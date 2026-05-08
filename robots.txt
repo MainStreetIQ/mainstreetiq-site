@@ -7,3 +7,89 @@ Sitemap: https://www.mainstreetiq.com/sitemap.xml
 # See https://llmstxt.org for specification
 # llms.txt: https://www.mainstreetiq.com/llms.txt
 # llms-full.txt: https://www.mainstreetiq.com/llms-full.txt
+
+# Explicit allows for AI crawlers and answer engines.
+# MSIQ wants AI surfaces (ChatGPT, Claude, Perplexity, Google AI Overviews,
+# Apple Intelligence, Meta AI, etc.) to discover, index, and cite this site.
+# A wildcard Allow above already covers everything; these explicit rules are
+# defensive against future stricter defaults and against bot owners who
+# require an exact User-agent match before indexing.
+
+# OpenAI
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# Google AI (Search Generative Experience, Gemini, Vertex AI grounding)
+User-agent: Google-Extended
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Common Crawl (training data feedstock for many models)
+User-agent: CCBot
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Meta AI
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+# Amazon (Alexa+, Rufus, etc.)
+User-agent: Amazonbot
+Allow: /
+
+# You.com
+User-agent: YouBot
+Allow: /
+
+# ByteDance / TikTok / Doubao
+User-agent: Bytespider
+Allow: /
+
+# Mistral
+User-agent: MistralAI-User
+Allow: /
+
+# Cohere
+User-agent: cohere-ai
+Allow: /
+
+User-agent: cohere-training-data-crawler
+Allow: /
+
+# DuckDuckGo AI
+User-agent: DuckAssistBot
+Allow: /
