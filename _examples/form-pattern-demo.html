@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Form Pattern Demo (internal) | Main Street IQ</title>
+  <link rel="icon" type="image/svg+xml" href="/assets/logos/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/assets/css/forms.css">
+</head>
+<body>
+
+  <main style="padding: 3rem 1.5rem; max-width: 1140px; margin: 0 auto;">
+
+    <header style="margin-bottom: 3rem;">
+      <p style="color: var(--color-neutral); font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; margin: 0 0 0.5rem;">Internal — noindex</p>
+      <h1 style="font-weight: 500; color: var(--color-midnight); font-size: 2rem; margin: 0 0 0.5rem; letter-spacing: -0.5px;">MSIQ Form Pattern Demo</h1>
+      <p style="color: var(--color-neutral); font-weight: 300; max-width: 720px; line-height: 1.6;">All form patterns used across the site, in one place. Use as a reference when building new forms. Loads <code>/assets/css/forms.css</code> and <code>/assets/js/forms.js</code>.</p>
+    </header>
+
+    <!-- ============================================================
+         1. Single-step form (lead capture / contact)
+         ============================================================ -->
+    <section style="padding: 3rem 0; border-top: 1px solid var(--color-border);">
+      <h2 style="font-weight: 500; color: var(--color-midnight); font-size: 1.4rem; margin: 0 0 0.5rem;">1. Single-step form (lead capture)</h2>
+      <p style="color: var(--color-neutral); font-weight: 300; max-width: 720px; line-height: 1.6; margin-bottom: 2rem;">Use for: contact form, simple lead capture, WCIR signup, Fit Call free booking confirmation. Native form submit (no JS controller needed unless you want custom validation hooks).</p>
+
+      <form class="msiq-form" id="demoSingleStep" action="https://crm.zoho.com/crm/WebToLeadForm" method="POST" accept-charset="UTF-8">
+        <input type="hidden" name="xnQsjsdp" value="DEMO_FORM_TOKEN_REPLACE_PER_FORM">
+        <input type="hidden" name="actionType" value="TGVhZHM=">
+        <input type="hidden" name="returnURL" value="https://www.mainstreetiq.com/_examples/form-pattern-demo?demo=success">
+        <input type="hidden" name="Lead Source" value="Demo Single-Step">
+
+        <div class="msiq-form__intro">
+          <h2>Tell us about your business</h2>
+          <p>We'll respond within one business day with a written one-pager.</p>
+        </div>
+
+        <div class="msiq-form__field msiq-form__field--inline-pair">
+          <div>
+            <label class="msiq-form__label" for="demoFirstName">First name</label>
+            <input class="msiq-form__input" type="text" id="demoFirstName" name="First Name" maxlength="40" autocomplete="given-name">
+          </div>
+          <div>
+            <label class="msiq-form__label msiq-form__label--required" for="demoLastName">Last name</label>
+            <input class="msiq-form__input" type="text" id="demoLastName" name="Last Name" required maxlength="80" autocomplete="family-name">
+            <div class="msiq-form__error"></div>
+          </div>
+        </div>
+
+        <div class="msiq-form__field">
+          <label class="msiq-form__label msiq-form__label--required" for="demoEmail">Email</label>
+          <input class="msiq-form__input" type="email" id="demoEmail" name="Email" required maxlength="100" autocomplete="email">
+          <div class="msiq-form__error"></div>
+        </div>
+
+        <div class="msiq-form__field">
+          <label class="msiq-form__label msiq-form__label--required" for="demoCompany">Company</label>
+          <input class="msiq-form__input" type="text" id="demoCompany" name="Company" required maxlength="100" autocomplete="organization">
+          <div class="msiq-form__error"></div>
+        </div>
+
+        <div class="msiq-form__field">
+          <label class="msiq-form__label" for="demoMessage">What's keeping you up at night?</label>
+          <textarea class="msiq-form__textarea" id="demoMessage" name="Description" rows="4" placeholder="One or two sentences is plenty."></textarea>
+          <p class="msiq-form__help">Optional. The more you share, the sharper our one-pager.</p>
+        </div>
+
+        <input type="text" name="aG9uZXlwb3Q" class="msiq-form__honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <div class="msiq-form__buttons msiq-form__buttons--end">
+          <button type="submit" class="msiq-form__btn msiq-form__btn--primary" data-action="submit">Send →</button>
+        </div>
+
+        <div class="msiq-form__success">
+          <svg class="msiq-form__success-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h2 class="msiq-form__success-title">Got it. We'll be in touch.</h2>
+          <p class="msiq-form__success-body">Look for an email from scott@mainstreetiq.com within one business day.</p>
+        </div>
+      </form>
+    </section>
+
+    <!-- ============================================================
+         2. Multi-step form (assessment quiz)
+         ============================================================ -->
+    <section style="padding: 3rem 0; border-top: 1px solid var(--color-border);">
+      <h2 style="font-weight: 500; color: var(--color-midnight); font-size: 1.4rem; margin: 0 0 0.5rem;">2. Multi-step form (assessment quiz)</h2>
+      <p style="color: var(--color-neutral); font-weight: 300; max-width: 720px; line-height: 1.6; margin-bottom: 2rem;">Use for: Winery Assessment, Wellness Assessment, Elective Assessment, Strategic Brief intake. Progressive disclosure, per-step validation, choice-card UX, conditional branching support.</p>
+
+      <form class="msiq-form msiq-form--wide" id="demoMultiStep" action="https://crm.zoho.com/crm/WebToLeadForm" method="POST" accept-charset="UTF-8">
+        <input type="hidden" name="xnQsjsdp" value="DEMO_FORM_TOKEN_REPLACE_PER_FORM">
+        <input type="hidden" name="actionType" value="TGVhZHM=">
+        <input type="hidden" name="returnURL" value="https://www.mainstreetiq.com/_examples/form-pattern-demo?demo=multi-success">
+        <input type="hidden" name="Lead Source" value="Demo Multi-Step">
+
+        <div class="msiq-form__progress">
+          <div class="msiq-form__progress-bar"><div class="msiq-form__progress-fill"></div></div>
+          <span class="msiq-form__progress-label">Step 1 of 3</span>
+        </div>
+
+        <!-- Step 1: choice cards -->
+        <div class="msiq-form__step msiq-form__step--active" data-step="1">
+          <h3 class="msiq-form__step-title">Which best describes your business?</h3>
+          <p class="msiq-form__step-subtitle">We tailor the rest of the questions based on your answer.</p>
+
+          <div class="msiq-form__field">
+            <div class="msiq-form__choice-group msiq-form__choice-group--grid" data-required="true">
+              <label class="msiq-form__choice">
+                <input type="radio" name="vertical" value="winery" required>
+                <span class="msiq-form__choice-label">Winery
+                  <span class="msiq-form__choice-label-sub">Tasting room, club, DTC, distribution</span>
+                </span>
+              </label>
+              <label class="msiq-form__choice">
+                <input type="radio" name="vertical" value="wellness">
+                <span class="msiq-form__choice-label">Wellness clinic
+                  <span class="msiq-form__choice-label-sub">Longevity, IV, hormone, functional, recovery</span>
+                </span>
+              </label>
+              <label class="msiq-form__choice">
+                <input type="radio" name="vertical" value="elective">
+                <span class="msiq-form__choice-label">Elective medicine
+                  <span class="msiq-form__choice-label-sub">Cosmetic surgery, MedSpa, cosmetic dental</span>
+                </span>
+              </label>
+              <label class="msiq-form__choice">
+                <input type="radio" name="vertical" value="other">
+                <span class="msiq-form__choice-label">Something else
+                  <span class="msiq-form__choice-label-sub">Owner-operated, under $50MM, California coast</span>
+                </span>
+              </label>
+            </div>
+            <div class="msiq-form__error"></div>
+          </div>
+        </div>
+
+        <!-- Step 2: free-text + select (demonstrates text inputs in multi-step) -->
+        <div class="msiq-form__step" data-step="2">
+          <h3 class="msiq-form__step-title">A bit about your size</h3>
+          <p class="msiq-form__step-subtitle">Helps us shape the recommendation. Rough estimates are fine.</p>
+
+          <div class="msiq-form__field">
+            <label class="msiq-form__label msiq-form__label--required" for="demoRevenue">Annual revenue band</label>
+            <select class="msiq-form__select" id="demoRevenue" name="Annual Revenue" required>
+              <option value="">Select a range...</option>
+              <option value="under_1m">Under $1M</option>
+              <option value="1_5m">$1-5M</option>
+              <option value="5_10m">$5-10M</option>
+              <option value="10_25m">$10-25M</option>
+              <option value="25_50m">$25-50M</option>
+              <option value="over_50m">Over $50M (likely out of scope)</option>
+            </select>
+            <div class="msiq-form__error"></div>
+          </div>
+
+          <div class="msiq-form__field">
+            <label class="msiq-form__label" for="demoChannels">Where are you currently getting customers?</label>
+            <textarea class="msiq-form__textarea" id="demoChannels" name="Acquisition Channels" rows="3" placeholder="e.g., tasting room walk-ins + wine club referrals + Instagram"></textarea>
+            <p class="msiq-form__help">One sentence is enough.</p>
+          </div>
+        </div>
+
+        <!-- Step 3: contact details -->
+        <div class="msiq-form__step" data-step="3">
+          <h3 class="msiq-form__step-title">Where should we send the read?</h3>
+          <p class="msiq-form__step-subtitle">Your one-pager will arrive at the email you provide within 24 hours.</p>
+
+          <div class="msiq-form__field msiq-form__field--inline-pair">
+            <div>
+              <label class="msiq-form__label" for="demoFirstName2">First name</label>
+              <input class="msiq-form__input" type="text" id="demoFirstName2" name="First Name" maxlength="40" autocomplete="given-name">
+            </div>
+            <div>
+              <label class="msiq-form__label msiq-form__label--required" for="demoLastName2">Last name</label>
+              <input class="msiq-form__input" type="text" id="demoLastName2" name="Last Name" required maxlength="80" autocomplete="family-name">
+              <div class="msiq-form__error"></div>
+            </div>
+          </div>
+
+          <div class="msiq-form__field">
+            <label class="msiq-form__label msiq-form__label--required" for="demoEmail2">Email</label>
+            <input class="msiq-form__input" type="email" id="demoEmail2" name="Email" required maxlength="100" autocomplete="email">
+            <div class="msiq-form__error"></div>
+          </div>
+
+          <div class="msiq-form__field">
+            <label class="msiq-form__label msiq-form__label--required" for="demoCompany2">Company</label>
+            <input class="msiq-form__input" type="text" id="demoCompany2" name="Company" required maxlength="100" autocomplete="organization">
+            <div class="msiq-form__error"></div>
+          </div>
+        </div>
+
+        <input type="text" name="aG9uZXlwb3Q" class="msiq-form__honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <div class="msiq-form__buttons">
+          <button type="button" class="msiq-form__btn msiq-form__btn--secondary" data-action="back" style="display:none;">← Back</button>
+          <button type="button" class="msiq-form__btn msiq-form__btn--primary" data-action="next">Continue →</button>
+          <button type="submit" class="msiq-form__btn msiq-form__btn--primary" data-action="submit" style="display:none;">Send my one-pager →</button>
+        </div>
+
+        <div class="msiq-form__success">
+          <svg class="msiq-form__success-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h2 class="msiq-form__success-title">Thanks. We'll be in touch.</h2>
+          <p class="msiq-form__success-body">Your written one-pager will arrive within 24 hours.</p>
+        </div>
+      </form>
+    </section>
+
+    <!-- ============================================================
+         3. Inline form (footer newsletter pattern)
+         ============================================================ -->
+    <section style="padding: 3rem 0; border-top: 1px solid var(--color-border);">
+      <h2 style="font-weight: 500; color: var(--color-midnight); font-size: 1.4rem; margin: 0 0 0.5rem;">3. Inline form (newsletter / hero CTA)</h2>
+      <p style="color: var(--color-neutral); font-weight: 300; max-width: 720px; line-height: 1.6; margin-bottom: 2rem;">Use for: footer newsletter, hero email capture, any single-input form where you want a horizontal layout.</p>
+
+      <form class="msiq-form msiq-form--inline" id="demoInline" novalidate>
+        <div class="msiq-form__field">
+          <label class="msiq-form__label" for="demoInlineEmail" style="position: absolute; left: -9999px;">Email</label>
+          <input class="msiq-form__input" type="email" id="demoInlineEmail" name="email" required placeholder="you@company.com" autocomplete="email">
+        </div>
+        <button type="submit" class="msiq-form__btn msiq-form__btn--primary">Subscribe</button>
+      </form>
+
+      <p style="font-size: 0.85rem; color: var(--color-neutral); margin-top: 0.75rem;">The current footer-newsletter on every page can be migrated to this pattern. Same fields, same backend, cleaner styling.</p>
+    </section>
+
+    <footer style="padding: 3rem 0 1rem; border-top: 1px solid var(--color-border); color: var(--color-neutral); font-size: 0.85rem;">
+      Pattern doc: <code>assets/css/forms.css</code> + <code>assets/js/forms.js</code> + <code>_examples/form-pattern-demo.html</code> (this page).
+    </footer>
+
+  </main>
+
+  <script src="/assets/js/forms.js"></script>
+  <script>
+    // Single-step: native form submit (Zoho Web-to-Lead handles redirect)
+    // We still want validation styling, so wire MSIQForm without onSubmit override.
+    new MSIQForm({
+      formElement: document.getElementById('demoSingleStep'),
+      analytics: { category: 'demo_single_step' },
+    }).init();
+
+    // Multi-step: same pattern + step navigation
+    new MSIQForm({
+      formElement: document.getElementById('demoMultiStep'),
+      analytics: { category: 'demo_multi_step' },
+    }).init();
+
+    // Inline newsletter: front-end only (custom backend wiring goes here)
+    document.getElementById('demoInline').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var email = document.getElementById('demoInlineEmail').value;
+      console.log('Demo inline submit:', email);
+      alert('Demo: would submit ' + email + ' to newsletter backend.');
+    });
+  </script>
+
+</body>
+</html>
