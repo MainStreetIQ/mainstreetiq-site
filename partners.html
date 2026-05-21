@@ -3,19 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="noindex, nofollow">
   <link rel="icon" type="image/svg+xml" href="assets/logos/favicon.svg">
-  <title>Partners | Main Street IQ</title>
+  <title>Partners | Center of Influence | Main Street IQ</title>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1K5GWDVVG0"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-1K5GWDVVG0');</script>
-  <meta name="description" content="Private landing page for Main Street IQ Center of Influence partners.">
+  <meta name="description" content="Center of Influence program for accountants, attorneys, bankers, and advisors who introduce owner-operators on the California coast to Main Street IQ.">
+  <meta name="keywords" content="CPA referral program, attorney referral program, banker referral, fractional CFO referral partner, Center of Influence, Main Street IQ partners">
   <link rel="canonical" href="https://www.mainstreetiq.com/partners">
+
+  <meta property="og:title" content="Partners | Center of Influence | Main Street IQ">
+  <meta property="og:description" content="A small, deliberate network of professionals who introduce their owner-operator clients to Main Street IQ.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.mainstreetiq.com/partners">
+  <meta property="og:image" content="https://www.mainstreetiq.com/assets/images/og-image.jpg">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="/assets/css/forms.css">
 </head>
 <body>
 
@@ -71,16 +78,100 @@
 
           <p>For attorneys whose bar rules restrict referral fees, the relationship runs on mutual professional courtesy: the voucher is yours to give, the commission is waived, and the reciprocity is the value.</p>
 
-          <h2>What to expect on the call</h2>
-          <p>Twenty minutes. We talk through who you serve, where you see your clients get stuck, and whether the kind of work I do would be useful to them. No pitch, no slide deck. If we are not a fit for your network, I will tell you and suggest where to point clients instead.</p>
+          <h2>Who fits</h2>
+          <ul class="partners-list">
+            <li>CPAs and tax advisors with clients between $5M and $50M who keep outgrowing the books.</li>
+            <li>Transactional attorneys whose owner-operator clients are weighing a sale, raise, or partner buyout.</li>
+            <li>Commercial bankers and wealth advisors whose clients run real operating businesses on the California coast.</li>
+            <li>Insurance, payroll, and benefits brokers who sit close to owner decisions.</li>
+          </ul>
 
-          <p class="partners-meta">If we have not spoken yet, use the calendar to find a time that works. If you already have the one-pager from me, treat this as the place to book the intro call.</p>
+          <h2>What happens next</h2>
+          <p>Tell us a little about your practice using the form. If there's a fit, we schedule twenty minutes. We talk through who you serve, where you see your clients get stuck, and whether the kind of work we do would be useful to them. No pitch, no slide deck.</p>
+
+          <p class="partners-meta">Prefer to skip the form? <a href="https://calendly.com/scott_mainstreetiq/30min?utm_source=mainstreetiq-site&utm_medium=website&utm_campaign=partners" target="_blank" rel="noopener">Book the intro call directly →</a></p>
         </div>
 
-        <!-- Right Column: Calendly Embed -->
-        <div class="partners-calendly">
-          <div class="calendly-inline-widget" data-url="https://calendly.com/scott_mainstreetiq/30min?utm_source=mainstreetiq-site&utm_medium=website&utm_campaign=partners" style="min-width:320px;height:720px;"></div>
-          <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        <!-- Right Column: Application Form -->
+        <div class="partners-form-col">
+          <form class="msiq-form" id="msiqPartnersForm" action="https://crm.zoho.com/crm/WebToLeadForm" method="POST" accept-charset="UTF-8">
+            <input type="hidden" name="xnQsjsdp" value="b20d9533cf4fc99c3bf706d8c6c71a4a3954a07e69e9285bf3e5dba36994b362">
+            <input type="hidden" name="zc_gad" id="zc_gad" value="">
+            <input type="hidden" name="xmIwtLD" value="815a9111e999269efd4d1d2db372b902a70c171679ef4b5b670edcda3a91cb3c5cd8963718a85063b57d553234721aae">
+            <input type="hidden" name="actionType" value="TGVhZHM=">
+            <input type="hidden" name="returnURL" value="https://www.mainstreetiq.com/partners?sent=success">
+            <input type="hidden" name="Lead Source" value="MSIQ Website">
+            <input type="hidden" name="Lead Status" value="Pre-Qualified">
+
+            <div class="msiq-form__intro">
+              <h2>Tell us about your practice</h2>
+              <p>Two minutes. We'll get back within one business day.</p>
+            </div>
+
+            <div class="msiq-form__field msiq-form__field--inline-pair">
+              <div>
+                <label class="msiq-form__label" for="msiqPartnerFirstName">First name</label>
+                <input class="msiq-form__input" type="text" id="msiqPartnerFirstName" name="First Name" maxlength="40" autocomplete="given-name">
+              </div>
+              <div>
+                <label class="msiq-form__label msiq-form__label--required" for="msiqPartnerLastName">Last name</label>
+                <input class="msiq-form__input" type="text" id="msiqPartnerLastName" name="Last Name" required maxlength="80" autocomplete="family-name">
+                <div class="msiq-form__error"></div>
+              </div>
+            </div>
+
+            <div class="msiq-form__field">
+              <label class="msiq-form__label msiq-form__label--required" for="msiqPartnerEmail">Email</label>
+              <input class="msiq-form__input" type="email" id="msiqPartnerEmail" name="Email" required maxlength="100" autocomplete="email">
+              <div class="msiq-form__error"></div>
+            </div>
+
+            <div class="msiq-form__field">
+              <label class="msiq-form__label msiq-form__label--required" for="msiqPartnerFirm">Firm or practice name</label>
+              <input class="msiq-form__input" type="text" id="msiqPartnerFirm" name="Company" required maxlength="100" autocomplete="organization">
+              <div class="msiq-form__error"></div>
+            </div>
+
+            <div class="msiq-form__field">
+              <label class="msiq-form__label msiq-form__label--required" for="msiqPartnerRole">Your role</label>
+              <select class="msiq-form__select" id="msiqPartnerRole" required aria-label="Your role">
+                <option value="">Select a role...</option>
+                <option value="CPA / Tax Advisor">CPA / Tax Advisor</option>
+                <option value="Attorney">Attorney</option>
+                <option value="Commercial Banker">Commercial Banker</option>
+                <option value="Wealth Advisor">Wealth Advisor</option>
+                <option value="Insurance / Benefits Broker">Insurance / Benefits Broker</option>
+                <option value="Operator / Founder">Operator / Founder</option>
+                <option value="Other">Other</option>
+              </select>
+              <div class="msiq-form__error"></div>
+            </div>
+
+            <div class="msiq-form__field">
+              <label class="msiq-form__label" for="msiqPartnerServe">Who do you primarily serve?</label>
+              <textarea class="msiq-form__textarea" id="msiqPartnerServe" rows="3" placeholder="Industry, revenue range, geography, anything that gives us a quick read."></textarea>
+              <p class="msiq-form__help">Optional, but helpful.</p>
+            </div>
+
+            <div class="msiq-form__field">
+              <label class="msiq-form__label" for="msiqPartnerNotes">Anything we should know before we talk?</label>
+              <textarea class="msiq-form__textarea" id="msiqPartnerNotes" rows="3" placeholder="A specific client situation, a question about how the program works, or just say hello."></textarea>
+            </div>
+
+            <textarea name="Description" id="msiqPartnerDescription" style="display:none;" aria-hidden="true"></textarea>
+
+            <input type="text" name="aG9uZXlwb3Q" class="msiq-form__honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+            <div class="msiq-form__buttons msiq-form__buttons--end">
+              <button type="submit" class="msiq-form__btn msiq-form__btn--primary" data-action="submit">Send →</button>
+            </div>
+
+            <div class="msiq-form__success">
+              <svg class="msiq-form__success-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <h2 class="msiq-form__success-title">Thanks. We'll be in touch.</h2>
+              <p class="msiq-form__success-body">We'll respond within one business day. If you'd rather skip ahead, <a href="https://calendly.com/scott_mainstreetiq/30min?utm_source=mainstreetiq-site&utm_medium=website&utm_campaign=partners" target="_blank" rel="noopener" style="color: var(--color-navy); font-weight: 500;">grab time on the calendar</a>.</p>
+            </div>
+          </form>
         </div>
 
       </div>
@@ -115,29 +206,28 @@
           <a href="/our-services">Services</a>
           <a href="/our-work">Our Work</a>
           <a href="/blog">Blog</a>
-          <a href="/central-coast-iq">Central Coast IQ</a>
         </div>
         <div class="footer-col">
           <h4>Connect</h4>
           <a href="/contact">Contact</a>
-          <a href="/cfo-assessment">CFO Diagnostic</a>
-          <a href="https://calendly.com/scott_mainstreetiq/30min?utm_source=mainstreetiq-site&utm_medium=website&utm_campaign=partners" target="_blank" rel="noopener">Book a Call</a>
+          <a href="/partners">Partners</a>
+          <a href="https://calendly.com/scott_mainstreetiq/30min" target="_blank" rel="noopener">Book a Fit Call</a>
           <a href="https://www.linkedin.com/in/johnscotthess" target="_blank" rel="noopener">LinkedIn</a>
         </div>
         <div class="footer-col">
-          <h4>Industries</h4>
-          <a href="/fractional-cfo-dtc-ecommerce">DTC &amp; Ecommerce</a>
-          <a href="/our-work/saas-post-seed-funding">SaaS</a>
-          <a href="/our-work/divesting-manufacturer">Manufacturing</a>
-          <a href="/our-work/restaurant-group">Hospitality</a>
+          <h4>Verticals</h4>
+          <a href="/wineries">Wineries</a>
+          <a href="/wellness">Health &amp; Wellness</a>
+          <a href="/aesthetics">Elective Medicine</a>
         </div>
         <div class="footer-col">
           <h4>Locations</h4>
-          <a href="/fractional-cfo-santa-barbara">Santa Barbara County</a>
-          <a href="/fractional-cfo-san-luis-obispo">San Luis Obispo County</a>
-          <a href="/fractional-cfo-ventura">Ventura County</a>
+          <a href="/fractional-cfo-san-luis-obispo">San Luis Obispo</a>
+          <a href="/fractional-cfo-santa-barbara">Santa Barbara</a>
+          <a href="/fractional-cfo-ventura">Ventura</a>
           <a href="/fractional-cfo-los-angeles">Los Angeles</a>
           <a href="/fractional-cfo-orange-county">Orange County</a>
+          <a href="/fractional-cfo-san-diego">San Diego</a>
         </div>
         <div class="footer-col">
           <h4>Legal</h4>
@@ -161,6 +251,7 @@
   </footer>
 
   <script src="/assets/js/newsletter.js" defer></script>
+  <script src="/assets/js/forms.js" defer></script>
 
   <style>
     .partners-grid {
@@ -170,7 +261,7 @@
       align-items: start;
     }
     @media (max-width: 900px) {
-      .partners-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .partners-grid { grid-template-columns: 1fr; gap: 2.5rem; }
     }
     .partners-explainer h2 {
       font-weight: 500;
@@ -207,6 +298,23 @@
       padding-top: 1rem;
       margin-top: 1.5rem;
     }
+    .partners-meta a {
+      color: var(--navy, #2B4E8C);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .partners-meta a:hover {
+      text-decoration: underline;
+    }
+    .partners-form-col {
+      background: var(--ice, #F4F6FA);
+      border: 1px solid var(--border, #E5E2DC);
+      border-radius: 8px;
+      padding: 2rem;
+    }
+    @media (max-width: 640px) {
+      .partners-form-col { padding: 1.5rem; }
+    }
   </style>
 
   <script>
@@ -228,6 +336,24 @@
         });
       });
     });
+
+    // Compose Description with partner attribution prefix on submit
+    // (Zoho custom-field cap workaround per ops memory)
+    (function(){
+      var form = document.getElementById('msiqPartnersForm');
+      if (!form) return;
+      form.addEventListener('submit', function(){
+        var firm = (document.getElementById('msiqPartnerFirm').value || '').trim();
+        var role = (document.getElementById('msiqPartnerRole').value || '').trim();
+        var serve = (document.getElementById('msiqPartnerServe').value || '').trim();
+        var notes = (document.getElementById('msiqPartnerNotes').value || '').trim();
+        var lines = [];
+        lines.push('Partner Inquiry | Firm: ' + firm + ' | Role: ' + role);
+        if (serve) lines.push('\nServes: ' + serve);
+        if (notes) lines.push('\nNotes: ' + notes);
+        document.getElementById('msiqPartnerDescription').value = lines.join('\n');
+      }, true);
+    })();
   </script>
 
 </body>
