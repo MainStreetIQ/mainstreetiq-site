@@ -1,0 +1,484 @@
+/**
+ * MSIQ Form Component Library
+ * --------------------------------
+ * Modern, design-system-matched form styles for Main Street IQ.
+ * Single-step and multi-step patterns supported.
+ *
+ * Tokens used (defined in styles.css):
+ *   --color-midnight, --color-navy, --color-sky, --color-neutral,
+ *   --color-border, --color-ice, --color-dark-text, --color-navy-hover,
+ *   --color-error, --color-success, --font-body, --container-narrow
+ *
+ * Usage: include this CSS file AFTER styles.css.
+ * Pair with assets/js/forms.js for multi-step state management.
+ *
+ * Last reviewed: 2026-05-21
+ */
+
+/* ============================================================
+   1. Form container + layout
+   ============================================================ */
+
+.msiq-form {
+  font-family: var(--font-body);
+  color: var(--color-dark-text);
+  max-width: 640px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.msiq-form--wide {
+  max-width: 800px;
+}
+
+.msiq-form__intro {
+  margin-bottom: 2rem;
+}
+
+.msiq-form__intro h2 {
+  font-weight: 500;
+  color: var(--color-midnight);
+  font-size: 1.6rem;
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.2px;
+}
+
+.msiq-form__intro p {
+  color: var(--color-neutral);
+  font-weight: 300;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ============================================================
+   2. Progress indicator (multi-step only)
+   ============================================================ */
+
+.msiq-form__progress {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.msiq-form__progress-bar {
+  flex: 1;
+  height: 4px;
+  background: var(--color-border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.msiq-form__progress-fill {
+  height: 100%;
+  background: var(--color-navy);
+  transition: width 0.3s ease;
+  width: 0;
+}
+
+.msiq-form__progress-label {
+  font-size: 0.85rem;
+  color: var(--color-neutral);
+  font-weight: 400;
+  white-space: nowrap;
+  letter-spacing: 0.2px;
+}
+
+/* ============================================================
+   3. Step container
+   ============================================================ */
+
+.msiq-form__step {
+  display: none;
+  animation: msiq-form-step-in 0.3s ease;
+}
+
+.msiq-form__step--active {
+  display: block;
+}
+
+@keyframes msiq-form-step-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.msiq-form__step-title {
+  font-weight: 500;
+  color: var(--color-midnight);
+  font-size: 1.25rem;
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.1px;
+  line-height: 1.3;
+}
+
+.msiq-form__step-subtitle {
+  color: var(--color-neutral);
+  font-weight: 300;
+  line-height: 1.6;
+  margin: 0 0 1.5rem;
+  font-size: 1rem;
+}
+
+/* ============================================================
+   4. Field group (label + input + help/error)
+   ============================================================ */
+
+.msiq-form__field {
+  margin-bottom: 1.5rem;
+}
+
+.msiq-form__field--inline-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 640px) {
+  .msiq-form__field--inline-pair {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.msiq-form__label {
+  display: block;
+  font-weight: 500;
+  color: var(--color-midnight);
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.1px;
+}
+
+.msiq-form__label--required::after {
+  content: ' *';
+  color: var(--color-error);
+}
+
+.msiq-form__help {
+  font-size: 0.85rem;
+  color: var(--color-neutral);
+  margin-top: 0.4rem;
+  line-height: 1.4;
+}
+
+.msiq-form__error {
+  font-size: 0.85rem;
+  color: var(--color-error);
+  margin-top: 0.4rem;
+  line-height: 1.4;
+  display: none;
+}
+
+.msiq-form__field--invalid .msiq-form__error {
+  display: block;
+}
+
+/* ============================================================
+   5. Inputs
+   ============================================================ */
+
+.msiq-form__input,
+.msiq-form__textarea,
+.msiq-form__select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--color-dark-text);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  box-sizing: border-box;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  outline: none;
+}
+
+.msiq-form__input::placeholder,
+.msiq-form__textarea::placeholder {
+  color: var(--color-neutral);
+  opacity: 0.7;
+}
+
+.msiq-form__input:hover,
+.msiq-form__textarea:hover,
+.msiq-form__select:hover {
+  border-color: var(--color-neutral);
+}
+
+.msiq-form__input:focus,
+.msiq-form__textarea:focus,
+.msiq-form__select:focus {
+  border-color: var(--color-navy);
+  box-shadow: 0 0 0 3px rgba(43, 78, 140, 0.12);
+}
+
+.msiq-form__field--invalid .msiq-form__input,
+.msiq-form__field--invalid .msiq-form__textarea,
+.msiq-form__field--invalid .msiq-form__select {
+  border-color: var(--color-error);
+}
+
+.msiq-form__textarea {
+  min-height: 120px;
+  resize: vertical;
+  font-family: var(--font-body);
+  line-height: 1.5;
+}
+
+.msiq-form__select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%236B7480' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
+  cursor: pointer;
+}
+
+/* Honeypot (anti-spam) */
+.msiq-form__honeypot {
+  position: absolute;
+  left: -9999px;
+  height: 0;
+  width: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ============================================================
+   6. Radio + checkbox groups (card-style choices)
+   ============================================================ */
+
+.msiq-form__choice-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.msiq-form__choice-group--grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.75rem;
+}
+
+.msiq-form__choice {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  cursor: pointer;
+  background: var(--color-white);
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.msiq-form__choice:hover {
+  border-color: var(--color-neutral);
+  background: var(--color-ice);
+}
+
+.msiq-form__choice input[type="radio"],
+.msiq-form__choice input[type="checkbox"] {
+  margin: 0;
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+  accent-color: var(--color-navy);
+  cursor: pointer;
+}
+
+.msiq-form__choice input[type="radio"]:checked + .msiq-form__choice-label,
+.msiq-form__choice input[type="checkbox"]:checked + .msiq-form__choice-label {
+  color: var(--color-midnight);
+  font-weight: 500;
+}
+
+.msiq-form__choice:has(input:checked) {
+  border-color: var(--color-navy);
+  background: rgba(91, 184, 255, 0.06);
+}
+
+.msiq-form__choice-label {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--color-dark-text);
+  line-height: 1.4;
+  cursor: pointer;
+  user-select: none;
+}
+
+.msiq-form__choice-label-sub {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--color-neutral);
+  font-weight: 300;
+  margin-top: 0.2rem;
+  line-height: 1.4;
+}
+
+/* ============================================================
+   7. Buttons (Next, Back, Submit)
+   ============================================================ */
+
+.msiq-form__buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.msiq-form__buttons--end {
+  justify-content: flex-end;
+}
+
+.msiq-form__btn {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.15s ease, border-color 0.15s ease;
+  white-space: nowrap;
+  letter-spacing: 0.2px;
+}
+
+.msiq-form__btn--primary {
+  background: var(--color-navy);
+  color: var(--color-white);
+}
+
+.msiq-form__btn--primary:hover:not(:disabled) {
+  background: var(--color-navy-hover);
+  transform: translateY(-1px);
+}
+
+.msiq-form__btn--primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.msiq-form__btn--secondary {
+  background: transparent;
+  color: var(--color-neutral);
+  border: 1px solid var(--color-border);
+}
+
+.msiq-form__btn--secondary:hover:not(:disabled) {
+  color: var(--color-dark-text);
+  border-color: var(--color-neutral);
+}
+
+.msiq-form__btn--secondary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ============================================================
+   8. Success state (post-submit)
+   ============================================================ */
+
+.msiq-form__success {
+  display: none;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.msiq-form__success--active {
+  display: block;
+}
+
+.msiq-form__success-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 1rem;
+  color: var(--color-success);
+}
+
+.msiq-form__success-title {
+  font-weight: 500;
+  color: var(--color-midnight);
+  font-size: 1.4rem;
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.1px;
+}
+
+.msiq-form__success-body {
+  color: var(--color-neutral);
+  font-weight: 300;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* ============================================================
+   9. Loading / submit state
+   ============================================================ */
+
+.msiq-form__btn--loading {
+  position: relative;
+  color: transparent !important;
+  pointer-events: none;
+}
+
+.msiq-form__btn--loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  margin: -8px 0 0 -8px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: var(--color-white);
+  border-radius: 50%;
+  animation: msiq-form-spin 0.6s linear infinite;
+}
+
+@keyframes msiq-form-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ============================================================
+   10. Inline form variants (e.g., footer newsletter, hero CTA)
+   ============================================================ */
+
+.msiq-form--inline {
+  display: flex;
+  gap: 0.75rem;
+  max-width: 480px;
+  margin: 0;
+}
+
+.msiq-form--inline .msiq-form__field {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.msiq-form--inline .msiq-form__input {
+  padding: 0.625rem 0.875rem;
+}
+
+.msiq-form--inline .msiq-form__btn {
+  flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+  .msiq-form--inline {
+    flex-direction: column;
+  }
+}
