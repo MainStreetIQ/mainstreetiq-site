@@ -1,36 +1,6 @@
 {
   "redirects": [
     {
-      "source": "/cciq-assessment",
-      "destination": "/wineries",
-      "permanent": true
-    },
-    {
-      "source": "/cciq-assessment.html",
-      "destination": "/wineries",
-      "permanent": true
-    },
-    {
-      "source": "/central-coast-iq",
-      "destination": "/wineries",
-      "permanent": true
-    },
-    {
-      "source": "/central-coast-iq.html",
-      "destination": "/wineries",
-      "permanent": true
-    },
-    {
-      "source": "/cfo-assessment",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/cfo-assessment.html",
-      "destination": "/",
-      "permanent": true
-    },
-    {
       "source": "/fractional-cfo-inland-empire",
       "destination": "/",
       "permanent": true
