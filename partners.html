@@ -354,6 +354,21 @@
         document.getElementById('msiqPartnerDescription').value = lines.join('\n');
       }, true);
     })();
+
+    // Show success state when Zoho redirects back with ?sent=success
+    (function(){
+      if (new URLSearchParams(window.location.search).get('sent') !== 'success') return;
+      var form = document.getElementById('msiqPartnersForm');
+      if (!form) return;
+      var intro = form.querySelector('.msiq-form__intro');
+      if (intro) intro.style.display = 'none';
+      form.querySelectorAll('.msiq-form__field').forEach(function(f){ f.style.display = 'none'; });
+      var buttons = form.querySelector('.msiq-form__buttons');
+      if (buttons) buttons.style.display = 'none';
+      var success = form.querySelector('.msiq-form__success');
+      if (success) success.classList.add('msiq-form__success--active');
+      form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    })();
   </script>
 
 </body>
