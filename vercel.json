@@ -11,6 +11,16 @@
       "permanent": true
     },
     {
+      "source": "/central-coast-iq",
+      "destination": "/wineries",
+      "permanent": true
+    },
+    {
+      "source": "/central-coast-iq.html",
+      "destination": "/wineries",
+      "permanent": true
+    },
+    {
       "source": "/fractional-cfo-inland-empire",
       "destination": "/",
       "permanent": true
