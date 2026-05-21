@@ -84,6 +84,18 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://www.mainstreetiq.com/wellness-assessment</loc>
+    <lastmod>2026-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mainstreetiq.com/aesthetics-assessment</loc>
+    <lastmod>2026-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <!-- Geo Landing Pages -->
   <url>
     <loc>https://www.mainstreetiq.com/fractional-cfo-santa-barbara</loc>
