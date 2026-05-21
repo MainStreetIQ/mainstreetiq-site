@@ -1,0 +1,24 @@
+{
+  "redirects": [
+    {
+      "source": "/fractional-cfo-inland-empire",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/fractional-cfo-inland-empire.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/fractional-cfo-dtc-ecommerce",
+      "destination": "/our-services",
+      "permanent": true
+    },
+    {
+      "source": "/fractional-cfo-dtc-ecommerce.html",
+      "destination": "/our-services",
+      "permanent": true
+    }
+  ]
+}
