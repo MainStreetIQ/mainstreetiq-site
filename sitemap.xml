@@ -66,12 +66,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
-  <url>
-    <loc>https://www.mainstreetiq.com/central-coast-iq</loc>
-    <lastmod>2026-04-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
   <!-- Geo Landing Pages -->
   <url>
     <loc>https://www.mainstreetiq.com/fractional-cfo-santa-barbara</loc>
@@ -363,11 +357,5 @@
     <lastmod>2026-04-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
-  </url>
-  <url>
-    <loc>https://www.mainstreetiq.com/cfo-assessment</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
   </url>
 </urlset>
