@@ -73,6 +73,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.mainstreetiq.com/fit-call</loc>
+    <lastmod>2026-05-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://www.mainstreetiq.com/central-coast-iq</loc>
     <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
