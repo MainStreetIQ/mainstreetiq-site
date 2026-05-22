@@ -92,12 +92,12 @@
     },
     {
       "source": "/fractional-cfo-dtc-ecommerce",
-      "destination": "/our-services",
+      "destination": "/ecommerce",
       "permanent": true
     },
     {
       "source": "/fractional-cfo-dtc-ecommerce.html",
-      "destination": "/our-services",
+      "destination": "/ecommerce",
       "permanent": true
     }
   ]
