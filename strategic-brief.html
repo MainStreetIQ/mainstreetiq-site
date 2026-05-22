@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/svg+xml" href="assets/logos/favicon.svg">
+  <title>Strategic Brief | Main Street IQ</title>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1K5GWDVVG0"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-1K5GWDVVG0');</script>
+  <meta name="description" content="Main Street IQ client onboarding Strategic Brief.">
+  <link rel="canonical" href="https://www.mainstreetiq.com/strategic-brief">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="/assets/css/forms.css">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <nav class="nav-inner">
+        <a href="/" class="logo"><img src="/assets/logos/logo-horizontal-light.svg" alt="Main Street IQ - AI-Augmented Strategic Advisory"></a>
+        <div class="nav-links" id="nav-links">
+          <a href="/our-services">Services</a>
+          <a href="/about">About</a>
+          <a href="/our-work">Our Work</a>
+          <a href="/blog">Blog</a>
+          <a href="/contact">Contact</a>
+          <a href="/fit-call" class="nav-cta">Book a Fit Call</a>
+        </div>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+  <!-- ===== HERO ===== -->
+  <section class="about-hero hero-has-bg">
+    <img src="/assets/images/hero-central-coast.jpg" alt="" class="hero-bg" aria-hidden="true">
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <span class="section-label">Client Onboarding</span>
+      <h1>Your Strategic Brief</h1>
+      <p>This is the document every Main Street IQ engagement is built on. It takes 20 to 40 minutes. Answer in plain language, the way you'd explain your business to a friend. There are no wrong answers, only useful ones.</p>
+    </div>
+  </section>
+
+  <!-- ===== FORM ===== -->
+  <section class="sb-form-section">
+    <div class="container">
+      <div class="sb-form-wrap">
+
+        <!--
+          Strategic Brief intake.
+          Posts to the existing "MSIQ Client Strategic Brief" Zoho Form via its
+          external htmlRecords/submit endpoint, so the established onboarding
+          pipeline (native CRM Account creation, operator "New onboarding |"
+          email, client confirmation email, client-onboarding-intake skill ->
+          build.py -> goals.md) keeps firing unchanged.
+
+          Field name attributes are the Zoho Form link-names, extracted from the
+          live form on 2026-05-21. Do not rename them; the Zoho mapping depends
+          on exact matches.
+
+          NOTE: the htmlRecords/submit contract needs one live verification
+          submission before this is considered done. If Zoho rejects the
+          external POST (anti-spam, email verification, or page-token), the
+          fallback is a Vercel relay function. Flagged in the PR.
+        -->
+        <form class="msiq-form msiq-form--wide msiq-form--multi-step" id="msiqStrategicBriefForm"
+              action="https://forms.zohopublic.com/mainstreetiq1/form/MSIQClientStrategicBrief/formperma/imvGt6hX80Mt23CSzGV6pZKooc1kh_hMyjENp4-V0Is/htmlRecords/submit"
+              method="POST" accept-charset="UTF-8">
+
+          <div class="msiq-form__progress">
+            <div class="msiq-form__progress-bar"><div class="msiq-form__progress-fill"></div></div>
+            <span class="msiq-form__progress-label">Step 1 of 7</span>
+          </div>
+
+          <!-- ===== STEP 1 | Who you want walking in the door ===== -->
+          <div class="msiq-form__step msiq-form__step--active" data-step="1">
+            <h2 class="msiq-form__step-title">Who you want walking in the door</h2>
+            <p class="msiq-form__step-subtitle">Your ideal customer, in plain language.</p>
+
+            <div class="msiq-form__field">
+              <label class="msiq-form__label msiq-form__label--required" for="sbIdealCustomer">In 2-3 sentences, describe your ideal customer. Who are they?</label>
+              <textarea class="msiq-form__textarea" id="sbIdealCustomer" name="MultiLine" required rows="4" maxlength="500"></textarea>
+              <p class="msiq-form__help">Speak in plain language. Imagine telling a friend who that customer is.</p>
+              <div class="msiq-form__error"></div>
+            </div>
+
+            <div class="msiq-form__field">
+              <label class="msiq-form__label msiq-form__label--required">Age range of your ideal customer</label>
+              <div class="msiq-form__choice-group msiq-form__choice-group--grid" data-required="true">
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox4" value="18-29"><span class="msiq-form__choice-label">18-29</span></label>
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox4" value="30-39"><span class="msiq-form__choice-label">30-39</span></label>
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox4" value="40-49"><span class="msiq-form__choice-label">40-49</span></label>
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox4" value="50-59"><span class="msiq-form__choice-label">50-59</span></label>
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox4" value="60-69"><span class="msiq-form__choice-label">60-69</span></label>
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox4" value="70+"><span class="msiq-form__choice-label">70+</span></label>
+              </div>
+              <div class="msiq-form__error"></div>
+            </div>
+
+            <div class="msiq-form__field">
+              <label class="msiq-form__label msiq-form__label--required" for="sbIncome">Approximate household income tier</label>
+              <select class="msiq-form__select" id="sbIncome" name="Dropdown5" required>
+                <option value="">Select a tier...</option>
+                <option value="Under $75K">Under $75K</option>
+                <option value="$75K-$150K">$75K-$150K</option>
+                <option value="$150K-$300K">$150K-$300K</option>
+                <option value="$300K-$500K">$300K-$500K</option>
+                <option value="$500K-$1M">$500K-$1M</option>
+                <option value="$1M+">$1M+</option>
+                <option value="Mixed or don't know">Mixed or don't know</option>
+              </select>
+              <div class="msiq-form__error"></div>
+            </div>
+
+            <div class="msiq-form__field">
+              <label class="msiq-form__label" for="sbGeography">Where do they come from geographically? Metros, regions, or ZIP codes</label>
+              <textarea class="msiq-form__textarea" id="sbGeography" name="MultiLine2" rows="3"></textarea>
+              <p class="msiq-form__help">Be specific where you can. We use this to filter session and traffic data.</p>
+            </div>
+
+            <div class="msiq-form__field">
+              <label class="msiq-form__label" for="sbExamples">Name 3-5 current customers who fit this profile perfectly</label>
+              <textarea class="msiq-form__textarea" id="sbExamples" name="MultiLine1" rows="3"></textarea>
+              <p class="msiq-form__help">First names or initials are fine. We use these as anchors, not for outreach.</p>
+            </div>
+
+            <div class="msiq-form__field">
+              <label class="msiq-form__label" for="sbSignal">The one signal that tells you "this is exactly our customer"</label>
+              <input class="msiq-form__input" type="text" id="sbSignal" name="SingleLine" maxlength="255">
+              <p class="msiq-form__help">What do they say, do, or buy that makes them unmistakable?</p>
+            </div>
+
+          </div>
+
+          <!-- ===== STEP 2 | Who you do not want ===== -->
+          <div class="msiq-form__step" data-step="2">
+            <h2 class="msiq-form__step-title">Who you do not want</h2>
+            <p class="msiq-form__step-subtitle">The clearer this is, the better we filter.</p>
+
+            <div class="msiq-form__field">
+              <label class="msiq-form__label msiq-form__label--required" for="sbNotFor">In 1-2 sentences, who is your business NOT for?</label>
+              <textarea class="msiq-form__textarea" id="sbNotFor" name="MultiLine4" required rows="3"></textarea>
+              <div class="msiq-form__error"></div>
+            </div>
+
+            <div class="msiq-form__field">
+              <label class="msiq-form__label">Channels or marketing surfaces you want to deprioritize</label>
+              <div class="msiq-form__choice-group">
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox" value="Mass-market review aggregators"><span class="msiq-form__choice-label">Mass-market review aggregators</span></label>
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox" value="Discount or coupon platforms"><span class="msiq-form__choice-label">Discount or coupon platforms</span></label>
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox" value="Generic tourism listings"><span class="msiq-form__choice-label">Generic tourism listings</span></label>
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox" value="Broad influencer marketing"><span class="msiq-form__choice-label">Broad influencer marketing</span></label>
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox" value="Mass paid social (Meta, TikTok ads)"><span class="msiq-form__choice-label">Mass paid social (Meta, TikTok ads)</span></label>
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox" value="Mass email lists"><span class="msiq-form__choice-label">Mass email lists</span></label>
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox" value="Aggregator or marketplace listings"><span class="msiq-form__choice-label">Aggregator or marketplace listings</span></label>
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox" value="Other"><span class="msiq-form__choice-label">Other</span></label>
+              </div>
+            </div>
+
+            <div class="msiq-form__field">
+              <label class="msiq-form__label" for="sbWrongAudience">What customer behaviors or themes in reviews would tell you the wrong audience is finding you?</label>
+              <textarea class="msiq-form__textarea" id="sbWrongAudience" name="MultiLine3" rows="3"></textarea>
+              <p class="msiq-form__help">Example: reviews mentioning "kid-friendly" would be a signal we lost the audience for a luxury brand.</p>
+            </div>
+
+          </div>
+
+          <!-- ===== STEP 3 | What you are trying to achieve ===== -->
+          <div class="msiq-form__step" data-step="3">
+            <h2 class="msiq-form__step-title">What you are trying to achieve</h2>
+            <p class="msiq-form__step-subtitle">Your objective, your targets, and the posture you run.</p>
+
+            <div class="msiq-form__field">
+              <label class="msiq-form__label msiq-form__label--required" for="sbObjective">In 50-100 words, what are you trying to achieve in the next 12-24 months?</label>
+              <textarea class="msiq-form__textarea" id="sbObjective" name="MultiLine6" required rows="4"></textarea>
+              <div class="msiq-form__error"></div>
+            </div>
+
+            <p class="msiq-form__help" style="margin-bottom: 0.75rem;">Up to three quantitative targets. Leave any row blank if you don't have it.</p>
+
+            <div class="msiq-form__field msiq-form__field--inline-pair">
+              <div>
+                <label class="msiq-form__label" for="sbMetric1">Target 1: metric</label>
+                <input class="msiq-form__input" type="text" id="sbMetric1" name="SingleLine6" maxlength="120" placeholder="e.g. Allocation list growth">
+              </div>
+              <div>
+                <label class="msiq-form__label" for="sbValue1">Target 1: target value</label>
+                <input class="msiq-form__input" type="text" id="sbValue1" name="SingleLine5" maxlength="120" placeholder="e.g. +150 members">
+              </div>
+            </div>
+            <div class="msiq-form__field">
+              <label class="msiq-form__label" for="sbTime1">Target 1: timeframe</label>
+              <select class="msiq-form__select" id="sbTime1" name="Dropdown4">
+                <option value="">Select...</option>
+                <option value="6 months">6 months</option>
+                <option value="12 months">12 months</option>
+                <option value="18 months">18 months</option>
+                <option value="24 months">24 months</option>
+                <option value="Ongoing">Ongoing</option>
+              </select>
+            </div>
+
+            <div class="msiq-form__field msiq-form__field--inline-pair">
+              <div>
+                <label class="msiq-form__label" for="sbMetric2">Target 2: metric</label>
+                <input class="msiq-form__input" type="text" id="sbMetric2" name="SingleLine4" maxlength="120">
+              </div>
+              <div>
+                <label class="msiq-form__label" for="sbValue2">Target 2: target value</label>
+                <input class="msiq-form__input" type="text" id="sbValue2" name="SingleLine3" maxlength="120">
+              </div>
+            </div>
+            <div class="msiq-form__field">
+              <label class="msiq-form__label" for="sbTime2">Target 2: timeframe</label>
+              <select class="msiq-form__select" id="sbTime2" name="Dropdown3">
+                <option value="">Select...</option>
+                <option value="6 months">6 months</option>
+                <option value="12 months">12 months</option>
+                <option value="18 months">18 months</option>
+                <option value="24 months">24 months</option>
+                <option value="Ongoing">Ongoing</option>
+              </select>
+            </div>
+
+            <div class="msiq-form__field msiq-form__field--inline-pair">
+              <div>
+                <label class="msiq-form__label" for="sbMetric3">Target 3: metric</label>
+                <input class="msiq-form__input" type="text" id="sbMetric3" name="SingleLine2" maxlength="120">
+              </div>
+              <div>
+                <label class="msiq-form__label" for="sbValue3">Target 3: target value</label>
+                <input class="msiq-form__input" type="text" id="sbValue3" name="SingleLine1" maxlength="120">
+              </div>
+            </div>
+            <div class="msiq-form__field">
+              <label class="msiq-form__label" for="sbTime3">Target 3: timeframe</label>
+              <select class="msiq-form__select" id="sbTime3" name="Dropdown2">
+                <option value="">Select...</option>
+                <option value="6 months">6 months</option>
+                <option value="12 months">12 months</option>
+                <option value="18 months">18 months</option>
+                <option value="24 months">24 months</option>
+                <option value="Ongoing">Ongoing</option>
+              </select>
+            </div>
+
+            <div class="msiq-form__field">
+              <label class="msiq-form__label msiq-form__label--required">Brand positioning posture</label>
+              <p class="msiq-form__help" style="margin-top: 0; margin-bottom: 0.75rem;">Pick the posture you actually run, not what sounds best. Volume isn't lesser than Premium; it's a different model.</p>
+              <div class="msiq-form__choice-group" data-required="true">
+                <label class="msiq-form__choice">
+                  <input type="radio" name="Radio" value="Exclusive: You actively filter who you serve. Allocation, invitation, or membership. Marker: friction at the door is intentional.">
+                  <span class="msiq-form__choice-label">Exclusive<span class="msiq-form__choice-label-sub">You actively filter who you serve. Allocation, invitation, or membership. Friction at the door is intentional.</span></span>
+                </label>
+                <label class="msiq-form__choice">
+                  <input type="radio" name="Radio" value="Premium: Top of your market, priced for it, but no access barriers. Marker: high price, no gate.">
+                  <span class="msiq-form__choice-label">Premium<span class="msiq-form__choice-label-sub">Top of your market, priced for it, but no access barriers. High price, no gate.</span></span>
+                </label>
+                <label class="msiq-form__choice">
+                  <input type="radio" name="Radio" value="Accessible: Reachable to a broad cross-section. Quality and approachability both matter. Marker: clear pricing, low-friction entry.">
+                  <span class="msiq-form__choice-label">Accessible<span class="msiq-form__choice-label-sub">Reachable to a broad cross-section. Quality and approachability both matter. Clear pricing, low-friction entry.</span></span>
+                </label>
+                <label class="msiq-form__choice">
+                  <input type="radio" name="Radio" value="Volume: Many customers per period. Throughput is the lever. Marker: revenue grows with transaction count.">
+                  <span class="msiq-form__choice-label">Volume<span class="msiq-form__choice-label-sub">Many customers per period. Throughput is the lever. Revenue grows with transaction count.</span></span>
+                </label>
+                <label class="msiq-form__choice">
+                  <input type="radio" name="Radio" value="Community: Returning, engaged customers who identify with your brand. Membership and shared identity matter most. Marker: customers talk about you as">
+                  <span class="msiq-form__choice-label">Community<span class="msiq-form__choice-label-sub">Returning, engaged customers who identify with your brand. Membership and shared identity matter most.</span></span>
+                </label>
+                <label class="msiq-form__choice">
+                  <input type="radio" name="Radio" value="Mixed: Two postures genuinely apply across distinct lines or segments. Use only if you can name which goes where.">
+                  <span class="msiq-form__choice-label">Mixed<span class="msiq-form__choice-label-sub">Two postures genuinely apply across distinct lines or segments. Use only if you can name which goes where.</span></span>
+                </label>
+              </div>
+              <div class="msiq-form__error"></div>
+            </div>
+
+            <div class="msiq-form__field">
+              <label class="msiq-form__label" for="sbStrategyWorks">If your strategy works, what changes in your business in 12 months?</label>
+              <textarea class="msiq-form__textarea" id="sbStrategyWorks" name="MultiLine5" rows="3"></textarea>
+              <p class="msiq-form__help">Paint the picture. We use this to recognize success when it shows up.</p>
+            </div>
+
+          </div>
+
+          <!-- ===== STEP 4 | How you measure success today ===== -->
+          <div class="msiq-form__step" data-step="4">
+            <h2 class="msiq-form__step-title">How you measure success today</h2>
+            <p class="msiq-form__step-subtitle">What you track, what you wish you tracked, and what would warn you.</p>
+
+            <div class="msiq-form__field">
+              <label class="msiq-form__label">Lagging indicators you already track</label>
+              <div class="msiq-form__choice-group msiq-form__choice-group--grid">
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox2" value="Revenue"><span class="msiq-form__choice-label">Revenue</span></label>
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox2" value="Number of paying customers"><span class="msiq-form__choice-label">Number of paying customers</span></label>
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox2" value="Average ticket or order value"><span class="msiq-form__choice-label">Average ticket or order value</span></label>
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox2" value="Repeat purchase rate"><span class="msiq-form__choice-label">Repeat purchase rate</span></label>
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox2" value="Subscription or membership growth"><span class="msiq-form__choice-label">Subscription or membership growth</span></label>
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox2" value="Booking or reservation completions"><span class="msiq-form__choice-label">Booking or reservation completions</span></label>
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox2" value="Foot traffic"><span class="msiq-form__choice-label">Foot traffic</span></label>
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox2" value="Website conversions"><span class="msiq-form__choice-label">Website conversions</span></label>
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox2" value="Other"><span class="msiq-form__choice-label">Other</span></label>
+              </div>
+            </div>
+
+            <div class="msiq-form__field">
+              <label class="msiq-form__label" for="sbLeading">Leading indicators you wish you had</label>
+              <textarea class="msiq-form__textarea" id="sbLeading" name="MultiLine8" rows="3"></textarea>
+              <p class="msiq-form__help">What signals would warn you 60-90 days before revenue moved?</p>
+            </div>
+
+            <div class="msiq-form__field">
+              <label class="msiq-form__label" for="sbAnti">Anti-indicators: what going UP would actually mean we're attracting the wrong customer?</label>
+              <textarea class="msiq-form__textarea" id="sbAnti" name="MultiLine7" rows="3"></textarea>
+              <p class="msiq-form__help">Example: Yelp review volume going up could mean mass-market drift for an exclusive brand.</p>
+            </div>
+
+            <div class="msiq-form__field">
+              <label class="msiq-form__label">Will you supply us monthly revenue or visit numbers so we can show the leading-vs-lagging picture together?</label>
+              <div class="msiq-form__choice-group">
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox6" value="Yes"><span class="msiq-form__choice-label">Yes</span></label>
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox6" value="No"><span class="msiq-form__choice-label">No</span></label>
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox6" value="Maybe, ask me later"><span class="msiq-form__choice-label">Maybe, ask me later</span></label>
+              </div>
+              <p class="msiq-form__help">Optional but recommended. We share a simple form once a month.</p>
+            </div>
+
+          </div>
+
+          <!-- ===== STEP 5 | Channel and tactic priorities ===== -->
+          <div class="msiq-form__step" data-step="5">
+            <h2 class="msiq-form__step-title">Channel and tactic priorities</h2>
+            <p class="msiq-form__step-subtitle">Where to lean in, where to hold, where to pull back.</p>
+
+            <div class="msiq-form__field">
+              <label class="msiq-form__label">Channels you want to LEAN INTO in the next 12 months</label>
+              <div class="msiq-form__choice-group msiq-form__choice-group--grid">
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox5" value="SEO and organic search"><span class="msiq-form__choice-label">SEO and organic search</span></label>
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox5" value="AI assistant visibility"><span class="msiq-form__choice-label">AI assistant visibility</span></label>
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox5" value="Editorial and press coverage"><span class="msiq-form__choice-label">Editorial and press coverage</span></label>
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox5" value="Sommelier or industry referrals"><span class="msiq-form__choice-label">Sommelier or industry referrals</span></label>
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox5" value="Provider directories"><span class="msiq-form__choice-label">Provider directories</span></label>
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox5" value="OTA or booking partners"><span class="msiq-form__choice-label">OTA or booking partners</span></label>
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox5" value="Email marketing"><span class="msiq-form__choice-label">Email marketing</span></label>
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox5" value="Direct mail or allocations"><span class="msiq-form__choice-label">Direct mail or allocations</span></label>
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox5" value="Social organic"><span class="msiq-form__choice-label">Social organic</span></label>
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox5" value="Paid social"><span class="msiq-form__choice-label">Paid social</span></label>
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox5" value="Paid search"><span class="msiq-form__choice-label">Paid search</span></label>
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox5" value="Partner or affiliate"><span class="msiq-form__choice-label">Partner or affiliate</span></label>
+              </div>
+            </div>
+
+            <div class="msiq-form__field">
+              <label class="msiq-form__label">Channels you want to MAINTAIN (no growth investment, no decline)</label>
+              <div class="msiq-form__choice-group msiq-form__choice-group--grid">
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox1" value="SEO and organic search"><span class="msiq-form__choice-label">SEO and organic search</span></label>
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox1" value="AI assistant visibility"><span class="msiq-form__choice-label">AI assistant visibility</span></label>
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox1" value="Editorial and press coverage"><span class="msiq-form__choice-label">Editorial and press coverage</span></label>
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox1" value="Sommelier or industry referrals"><span class="msiq-form__choice-label">Sommelier or industry referrals</span></label>
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox1" value="Provider directories"><span class="msiq-form__choice-label">Provider directories</span></label>
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox1" value="OTA or booking partners"><span class="msiq-form__choice-label">OTA or booking partners</span></label>
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox1" value="Email marketing"><span class="msiq-form__choice-label">Email marketing</span></label>
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox1" value="Direct mail or allocations"><span class="msiq-form__choice-label">Direct mail or allocations</span></label>
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox1" value="Social organic"><span class="msiq-form__choice-label">Social organic</span></label>
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox1" value="Paid social"><span class="msiq-form__choice-label">Paid social</span></label>
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox1" value="Paid search"><span class="msiq-form__choice-label">Paid search</span></label>
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox1" value="Partner or affiliate"><span class="msiq-form__choice-label">Partner or affiliate</span></label>
+              </div>
+            </div>
+
+            <div class="msiq-form__field">
+              <label class="msiq-form__label">Channels you want to AVOID or DEPRIORITIZE</label>
+              <div class="msiq-form__choice-group msiq-form__choice-group--grid">
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox3" value="SEO and organic search"><span class="msiq-form__choice-label">SEO and organic search</span></label>
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox3" value="AI assistant visibility"><span class="msiq-form__choice-label">AI assistant visibility</span></label>
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox3" value="Editorial and press coverage"><span class="msiq-form__choice-label">Editorial and press coverage</span></label>
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox3" value="Sommelier or industry referrals"><span class="msiq-form__choice-label">Sommelier or industry referrals</span></label>
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox3" value="Provider directories"><span class="msiq-form__choice-label">Provider directories</span></label>
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox3" value="OTA or booking partners"><span class="msiq-form__choice-label">OTA or booking partners</span></label>
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox3" value="Email marketing"><span class="msiq-form__choice-label">Email marketing</span></label>
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox3" value="Direct mail or allocations"><span class="msiq-form__choice-label">Direct mail or allocations</span></label>
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox3" value="Social organic"><span class="msiq-form__choice-label">Social organic</span></label>
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox3" value="Paid social"><span class="msiq-form__choice-label">Paid social</span></label>
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox3" value="Paid search"><span class="msiq-form__choice-label">Paid search</span></label>
+                <label class="msiq-form__choice"><input type="checkbox" name="Checkbox3" value="Partner or affiliate"><span class="msiq-form__choice-label">Partner or affiliate</span></label>
+              </div>
+            </div>
+
+            <div class="msiq-form__field">
+              <label class="msiq-form__label" for="sbChannelNotes">Anything else we should know about your channel mix?</label>
+              <textarea class="msiq-form__textarea" id="sbChannelNotes" name="MultiLine9" rows="3"></textarea>
+            </div>
+
+          </div>
+
+          <!-- ===== STEP 6 | Brand non-negotiables ===== -->
+          <div class="msiq-form__step" data-step="6">
+            <h2 class="msiq-form__step-title">Brand non-negotiables</h2>
+            <p class="msiq-form__step-subtitle">The lines we should not cross.</p>
+
+            <div class="msiq-form__field">
+              <label class="msiq-form__label" for="sbBrandSound">In a sentence, how should your brand sound?</label>
+              <textarea class="msiq-form__textarea" id="sbBrandSound" name="MultiLine12" rows="2"></textarea>
+              <p class="msiq-form__help">e.g. producer-led, serious, founder-direct.</p>
+            </div>
+
+            <div class="msiq-form__field">
+              <label class="msiq-form__label" for="sbWordsAvoid">Words, tones, or framings you would never use</label>
+              <textarea class="msiq-form__textarea" id="sbWordsAvoid" name="MultiLine11" rows="3"></textarea>
+            </div>
+
+            <div class="msiq-form__field">
+              <label class="msiq-form__label" for="sbVisual">Visual rules we should respect</label>
+              <textarea class="msiq-form__textarea" id="sbVisual" name="MultiLine10" rows="3"></textarea>
+              <p class="msiq-form__help">Imagery style, color preferences, things to avoid.</p>
+            </div>
+
+            <div class="msiq-form__field">
+              <label class="msiq-form__label" for="sbPartnerships">What types of partnerships are off-limits?</label>
+              <input class="msiq-form__input" type="text" id="sbPartnerships" name="SingleLine7" maxlength="255">
+            </div>
+
+          </div>
+
+          <!-- ===== STEP 7 | Operational basics ===== -->
+          <div class="msiq-form__step" data-step="7">
+            <h2 class="msiq-form__step-title">Operational basics</h2>
+            <p class="msiq-form__step-subtitle">Last step. The details that route everything.</p>
+
+            <div class="msiq-form__field">
+              <label class="msiq-form__label msiq-form__label--required" for="sbBusinessName">Business name</label>
+              <input class="msiq-form__input" type="text" id="sbBusinessName" name="SingleLine8" required maxlength="120" autocomplete="organization">
+              <div class="msiq-form__error"></div>
+            </div>
+
+            <div class="msiq-form__field msiq-form__field--inline-pair">
+              <div>
+                <label class="msiq-form__label msiq-form__label--required" for="sbContactName">Contact name</label>
+                <input class="msiq-form__input" type="text" id="sbContactName" name="SingleLine10" required maxlength="120" autocomplete="name">
+                <div class="msiq-form__error"></div>
+              </div>
+              <div>
+                <label class="msiq-form__label" for="sbRole">Role</label>
+                <input class="msiq-form__input" type="text" id="sbRole" name="SingleLine9" maxlength="120" placeholder="Owner, Winemaker, GM...">
+              </div>
+            </div>
+
+            <div class="msiq-form__field">
+              <label class="msiq-form__label msiq-form__label--required" for="sbEmail">Contact email</label>
+              <input class="msiq-form__input" type="email" id="sbEmail" name="Email" required maxlength="120" autocomplete="email">
+              <div class="msiq-form__error"></div>
+            </div>
+
+            <div class="msiq-form__field">
+              <label class="msiq-form__label" for="sbWebsite">Primary website URL</label>
+              <input class="msiq-form__input" type="url" id="sbWebsite" name="Website" maxlength="255" placeholder="https://">
+            </div>
+
+            <div class="msiq-form__field">
+              <label class="msiq-form__label msiq-form__label--required" for="sbIndustry">Industry or practice</label>
+              <select class="msiq-form__select" id="sbIndustry" name="Dropdown7" required>
+                <option value="">Select...</option>
+                <option value="Winery">Winery</option>
+                <option value="Healthcare / Medical">Healthcare / Medical</option>
+                <option value="Hospitality / F&B">Hospitality / F&amp;B</option>
+                <option value="Professional Services">Professional Services</option>
+                <option value="DTC / Ecommerce">DTC / Ecommerce</option>
+              </select>
+              <div class="msiq-form__error"></div>
+            </div>
+
+            <div class="msiq-form__field">
+              <label class="msiq-form__label msiq-form__label--required" for="sbCadence">Document refresh cadence preference</label>
+              <select class="msiq-form__select" id="sbCadence" name="Dropdown6" required>
+                <option value="">Select...</option>
+                <option value="Annual">Annual</option>
+                <option value="Semi-Annual">Semi-Annual</option>
+                <option value="Quarterly">Quarterly</option>
+              </select>
+              <div class="msiq-form__error"></div>
+            </div>
+
+            <div class="msiq-form__field">
+              <label class="msiq-form__label" for="sbOtherContext">Any other context we should know to read your business correctly?</label>
+              <textarea class="msiq-form__textarea" id="sbOtherContext" name="MultiLine13" rows="3"></textarea>
+            </div>
+
+          </div>
+
+          <div class="msiq-form__buttons">
+            <button type="button" class="msiq-form__btn msiq-form__btn--secondary" data-action="back">Back</button>
+            <button type="button" class="msiq-form__btn msiq-form__btn--primary" data-action="next">Continue →</button>
+            <button type="submit" class="msiq-form__btn msiq-form__btn--primary" data-action="submit" style="display:none;">Submit Strategic Brief →</button>
+          </div>
+
+          <div class="msiq-form__success">
+            <svg class="msiq-form__success-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <h2 class="msiq-form__success-title">Your Strategic Brief is in.</h2>
+            <p class="msiq-form__success-body">Thank you. We'll review it and get your engagement moving. You'll get a confirmation email shortly.</p>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo"><img src="/assets/logos/logo-horizontal-dark.svg" alt="Main Street IQ - AI-Augmented Strategic Advisory"></a>
+          <p>AI-Augmented Strategic Advisory. Outcomes you can justify, without the headcount.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="/about">About</a>
+          <a href="/our-services">Services</a>
+          <a href="/our-work">Our Work</a>
+          <a href="/blog">Blog</a>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="/contact">Contact</a>
+          <a href="/partners">Partners</a>
+          <a href="/fit-call">Book a Fit Call</a>
+          <a href="https://www.linkedin.com/in/johnscotthess" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+        <div class="footer-col">
+          <h4>Verticals</h4>
+          <a href="/wineries">Wineries</a>
+          <a href="/wellness">Health &amp; Wellness</a>
+          <a href="/aesthetics">Elective Medicine</a>
+        </div>
+        <div class="footer-col">
+          <h4>Locations</h4>
+          <a href="/fractional-cfo-san-luis-obispo">San Luis Obispo</a>
+          <a href="/fractional-cfo-santa-barbara">Santa Barbara</a>
+          <a href="/fractional-cfo-ventura">Ventura</a>
+          <a href="/fractional-cfo-los-angeles">Los Angeles</a>
+          <a href="/fractional-cfo-orange-county">Orange County</a>
+          <a href="/fractional-cfo-san-diego">San Diego</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/legal/privacy">Privacy</a>
+          <a href="/legal/terms">Terms of Use</a>
+          <a href="/legal/cookies">Cookies</a>
+          <a href="/legal/subscription-terms">Subscription Terms</a>
+          <a href="/legal/refund-cancellation">Refunds</a>
+          <a href="/legal/ai-use">AI Use</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Main Street IQ. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/forms.js" defer></script>
+
+  <style>
+    .sb-form-section {
+      background: var(--color-ice, #F4F6FA);
+      padding: 4rem 0;
+    }
+    .sb-form-wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      background: var(--color-white, #FFFFFF);
+      padding: 2.5rem;
+      border-radius: 8px;
+      border: 1px solid var(--color-border, #E5E2DC);
+    }
+    @media (max-width: 640px) {
+      .sb-form-wrap { padding: 1.75rem; }
+      .sb-form-section { padding: 2.5rem 0; }
+    }
+  </style>
+
+  <script>
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 20);
+    });
+    const toggle = document.getElementById('nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      toggle.classList.toggle('active');
+    });
+  </script>
+
+  <script>
+    // Instantiate the multi-step controller. No onSubmit callback -> the form
+    // submits natively (full-page POST) to the Zoho htmlRecords endpoint.
+    document.addEventListener('DOMContentLoaded', function () {
+      var sbForm = document.getElementById('msiqStrategicBriefForm');
+      if (sbForm && window.MSIQForm) {
+        new MSIQForm({
+          formElement: sbForm,
+          analytics: { category: 'strategic_brief' }
+        }).init();
+      }
+
+      // Last-step (step 7) required-field guard. The library validates steps
+      // 1-6 on each Continue click; the final step submits natively, so guard
+      // its required fields here before the POST leaves the page.
+      if (sbForm) {
+        sbForm.addEventListener('submit', function (e) {
+          var required = [
+            ['sbBusinessName', 'business name'],
+            ['sbContactName', 'contact name'],
+            ['sbEmail', 'contact email'],
+            ['sbIndustry', 'industry or practice'],
+            ['sbCadence', 'refresh cadence']
+          ];
+          for (var i = 0; i < required.length; i++) {
+            var el = document.getElementById(required[i][0]);
+            if (el && !(el.value || '').trim()) {
+              e.preventDefault();
+              alert('Please complete the ' + required[i][1] + ' field before submitting.');
+              el.focus();
+              return false;
+            }
+          }
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'strategic_brief_submit', { page_path: window.location.pathname });
+          }
+        }, true);
+      }
+    });
+  </script>
+
+</body>
+</html>
