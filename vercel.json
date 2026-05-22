@@ -1,6 +1,66 @@
 {
   "redirects": [
     {
+      "source": "/cfo-assessment",
+      "destination": "/fit-call",
+      "permanent": true
+    },
+    {
+      "source": "/cfo-assessment.html",
+      "destination": "/fit-call",
+      "permanent": true
+    },
+    {
+      "source": "/cciq-methodology",
+      "destination": "/wineries",
+      "permanent": true
+    },
+    {
+      "source": "/cciq-methodology.html",
+      "destination": "/wineries",
+      "permanent": true
+    },
+    {
+      "source": "/head-of-finance-services",
+      "destination": "/our-services",
+      "permanent": true
+    },
+    {
+      "source": "/head-of-finance-services.html",
+      "destination": "/our-services",
+      "permanent": true
+    },
+    {
+      "source": "/pe-ops-partner",
+      "destination": "/our-services",
+      "permanent": true
+    },
+    {
+      "source": "/pe-ops-partner.html",
+      "destination": "/our-services",
+      "permanent": true
+    },
+    {
+      "source": "/cfo-for-series-a-prep",
+      "destination": "/our-services",
+      "permanent": true
+    },
+    {
+      "source": "/cfo-for-series-a-prep.html",
+      "destination": "/our-services",
+      "permanent": true
+    },
+    {
+      "source": "/5-day-close",
+      "destination": "/our-services",
+      "permanent": true
+    },
+    {
+      "source": "/5-day-close.html",
+      "destination": "/our-services",
+      "permanent": true
+    },
+    {
       "source": "/cciq-assessment",
       "destination": "/winery-assessment",
       "permanent": true
