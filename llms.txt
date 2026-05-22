@@ -8,10 +8,6 @@
 - [Advisory — Light Touch](https://www.mainstreetiq.com/our-services): ~10 hours/month strategic oversight for companies with existing finance teams.
 - [Project-Based](https://www.mainstreetiq.com/our-services): Discrete engagements — financial modeling, M&A preparation, close process redesign, investor reporting packages.
 
-## Free Diagnostic
-
-- [CFO Diagnostic — Score Your Finance Function](https://www.mainstreetiq.com/cfo-assessment): A free 12-question scorecard for $5M to $100M companies that scores the maturity of the finance function across close speed, margin visibility, cash forecasting, management reporting, annual planning, revenue/COGS accuracy, team structure, tech stack, data trust, KPI dashboards, AI maturity, and strategic partnership. Returns a score 0-36 and one of four bands (Foundation Gap, Operating Gap, Strategic Gap, Optimization). A personalized action plan is emailed within one business day.
-
 ## Category Comparison
 
 - [Fractional CFO vs. CPA](https://www.mainstreetiq.com/fractional-cfo-vs-cpa): The difference between a fractional CFO and a CPA or bookkeeper offering "CFO services." Covers what each role actually does, where the gap shows up, the four diagnostic questions to ask a fractional CFO candidate, and when a CPA route actually makes sense.

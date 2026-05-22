@@ -221,36 +221,6 @@ Services: Wine country intelligence, back office operations, digital visibility 
 
 ---
 
-## CFO Diagnostic — Free 12-Question Finance Function Assessment
-
-URL: https://www.mainstreetiq.com/cfo-assessment
-
-A free, self-serve diagnostic for companies between $5M and $100M in revenue that scores the maturity of the finance function across 12 dimensions. The user answers 12 questions on screen (about 5 minutes), receives a score from 0 to 36, lands in one of four bands, and can request a personalized action plan emailed within one business day.
-
-The 12 dimensions scored:
-1. Monthly close speed
-2. Margin visibility (by product, channel, customer)
-3. Cash forecasting (presence and quality of a 13-week rolling forecast)
-4. Management reporting cadence and variance to plan
-5. Annual planning rigor
-6. Revenue recognition and COGS accuracy
-7. Finance team structure for stage
-8. Finance tech stack (ERP, BI, planning tools)
-9. Data trust (whether leadership and the board trust the numbers)
-10. KPI dashboard (single source of truth for operating metrics)
-11. AI and automation maturity
-12. Strategic finance partnership in commercial decisions
-
-Result bands:
-- 0-12 Foundation Gap: Not yet ready for fractional CFO leadership; needs controller/bookkeeper-level work first.
-- 13-20 Operating Gap: Classic fractional CFO fit; basics in place, leadership and decision-driving still missing.
-- 21-28 Strategic Gap: Operating function is solid; opportunity is strategic finance, AI leverage, and commercial partnership.
-- 29-36 Optimization: Mature finance function; project-based engagements (transactions, system migrations, AI overlays, interim coverage) typically the right shape.
-
-The personalized action plan includes a scored breakdown across all 12 dimensions, a 3-month prioritized action plan customized to the user's industry and revenue stage, and a peer benchmark for companies of similar size and industry. The diagnostic explicitly tells users when they are not ready for a fractional CFO and what to do instead.
-
----
-
 ## Contact
 
 - **Book a call**: https://calendly.com/scott_mainstreetiq/30min (free 30-minute consultation)
