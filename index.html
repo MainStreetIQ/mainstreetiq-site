@@ -30,12 +30,17 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Outfit: trimmed from 6 weights (200-700) to 4 (300/400/500/600) actually used above the fold; saves ~70KB on first paint -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css">
 
-  <!-- Preload hero LCP image -->
-  <link rel="preload" as="image" href="assets/images/hero-central-coast.avif" type="image/avif" fetchpriority="high">
+  <!-- Preload hero LCP image: responsive srcset matches the picture element below.
+       Mobile gets a 75KB AVIF (was 145KB); desktop unchanged at 145KB AVIF. -->
+  <link rel="preload" as="image" type="image/avif" fetchpriority="high"
+        href="assets/images/hero-central-coast.avif"
+        imagesrcset="assets/images/hero-central-coast-mobile.avif 800w, assets/images/hero-central-coast.avif 1600w"
+        imagesizes="100vw">
 
   <!-- Structured Data: WebSite -->
   <script type="application/ld+json">
@@ -177,8 +182,12 @@
   <!-- ===== HERO ===== -->
   <section class="hero hero-has-bg">
     <picture>
-      <source srcset="assets/images/hero-central-coast.avif" type="image/avif">
-      <source srcset="assets/images/hero-central-coast.webp" type="image/webp">
+      <source type="image/avif"
+              srcset="assets/images/hero-central-coast-mobile.avif 800w, assets/images/hero-central-coast.avif 1600w"
+              sizes="100vw">
+      <source type="image/webp"
+              srcset="assets/images/hero-central-coast-mobile.webp 800w, assets/images/hero-central-coast.webp 1600w"
+              sizes="100vw">
       <img src="assets/images/hero-central-coast.jpg" alt="" class="hero-bg" aria-hidden="true" fetchpriority="high" decoding="async" width="1600" height="900">
     </picture>
     <div class="hero-overlay"></div>
