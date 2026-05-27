@@ -82,6 +82,40 @@
     "description": "Navy veteran, Founder and Fractional CFO of Main Street IQ. 20+ years building finance functions that operationalize business decisions, now focused on owner-operated companies under $50MM on the California coast. Main Street IQ is veteran-owned and operated."
   }
   </script>
+
+  <!-- Structured Data: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Who is Scott Hess?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Founder of Main Street IQ. Twenty-plus years of CFO experience across subscription ecommerce, retail, and institutional finance. CFO at Watch Gang ($40M subscription ecommerce), CFO and VP Operations at Haberdash (luxury menswear), 12 years at Northern Trust in institutional finance (modeling, M&A due diligence, ERP implementation). U.S. Navy veteran. MBA from Pepperdine's Graziadio School of Business."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why does veteran-owned matter for finance work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Two reasons. Operationally, military service trains discipline, structure, and reliability under pressure; finance work for owner-operators requires the same. Structurally, veteran-owned status is a real accountability commitment to clients and to the federal contracting framework. Main Street IQ LLC is veteran-owned and operated."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does Main Street IQ stay objective if Scott is also the operator?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We are not a marketing agency. We do not run your ads, build your website, or write your blog posts. We tell you what is actually happening, what to do about it, and (for Advisory clients) sit in the room while you decide. Execution stays with your team or your vetted partners. The fee is for judgment, not for selling you services you do not need."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -219,6 +253,45 @@
     </div>
   </section>
 
+  <!-- ===== COMMON QUESTIONS (FAQ for AEO / snippet eligibility) ===== -->
+  <section class="bg-light">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Common questions</span>
+        <h2 class="section-title">What founders ask about Scott</h2>
+      </div>
+      <div class="container-narrow" style="max-width: 820px; margin: 0 auto;">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Who is Scott Hess?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Founder of Main Street IQ. Twenty-plus years of CFO experience across subscription ecommerce, retail, and institutional finance. CFO at Watch Gang ($40M subscription ecommerce), CFO and VP Operations at Haberdash (luxury menswear), 12 years at Northern Trust in institutional finance (modeling, M&amp;A due diligence, ERP implementation). U.S. Navy veteran. MBA from Pepperdine's Graziadio School of Business.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Why does veteran-owned matter for finance work?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Two reasons. Operationally, military service trains discipline, structure, and reliability under pressure; finance work for owner-operators requires the same. Structurally, veteran-owned status is a real accountability commitment to clients and to the federal contracting framework. Main Street IQ LLC is veteran-owned and operated.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>How does Main Street IQ stay objective if Scott is also the operator?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <p>We are not a marketing agency. We do not run your ads, build your website, or write your blog posts. We tell you what is actually happening, what to do about it, and (for Advisory clients) sit in the room while you decide. Execution stays with your team or your vetted partners. The fee is for judgment, not for selling you services you do not need.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== CTA BANNER ===== -->
   <section class="cta-banner">
     <div class="container">
@@ -346,6 +419,22 @@
             page_path: window.location.pathname,
             link_url: a.href
           });
+        }
+      });
+    });
+
+    // FAQ accordion toggle
+    document.querySelectorAll('.faq-question').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var item = btn.parentElement;
+        var isOpen = item.classList.contains('active');
+        document.querySelectorAll('.faq-item').forEach(function(i) {
+          i.classList.remove('active');
+          i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        });
+        if (!isOpen) {
+          item.classList.add('active');
+          btn.setAttribute('aria-expanded', 'true');
         }
       });
     });
