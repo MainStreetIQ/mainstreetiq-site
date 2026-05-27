@@ -314,21 +314,35 @@
           </div>
 
           <div class="msiq-form__field">
-            <label class="msiq-form__label msiq-form__label--required" for="msiqWcirAva">Which AVA or region is your winery in?</label>
-            <select class="msiq-form__select" id="msiqWcirAva" required aria-label="Wine region">
-              <option value="">Select an AVA or region...</option>
-              <option value="Santa Ynez Valley">Santa Ynez Valley</option>
-              <option value="Sta. Rita Hills">Sta. Rita Hills</option>
-              <option value="Happy Canyon">Happy Canyon</option>
-              <option value="Santa Maria Valley">Santa Maria Valley</option>
-              <option value="Ballard Canyon">Ballard Canyon</option>
-              <option value="Los Olivos District">Los Olivos District</option>
-              <option value="Alisos Canyon">Alisos Canyon</option>
-              <option value="Paso Robles">Paso Robles</option>
-              <option value="York Mountain">York Mountain</option>
-              <option value="SLO Coast (Edna Valley, Arroyo Grande)">SLO Coast (Edna Valley, Arroyo Grande)</option>
-              <option value="Other Central Coast">Other Central Coast</option>
-              <option value="Not a Central Coast winery">Not a Central Coast winery</option>
+            <label class="msiq-form__label msiq-form__label--required" for="msiqWcirAva">Where is your tasting room located?</label>
+            <select class="msiq-form__select" id="msiqWcirAva" required aria-label="Tasting room location">
+              <option value="">Select a location...</option>
+              <optgroup label="Santa Barbara County">
+                <option value="Santa Barbara (downtown / Funk Zone)">Santa Barbara (downtown / Funk Zone)</option>
+                <option value="Carpinteria">Carpinteria</option>
+                <option value="Goleta">Goleta</option>
+                <option value="Santa Ynez">Santa Ynez</option>
+                <option value="Los Olivos">Los Olivos</option>
+                <option value="Solvang">Solvang</option>
+                <option value="Buellton">Buellton</option>
+                <option value="Lompoc">Lompoc</option>
+                <option value="Santa Maria">Santa Maria</option>
+              </optgroup>
+              <optgroup label="San Luis Obispo County">
+                <option value="Paso Robles">Paso Robles</option>
+                <option value="Templeton">Templeton</option>
+                <option value="Atascadero">Atascadero</option>
+                <option value="San Luis Obispo">San Luis Obispo</option>
+                <option value="Edna Valley / Arroyo Grande">Edna Valley / Arroyo Grande</option>
+                <option value="Cambria">Cambria</option>
+              </optgroup>
+              <optgroup label="Other">
+                <option value="Multiple tasting rooms">Multiple tasting rooms</option>
+                <option value="Estate / vineyard tasting only (no off-site)">Estate / vineyard tasting only (no off-site)</option>
+                <option value="DTC only (no tasting room)">DTC only (no tasting room)</option>
+                <option value="Other Central Coast">Other Central Coast</option>
+                <option value="Not a Central Coast winery">Not a Central Coast winery</option>
+              </optgroup>
             </select>
             <div class="msiq-form__error"></div>
           </div>
@@ -608,7 +622,7 @@
         var desc = document.getElementById('msiqWcirDescription');
         if (desc) {
           var lines = [desc.value];
-          if (ava) lines.push('AVA: ' + ava);
+          if (ava) lines.push('Tasting Room: ' + ava);
           if (referral) lines.push('Referral: ' + referral);
           desc.value = lines.join(' | ');
         }
