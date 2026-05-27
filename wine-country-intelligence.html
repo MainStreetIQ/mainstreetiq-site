@@ -23,6 +23,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="/assets/css/forms.css">
 
   <script type="application/ld+json">
   {
@@ -73,7 +74,7 @@
       <h1>The Wine Country Intelligence Report</h1>
       <p>A quarterly digital-performance benchmark of the Central Coast wine market. Every tracked winery scored on six dimensions, movement called quarter over quarter, and the operators gaining and losing ground named. Current issue: Q1 2026, Santa Barbara County, all 175 wineries.</p>
       <div class="hero-buttons">
-        <a href="/wineries#wcir-signup" class="btn btn-white">Subscribe &rarr;</a>
+        <a href="#wcir-signup" class="btn btn-white">Subscribe &rarr;</a>
         <a href="/samples/wine-country-intelligence-report-sample.pdf" class="btn btn-outline-white" target="_blank" rel="noopener">View the sample report</a>
       </div>
     </div>
@@ -253,10 +254,112 @@
         <div class="card"><h3>Report only</h3><p><strong>$800 / year.</strong> The quarterly Wine Country Intelligence Report for one county.</p></div>
         <div class="card"><h3>Single issue</h3><p><strong>$250.</strong> One quarterly issue, if you want to read it before subscribing.</p></div>
       </div>
-      <div style="text-align: center; margin-top: 2.5rem;">
-        <a href="/wineries#wcir-signup" class="btn btn-primary">Subscribe to the report &rarr;</a>
-      </div>
       <p class="wcir-disclaimer">Scores are based on publicly available data collected via automated tools. Winery names and brands referenced are the property of their respective owners. The report is independent analysis and is not affiliated with, endorsed by, or sponsored by any winery named.</p>
+    </div>
+  </section>
+
+  <!-- ===== WCIR SIGNUP ===== -->
+  <section id="wcir-signup">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Get the sample</span>
+        <h2 class="section-title">Get the next Wine Country Intelligence Report</h2>
+        <p class="section-subtitle">Tell us where your winery is and we'll send the Q1 2026 Santa Barbara County issue as a sample within one business day. Q2 launches in July covering Santa Barbara plus San Luis Obispo County, free 10-page summary for subscribers.</p>
+      </div>
+
+      <div style="max-width: 760px; margin: 0 auto 2.5rem; text-align: center;">
+        <p style="font-weight: 300; color: var(--neutral, #6B7480); line-height: 1.6;"><a href="/samples/wine-country-intelligence-report-sample.pdf" target="_blank" rel="noopener" style="color: var(--navy, #2B4E8C); font-weight: 500;">View the sample without signing up &rarr;</a></p>
+      </div>
+
+      <div class="wcir-form-wrap" id="wcir-signup-form-wrap">
+        <form class="msiq-form" id="msiqWcirForm" action="https://crm.zoho.com/crm/WebToLeadForm" method="POST" accept-charset="UTF-8">
+          <input type="hidden" name="xnQsjsdp" value="b20d9533cf4fc99c3bf706d8c6c71a4a3954a07e69e9285bf3e5dba36994b362">
+          <input type="hidden" name="zc_gad" id="msiqWcirZcGad" value="">
+          <input type="hidden" name="xmIwtLD" value="815a9111e999269efd4d1d2db372b902a70c171679ef4b5b670edcda3a91cb3c5cd8963718a85063b57d553234721aae">
+          <input type="hidden" name="actionType" value="TGVhZHM=">
+          <input type="hidden" name="returnURL" value="https://www.mainstreetiq.com/wine-country-intelligence?signup=success">
+          <input type="hidden" name="Description" id="msiqWcirDescription" value="Wine Country Intelligence Report subscription interest (from WCIR page)">
+          <!-- Lead Source kept as "CCIQ Webform" (strict Zoho picklist value) per ops memory feedback_zoho_webtolead_picklist_strict. -->
+          <input type="hidden" name="Lead Source" value="CCIQ Webform">
+          <input type="hidden" name="Industry" value="Winery">
+          <input type="hidden" name="Lead Status" value="Pre-Qualified">
+          <input type="hidden" name="LEADCF6" value="Submitted">
+          <input type="hidden" name="LEADCF5" id="msiqWcirHiddenAva" value="">
+          <input type="hidden" name="LEADCF4" id="msiqWcirHiddenReferral" value="">
+          <input type="text" name="aG9uZXlwb3Q" class="msiq-form__honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+          <div class="msiq-form__field msiq-form__field--inline-pair">
+            <div>
+              <label class="msiq-form__label" for="msiqWcirFirstName">First name</label>
+              <input class="msiq-form__input" type="text" id="msiqWcirFirstName" name="First Name" maxlength="40" autocomplete="given-name">
+            </div>
+            <div>
+              <label class="msiq-form__label msiq-form__label--required" for="msiqWcirLastName">Last name</label>
+              <input class="msiq-form__input" type="text" id="msiqWcirLastName" name="Last Name" required maxlength="80" autocomplete="family-name">
+              <div class="msiq-form__error"></div>
+            </div>
+          </div>
+
+          <div class="msiq-form__field msiq-form__field--inline-pair">
+            <div>
+              <label class="msiq-form__label msiq-form__label--required" for="msiqWcirEmail">Email</label>
+              <input class="msiq-form__input" type="email" id="msiqWcirEmail" name="Email" required maxlength="100" autocomplete="email">
+              <div class="msiq-form__error"></div>
+            </div>
+            <div>
+              <label class="msiq-form__label msiq-form__label--required" for="msiqWcirCompany">Winery name</label>
+              <input class="msiq-form__input" type="text" id="msiqWcirCompany" name="Company" required maxlength="100" autocomplete="organization">
+              <div class="msiq-form__error"></div>
+            </div>
+          </div>
+
+          <div class="msiq-form__field">
+            <label class="msiq-form__label msiq-form__label--required" for="msiqWcirAva">Which AVA or region is your winery in?</label>
+            <select class="msiq-form__select" id="msiqWcirAva" required aria-label="Wine region">
+              <option value="">Select an AVA or region...</option>
+              <option value="Santa Ynez Valley">Santa Ynez Valley</option>
+              <option value="Sta. Rita Hills">Sta. Rita Hills</option>
+              <option value="Happy Canyon">Happy Canyon</option>
+              <option value="Santa Maria Valley">Santa Maria Valley</option>
+              <option value="Ballard Canyon">Ballard Canyon</option>
+              <option value="Los Olivos District">Los Olivos District</option>
+              <option value="Alisos Canyon">Alisos Canyon</option>
+              <option value="Paso Robles">Paso Robles</option>
+              <option value="York Mountain">York Mountain</option>
+              <option value="SLO Coast (Edna Valley, Arroyo Grande)">SLO Coast (Edna Valley, Arroyo Grande)</option>
+              <option value="Other Central Coast">Other Central Coast</option>
+              <option value="Not a Central Coast winery">Not a Central Coast winery</option>
+            </select>
+            <div class="msiq-form__error"></div>
+          </div>
+
+          <div class="msiq-form__field">
+            <label class="msiq-form__label" for="msiqWcirReferral">How did you hear about us?</label>
+            <select class="msiq-form__select" id="msiqWcirReferral" aria-label="How did you hear about us">
+              <option value="">Optional...</option>
+              <option value="Search engine (Google, etc.)">Search engine (Google, etc.)</option>
+              <option value="Linkedin">Linkedin</option>
+              <option value="Facebook / Instagram / Meta">Facebook / Instagram / Meta</option>
+              <option value="X (Twitter)">X (Twitter)</option>
+              <option value="Referral from another winery">Referral from another winery</option>
+              <option value="Industry event or trade show">Industry event or trade show</option>
+              <option value="Press or article">Press or article</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="msiq-form__buttons msiq-form__buttons--end">
+            <button type="submit" class="msiq-form__btn msiq-form__btn--primary" data-action="submit">Send Me the Sample &rarr;</button>
+          </div>
+        </form>
+        <p class="wcir-form-fineprint">Central Coast wineries receive the sample within one business day. Bundle (Wine Country Intelligence Report + Wine Pricing Report) is $1,000/yr. Single issues $250. Unsubscribe any time.</p>
+      </div>
+
+      <div class="wcir-success" id="wcir-signup-success" style="display:none;">
+        <svg class="wcir-success-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>Thanks, your sample is on the way.</h3>
+        <p>We'll send the sample of the Wine Country Intelligence Report within one business day. Check your inbox (and spam folder, just in case).</p>
+      </div>
     </div>
   </section>
 
@@ -427,6 +530,55 @@
       color: var(--neutral, #6B7480);
       line-height: 1.55;
     }
+    .wcir-form-wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      background: var(--color-white, #FFFFFF);
+      padding: 2.5rem;
+      border-radius: 8px;
+      border: 1px solid var(--color-border, #E5E2DC);
+    }
+    @media (max-width: 640px) {
+      .wcir-form-wrap { padding: 1.75rem; }
+    }
+    .wcir-form-fineprint {
+      margin: 1.25rem auto 0;
+      max-width: 720px;
+      font-size: 0.85rem;
+      color: var(--neutral, #6B7480);
+      text-align: center;
+      font-weight: 300;
+      line-height: 1.5;
+    }
+    .wcir-success {
+      max-width: 560px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 2.5rem;
+      background: var(--color-white, #FFFFFF);
+      border: 1px solid var(--color-border, #E5E2DC);
+      border-radius: 8px;
+    }
+    .wcir-success-icon {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto 1rem;
+      color: var(--color-success, #2E7D52);
+      display: block;
+    }
+    .wcir-success h3 {
+      font-weight: 500;
+      color: var(--color-midnight, #0F1C2E);
+      font-size: 1.35rem;
+      margin: 0 0 0.5rem;
+      letter-spacing: -0.1px;
+    }
+    .wcir-success p {
+      color: var(--neutral, #6B7480);
+      font-weight: 300;
+      line-height: 1.6;
+      margin: 0;
+    }
   </style>
 
   <script>
@@ -440,6 +592,41 @@
       navLinks.classList.toggle('open');
       toggle.classList.toggle('active');
     });
+
+    // WCIR signup: sync select values into Zoho LEADCF custom-field hidden
+    // inputs (Zoho Web-to-Lead drops select values, accepts hidden inputs).
+    // Enriches Description as fallback for downstream reporting.
+    (function(){
+      var form = document.getElementById('msiqWcirForm');
+      if (!form) return;
+      form.addEventListener('submit', function(){
+        var ava = (document.getElementById('msiqWcirAva').value || '').trim();
+        var referral = (document.getElementById('msiqWcirReferral').value || '').trim();
+        if (ava) document.getElementById('msiqWcirHiddenAva').value = ava;
+        if (referral) document.getElementById('msiqWcirHiddenReferral').value = referral;
+
+        var desc = document.getElementById('msiqWcirDescription');
+        if (desc) {
+          var lines = [desc.value];
+          if (ava) lines.push('AVA: ' + ava);
+          if (referral) lines.push('Referral: ' + referral);
+          desc.value = lines.join(' | ');
+        }
+      }, true);
+    })();
+
+    // WCIR signup: show success state when Zoho redirects back with ?signup=success
+    (function(){
+      if (new URLSearchParams(window.location.search).get('signup') !== 'success') return;
+      var formWrap = document.getElementById('wcir-signup-form-wrap');
+      var success = document.getElementById('wcir-signup-success');
+      if (formWrap) formWrap.style.display = 'none';
+      if (success) success.style.display = 'block';
+      setTimeout(function(){
+        var target = document.getElementById('wcir-signup');
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 150);
+    })();
   </script>
 
 </body>
