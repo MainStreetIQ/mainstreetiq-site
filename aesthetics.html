@@ -20,6 +20,48 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+
+  <!-- Structured Data: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is different about CFO services for an elective medicine practice?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Elective medicine runs on multi-procedure mix and the consultation-to-procedure lever. A facial-aesthetic patient may convert to injectables, then to surgery, over years. The CFO work is reading the funnel from initial consultation through lifetime procedure value, by service line, so the marketing spend and the schedule mix decisions both stop being guesses."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you handle multi-modality patient economics in aesthetics?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cosmetic surgery, injectables, laser, dermatology, MedSpa, and adult cosmetic ortho all sit in one practice but they have different acquisition costs, lifetime values, and operational cadences. We separate them in the analytics so you can see which service line is actually paying for itself and which is being subsidized by the others."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does an audit work for a med spa or plastic surgery practice?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Website Audit benchmarks visibility, search authority, and AI-search citation rate against local and national peers. The Buyer Alignment Audit (usually the right entry point) diagnoses whether the patient mix matches the procedure economics you need. The Full Business Diagnostic adds the operational and capital read."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does Main Street IQ cost for an aesthetics practice?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Published on this page: $2,995 for the Website Audit, $3,995 for the Buyer Alignment Audit, $17,995 for the Full Business Diagnostic. Monitor Plus is $1,200 per month. Advisory engagements are scoped at the Fit Call and quoted per client."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -184,6 +226,54 @@
     </div>
   </section>
 
+  <!-- ===== COMMON QUESTIONS (FAQ for AEO / snippet eligibility) ===== -->
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Common questions</span>
+        <h2 class="section-title">What practice owners ask</h2>
+      </div>
+      <div class="container-narrow" style="max-width: 820px; margin: 0 auto;">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>What is different about CFO services for an elective medicine practice?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Elective medicine runs on multi-procedure mix and the consultation-to-procedure lever. A facial-aesthetic patient may convert to injectables, then to surgery, over years. The CFO work is reading the funnel from initial consultation through lifetime procedure value, by service line, so the marketing spend and the schedule mix decisions both stop being guesses.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>How do you handle multi-modality patient economics in aesthetics?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Cosmetic surgery, injectables, laser, dermatology, MedSpa, and adult cosmetic ortho all sit in one practice but they have different acquisition costs, lifetime values, and operational cadences. We separate them in the analytics so you can see which service line is actually paying for itself and which is being subsidized by the others.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>How does an audit work for a med spa or plastic surgery practice?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <p>The Website Audit benchmarks visibility, search authority, and AI-search citation rate against local and national peers. The Buyer Alignment Audit (usually the right entry point) diagnoses whether the patient mix matches the procedure economics you need. The Full Business Diagnostic adds the operational and capital read.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>How much does Main Street IQ cost for an aesthetics practice?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Published on this page: $2,995 for the Website Audit, $3,995 for the Buyer Alignment Audit, $17,995 for the Full Business Diagnostic. Monitor Plus is $1,200 per month. Advisory engagements are scoped at the Fit Call and quoted per client.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="bg-navy">
     <div class="container" style="text-align: center;">
       <h2 class="section-title">One conversation. Written one-pager within 24 hours. No pitch.</h2>
@@ -285,6 +375,22 @@
           page_path: window.location.pathname,
           link_url: a.href
         });
+      });
+    });
+
+    // FAQ accordion toggle
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const isOpen = item.classList.contains('active');
+        document.querySelectorAll('.faq-item').forEach(i => {
+          i.classList.remove('active');
+          i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        });
+        if (!isOpen) {
+          item.classList.add('active');
+          btn.setAttribute('aria-expanded', 'true');
+        }
       });
     });
   </script>

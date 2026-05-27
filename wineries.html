@@ -21,6 +21,48 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="/assets/css/forms.css">
+
+  <!-- Structured Data: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What does a fractional CFO do for a winery?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We read the four winery customer bases (club, tasting room, DTC shipping, distribution) as four different economic engines, because they are. Each has its own acquisition cost, lifetime value, retention curve, and cash conversion cycle. The fractional CFO work is making the pricing, allocation, and capital decisions that compound across all four without missing the one that is silently subtracting margin."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is winery finance different from other industries?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Wine has the longest cash conversion cycle of any consumer business. Grapes go in the ground three years before bottling. A vintage sells over five to ten years. The club is a subscription dressed up as a wine purchase. Tasting room is retail. DTC is ecommerce. Distribution is wholesale. Each has a different P&L logic and you cannot run them on one set of metrics."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the Wine Country Intelligence Report?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A quarterly digital-performance benchmark of every tracked winery in a Central Coast county. Each issue scores wineries on six dimensions, surfaces an AI-visibility leaderboard, names the operators gaining and losing ground, and shows quarter-over-quarter movement. Q1 2026 covers all 175 Santa Barbara County wineries. Q2 2026 adds San Luis Obispo County in July."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does it cost to work with Main Street IQ for a winery?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The intelligence products are published on this page: $1,495 for the Website Audit, $1,995 for the Buyer Alignment Audit, $4,995 for the Full Business Diagnostic. Monitor Plus is $600 per month. Advisory engagements are scoped at the Fit Call and quoted per client. The WCIR subscription is $800 per year per county or $1,000 per year bundled with the Wine Pricing Report."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -293,6 +335,54 @@
     </div>
   </section>
 
+  <!-- ===== COMMON QUESTIONS (FAQ for AEO / snippet eligibility) ===== -->
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Common questions</span>
+        <h2 class="section-title">What winery owners ask</h2>
+      </div>
+      <div class="container-narrow" style="max-width: 820px; margin: 0 auto;">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>What does a fractional CFO do for a winery?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <p>We read the four winery customer bases (club, tasting room, DTC shipping, distribution) as four different economic engines, because they are. Each has its own acquisition cost, lifetime value, retention curve, and cash conversion cycle. The fractional CFO work is making the pricing, allocation, and capital decisions that compound across all four without missing the one that is silently subtracting margin.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>How is winery finance different from other industries?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Wine has the longest cash conversion cycle of any consumer business. Grapes go in the ground three years before bottling. A vintage sells over five to ten years. The club is a subscription dressed up as a wine purchase. Tasting room is retail. DTC is ecommerce. Distribution is wholesale. Each has a different P&amp;L logic and you cannot run them on one set of metrics.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>What is the Wine Country Intelligence Report?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <p>A quarterly digital-performance benchmark of every tracked winery in a Central Coast county. Each issue scores wineries on six dimensions, surfaces an AI-visibility leaderboard, names the operators gaining and losing ground, and shows quarter-over-quarter movement. Q1 2026 covers all 175 Santa Barbara County wineries. Q2 2026 adds San Luis Obispo County in July.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>How much does it cost to work with Main Street IQ for a winery?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <p>The intelligence products are published on this page: $1,495 for the Website Audit, $1,995 for the Buyer Alignment Audit, $4,995 for the Full Business Diagnostic. Monitor Plus is $600 per month. Advisory engagements are scoped at the Fit Call and quoted per client. The WCIR subscription is $800 per year per county or $1,000 per year bundled with the Wine Pricing Report.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="bg-navy">
     <div class="container" style="text-align: center;">
       <h2 class="section-title">One conversation. Written one-pager within 24 hours. No pitch.</h2>
@@ -483,6 +573,22 @@
         if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }, 150);
     })();
+
+    // FAQ accordion toggle
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const isOpen = item.classList.contains('active');
+        document.querySelectorAll('.faq-item').forEach(i => {
+          i.classList.remove('active');
+          i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        });
+        if (!isOpen) {
+          item.classList.add('active');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
   </script>
 
 </body>
