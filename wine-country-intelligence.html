@@ -75,7 +75,7 @@
       <p>A quarterly digital-performance benchmark of the Central Coast wine market. Every tracked winery scored on six dimensions, movement called quarter over quarter, and the operators gaining and losing ground named. Current issue: Q1 2026, Santa Barbara County, all 175 wineries.</p>
       <div class="hero-buttons">
         <a href="#wcir-signup" class="btn btn-white">Subscribe &rarr;</a>
-        <a href="/samples/wine-country-intelligence-report-sample.pdf" class="btn btn-outline-white" target="_blank" rel="noopener">View the sample report</a>
+        <a href="/samples/wine-country-intelligence-report-sample.pdf" class="btn btn-outline-white" target="_blank" rel="noopener" data-sample="wcir" data-vertical="wine">View the sample report</a>
       </div>
     </div>
   </section>
@@ -268,7 +268,7 @@
       </div>
 
       <div style="max-width: 760px; margin: 0 auto 2.5rem; text-align: center;">
-        <p style="font-weight: 300; color: var(--neutral, #6B7480); line-height: 1.6;"><a href="/samples/wine-country-intelligence-report-sample.pdf" target="_blank" rel="noopener" style="color: var(--navy, #2B4E8C); font-weight: 500;">View the sample without signing up &rarr;</a></p>
+        <p style="font-weight: 300; color: var(--neutral, #6B7480); line-height: 1.6;"><a href="/samples/wine-country-intelligence-report-sample.pdf" target="_blank" rel="noopener" data-sample="wcir" data-vertical="wine" style="color: var(--navy, #2B4E8C); font-weight: 500;">View the sample without signing up &rarr;</a></p>
       </div>
 
       <div class="wcir-form-wrap" id="wcir-signup-form-wrap">
@@ -640,6 +640,23 @@
         var target = document.getElementById('wcir-signup');
         if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }, 150);
+    })();
+
+    // Sample-view tracking (GA4)
+    (function(){
+      function fire(name, params) {
+        if (typeof gtag !== 'undefined') {
+          gtag('event', name, Object.assign({page_path: window.location.pathname}, params));
+        }
+      }
+      document.querySelectorAll('[data-sample]').forEach(function(el){
+        el.addEventListener('click', function(){
+          fire('view_sample', {
+            sample: el.getAttribute('data-sample'),
+            vertical: el.getAttribute('data-vertical') || 'unknown'
+          });
+        });
+      });
     })();
   </script>
 

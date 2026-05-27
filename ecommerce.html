@@ -201,20 +201,21 @@
         <div class="card">
           <h3>Website Audit</h3>
           <p><strong>$1,495 one-time.</strong> Fastest read on what is and is not working on your customer-acquisition surface. 7-14 day turnaround. Good if you suspect the website and search layer is the bottleneck.</p>
-          <p style="margin-top: 1rem;"><a href="https://buy.stripe.com/00wbJ2e4XaK05uW1M9a3u0N" target="_blank" rel="noopener" class="btn btn-primary" data-stripe-product="ecom-website-audit">Buy &rarr;</a></p>
+          <p style="margin-top: 1rem;"><a href="https://buy.stripe.com/00wbJ2e4XaK05uW1M9a3u0N" target="_blank" rel="noopener" class="btn btn-primary" data-stripe-product="ecom-website-audit" data-vertical="ecom">Buy &rarr;</a></p>
+          <p style="margin-top: 0.5rem; font-size: 0.85rem;"><a href="/samples/website-audit-sample-msiq-on-msiq.pdf" target="_blank" rel="noopener" data-sample="audit" data-vertical="ecom" style="color: var(--color-sky);">View a sample audit (PDF) &rarr;</a></p>
         </div>
         <div class="card">
           <h3>Buyer Alignment Audit</h3>
           <p><strong>$1,995 one-time.</strong> Best if you suspect you are attracting the wrong buyer, or the messaging across DTC, marketplace, and wholesale is not coherent.</p>
-          <p style="margin-top: 1rem;"><a href="https://buy.stripe.com/8x2eVee4X05m4qSeyVa3u0Q" target="_blank" rel="noopener" class="btn btn-primary" data-stripe-product="ecom-buyer-alignment-audit">Buy &rarr;</a></p>
+          <p style="margin-top: 1rem;"><a href="https://buy.stripe.com/8x2eVee4X05m4qSeyVa3u0Q" target="_blank" rel="noopener" class="btn btn-primary" data-stripe-product="ecom-buyer-alignment-audit" data-vertical="ecom">Buy &rarr;</a></p>
         </div>
         <div class="card">
           <h3>Full Business Diagnostic</h3>
           <p><strong>$4,995 one-time.</strong> The whole-business read across all eight dimensions. Best if you have not had a structured outside look in 12+ months.</p>
-          <p style="margin-top: 1rem;"><a href="https://buy.stripe.com/28E14ogd5cS8g9AaiFa3u0T" target="_blank" rel="noopener" class="btn btn-primary" data-stripe-product="ecom-fbd">Buy &rarr;</a></p>
+          <p style="margin-top: 1rem;"><a href="https://buy.stripe.com/28E14ogd5cS8g9AaiFa3u0T" target="_blank" rel="noopener" class="btn btn-primary" data-stripe-product="ecom-fbd" data-vertical="ecom">Buy &rarr;</a></p>
         </div>
       </div>
-      <p style="margin-top: 2rem; max-width: 780px;">Then most graduate to <strong>Monitor Plus ($600/mo)</strong> for ongoing cohort intelligence and monthly briefings — peer movement, AI visibility drift, pricing drift, sentiment, visual asset inventory, and three prioritized actions per month. <a href="https://buy.stripe.com/7sY3cw9OH6tKf5w1M9a3u0L" target="_blank" rel="noopener" style="color: var(--color-sky); font-weight: 500;" data-stripe-product="ecom-monitor-plus-monthly">Subscribe to Monitor Plus &rarr;</a></p>
+      <p style="margin-top: 2rem; max-width: 780px;">Then most graduate to <strong>Monitor Plus ($600/mo)</strong> for ongoing cohort intelligence and monthly briefings — peer movement, AI visibility drift, pricing drift, sentiment, visual asset inventory, and three prioritized actions per month. <a href="https://buy.stripe.com/7sY3cw9OH6tKf5w1M9a3u0L" target="_blank" rel="noopener" style="color: var(--color-sky); font-weight: 500;" data-stripe-product="ecom-monitor-plus-monthly" data-vertical="ecom">Subscribe to Monitor Plus &rarr;</a></p>
     </div>
   </section>
 
@@ -388,6 +389,31 @@
         }
       });
     });
+
+    // Conversion + sample-view tracking (GA4)
+    (function(){
+      function fire(name, params) {
+        if (typeof gtag !== 'undefined') {
+          gtag('event', name, Object.assign({page_path: window.location.pathname}, params));
+        }
+      }
+      document.querySelectorAll('[data-stripe-product]').forEach(function(el){
+        el.addEventListener('click', function(){
+          fire('purchase_click', {
+            product: el.getAttribute('data-stripe-product'),
+            vertical: el.getAttribute('data-vertical') || 'unknown'
+          });
+        });
+      });
+      document.querySelectorAll('[data-sample]').forEach(function(el){
+        el.addEventListener('click', function(){
+          fire('view_sample', {
+            sample: el.getAttribute('data-sample'),
+            vertical: el.getAttribute('data-vertical') || 'unknown'
+          });
+        });
+      });
+    })();
   </script>
 
 </body>
