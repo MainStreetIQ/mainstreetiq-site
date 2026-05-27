@@ -24,3 +24,11 @@ Thumbs.db
 *.tmp
 *.bak
 node_modules/
+
+# Pre-publish-gate sidecars (tooling artifacts; not site content)
+*.gate.json
+*.canonical_facts.json
+*.scope_checker.json
+*.brand_guardian.json
+*.reality_checker.json
+*.compliance_review.json
