@@ -50,7 +50,7 @@ Source: `msiq-site/styles.css` (canonical) and `~/MSIQ/CCIQ/cciq_brand.py` (Pyth
 - Numbers > adjectives. "$10M-$100M revenue band" beats "growth-stage."
 - Hope + story framing on every report. Explain WHY the business is performing this way, end with a credible path forward (not a failure list + price tag).
 
-**Voice flips to client voice** only when ghost-writing under a client's brand (CCIQ winery, medspa, etc.). Load the client voice file from `~/.claude/skills/copy-lab/voice-library/<client>/`. Always declare the voice mode in the run log.
+**Voice flips to client voice** only when ghost-writing under a client's brand (a specific winery, medspa, etc.). Load the client voice file from `~/.claude/skills/copy-lab/voice-library/<client>/`. Always declare the voice mode in the run log.
 
 **Brand-guardian gate:** any externally visible text passes through the `brand-guardian` agent before send/publish. Internal-only artifacts (Zoho notes, Notion tasks, Scott's briefs) skip the gate.
 
