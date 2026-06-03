@@ -32,3 +32,6 @@ node_modules/
 *.brand_guardian.json
 *.reality_checker.json
 *.compliance_review.json
+*.orchestrator_verdict.json
+*.gate_checker_prompts.txt
+.gate/
