@@ -77,7 +77,7 @@
         "name": "Who is this assessment for?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Owner-operator wineries on California's Central Coast (Santa Barbara, San Luis Obispo, Monterey counties and adjacent). Most useful for wineries between $300K and $10M in revenue who want to grow their wine club, lift DTC, capture AI visibility, or reduce wasted marketing spend."
+          "text": "Owner-operator wineries on California's Central Coast (Santa Barbara and San Luis Obispo counties). Most useful for wineries between $300K and $10M in revenue who want to grow their wine club, lift DTC, capture AI visibility, or reduce wasted marketing spend."
         }
       },
       {
@@ -358,7 +358,7 @@
         </details>
         <details class="faq-item">
           <summary>Who is this assessment for?</summary>
-          <p>Owner-operator wineries on California's Central Coast (Santa Barbara, San Luis Obispo, Monterey counties and adjacent). Most useful for wineries between $300K and $10M in revenue who want to grow their wine club, lift DTC, capture AI visibility, or reduce wasted marketing spend.</p>
+          <p>Owner-operator wineries on California's Central Coast (Santa Barbara and San Luis Obispo counties). Most useful for wineries between $300K and $10M in revenue who want to grow their wine club, lift DTC, capture AI visibility, or reduce wasted marketing spend.</p>
         </details>
         <details class="faq-item">
           <summary>How long does it take?</summary>
@@ -1118,40 +1118,40 @@
     // Outcome library: maps a C1 outcome value to a profile bullet (headline + detail).
     const cciqOutcomeLibrary = {
       "Grow my wine club by 10-30% net new members": {
-        headline: "Grow your wine club by 10-20% net new members in year 1",
-        detail: "Wine club is the most predictable revenue line for most wineries. Engage operators commit to 10-20% net growth in the first 12 months; Manage operators commit to 15-20%."
+        headline: "Grow your wine club, the most predictable revenue line",
+        detail: "Wine club is the most predictable revenue line for most wineries. Engage and Manage both prioritize it: tightening sign-up conversion, catching silent churn at the renewal window, and lifting reorder."
       },
       "Lift my e-commerce revenue 15-30%": {
-        headline: "Lift DTC e-commerce revenue 10-30%",
-        detail: "Conversion friction, product page quality, and post-visit re-engagement are the typical levers. Engage commits to a 10%+ DTC lift year 1; Manage to 25%+."
+        headline: "Lift your DTC e-commerce revenue",
+        detail: "Conversion friction, product-page quality, and post-visit re-engagement are the typical levers. Engage and Manage work the DTC funnel end to end."
       },
       "Improve my tasting room conversion (more $ per visitor)": {
         headline: "Lift tasting room conversion (more dollars per visitor)",
-        detail: "Flight pricing, club close rate, and food-pairing attach drive the per-visitor number. Diagnose names the gaps; Engage operators see 10-20% per-visitor lift in year 1."
+        detail: "Flight pricing, club close rate, and food-pairing attach drive the per-visitor number. Diagnose names the gaps; Engage works them with you."
       },
       "Expand to more direct ship states": {
         headline: "Expand to more direct ship states",
-        detail: "Compliance partner referral plus Engage oversight on rollout. Adds 5-15% to addressable DTC market for most operators."
+        detail: "Compliance-partner referral plus Engage oversight on rollout, to widen your addressable DTC market state by state."
       },
       "Capture AI visibility (show up when customers ask ChatGPT, Claude, Perplexity for wine recommendations)": {
         headline: "Capture AI visibility across ChatGPT, Claude, Perplexity, Gemini",
-        detail: "Engage commits to 2x AI mention count within 180 days; Manage to 3x within 12 months. Tracked monthly across 48 prompts on the four assistants."
+        detail: "Engage and Manage grow your mention count on the AI assistants buyers now ask for wine recommendations. Tracked monthly across 48 prompts on the four assistants."
       },
       "Outperform a specific named competitor I have in mind": {
         headline: "Close the gap with a named competitor",
         detail: "Diagnose: Competitor Benchmark scores you and four named peers across all 8 dimensions, with a prioritized plan to close each gap."
       },
       "Free up my time so I can focus on winemaking and team": {
-        headline: "Free up 10-20 owner hours per month",
-        detail: "Manage tier displaces 10-20 hours of monthly owner overhead by handling marketing decision-making, partner coordination, and vendor management."
+        headline: "Free up owner hours each month",
+        detail: "Manage tier displaces monthly owner overhead by handling marketing decision-making, partner coordination, and vendor management, so you can stay on winemaking and team."
       },
       "Reduce wasted marketing spend / agency frustration": {
-        headline: "Reduce wasted marketing spend by 20-30%",
-        detail: "Engage tier typically captures 20-30% effective CAC reduction by aligning the partner stack against the same monthly scorecard."
+        headline: "Reduce wasted marketing spend",
+        detail: "Engage aligns the partner stack against one monthly scorecard, so spend follows what actually works instead of what each vendor reports."
       },
       "Get a board-ready plan for the next phase of growth": {
         headline: "Build a board-ready plan for the next phase of growth",
-        detail: "Diagnose: Full Business Diagnostic produces a 90-day plan with quantified opportunity sizing across 5-7 levers. Manage tier adds quarterly board package on an ongoing basis."
+        detail: "Diagnose: Full Business Diagnostic produces a 90-day plan with opportunity sizing across 5-7 levers. Manage tier adds a quarterly board package on an ongoing basis."
       },
       "Build / refresh my brand identity": {
         headline: "Refresh your brand identity for the next chapter",
@@ -1159,62 +1159,53 @@
       }
     };
 
-    const cciqRevImpact = {
-      "Under $300K":      { lo: 5,   hi: 25,  label: "$5K to $25K range" },
-      "$300K - $750K":    { lo: 10,  hi: 50,  label: "$10K to $50K range" },
-      "$750K - $2M":      { lo: 25,  hi: 100, label: "$25K to $100K range" },
-      "$2M - $5M":        { lo: 50,  hi: 200, label: "$50K to $200K range" },
-      "$5M - $10M":       { lo: 100, hi: 400, label: "$100K to $400K range" },
-      "$10M+":            { lo: 200, hi: 800, label: "$200K to $800K range" },
-      "Prefer not to say":{ lo: 25,  hi: 150, label: "$25K to $150K range" }
-    };
 
     // Tier metadata used in the rec block.
     const cciqTiers = {
       "discover": {
         headline: "Discover: stay ahead of your peers, starting with a free sample of the report",
         pricing: "$1,000/yr for the Discover Bundle (Wine Country Intelligence Report + Wine Pricing Report). Free sample summary available before you subscribe.",
-        roi: "Regional view of who is gaining ground and what playbooks are working. 5-15x ROI at $1M scale; 10-30x at $5M+."
+        roi: "A regional view of who is gaining ground and which playbooks are working, so you can act before the gap widens."
       },
       "monitor": {
         headline: "Monitor: peace of mind that your digital storefront is as sharp as it can get, every month",
-        pricing: "$400/mo or $3,600/yr (annual includes Discover Bundle)",
-        roi: "Monthly scorecard, AI visibility tracking, and the Drift Watch covering five self-monitoring alerts. 1.5-8x ROI at $1M; 2-20x at $5M."
+        pricing: "Scoped on a Fit Call. The annual plan includes the Discover Bundle.",
+        roi: "Monthly scorecard, AI-visibility tracking, and the Drift Watch covering five self-monitoring alerts."
       },
       "monitor_plus": {
         headline: "Monitor Plus: monthly depth and a recurring 1-on-1 with Scott, without retainer commitment",
-        pricing: "$600/mo or $6,000/yr (annual includes Discover Bundle)",
-        roi: "Cohort-aware Drift Watch, custom 6-peer tracking, monthly written commentary, and 1-on-1 office hours. 2.5-10x ROI at $1M; 4-20x at $5M."
+        pricing: "Scoped on a Fit Call. The annual plan includes the Discover Bundle.",
+        roi: "Cohort-aware Drift Watch, custom 6-peer tracking, monthly written commentary, and 1-on-1 office hours."
       },
       "diagnose_audit": {
         headline: "Diagnose: Website Audit, vendor-ready findings across every accessible page on the site",
-        pricing: "$1,495 standard, $1,995 with 30-min readout. 5-7 business days.",
-        roi: "Three-layer audit your web person can act on. 3-15x year 1 ROI at $1M scale."
+        pricing: "Scoped on a Fit Call. 5-7 business days; a 30-minute readout is available.",
+        roi: "A three-layer audit your web person can act on, layer by layer."
       },
       "diagnose_audit_pro": {
         headline: "Diagnose: Website Audit Pro, the audit that already tells you what to do first and why",
-        pricing: "$2,995 (includes 30-min readout). 7-10 business days.",
-        roi: "Everything in the Website Audit, plus a specialist read on which fixes have to come first, where to spend energy and where to skip, the things rules can't catch, and vertical commentary on every finding. 13-40x year 1 ROI at $1-3M scale."
+        pricing: "Scoped on a Fit Call. 7-10 business days; includes a 30-minute readout.",
+        roi: "Everything in the Website Audit, plus a specialist read on which fixes have to come first, where to spend energy and where to skip, the things rules can't catch, and vertical commentary on every finding."
       },
       "diagnose_benchmark": {
         headline: "Diagnose: Competitor Benchmark, head-to-head scoring against four named peers",
-        pricing: "$2,995 standard, $3,995 with strategy call. 10-14 business days.",
+        pricing: "Scoped on a Fit Call. 10-14 business days; a strategy call is available.",
         roi: "Side-by-side 8-dimension scoring with a prioritized closing plan. Ideal when peer competition is the named concern."
       },
       "diagnose_full": {
         headline: "Diagnose: Full Business Diagnostic, 90-day plan with quantified opportunity sizing",
-        pricing: "$4,995 standard, $7,995 with 90-min session. 14-21 business days.",
-        roi: "13 fully-formatted findings, CAC computation, opportunity sizing across 5-7 levers. 4-25x year-1 ROI at $5M scale."
+        pricing: "Scoped on a Fit Call. 14-21 business days; a 90-minute session is available.",
+        roi: "13 fully-formatted findings and opportunity sizing across 5-7 levers, assembled into a 90-day plan."
       },
       "engage": {
         headline: "Engage: strategic marketing oversight, with Scott coordinating your partner stack",
-        pricing: "Custom retainer scoped per engagement. Best fit at $3M+ revenue.",
-        roi: "$50K-$150K year 1 at $5M scale, 3-7x ROI at maturity. SLA-committed outcomes on review response, wine club growth, DTC lift, AI visibility."
+        pricing: "Scoped on a Fit Call. Best fit at $3M+ revenue. Book a Fit Call about Engage.",
+        roi: "Strategic marketing oversight with SLA-committed outcomes on review response, wine club growth, DTC lift, and AI visibility."
       },
       "manage": {
         headline: "Manage: fractional CFO + MSIQ Wine marketing intelligence under one voice",
-        pricing: "Custom retainer scoped per engagement. Best fit at $3M+ revenue.",
-        roi: "$150K-$500K year 1 at $5M scale, 6-12x ROI at maturity. Scott in the room for pricing, allocation, and major decisions."
+        pricing: "Scoped on a Fit Call. Best fit at $3M+ revenue. Book a Fit Call about Manage.",
+        roi: "A fractional CFO plus MSIQ Wine intelligence under one voice, with Scott in the room for pricing, allocation, and major decisions."
       }
     };
 
@@ -1619,9 +1610,8 @@
         `;
         outcomesList.appendChild(li);
       });
-      const impact = cciqRevImpact[ans.revenue_band] || cciqRevImpact["Prefer not to say"];
       document.getElementById('cciqOutcomesBand').textContent =
-        `Across the three outcomes, the typical 12-18 month revenue impact for an operator at your scale lands in the ${impact.label}.`;
+        `Across the three outcomes, the work focuses on the levers most likely to move revenue for an operator at your scale over the next 12-18 months.`;
 
       // Recommendation block
       document.getElementById('cciqRecHeadline').textContent = tierMeta.headline;
