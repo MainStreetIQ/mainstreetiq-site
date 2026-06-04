@@ -6,5 +6,5 @@
   <!-- Name centered -->
   <text x="160" y="160" text-anchor="middle" font-family="'Outfit','Helvetica Neue',Arial,sans-serif" font-size="24" font-weight="500" letter-spacing="6.5" fill="#2B4E8C">MAIN STREET IQ</text>
   <!-- Tagline centered -->
-  <text x="160" y="185" text-anchor="middle" font-family="'Outfit','Helvetica Neue',Arial,sans-serif" font-size="12.5" font-weight="400" letter-spacing="0.6" fill="#2B4E8C">AI-Augmented Strategic Advisory</text>
+  <text x="160" y="185" text-anchor="middle" font-family="'Outfit','Helvetica Neue',Arial,sans-serif" font-size="12.5" font-weight="400" letter-spacing="0.6" fill="#2B4E8C">Financial IQ for Main Street</text>
 </svg>

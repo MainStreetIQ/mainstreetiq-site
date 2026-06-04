@@ -21,8 +21,8 @@ ROOT = Path(__file__).resolve().parent.parent
 # before that point.
 CANONICAL_FOOTER = """<div class="footer-grid">
         <div class="footer-brand">
-          <a href="/" class="logo"><img src="/assets/logos/logo-horizontal-dark.svg" alt="Main Street IQ - AI-Augmented Strategic Advisory"></a>
-          <p>AI-Augmented Strategic Advisory. Outcomes you can justify, without the headcount.</p>
+          <a href="/" class="logo"><img src="/assets/logos/logo-horizontal-dark.svg" alt="Main Street IQ"></a>
+          <p>Fractional CFO and business advisory for owner and founder-led companies on the California coast.</p>
         </div>
         <div class="footer-col">
           <h4>Company</h4>

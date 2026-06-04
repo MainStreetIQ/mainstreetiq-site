@@ -1,6 +1,6 @@
 # Main Street IQ — Brand Guide
 
-**Positioning:** AI-Augmented Strategic Advisory.
+**Tagline:** Financial IQ for Main Street.
 
 ---
 
@@ -85,7 +85,7 @@ The kit splits into three layers: full lockups (mark + name + tagline), namemark
 | `logo-tagline-light.svg` / `-dark.svg` | Component | Footers, sub-block under custom marks |
 | `favicon.svg` | Icon | Browser tab favicon |
 
-All lockup SVGs embed the tagline: **AI-Augmented Strategic Advisory** in Outfit, Title Case.
+All lockup SVGs embed the tagline: **Financial IQ for Main Street** in Outfit, Title Case.
 
 ### Logo usage rules
 - Light-bg pages: use `-light` logo (navy on white/ice)
