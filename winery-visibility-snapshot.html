@@ -207,14 +207,20 @@
           `Website` lead field, which winery-snapshot-delivery reads to run the
           audit. Lead Source stays "CCIQ Webform" verbatim (strict Zoho
           picklist; rename pending per project_zoho_lead_source_rename).
-          PRE-LAUNCH GATE: enable Zoho Web-to-Lead CAPTCHA on this form token
-          (Zoho-side toggle) per feedback_public_webform_spam_hardening; the
-          honeypot below is the HTML-side guard.
+          SPAM GUARD: keep Zoho Web-to-Lead CAPTCHA OFF on this form. Zoho's
+          managed CAPTCHA is reCAPTCHA Enterprise, which silently drops a
+          self-hosted POST like this one (reference_zoho_webtolead_captcha_is_enterprise);
+          the honeypot below is the HTML-side guard instead.
+          TOKENS: xnQsjsdp/xmIwtLD refreshed 2026-06-05 after the form was
+          regenerated + left inactive, which dropped 100% of submissions
+          (project_snapshot_form_silently_drops_2026-06-05). If they ever stop
+          creating Leads, re-pull the Source Code embed for the "CCIQ Assessment"
+          Leads webform and confirm the form Status toggle is ON.
         -->
         <form class="msiq-form" id="msiqSnapForm" action="https://crm.zoho.com/crm/WebToLeadForm" method="POST" accept-charset="UTF-8">
-          <input type="hidden" name="xnQsjsdp" value="b20d9533cf4fc99c3bf706d8c6c71a4a3954a07e69e9285bf3e5dba36994b362">
+          <input type="hidden" name="xnQsjsdp" value="4f10488f4f88d101fa729ca4dcbf7d8d1fedde0e4d63b68e7bbf5912f2f1f633">
           <input type="hidden" name="zc_gad" id="msiqSnapZcGad" value="">
-          <input type="hidden" name="xmIwtLD" value="815a9111e999269efd4d1d2db372b902a70c171679ef4b5b670edcda3a91cb3c5cd8963718a85063b57d553234721aae">
+          <input type="hidden" name="xmIwtLD" value="b0b3547ebd63bd37ea4c9ad19f0c21f3c5bf6d1ff42106e22fb14b94361e92f4dfa9563cf33817d9e6e77c9edd27cacc">
           <input type="hidden" name="actionType" value="TGVhZHM=">
           <input type="hidden" name="returnURL" value="https://www.mainstreetiq.com/winery-visibility-snapshot?signup=success">
           <input type="hidden" name="Description" id="msiqSnapDescription" value="Winery visibility snapshot request (from snapshot page)">
