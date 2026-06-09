@@ -295,6 +295,9 @@ p  { font-size: 1.05rem; color: var(--slate); margin-bottom: 1rem; font-weight: 
   letter-spacing: 0.2em;
   font-weight: 300;
 }
+/* stat-bar defaults to white text for dark hero sections; restyle on light backgrounds */
+.bg-light .stat-bar { border-top-color: rgba(15,28,46,0.12); }
+.bg-light .stat-item p { color: var(--color-neutral); }
 
 /* --- Sections --- */
 section { padding: var(--section-padding); }
