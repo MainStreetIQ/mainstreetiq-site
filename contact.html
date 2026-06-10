@@ -293,7 +293,7 @@
       navLinks.classList.toggle('open');
     });
 
-    // Initialize MSIQForm — validation styling, gtag events.
+    // Initialize MSIQForm: validation styling, gtag events.
     // Form uses native submit (POST to Zoho Web-to-Lead); Zoho redirects
     // back to ?sent=success which is handled below.
     new MSIQForm({
@@ -327,7 +327,7 @@
       form.scrollIntoView({ behavior: 'smooth', block: 'start' });
     })();
 
-    // Calendly click tracking — fires book_call_click event for GA4 attribution
+    // Calendly click tracking, fires book_call_click event for GA4 attribution
     document.querySelectorAll('a[href*="calendly.com"]').forEach(function(a) {
       a.addEventListener('click', function() {
         if (typeof gtag !== 'undefined') {
