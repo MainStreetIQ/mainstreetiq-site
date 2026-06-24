@@ -1,14 +1,16 @@
 name: Scheduled blog publish
 
-# Promotes "After the Close" posts from _scheduled/atc/ into blog/ on their slot
-# dates, then commits to main so Vercel deploys them. See _scripts/publish_scheduled.py
-# and _scheduled/atc/manifest.json. Idempotent: a no-op on days with nothing due.
+# Promotes scheduled posts (After the Close + the AI-visibility "Found by the
+# Machine" track) from _scheduled/<series>/ into blog/ on their slot dates, then
+# commits to main so the site deploys them. See _scripts/publish_scheduled.py and
+# the per-series manifest.json files. Idempotent: a no-op on days with nothing due.
 
 on:
   schedule:
-    # 16:15 UTC daily = after the 08:00 local LinkedIn posts fire year-round
-    # (08:15 PST in winter, 09:15 PDT in summer).
-    - cron: "15 16 * * *"
+    # 15:00 UTC daily targets ~08:00 local when the Thursday LinkedIn posts fire
+    # (08:00 PDT in summer, 07:00 PST in winter). GitHub may run scheduled jobs a
+    # few minutes-to-an-hour late, so treat this as "Thursday morning," not exact.
+    - cron: "0 15 * * *"
   workflow_dispatch:
     inputs:
       date:

@@ -1,0 +1,66 @@
+{
+  "series": "Found by the Machine",
+  "note": "Source-of-truth for the scheduled AI-visibility blog drip ('Found by the Machine'). Each post is published from _scheduled/aiv/<slug>.html into blog/<slug>.html on its date by _scripts/publish_scheduled.py (run daily by .github/workflows/scheduled-publish.yml). Companion blog pillars to the Thursday LinkedIn AI-visibility series. Edit a post's source here before its date and the change is picked up automatically. Posts are ordered by date.",
+  "posts": [
+    {
+      "slug": "why-a-finance-guy-talks-about-chatgpt",
+      "date": "2026-06-25",
+      "title": "Why a Finance Guy Is Talking to You About ChatGPT",
+      "month_label": "June 2026",
+      "month_datetime": "2026-06",
+      "read_min": 6,
+      "card_desc": "A founder asked why a finance person was talking to her about ChatGPT. The honest answer: a CFO's job is managing the intelligence of your business, and a new blind spot just opened up outside the building.",
+      "llms_desc": "Why a fractional CFO cares about AI search: managing the intelligence of a business means both the numbers it reports inward and the signal AI engines read outward. Opener of the Found by the Machine series."
+    },
+    {
+      "slug": "your-next-customer-is-asking-chatgpt",
+      "date": "2026-07-02",
+      "title": "Your Next Customer Is Asking ChatGPT, Not Google",
+      "month_label": "July 2026",
+      "month_datetime": "2026-07",
+      "read_min": 6,
+      "card_desc": "Your next customer isn't Googling wineries. She's asking ChatGPT which ones to visit, and the engine hands her a short list. If you're not on it, there's no page two to fight your way onto.",
+      "llms_desc": "Buyers increasingly ask ChatGPT, Perplexity, and Gemini for recommendations instead of Googling, and the engine returns a short list rather than ten links. Why discoverability in AI answers is a leading indicator of revenue."
+    },
+    {
+      "slug": "three-kinds-of-search",
+      "date": "2026-07-09",
+      "title": "Three Kinds of Search, and Why Your Site Only Handles One",
+      "month_label": "July 2026",
+      "month_datetime": "2026-07",
+      "read_min": 7,
+      "card_desc": "SEO, AEO, and GEO are three different games. Your site was built to rank on Google. It was never built to be quoted by an AI engine or surfaced in a recommendation. Most businesses play only the oldest one.",
+      "llms_desc": "SEO vs AEO vs GEO in plain language: ranking on Google, being quoted as the answer, and being surfaced in a generated recommendation are three different games. Why most small business sites only play the oldest one."
+    },
+    {
+      "slug": "ai-visibility-before-the-pl",
+      "date": "2026-07-16",
+      "title": "Why I Check AI Visibility Before I Read the P&L",
+      "month_label": "July 2026",
+      "month_datetime": "2026-07",
+      "read_min": 6,
+      "card_desc": "A CFO follows the dollar upstream. The dollar now starts the moment an engine decides whether to recommend you. That is why AI visibility is a leading revenue indicator, and why I check it before the books.",
+      "llms_desc": "Why AI visibility is a leading revenue indicator a CFO should check before the financial statements: an engine decides whether to recommend you before a customer ever spends a dollar, so the signal sits upstream of the P&L."
+    },
+    {
+      "slug": "the-cost-of-being-invisible-in-ai-search",
+      "date": "2026-07-23",
+      "title": "What It Costs to Be Invisible in AI Search",
+      "month_label": "July 2026",
+      "month_datetime": "2026-07",
+      "read_min": 6,
+      "card_desc": "Being invisible in AI search isn't a marketing problem. It's a revenue line you can't see. Here is the math to run on your own numbers, without a single made-up statistic.",
+      "llms_desc": "How to size the revenue cost of being invisible in AI search using your own numbers (first-time customer value, recommendation share) without fabricated statistics. Links to the free winery visibility snapshot."
+    },
+    {
+      "slug": "we-track-what-ai-says-about-you",
+      "date": "2026-07-30",
+      "title": "We Track What AI Says About Your Business So You Don't Have To",
+      "month_label": "July 2026",
+      "month_datetime": "2026-07",
+      "read_min": 6,
+      "card_desc": "What an AI engine says about your business today is not what it said last month. The models retrain, the web shifts, and your description drifts with it. This is the thing we watch so an owner doesn't have to.",
+      "llms_desc": "Why AI answers about your business change month to month as models retrain, and why monitoring what AI engines say about you over time is the finance-grade way to catch drift. Close of the Found by the Machine series."
+    }
+  ]
+}

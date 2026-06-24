@@ -47,6 +47,9 @@ Every engagement is structured around four principles:
 - [Who Owns the So-What After the Books Close?](https://www.mainstreetiq.com/blog/who-owns-the-so-what): After your books close, who owns the so-what? Why automation produces output but judgment — naming the one number that matters and the next move — is still human work. Opener of the After the Close series.
 <!-- ATC-LLMS-END -->
 
+<!-- AIV-LLMS-START -->
+<!-- AIV-LLMS-END -->
+
 ### The RAID Framework Series (8 parts)
 - [Why Most Finance Teams Fail to Scale](https://www.mainstreetiq.com/blog/why-finance-teams-fail-to-scale): The pattern of finance breaking at $20M — and the 4 failure modes. Series opener.
 - [Automate First — Why Tools Come Before People](https://www.mainstreetiq.com/blog/automate-first): The "Agile" principle — automation before headcount. AP, AR, expense, and reconciliation automation.
