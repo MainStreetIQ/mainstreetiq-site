@@ -1,0 +1,76 @@
+{
+  "series": "After the Close",
+  "note": "Source-of-truth for the scheduled 'After the Close' blog drip. Each post is published from _scheduled/atc/<slug>.html into blog/<slug>.html on its date by _scripts/publish_scheduled.py (run daily by .github/workflows/scheduled-publish.yml). Edit a post's source here before its date and the change is picked up automatically. Posts are ordered by date.",
+  "posts": [
+    {
+      "slug": "who-owns-the-so-what",
+      "date": "2026-06-24",
+      "title": "Who Owns the So-What After the Books Close?",
+      "month_label": "June 2026",
+      "month_datetime": "2026-06",
+      "read_min": 6,
+      "card_desc": "Your software can close the books in a day. It still can't tell you what the numbers mean or what to do Monday morning. Here's who owns the so-what.",
+      "llms_desc": "After your books close, who owns the so-what? Why automation produces output but judgment — naming the one number that matters and the next move — is still human work. Opener of the After the Close series."
+    },
+    {
+      "slug": "the-real-bottleneck-is-hours",
+      "date": "2026-06-30",
+      "title": "Your Real Bottleneck Is Hours, Not Tools",
+      "month_label": "June 2026",
+      "month_datetime": "2026-06",
+      "read_min": 6,
+      "card_desc": "The best operators already have the tools and the data. Their scarce resource is hours and judgment. Why a finance partner, not more software, is the fix.",
+      "llms_desc": "The strongest operators already have tools and data; their bottleneck is hours and judgment load. Why the fix is a finance partner, not more software."
+    },
+    {
+      "slug": "finance-that-knows-where-youre-going",
+      "date": "2026-07-07",
+      "title": "Does Your Finance Partner Know Where You're Going?",
+      "month_label": "July 2026",
+      "month_datetime": "2026-07",
+      "read_min": 6,
+      "card_desc": "Most finance work stops at the company and never reaches the founder. Why finance tied to your long-term security is the half that actually matters.",
+      "llms_desc": "Finance that stops at the company misses the founder. Tying growth to the owner's long-term security, distributions, and timeline — the half of finance most partners skip."
+    },
+    {
+      "slug": "why-growth-breaks-your-cash",
+      "date": "2026-07-14",
+      "title": "Why Growth Is What Breaks Your Cash",
+      "month_label": "July 2026",
+      "month_datetime": "2026-07",
+      "read_min": 7,
+      "card_desc": "Fast growth widens the gap between cash out and cash in. Why your cash conversion cycle, not revenue, decides whether you survive your own growth.",
+      "llms_desc": "Why fast growth breaks cash: the cash conversion cycle, working capital, and the float gap that revenue growth widens. The metric that decides whether you survive scaling."
+    },
+    {
+      "slug": "blended-roas-hides-your-best-channel",
+      "date": "2026-07-21",
+      "title": "Your Blended ROAS Is Hiding Your Best Channel",
+      "month_label": "July 2026",
+      "month_datetime": "2026-07",
+      "read_min": 6,
+      "card_desc": "A blended ROAS average looks healthy while it protects your worst channel and starves your best. How to break it apart by channel and payback window.",
+      "llms_desc": "Blended ROAS hides your best channel and protects your worst. Breaking marketing performance apart by channel and payback window to fund what actually pays back."
+    },
+    {
+      "slug": "custom-ai-the-platform-makes-free",
+      "date": "2026-07-28",
+      "title": "The Custom AI Build the Platform Makes Free",
+      "month_label": "July 2026",
+      "month_datetime": "2026-07",
+      "read_min": 6,
+      "card_desc": "The custom AI you build today the platform may hand you free six months later. The finance question to ask before you spend on a bespoke build.",
+      "llms_desc": "The custom AI build the platform makes free six months later — the finance framing for build-vs-wait decisions on bespoke AI systems."
+    },
+    {
+      "slug": "lead-with-your-scar",
+      "date": "2026-08-04",
+      "title": "Lead With Your Scar, Not Your Resume",
+      "month_label": "August 2026",
+      "month_datetime": "2026-08",
+      "read_min": 5,
+      "card_desc": "Founders trust shared scars, not credentials. Why a five-year inventory mistake earns more trust than any track record, and what that means for finance.",
+      "llms_desc": "Founders trust scars over resumes. Why leading with a hard, specific failure builds more trust than credentials — and what that means for how finance shows up. Close of the After the Close series."
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+# Staging area for scheduled blog posts not yet published.
+# Files here are kept in git but excluded from Vercel deploys, so a post is not
+# publicly served until _scripts/publish_scheduled.py promotes it into blog/ on its date.
+_scheduled/
