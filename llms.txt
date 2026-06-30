@@ -43,8 +43,9 @@ Every engagement is structured around four principles:
 ## Blog — Finance Insights (31 posts)
 
 <!-- ATC-LLMS-START -->
-### After the Close Series (1 of 7 parts live)
+### After the Close Series (2 of 7 parts live)
 - [Who Owns the So-What After the Books Close?](https://www.mainstreetiq.com/blog/who-owns-the-so-what): After your books close, who owns the so-what? Why automation produces output but judgment — naming the one number that matters and the next move — is still human work. Opener of the After the Close series.
+- [Your Real Bottleneck Is Hours, Not Tools](https://www.mainstreetiq.com/blog/the-real-bottleneck-is-hours): The strongest operators already have tools and data; their bottleneck is hours and judgment load. Why the fix is a finance partner, not more software.
 <!-- ATC-LLMS-END -->
 
 <!-- AIV-LLMS-START -->
