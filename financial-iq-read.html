@@ -4,17 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/svg+xml" href="assets/logos/favicon.svg">
-  <title>Financial Stack Quick Read | Main Street IQ</title>
+  <title>The Financial IQ Read | Main Street IQ</title>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-SBC31MGCEV"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SBC31MGCEV');</script>
   <meta name="description" content="A five-minute, ten-question read of the financial operations underneath your business. Score how resilient your banking, treasury, float, credit, and liquidity layers are, and see where the gaps sit. Free, scored on the spot.">
-  <meta name="keywords" content="financial stack assessment, cash flow resilience, treasury maturity, working capital assessment, fractional CFO assessment, small business financial health">
-  <link rel="canonical" href="https://www.mainstreetiq.com/financial-stack">
+  <meta name="keywords" content="financial IQ read, financial stack assessment, cash flow resilience, treasury maturity, working capital assessment, fractional CFO assessment, small business financial health">
+  <link rel="canonical" href="https://www.mainstreetiq.com/financial-iq-read">
 
-  <meta property="og:title" content="Financial Stack Quick Read | Main Street IQ">
+  <meta property="og:title" content="The Financial IQ Read | Main Street IQ">
   <meta property="og:description" content="Ten questions, five minutes, your score on the spot. See how resilient the money side of your business is.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.mainstreetiq.com/financial-stack">
+  <meta property="og:url" content="https://www.mainstreetiq.com/financial-iq-read">
   <meta property="og:image" content="https://www.mainstreetiq.com/assets/images/og-image.jpg">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,9 +28,9 @@
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "Financial Stack Quick Read",
+    "name": "The Financial IQ Read",
     "description": "A ten-question assessment that scores the five layers of financial infrastructure underneath a business: banking, treasury, float, credit architecture, and liquidity. Scored instantly, free.",
-    "url": "https://www.mainstreetiq.com/financial-stack",
+    "url": "https://www.mainstreetiq.com/financial-iq-read",
     "provider": {
       "@type": "ProfessionalService",
       "name": "Main Street IQ",
@@ -82,7 +82,7 @@
     <img src="/assets/images/hero-central-coast.jpg" alt="" class="hero-bg" aria-hidden="true">
     <div class="hero-overlay"></div>
     <div class="container">
-      <span class="section-label">Financial Stack Quick Read</span>
+      <span class="section-label">The Financial IQ Read</span>
       <h1>How resilient is the money side of your business?</h1>
       <p>Five layers sit underneath every business: how it banks, how it sees its cash, how cash moves, how it borrows, and how it manages liquidity. Answer ten quick questions and see where yours stands. About five minutes, and you get your score on the spot.</p>
     </div>
@@ -102,11 +102,9 @@
         <div class="fs-field">
           <label class="fs-field__label" for="fsBusinessType">What kind of business is this?</label>
           <select class="msiq-form__select" id="fsBusinessType" aria-label="Business type">
-            <option value="default">Other or food and beverage</option>
+            <option value="default">Ecommerce or other</option>
             <option value="wine">Wine or winery</option>
             <option value="aesthetic">Wellness or aesthetics practice</option>
-            <option value="jewelry">Luxury jewelry</option>
-            <option value="hospitality">Hospitality</option>
           </select>
           <p class="fs-field__help">This sets the last two questions, which read differently by business type.</p>
         </div>
@@ -233,12 +231,12 @@
           <input type="hidden" name="zc_gad" id="fsZcGad" value="">
           <input type="hidden" name="xmIwtLD" value="b41c824141e3e85e9fb8d030284b5d9cd78fec633acfb28e3beb5f7c076d77e300ea0a8ebaf2695410cf55b19b1c76fe">
           <input type="hidden" name="actionType" value="TGVhZHM=">
-          <input type="hidden" name="returnURL" value="https://www.mainstreetiq.com/financial-stack-thanks">
+          <input type="hidden" name="returnURL" value="https://www.mainstreetiq.com/financial-iq-read-thanks">
           <input type="hidden" name="Lead Source" value="Financial Stack Quick Read">
 
           <div class="msiq-form__intro">
-            <h2>Want this as a branded one-page Quick Read?</h2>
-            <p>We will send a branded PDF of your Financial Stack Quick Read you can keep or share, and if you would like, set up a 30-minute review to walk the gaps and name the two or three moves that matter most for your business.</p>
+            <h2>Want this as a branded one-page Financial IQ Read?</h2>
+            <p>We will send a branded PDF of your Financial IQ Read you can keep or share, and if you would like, set up a 30-minute review to walk the gaps and name the two or three moves that matter most for your business.</p>
           </div>
 
           <div class="msiq-form__field msiq-form__field--inline-pair">
@@ -280,7 +278,7 @@
           <input type="text" name="aG9uZXlwb3Q" class="msiq-form__honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
 
           <div class="msiq-form__buttons msiq-form__buttons--end">
-            <button type="submit" class="msiq-form__btn msiq-form__btn--primary" data-action="submit">Email my Quick Read</button>
+            <button type="submit" class="msiq-form__btn msiq-form__btn--primary" data-action="submit">Email my Financial IQ Read</button>
           </div>
         </form>
         <p class="assessment-form-fineprint">We send the branded PDF within one business day. If you asked for a review, Scott reaches out within 48 business hours. Unsubscribe any time.</p>
@@ -487,6 +485,11 @@
   // change BOTH. Score, layers, and gaps here match score_answers()
   // exactly; the 0-3 bucket blurb says "this picture" instead of
   // "this Diagnostic" for the web context.
+  // INTENTIONAL DIVERGENCE (2026-06-17): the jewelry and hospitality
+  // business-type overlays were removed here because Luxury Retail and
+  // Hospitality are retired verticals (canonical-facts.md) and must not
+  // appear on a public surface. Do NOT re-add them when resyncing the
+  // Python rubric. Unknown types fall back to the "default" overlay.
   // ===========================================================
   (function(){
     var LAYER_ORDER = ["banking","treasury","float","credit","liquidity"];
@@ -520,18 +523,6 @@
         q9gap:"Prepaid-package deferred revenue is not tracked separately from realized revenue",
         q10:"10. Do you know your cash conversion cycle on retail product resale?",
         q10gap:"Cash conversion cycle on retail product resale is not known"
-      },
-      jewelry: {
-        q9:"9. Do you know your inventory carry cost per piece per month?",
-        q9gap:"Inventory carry cost per piece per month is not known",
-        q10:"10. Do you measure trade or wholesale days-sales-outstanding separately from retail?",
-        q10gap:"Trade or wholesale days-sales-outstanding is not measured separately from retail"
-      },
-      hospitality: {
-        q9:"9. Do you know your booking-window-to-cash timeline by segment?",
-        q9gap:"Booking-window-to-cash timeline is not known by segment",
-        q10:"10. Do you carry prepaid deposit balances as a separate liability from earned revenue?",
-        q10gap:"Prepaid deposit balances are not carried as a separate liability"
       },
       "default": {
         q9:"9. Do you measure your cash conversion cycle, the days between spending on inventory and receiving payment?",

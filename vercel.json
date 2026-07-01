@@ -99,6 +99,26 @@
       "source": "/fractional-cfo-dtc-ecommerce.html",
       "destination": "/ecommerce",
       "permanent": true
+    },
+    {
+      "source": "/financial-stack",
+      "destination": "/financial-iq-read",
+      "permanent": true
+    },
+    {
+      "source": "/financial-stack.html",
+      "destination": "/financial-iq-read",
+      "permanent": true
+    },
+    {
+      "source": "/financial-stack-thanks",
+      "destination": "/financial-iq-read-thanks",
+      "permanent": true
+    },
+    {
+      "source": "/financial-stack-thanks.html",
+      "destination": "/financial-iq-read-thanks",
+      "permanent": true
     }
   ]
 }
