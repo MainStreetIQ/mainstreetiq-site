@@ -24,6 +24,8 @@ Thumbs.db
 *.tmp
 *.bak
 node_modules/
+__pycache__/
+_screens/
 
 # Pre-publish-gate sidecars (tooling artifacts; not site content)
 *.gate.json
@@ -34,4 +36,5 @@ node_modules/
 *.compliance_review.json
 *.orchestrator_verdict.json
 *.gate_checker_prompts.txt
+*.data_sanity.json
 .gate/

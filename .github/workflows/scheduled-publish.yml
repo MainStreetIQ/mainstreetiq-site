@@ -43,6 +43,8 @@ jobs:
           fi
           git config user.name "msiq-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add -A
-          git commit -m "chore(blog): publish scheduled After the Close post(s) for $(date -u +%Y-%m-%d)"
+          # publish_scheduled.py only ever writes blog/*.html and llms.txt —
+          # stage exactly those so stray working-tree files can never be swept into prod
+          git add blog/ llms.txt
+          git commit -m "chore(blog): publish scheduled post(s) for $(date -u +%Y-%m-%d)"
           git push
