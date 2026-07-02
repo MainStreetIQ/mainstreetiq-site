@@ -49,8 +49,9 @@ Every engagement is structured around four principles:
 <!-- ATC-LLMS-END -->
 
 <!-- AIV-LLMS-START -->
-### Found by the Machine Series (1 of 6 parts live)
+### Found by the Machine Series (2 of 6 parts live)
 - [Why a Finance Guy Is Talking to You About ChatGPT](https://www.mainstreetiq.com/blog/why-a-finance-guy-talks-about-chatgpt): Why a fractional CFO cares about AI search: managing the intelligence of a business means both the numbers it reports inward and the signal AI engines read outward. Opener of the Found by the Machine series.
+- [Your Next Customer Is Asking ChatGPT, Not Google](https://www.mainstreetiq.com/blog/your-next-customer-is-asking-chatgpt): Buyers increasingly ask ChatGPT, Perplexity, and Gemini for recommendations instead of Googling, and the engine returns a short list rather than ten links. Why discoverability in AI answers is a leading indicator of revenue.
 <!-- AIV-LLMS-END -->
 
 ### The RAID Framework Series (8 parts)
