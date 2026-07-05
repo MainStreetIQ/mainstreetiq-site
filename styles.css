@@ -270,7 +270,7 @@ footer :focus-visible {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(9,17,30,0.92) 0%, rgba(26,44,78,0.86) 50%, rgba(43,78,140,0.78) 100%);
+  background: linear-gradient(135deg, rgba(9,17,30,0.94) 0%, rgba(26,44,78,0.90) 50%, rgba(33,60,108,0.86) 100%);
   z-index: 1;
 }
 .hero-has-bg .container {
