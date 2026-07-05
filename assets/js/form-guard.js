@@ -15,7 +15,7 @@
  * MSIQForm-driven pages and the plain native-submit pages.
  *
  * Added 2026-06-15 after form-spam bots passed the unenforced honeypot
- * (two dotted-Gmail bursts, 7 junk Leads across Partner / Fit Call / WCIR forms).
+ * (two dotted-Gmail bursts, 7 junk Leads across Partner / Intro Call / WCIR forms).
  */
 (function () {
   'use strict';

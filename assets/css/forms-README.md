@@ -13,7 +13,7 @@ Modern, design-system-matched forms for Main Street IQ. Three patterns supported
 ## Three patterns
 
 ### 1. Single-step form
-Simple lead capture. Contact, WCIR signup, Fit Call free booking, etc. Native form submit (POSTs straight to Zoho Web-to-Lead). Use `MSIQForm` for validation styling without overriding the submit.
+Simple lead capture. Contact, WCIR signup, Intro Call free booking, etc. Native form submit (POSTs straight to Zoho Web-to-Lead). Use `MSIQForm` for validation styling without overriding the submit.
 
 ### 2. Multi-step form
 Assessment quizzes, Strategic Brief intake, multi-stage onboarding. Progressive disclosure, per-step validation, choice-card UX. Use `MSIQForm` with `conditionalLogic` if some steps depend on prior answers.
@@ -144,7 +144,7 @@ The previous pattern was Zoho's embedded widgets + custom inline styling per for
 - Date picker
 - Multi-select dropdown
 - Auto-save to localStorage (resume long forms)
-- Submission to Zoho Bookings (for Fit Call paid landing with calendar selection embedded)
+- Submission to Zoho Bookings (for Intro Call paid landing with calendar selection embedded)
 
 Each is a focused addition to the library, not a rewrite.
 

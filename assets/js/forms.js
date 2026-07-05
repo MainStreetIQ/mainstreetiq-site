@@ -23,7 +23,7 @@
  *       'step-2': (data) => data.vertical === 'wine',
  *     },
  *     analytics: {
- *       category: 'fit_call',              // gtag event category
+ *       category: 'intro_call',              // gtag event category
  *     },
  *   });
  *   form.init();

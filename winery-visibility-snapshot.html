@@ -53,7 +53,7 @@
           <a href="/our-work">Our Work</a>
           <a href="/blog">Blog</a>
           <a href="/contact">Contact</a>
-          <a href="/fit-call" class="nav-cta">Book a Fit Call</a>
+          <a href="/intro-call" class="nav-cta">Book an Intro Call</a>
         </div>
         <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
           <span></span><span></span><span></span>
@@ -173,16 +173,16 @@
         </div>
         <div class="card">
           <h3>3. Talk it through</h3>
-          <p>If a CFO in the room would help with the bigger decisions, pricing, club retention, allocation, that conversation starts with a Fit Call. 30 minutes, free, with founder-to-founder notes to follow. No pitch.</p>
+          <p>If a CFO in the room would help with the bigger decisions, pricing, club retention, allocation, that conversation starts with an Intro Call. 30 minutes, free, with founder-to-founder notes to follow. No pitch.</p>
         </div>
       </div>
       <div style="max-width: 760px; margin: 2.5rem auto 0; padding: 1.75rem 2rem; background: var(--ice, #F4F6FA); border-radius: 8px;">
         <h3 style="margin: 0 0 0.6rem; color: var(--color-midnight, #0F1C2E);">We watch the AI-search market so you do not have to</h3>
         <p style="margin: 0 0 0.9rem; font-weight: 300;">The rules for getting found in ChatGPT, Claude, Perplexity, and Gemini change constantly: FAQ markup losing weight, the new llms.txt file emerging, assistants answering buyers directly instead of sending a click. We track the shifts that matter and flag them as they land. <a href="#footerNewsletterForm" style="color: var(--color-navy);">Subscribe in the footer</a> to get them when they happen. No drip, no pitch.</p>
-        <p style="margin: 0; font-weight: 300;">When you want to go further, <strong>Monitor</strong> keeps watching your visibility month over month, and a <strong>Competitor Benchmark</strong> shows how you stack against the wineries you compete with. Both scoped on a Fit Call, never a hard sell.</p>
+        <p style="margin: 0; font-weight: 300;">When you want to go further, <strong>Monitor</strong> keeps watching your visibility month over month, and a <strong>Competitor Benchmark</strong> shows how you stack against the wineries you compete with. Both scoped on an Intro Call, never a hard sell.</p>
       </div>
       <div class="hero-buttons" style="justify-content: center; margin-top: 2.5rem;">
-        <a href="https://calendly.com/scott_mainstreetiq/30min?utm_source=mainstreetiq-site&utm_medium=website&utm_campaign=snapshot-bridge" class="btn btn-primary" target="_blank" rel="noopener">Book a Fit Call &rarr;</a>
+        <a href="https://calendly.com/scott_mainstreetiq/30min?utm_source=mainstreetiq-site&utm_medium=website&utm_campaign=snapshot-bridge" class="btn btn-primary" target="_blank" rel="noopener">Book an Intro Call &rarr;</a>
       </div>
       <p style="text-align: center; font-size: 0.9rem; color: var(--neutral, #6B7480); margin-top: 1rem; font-weight: 300;">No step is required. The snapshot is yours either way.</p>
     </div>
@@ -366,7 +366,7 @@
           <h4>Connect</h4>
           <a href="/contact">Contact</a>
           <a href="/partners">Partners</a>
-          <a href="/fit-call">Book a Fit Call</a>
+          <a href="/intro-call">Book an Intro Call</a>
           <a href="https://www.linkedin.com/in/johnscotthess" target="_blank" rel="noopener">LinkedIn</a>
         </div>
         <div class="footer-col">
@@ -537,12 +537,12 @@
       }, 150);
     })();
 
-    // Fit Call intent: fire book_call_click on any Calendly or /fit-call CTA so
+    // Intro Call intent: fire book_call_click on any Calendly or /intro-call CTA so
     // GA4 can attribute downstream bookings back to this snapshot page.
     (function(){
       document.querySelectorAll('a[href]').forEach(function(a){
         var href = a.getAttribute('href') || '';
-        if (href.indexOf('calendly.com') === -1 && href.indexOf('/fit-call') === -1) return;
+        if (href.indexOf('calendly.com') === -1 && href.indexOf('/intro-call') === -1) return;
         a.addEventListener('click', function(){
           msiqFire('book_call_click', {
             cta_href: href,
