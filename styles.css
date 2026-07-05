@@ -145,6 +145,27 @@ p  { font-size: 1.05rem; color: var(--slate); margin-bottom: 1rem; font-weight: 
   outline-offset: 2px;
 }
 
+/* --- Accessibility: visible keyboard focus everywhere --- */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--color-navy);
+  outline-offset: 2px;
+}
+/* Dark sections need the light accent for a visible ring */
+.bg-navy :focus-visible,
+.hero :focus-visible,
+.about-hero :focus-visible,
+.case-hero :focus-visible,
+.post-hero :focus-visible,
+.site-footer :focus-visible,
+footer :focus-visible {
+  outline-color: var(--color-sky);
+}
+
 /* --- Header / Nav --- */
 .site-header {
   position: fixed;
@@ -540,8 +561,9 @@ section { padding: var(--section-padding); }
   border-radius: 4px;
 }
 .footer-newsletter-form input[type="email"]:focus {
-  outline: none;
-  border-color: var(--color-navy);
+  outline: 2px solid var(--color-sky);
+  outline-offset: 1px;
+  border-color: var(--color-sky);
   background: rgba(255,255,255,0.08);
 }
 .footer-newsletter-form input[type="email"]::placeholder {
