@@ -17,6 +17,7 @@ Promoted from Scott's session memory (2026-07-06, agent-native plan P1). This fi
 ## Verification harness
 
 - Browser-verify style work before commit with `~/MSIQ/.venv/bin/python` + Playwright headless Chromium on `file://` URLs; screenshot to scratchpad and Read the PNG; catch JS errors via `page.on('pageerror')`. Desktop 1440x900 + mobile 390x844 covers both breakpoints.
+- **Subdirectory pages (e.g. `/glossary/*.html`) use ABSOLUTE asset paths (`/styles.css`, `/assets/...`) and render UNSTYLED over `file://`** (the leading `/` resolves to the filesystem root, not the repo). Verify those over a local HTTP server instead: `python3 -m http.server 8899 --directory .` then load `http://localhost:8899/<page>.html`. Note python's http.server has NO extensionless-URL resolution (hit `.html` locally), but GitHub Pages does (production links stay extensionless). Root-level pages use relative paths and still style over `file://`.
 - **`:focus-visible` must be verified with a real keyboard Tab** (`page.keyboard.press('Tab')` loop until `document.activeElement` is the target). Programmatic `element.focus()` + getComputedStyle false-negatives (outline reads back as currentColor).
 
 ## Gate adjudications
