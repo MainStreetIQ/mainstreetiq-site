@@ -12,6 +12,32 @@
 
 - [Fractional CFO vs. CPA](https://www.mainstreetiq.com/fractional-cfo-vs-cpa): The difference between a fractional CFO and a CPA or bookkeeper offering "CFO services." Covers what each role actually does, where the gap shows up, the four diagnostic questions to ask a fractional CFO candidate, and when a CPA route actually makes sense.
 
+## AI CFO
+
+- [What Is an AI CFO?](https://www.mainstreetiq.com/ai-cfo): Definition and full explainer. An AI CFO is a fractional CFO with a built-in intelligence engine, a person who turns financial data into decisions, not finance software you log into. Includes a comparison table (AI CFO vs. fractional CFO vs. CPA vs. BI tool vs. FP&A software).
+- [AI CFO in Santa Barbara County](https://www.mainstreetiq.com/ai-cfo-santa-barbara): Local AI CFO for owner-operated businesses across Santa Barbara County, pairing a named finance operator with the intelligence engine, plus an AI-search-visibility read for local buyers. Cross-linked to the Santa Barbara County fractional CFO page.
+- [AI CFO in San Luis Obispo County](https://www.mainstreetiq.com/ai-cfo-san-luis-obispo): Local AI CFO for owner-operated businesses across San Luis Obispo County, pairing a named finance operator with the intelligence engine, plus an AI-search-visibility read for local buyers. Cross-linked to the San Luis Obispo County fractional CFO page.
+- [AI CFO in Ventura County](https://www.mainstreetiq.com/ai-cfo-ventura): Local AI CFO for owner-operated businesses across Ventura County, pairing a named finance operator with the intelligence engine, plus an AI-search-visibility read for local buyers. Cross-linked to the Ventura County fractional CFO page.
+
+## Glossary
+
+- [Finance & AI Glossary](https://www.mainstreetiq.com/glossary): Plain-language definitions of the finance and AI-search terms behind an AI CFO.
+- [AI Visibility](https://www.mainstreetiq.com/glossary/ai-visibility): AI visibility is how often, and how accurately, AI assistants like ChatGPT, Claude, Gemini, and Perplexity name your business when someone asks them a question you should be the answer to.
+- [Answer Engine Optimization (AEO)](https://www.mainstreetiq.com/glossary/answer-engine-optimization): Answer Engine Optimization (AEO) is the practice of structuring your content so that answer engines, the AI systems and featured-snippet tools that give a single direct answer, pull from your business as the source.
+- [Generative Engine Optimization (GEO)](https://www.mainstreetiq.com/glossary/generative-engine-optimization): Generative Engine Optimization (GEO) is optimizing your business's presence so that generative AI models, the large language models behind ChatGPT, Claude, Gemini, and Perplexity, represent and recommend you accurately when they generate a response.
+- [LLM Citation](https://www.mainstreetiq.com/glossary/llm-citation): An LLM citation is when a large language model names or links to your business as a source or recommendation inside the answer it generates for a user.
+- [llms.txt](https://www.mainstreetiq.com/glossary/llms-txt): llms.txt is a plain-text file placed at the root of a website that gives AI systems a clean, curated summary of what the site is about and which pages matter most, the way robots.txt speaks to search crawlers.
+- [Schema Markup (Structured Data)](https://www.mainstreetiq.com/glossary/schema-markup): Schema markup is standardized code you add to your web pages that labels your content, this is a business name, this is a price, this is an FAQ, so search engines and AI systems can read it unambiguously.
+- [Entity & Knowledge Graph](https://www.mainstreetiq.com/glossary/entity-knowledge-graph): An entity is a distinct thing a search or AI system recognizes, a specific business, person, or place, and a knowledge graph is the connected map of facts these systems hold about that entity and how it relates to others.
+- [Retrieval-Augmented Generation (RAG)](https://www.mainstreetiq.com/glossary/retrieval-augmented-generation): Retrieval-augmented generation (RAG) is a technique where an AI model, before answering, retrieves relevant up-to-date information from an external source and uses it to ground its response, rather than relying only on what it memorized during training.
+- [AI CFO](https://www.mainstreetiq.com/glossary/ai-cfo): An AI CFO is a fractional Chief Financial Officer whose work is powered by a built-in intelligence engine: an operator who turns your financial data into decisions, delivered by a person, not a software product you log into.
+- [Fractional CFO](https://www.mainstreetiq.com/glossary/fractional-cfo): A fractional CFO is an experienced Chief Financial Officer who works with a company part-time, providing senior strategic finance leadership without the cost of a full-time executive hire.
+- [Contribution Margin](https://www.mainstreetiq.com/glossary/contribution-margin): Contribution margin is the revenue left from a sale after subtracting the variable costs of delivering it, the money each sale contributes toward covering fixed costs and, beyond that, profit.
+- [Unit Economics](https://www.mainstreetiq.com/glossary/unit-economics): Unit economics is the profitability of a single unit of your business, one product sold or one customer served, measured by the direct revenues and costs tied to that unit.
+- [CAC:LTV Ratio](https://www.mainstreetiq.com/glossary/cac-ltv-ratio): The CAC:LTV ratio compares what it costs to acquire a customer (customer acquisition cost) against how much profit that customer generates over their relationship with you (lifetime value), the core test of whether your growth is efficient.
+- [Cash Conversion Cycle](https://www.mainstreetiq.com/glossary/cash-conversion-cycle): The cash conversion cycle is the time it takes for a dollar you spend, on inventory or delivering a service, to come back to you as collected cash from a customer.
+- [Cohort Analysis](https://www.mainstreetiq.com/glossary/cohort-analysis): Cohort analysis groups customers by when they first bought, then tracks how each group behaves over time, so you can see whether customers are getting more or less valuable, and whether retention is improving or decaying.
+
 ## About
 
 - [About Scott Hess](https://www.mainstreetiq.com/about): 20+ years CFO experience. Former CFO at Watch Gang ($40M subscription ecommerce) and Haberdash (luxury menswear). 12 years at Northern Trust in institutional finance. Navy veteran. MBA from Pepperdine Graziadio School of Business.
