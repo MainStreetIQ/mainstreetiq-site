@@ -73,6 +73,10 @@ Most clients have a 5-day close process within 90 days. Real-time dashboards and
 - [AI CFO in San Luis Obispo County](https://www.mainstreetiq.com/ai-cfo-san-luis-obispo): Local AI CFO for owner-operated businesses across San Luis Obispo County, pairing a named finance operator with the intelligence engine, plus an AI-search-visibility read for local buyers. Cross-linked to the San Luis Obispo County fractional CFO page.
 - [AI CFO in Ventura County](https://www.mainstreetiq.com/ai-cfo-ventura): Local AI CFO for owner-operated businesses across Ventura County, pairing a named finance operator with the intelligence engine, plus an AI-search-visibility read for local buyers. Cross-linked to the Ventura County fractional CFO page.
 
+## AI Visibility
+
+- [When a Tourist Asks AI Where to Go, Is It Your Name?](https://www.mainstreetiq.com/ai-visibility-tourism): AI answer visibility (answer engine optimization) for owner-operated tourism businesses across California's Central Coast (Santa Barbara, San Luis Obispo, Ventura counties), led by wineries and tasting rooms. How AI engines like ChatGPT, Perplexity, Claude, and Google's AI Overviews decide which businesses to name when a traveler asks where to go. Includes a comparison table (classic tourism SEO vs. AI answer visibility) and the Wine Country Intelligence Report as the winery proof point.
+
 ## Glossary
 
 - [Finance & AI Glossary](https://www.mainstreetiq.com/glossary): Plain-language definitions of the finance and AI-search terms behind an AI CFO.
