@@ -1,12 +1,12 @@
 # Main Street IQ
 
-> Main Street IQ is a fractional and interim CFO services firm led by Scott Hess, providing embedded finance leadership for growing companies between $15M and $100M in revenue. Based in California, the firm works across e-commerce, SaaS, manufacturing, hospitality, apparel/DTC, and PE-backed companies. Every engagement is built on the proprietary RAID Framework (Redundant, Agile, Intelligent, Data-Driven).
+> Main Street IQ is a fractional CFO practice for owner-operated businesses under $50MM in revenue, with a built-in intelligence engine. Led by Scott Hess, it pairs a named fractional or interim CFO with an engine that reads your market, your funnel, your cohorts, and what AI search says about you; the CFO works those decisions alongside you, not from the sideline. The practice concentrates on California's Central Coast and Southern California and serves fitting owner-operated businesses nationwide, with the deepest work in e-commerce, wine, health and wellness, and elective medicine. Every engagement is built on the proprietary RAID Framework (Redundant, Agile, Intelligent, Data-Driven).
 
 ## Core Services
 
-- [Fractional CFO — Ongoing](https://www.mainstreetiq.com/our-services): 10–15 hours/week embedded finance leadership (fractional or interim CFO) covering month-end close, cash/margin visibility, investor reporting, and cross-functional strategy.
-- [Advisory — Light Touch](https://www.mainstreetiq.com/our-services): ~10 hours/month strategic oversight for companies with existing finance teams.
-- [Project-Based](https://www.mainstreetiq.com/our-services): Discrete engagements — financial modeling, M&A preparation, close process redesign, investor reporting packages.
+- [Fractional CFO, Ongoing](https://www.mainstreetiq.com/our-services): 10–15 hours/week embedded finance leadership (fractional or interim CFO) covering month-end close, cash/margin visibility, investor reporting, and cross-functional strategy.
+- [Advisory, Light Touch](https://www.mainstreetiq.com/our-services): ~10 hours/month strategic oversight for companies with existing finance teams.
+- [Project-Based](https://www.mainstreetiq.com/our-services): Discrete engagements: financial modeling, M&A preparation, close process redesign, investor reporting packages.
 
 ## Category Comparison
 
@@ -48,35 +48,35 @@
 
 ## Case Studies
 
-- [E-Commerce: $15M Company](https://www.mainstreetiq.com/our-work/e-commercegrowth): Scaling finance through hypergrowth — inventory forecasting, margin analysis by channel, KPI dashboards, enterprise accounting migration.
+- [E-Commerce: $15M Company](https://www.mainstreetiq.com/our-work/e-commercegrowth): Scaling finance through hypergrowth: inventory forecasting, margin analysis by channel, KPI dashboards, enterprise accounting migration.
 - [Manufacturing: $300M Divestiture](https://www.mainstreetiq.com/our-work/divesting-manufacturer): Financial carve-out, standalone financials, data room construction, deal support for business unit sale.
 - [Apparel/DTC: $10M Brand](https://www.mainstreetiq.com/our-work/designer-led-apparel): Product costing, seasonal cash flow forecasting, channel profitability analysis, working capital optimization.
 - [Hospitality: Six-Location Restaurant Group](https://www.mainstreetiq.com/our-work/restaurant-group): Unified multi-location reporting, food/labor cost controls, expansion modeling for coastal California restaurants.
-- [Turnaround: Asset Purchase](https://www.mainstreetiq.com/our-work/asset-purchase): Management-led acquisition from bankruptcy — valuation, financing, 100-day integration, finance function built from scratch.
+- [Turnaround: Asset Purchase](https://www.mainstreetiq.com/our-work/asset-purchase): Management-led acquisition from bankruptcy: valuation, financing, 100-day integration, finance function built from scratch.
 - [SaaS: Post-Seed Series A Prep](https://www.mainstreetiq.com/our-work/saas-post-seed-funding): SaaS metrics implementation (ARR, MRR, CAC, LTV, churn), cohort analysis, revenue recognition, investor-ready reporting.
 - [Family Office](https://www.mainstreetiq.com/our-work/family-office): Unified reporting across PE, real estate, operating businesses. Institutional-grade investment analysis and multigenerational governance.
 
 ## The RAID Framework
 
 Every engagement is structured around four principles:
-- **Redundant**: Documented, cross-trained processes — no single points of failure.
-- **Agile**: Automation-first — build systems before hiring people.
+- **Redundant**: Documented, cross-trained processes with no single points of failure.
+- **Agile**: Automation-first: build systems before hiring people.
 - **Intelligent**: Finance teams as owner-operators, not scorekeepers.
 - **Data-Driven**: Every team member owns 3–5 KPIs tied to real business levers.
 
 ## Contact
 
-- [Book a 30-Minute Call](https://calendly.com/scott_mainstreetiq/30min): Free initial consultation.
+- [Book a 30-Minute Call](https://calendly.com/scott_mainstreetiq/30min): A 30-minute introductory call with Scott Hess. No pitch, no obligation.
 - [Contact Page](https://www.mainstreetiq.com/contact): Calendly booking and contact information.
 - [LinkedIn](https://www.linkedin.com/in/johnscotthess): Scott Hess profile.
 
-## Blog — Finance Insights (31 posts)
+## Blog: Finance Insights (31 posts)
 
 <!-- ATC-LLMS-START -->
 ### After the Close Series (5 of 7 parts live)
-- [Who Owns the So-What After the Books Close?](https://www.mainstreetiq.com/blog/who-owns-the-so-what): After your books close, who owns the so-what? Why automation produces output but judgment — naming the one number that matters and the next move — is still human work. Opener of the After the Close series.
+- [Who Owns the So-What After the Books Close?](https://www.mainstreetiq.com/blog/who-owns-the-so-what): After your books close, who owns the so-what? Why automation produces output but judgment, naming the one number that matters and the next move, is still human work. Opener of the After the Close series.
 - [Your Real Bottleneck Is Hours, Not Tools](https://www.mainstreetiq.com/blog/the-real-bottleneck-is-hours): The strongest operators already have tools and data; their bottleneck is hours and judgment load. Why the fix is a finance partner, not more software.
-- [Does Your Finance Partner Know Where You're Going?](https://www.mainstreetiq.com/blog/finance-that-knows-where-youre-going): Finance that stops at the company misses the founder. Tying growth to the owner's long-term security, distributions, and timeline — the half of finance most partners skip.
+- [Does Your Finance Partner Know Where You're Going?](https://www.mainstreetiq.com/blog/finance-that-knows-where-youre-going): Finance that stops at the company misses the founder. Tying growth to the owner's long-term security, distributions, and timeline, the half of finance most partners skip.
 - [Why Growth Is What Breaks Your Cash](https://www.mainstreetiq.com/blog/why-growth-breaks-your-cash): Why fast growth breaks cash: the cash conversion cycle, working capital, and the float gap that revenue growth widens. The metric that decides whether you survive scaling.
 - [Your Blended ROAS Is Hiding Your Best Channel](https://www.mainstreetiq.com/blog/blended-roas-hides-your-best-channel): Blended ROAS hides your best channel and protects your worst. Breaking marketing performance apart by channel and payback window to fund what actually pays back.
 <!-- ATC-LLMS-END -->
@@ -90,57 +90,57 @@ Every engagement is structured around four principles:
 <!-- AIV-LLMS-END -->
 
 ### The RAID Framework Series (8 parts)
-- [Why Most Finance Teams Fail to Scale](https://www.mainstreetiq.com/blog/why-finance-teams-fail-to-scale): The pattern of finance breaking at $20M — and the 4 failure modes. Series opener.
-- [Automate First — Why Tools Come Before People](https://www.mainstreetiq.com/blog/automate-first): The "Agile" principle — automation before headcount. AP, AR, expense, and reconciliation automation.
-- [Build Redundant Finance — No More Single Points of Failure](https://www.mainstreetiq.com/blog/build-redundant-finance): The "Redundant" principle — documentation, cross-training, and system access redundancy.
-- [Stay Agile — Shrink the Team, Grow the Revenue](https://www.mainstreetiq.com/blog/stay-agile): Organizational agility — why a $25M company needs 3 finance people, not 8.
-- [Intelligent Teams Think Like Owners](https://www.mainstreetiq.com/blog/intelligent-teams): The "Intelligent" principle — scorekeepers vs. owner-operators. Building teams that drive decisions.
-- [Moneyball Metrics — The 3–5 KPIs Each Role Must Own](https://www.mainstreetiq.com/blog/moneyball-metrics): The "Data-Driven" principle — stage-based KPI selection and ownership by role.
-- [RAID Tech Stack — Tools That Reduce FTEs](https://www.mainstreetiq.com/blog/raid-tech-stack): The specific tools — QBO vs NetSuite, Bill.com, Ramp, FloQast, Mosaic.
-- [Investor-Ready Finance — Fewer FTE, More Control](https://www.mainstreetiq.com/blog/investor-ready-finance): The 5 things investors look for in your finance function. Series conclusion.
+- [Why Most Finance Teams Fail to Scale](https://www.mainstreetiq.com/blog/why-finance-teams-fail-to-scale): The pattern of finance breaking at $20M, and the 4 failure modes. Series opener.
+- [Automate First: Why Tools Come Before People](https://www.mainstreetiq.com/blog/automate-first): The "Agile" principle: automation before headcount. AP, AR, expense, and reconciliation automation.
+- [Build Redundant Finance: No More Single Points of Failure](https://www.mainstreetiq.com/blog/build-redundant-finance): The "Redundant" principle: documentation, cross-training, and system access redundancy.
+- [Stay Agile: Shrink the Team, Grow the Revenue](https://www.mainstreetiq.com/blog/stay-agile): Organizational agility, why a $25M company needs 3 finance people, not 8.
+- [Intelligent Teams Think Like Owners](https://www.mainstreetiq.com/blog/intelligent-teams): The "Intelligent" principle: scorekeepers vs. owner-operators. Building teams that drive decisions.
+- [Moneyball Metrics: The 3–5 KPIs Each Role Must Own](https://www.mainstreetiq.com/blog/moneyball-metrics): The "Data-Driven" principle: stage-based KPI selection and ownership by role.
+- [RAID Tech Stack: Tools That Reduce FTEs](https://www.mainstreetiq.com/blog/raid-tech-stack): The specific tools: QBO vs NetSuite, Bill.com, Ramp, FloQast, Mosaic.
+- [Investor-Ready Finance: Fewer FTE, More Control](https://www.mainstreetiq.com/blog/investor-ready-finance): The 5 things investors look for in your finance function. Series conclusion.
 
 ### RAID in Action
-- [RAID in Action](https://www.mainstreetiq.com/blog/raid-in-action): Real-world case study of the RAID Framework applied to a growing company — the problems, the fixes, and the results.
+- [RAID in Action](https://www.mainstreetiq.com/blog/raid-in-action): Real-world case study of the RAID Framework applied to a growing company: the problems, the fixes, and the results.
 
 ### Annual Planning Series (6 parts)
-- [Why an Annual Plan Matters](https://www.mainstreetiq.com/blog/why-annual-plan-matters): The real value of annual planning isn't the document — it's forcing alignment between revenue, expenses, headcount, and cash flow.
+- [Why an Annual Plan Matters](https://www.mainstreetiq.com/blog/why-annual-plan-matters): The real value of annual planning isn't the document, it's forcing alignment between revenue, expenses, headcount, and cash flow.
 - [Revenue Growth Planning](https://www.mainstreetiq.com/blog/revenue-growth-planning): Building bottoms-up revenue models by channel with unit economics, capacity constraints, and scenario analysis.
 - [Expense Controls](https://www.mainstreetiq.com/blog/expense-controls): Separating fixed from variable, benchmarking against revenue percentages, and building approval workflows that catch bad spending early.
 - [Marketing Spend Planning](https://www.mainstreetiq.com/blog/marketing-spend-planning): Tying marketing spend to CAC targets by channel, setting payback period guardrails, and giving marketing a flexible budget framework.
-- [Balance Sheet Management](https://www.mainstreetiq.com/blog/balance-sheet-management): Managing working capital, inventory, and receivables proactively — the balance sheet tells you what the P&L can't.
+- [Balance Sheet Management](https://www.mainstreetiq.com/blog/balance-sheet-management): Managing working capital, inventory, and receivables proactively; the balance sheet tells you what the P&L can't.
 - [Planning for Unknowns](https://www.mainstreetiq.com/blog/planning-for-unknowns): Scenario planning, contingency reserves, and monthly reforecasting that turn a rigid plan into a flexible operating framework.
 
 ### Acquisition & Growth Series (6 parts)
 - [SEO vs GEO vs AEO: What Each One Actually Does for Growth](https://www.mainstreetiq.com/blog/seo-vs-geo-vs-aeo-explained): Three acronyms, three different optimization targets. SEO ranks you, GEO finds you, AEO quotes you. What each one unlocks for growth and which layer is most likely leaking today.
 - [If Your Month-End Close Takes More Than 7 Days](https://www.mainstreetiq.com/blog/month-end-close): How to go from an 18-day close to a 5-day close in 90 days.
 - [Your Marketing Team Might Be Destroying Your Margin](https://www.mainstreetiq.com/blog/marketing-team-destroying-margin): The gap between marketing efficiency (MER) and actual profitability lives in COGS assumptions, shipping costs, and return rates.
-- [Tariffs and Lower Middle Market COGS](https://www.mainstreetiq.com/blog/tariffs-lower-middle-market-cogs): How tariffs cascade through pricing, margins, inventory strategy, and cash flow — and how to model for them.
+- [Tariffs and Lower Middle Market COGS](https://www.mainstreetiq.com/blog/tariffs-lower-middle-market-cogs): How tariffs cascade through pricing, margins, inventory strategy, and cash flow, plus how to model for them.
 - [Your Comp Structure Is Driving the Wrong Behavior](https://www.mainstreetiq.com/blog/comp-structure-wrong-behavior): When compensation plans don't align with margin, cash collection, and retention, you're paying people to optimize the wrong things.
-- [The Payback Window Problem](https://www.mainstreetiq.com/blog/payback-window-problem): Why most companies calculate payback period wrong — and how getting it right changes which channels you scale.
+- [The Payback Window Problem](https://www.mainstreetiq.com/blog/payback-window-problem): Why most companies calculate payback period wrong, and how getting it right changes which channels you scale.
 
 ### Finance Leadership & Operations
-- [The Cash Flow Illusion](https://www.mainstreetiq.com/blog/the-cash-flow-illusion): How cash hides in inventory, accounts receivable, and expense timing — and the 13-week forecast that fixes it.
-- [MER Looks Healthy, Margin Is Disappearing](https://www.mainstreetiq.com/blog/mer-margin-disappearing): Marketing efficiency ratio vs. contribution margin — why the metric everyone watches isn't the one that matters.
+- [The Cash Flow Illusion](https://www.mainstreetiq.com/blog/the-cash-flow-illusion): How cash hides in inventory, accounts receivable, and expense timing, and the 13-week forecast that fixes it.
+- [MER Looks Healthy, Margin Is Disappearing](https://www.mainstreetiq.com/blog/mer-margin-disappearing): Marketing efficiency ratio vs. contribution margin: why the metric everyone watches isn't the one that matters.
 - [CFO vs. Finance Director vs. Controller](https://www.mainstreetiq.com/blog/cfo-finance-director-controller): What each role actually owns, which one fits your revenue stage, and how to avoid the expensive hiring mistake.
-- [How to Evaluate a Fractional CFO](https://www.mainstreetiq.com/blog/evaluate-fractional-cfo): What to look for when hiring a fractional CFO — industry experience, engagement model, and red flags.
-- [Your Finance Team Stopped Scaling](https://www.mainstreetiq.com/blog/finance-team-stopped-scaling): Five signs your finance function has stalled — and why the fix is structural, not tactical.
-- [The Hero Problem Is a Liability](https://www.mainstreetiq.com/blog/hero-problem-liability): When one person holds all the keys to your finance function, you don't have a team — you have a single point of failure.
-- [The Marketing Problem Is a Merchandising Problem](https://www.mainstreetiq.com/blog/marketing-problem-merchandising): When revenue underperforms, the instinct is to blame marketing — but the root cause is often product mix and merchandising.
+- [How to Evaluate a Fractional CFO](https://www.mainstreetiq.com/blog/evaluate-fractional-cfo): What to look for when hiring a fractional CFO: industry experience, engagement model, and red flags.
+- [Your Finance Team Stopped Scaling](https://www.mainstreetiq.com/blog/finance-team-stopped-scaling): Five signs your finance function has stalled, and why the fix is structural, not tactical.
+- [The Hero Problem Is a Liability](https://www.mainstreetiq.com/blog/hero-problem-liability): When one person holds all the keys to your finance function, you don't have a team, you have a single point of failure.
+- [The Marketing Problem Is a Merchandising Problem](https://www.mainstreetiq.com/blog/marketing-problem-merchandising): When revenue underperforms, the instinct is to blame marketing, but the root cause is often product mix and merchandising.
 - [Running a Business With a Better CFO](https://www.mainstreetiq.com/blog/running-business-better-cfo): What changes when you bring in senior finance leadership that understands the business, not just the books.
 - [What Your CAC Number Doesn't Include](https://www.mainstreetiq.com/blog/what-cac-number-doesnt-include): The hidden costs that inflate your real customer acquisition cost beyond what the marketing dashboard reports.
 - [The Finance Side of a PE Exit](https://www.mainstreetiq.com/blog/pe-exit-finance-side): What gets tested in a quality of earnings process and how to prepare your finance function before the LOI.
-- [What PE Sponsors Actually Ask About EBITDA](https://www.mainstreetiq.com/blog/pe-sponsors-ebitda): The specific EBITDA questions PE firms ask in diligence — and what "can answer them cleanly" actually means.
-- [Why Your CPA's "Fractional CFO" Service Isn't Actually CFO Work](https://www.mainstreetiq.com/blog/cpa-fractional-cfo-service): Most fractional CFO services are CPA firms adding a strategic line item to a tax-and-bookkeeping package. Real CFO work is different — and here's the test to tell them apart.
+- [What PE Sponsors Actually Ask About EBITDA](https://www.mainstreetiq.com/blog/pe-sponsors-ebitda): The specific EBITDA questions PE firms ask in diligence, and what "can answer them cleanly" actually means.
+- [Why Your CPA's "Fractional CFO" Service Isn't Actually CFO Work](https://www.mainstreetiq.com/blog/cpa-fractional-cfo-service): Most fractional CFO services are CPA firms adding a strategic line item to a tax-and-bookkeeping package. Real CFO work is different, and here's the test to tell them apart.
 
 ## Service Areas
 
-- [All Locations — Locations Hub](https://www.mainstreetiq.com/locations): Overview of all markets MSIQ serves across California's Central Coast and Southern California.
-- [Santa Barbara County](https://www.mainstreetiq.com/fractional-cfo-santa-barbara): Fractional and interim CFO services for Santa Barbara County — wine, tourism, tech, agriculture.
-- [San Luis Obispo County](https://www.mainstreetiq.com/fractional-cfo-san-luis-obispo): Fractional and interim CFO services for SLO County — Paso Robles wine, agriculture, Cal Poly tech pipeline.
+- [All Locations, Locations Hub](https://www.mainstreetiq.com/locations): Overview of all markets MSIQ serves across California's Central Coast and Southern California.
+- [Santa Barbara County](https://www.mainstreetiq.com/fractional-cfo-santa-barbara): Fractional and interim CFO services for Santa Barbara County: wine, tourism, tech, agriculture.
+- [San Luis Obispo County](https://www.mainstreetiq.com/fractional-cfo-san-luis-obispo): Fractional and interim CFO services for SLO County: Paso Robles wine, agriculture, Cal Poly tech pipeline.
 - [AI Consulting: Santa Barbara & San Luis Obispo Counties](https://www.mainstreetiq.com/ai-consulting): AI consulting for owner-operated $5M to $50M businesses on the Central Coast, from a practice that runs its own operations on AI agents: AI adoption, back-office AI workflows, and AI search visibility.
-- [Ventura County](https://www.mainstreetiq.com/fractional-cfo-ventura): Fractional and interim CFO services for Ventura County — agriculture, defense, manufacturing, biotech.
-- [Los Angeles](https://www.mainstreetiq.com/fractional-cfo-los-angeles): Fractional and interim CFO services for LA — entertainment, DTC/ecommerce, apparel, PE-backed companies.
-- [Orange County](https://www.mainstreetiq.com/fractional-cfo-orange-county): Fractional and interim CFO services for Orange County — tech/SaaS, ecommerce, medical devices, franchises.
+- [Ventura County](https://www.mainstreetiq.com/fractional-cfo-ventura): Fractional and interim CFO services for Ventura County: agriculture, defense, manufacturing, biotech.
+- [Los Angeles](https://www.mainstreetiq.com/fractional-cfo-los-angeles): Fractional and interim CFO services for LA: entertainment, DTC/ecommerce, apparel, PE-backed companies.
+- [Orange County](https://www.mainstreetiq.com/fractional-cfo-orange-county): Fractional and interim CFO services for Orange County: tech/SaaS, ecommerce, medical devices, franchises.
 
 ## Optional
 
