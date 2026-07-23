@@ -154,6 +154,70 @@
   }
   </script>
 
+  <style>
+    .vscpa-table-wrap {
+      max-width: 960px;
+      margin: 0 auto;
+      overflow-x: auto;
+    }
+    .vscpa-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+      min-width: 720px;
+    }
+    .vscpa-table thead th {
+      background: var(--color-midnight, #0F1C2E);
+      color: #fff;
+      font-weight: 500;
+      text-align: left;
+      padding: 0.85rem 1rem;
+      font-size: 0.9rem;
+      letter-spacing: 0.3px;
+      vertical-align: bottom;
+    }
+    .vscpa-table thead th.vscpa-col-highlight {
+      background: var(--color-navy, #2B4E8C);
+    }
+    .vscpa-table tbody th {
+      text-align: left;
+      padding: 0.75rem 1rem;
+      font-weight: 600;
+      color: var(--color-navy, #2B4E8C);
+      border-bottom: 1px solid var(--color-border, #E5E2DC);
+      background: var(--color-ice, #FAFAF7);
+      white-space: nowrap;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      vertical-align: top;
+    }
+    .vscpa-table tbody td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--color-border, #E5E2DC);
+      font-weight: 300;
+      color: var(--color-dark-text, #1A1F2B);
+      vertical-align: top;
+      line-height: 1.55;
+    }
+    .vscpa-table td.vscpa-col-highlight {
+      background: rgba(43, 78, 140, 0.06);
+      font-weight: 400;
+      color: var(--color-midnight, #0F1C2E);
+    }
+    .vscpa-table .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
+
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
@@ -203,34 +267,38 @@
         <h2 class="section-title">Bookkeeper vs. CPA vs. Strategic Fractional CFO</h2>
         <p class="section-subtitle">Three distinct disciplines. Most companies need two of the three. Very few need a CPA's "CFO services" bundle.</p>
       </div>
-      <div class="card-grid">
-        <div class="card">
-          <h3>Bookkeeper</h3>
-          <p style="color: var(--navy); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem;">Core expertise</p>
-          <p>Recording transactions, reconciling accounts, managing the close cycle. Production-layer accuracy.</p>
-          <p style="color: var(--navy); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 1.25rem; margin-bottom: 0.75rem;">What they deliver</p>
-          <p>Clean books, monthly financial statements, accurate records. Table stakes for any business.</p>
-          <p style="color: var(--navy); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 1.25rem; margin-bottom: 0.75rem;">Where they fall short</p>
-          <p>No strategic judgment. No tech stack design. No unit economics. No capital allocation. No board narrative. They record what happened; they don't shape what happens next.</p>
-        </div>
-        <div class="card">
-          <h3>CPA with "CFO services"</h3>
-          <p style="color: var(--navy); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem;">Core expertise</p>
-          <p>Tax planning, compliance, audit (if attest), financial statement prep, GAAP interpretation, controller-level oversight.</p>
-          <p style="color: var(--navy); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 1.25rem; margin-bottom: 0.75rem;">What they deliver</p>
-          <p>Bundled tax + bookkeeping + controller package, often with a strategic quarterly check-in billed as "CFO services."</p>
-          <p style="color: var(--navy); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 1.25rem; margin-bottom: 0.75rem;">Where they fall short</p>
-          <p>Default tech stack stuck in 2015 (QBO + Excel). Minimal AI or automation. No operator-grade financial modeling. Board reporting that doesn't scale past a 20-page binder. Fundraising support limited to tax structure.</p>
-        </div>
-        <div class="card" style="border-top: 2px solid var(--navy);">
-          <h3>Strategic Fractional CFO</h3>
-          <p style="color: var(--navy); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem;">Core expertise</p>
-          <p>Capital allocation, strategic guidance, tech stack ownership, team leadership, board and investor narrative. Operator-grade finance, not audit-adjacent.</p>
-          <p style="color: var(--navy); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 1.25rem; margin-bottom: 0.75rem;">What they deliver</p>
-          <p>Modern tech stack (Bill.com, Ramp, FloQast, integrated BI). AI-assisted workflows. Contribution margin by SKU and channel. 13-week cash forecasts. Board-grade reporting. Investor-ready data rooms.</p>
-          <p style="color: var(--navy); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 1.25rem; margin-bottom: 0.75rem;">Where we add value</p>
-          <p>The strategic judgment, tech-stack design, and AI integration that turns a finance function from a cost center into a competitive advantage. Plus a named operator history that includes taking Watch Gang from $18M to $40M+ as first finance hire.</p>
-        </div>
+      <div class="vscpa-table-wrap">
+        <table class="vscpa-table">
+          <caption class="sr-only">Comparison of a bookkeeper, a CPA offering "CFO services," and a strategic fractional CFO across core expertise, what they deliver, and where the gaps show up.</caption>
+          <thead>
+            <tr>
+              <th scope="col">&nbsp;</th>
+              <th scope="col">Bookkeeper</th>
+              <th scope="col">CPA with "CFO services"</th>
+              <th scope="col" class="vscpa-col-highlight">Strategic Fractional CFO</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Core expertise</th>
+              <td>Recording transactions, reconciling accounts, managing the close cycle. Production-layer accuracy.</td>
+              <td>Tax planning, compliance, audit (if attest), financial statement prep, GAAP interpretation, controller-level oversight.</td>
+              <td class="vscpa-col-highlight">Capital allocation, strategic guidance, tech stack ownership, team leadership, board and investor narrative. Operator-grade finance, not audit-adjacent.</td>
+            </tr>
+            <tr>
+              <th scope="row">What they deliver</th>
+              <td>Clean books, monthly financial statements, accurate records. Table stakes for any business.</td>
+              <td>Bundled tax + bookkeeping + controller package, often with a strategic quarterly check-in billed as "CFO services."</td>
+              <td class="vscpa-col-highlight">Modern tech stack (Bill.com, Ramp, FloQast, integrated BI). AI-assisted workflows. Contribution margin by SKU and channel. 13-week cash forecasts. Board-grade reporting. Investor-ready data rooms.</td>
+            </tr>
+            <tr>
+              <th scope="row">The gaps, and what fills them</th>
+              <td>No strategic judgment. No tech stack design. No unit economics. No capital allocation. No board narrative. They record what happened; they don't shape what happens next.</td>
+              <td>Default tech stack stuck in 2015 (QBO + Excel). Minimal AI or automation. No operator-grade financial modeling. Board reporting that doesn't scale past a 20-page binder. Fundraising support limited to tax structure.</td>
+              <td class="vscpa-col-highlight">The strategic judgment, tech-stack design, and AI integration that turns a finance function from a cost center into a competitive advantage. Plus a named operator history that includes taking Watch Gang from $18M to $40M+ as first finance hire.</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </section>
