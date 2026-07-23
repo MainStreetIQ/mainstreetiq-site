@@ -82,11 +82,12 @@ Every engagement is structured around four principles:
 <!-- ATC-LLMS-END -->
 
 <!-- AIV-LLMS-START -->
-### Found by the Machine Series (4 of 6 parts live)
+### Found by the Machine Series (5 of 6 parts live)
 - [Why a Finance Guy Is Talking to You About ChatGPT](https://www.mainstreetiq.com/blog/why-a-finance-guy-talks-about-chatgpt): Why a fractional CFO cares about AI search: managing the intelligence of a business means both the numbers it reports inward and the signal AI engines read outward. Opener of the Found by the Machine series.
 - [Your Next Customer Is Asking ChatGPT, Not Google](https://www.mainstreetiq.com/blog/your-next-customer-is-asking-chatgpt): Buyers increasingly ask ChatGPT, Perplexity, and Gemini for recommendations instead of Googling, and the engine returns a short list rather than ten links. Why discoverability in AI answers is a leading indicator of revenue.
 - [Three Kinds of Search, and Why Your Site Only Handles One](https://www.mainstreetiq.com/blog/three-kinds-of-search): SEO vs AEO vs GEO in plain language: ranking on Google, being quoted as the answer, and being surfaced in a generated recommendation are three different games. Why most small business sites only play the oldest one.
 - [Why I Check AI Visibility Before I Read the P&L](https://www.mainstreetiq.com/blog/ai-visibility-before-the-pl): Why AI visibility is a leading revenue indicator a CFO should check before the financial statements: an engine decides whether to recommend you before a customer ever spends a dollar, so the signal sits upstream of the P&L.
+- [What It Costs to Be Invisible in AI Search](https://www.mainstreetiq.com/blog/the-cost-of-being-invisible-in-ai-search): How to size the revenue cost of being invisible in AI search using your own numbers (first-time customer value, recommendation share) without fabricated statistics. Links to the free winery visibility snapshot.
 <!-- AIV-LLMS-END -->
 
 ### The RAID Framework Series (8 parts)
