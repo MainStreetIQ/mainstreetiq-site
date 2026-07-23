@@ -44,7 +44,7 @@
   </url>
   <url>
     <loc>https://www.mainstreetiq.com/partners</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -110,20 +110,20 @@
   </url>
   <url>
     <loc>https://www.mainstreetiq.com/ai-consulting</loc>
-    <lastmod>2026-07-05</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- Geo Landing Pages -->
   <url>
     <loc>https://www.mainstreetiq.com/fractional-cfo-santa-barbara</loc>
-    <lastmod>2026-05-27</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://www.mainstreetiq.com/fractional-cfo-san-luis-obispo</loc>
-    <lastmod>2026-05-27</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
@@ -195,13 +195,13 @@
   </url>
   <url>
     <loc>https://www.mainstreetiq.com/blog/cfo-finance-director-controller</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.mainstreetiq.com/blog</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.75</priority>
   </url>
@@ -219,13 +219,13 @@
   </url>
   <url>
     <loc>https://www.mainstreetiq.com/blog/the-cash-flow-illusion</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.mainstreetiq.com/blog/mer-margin-disappearing</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -237,19 +237,19 @@
   </url>
   <url>
     <loc>https://www.mainstreetiq.com/blog/investor-ready-finance</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.mainstreetiq.com/blog/raid-tech-stack</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.mainstreetiq.com/blog/moneyball-metrics</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -279,7 +279,7 @@
   </url>
   <url>
     <loc>https://www.mainstreetiq.com/blog/why-finance-teams-fail-to-scale</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -408,19 +408,19 @@
   </url>
   <url>
     <loc>https://www.mainstreetiq.com/blog/cpa-fractional-cfo-service</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.mainstreetiq.com/fractional-cfo-vs-cpa</loc>
-    <lastmod>2026-04-18</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.mainstreetiq.com/locations</loc>
-    <lastmod>2026-04-18</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
@@ -438,19 +438,19 @@
   </url>
   <url>
     <loc>https://www.mainstreetiq.com/ai-cfo-santa-barbara</loc>
-    <lastmod>2026-07-08</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.mainstreetiq.com/ai-cfo-san-luis-obispo</loc>
-    <lastmod>2026-07-08</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.mainstreetiq.com/ai-cfo-ventura</loc>
-    <lastmod>2026-07-08</lastmod>
+    <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -549,5 +549,30 @@
     <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <!-- Pillars added 2026-07-23 -->
+  <url>
+    <loc>https://www.mainstreetiq.com/manage</loc>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.mainstreetiq.com/audit</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.mainstreetiq.com/raid-framework</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.mainstreetiq.com/winery-visibility-snapshot</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
