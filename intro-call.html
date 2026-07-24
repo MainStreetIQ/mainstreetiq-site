@@ -130,7 +130,7 @@
           <input type="hidden" name="xmIwtLD" value="b41c824141e3e85e9fb8d030284b5d9cd78fec633acfb28e3beb5f7c076d77e300ea0a8ebaf2695410cf55b19b1c76fe">
           <input type="hidden" name="actionType" value="TGVhZHM=">
           <input type="hidden" name="returnURL" id="msiqIntroCallReturnURL" value="https://www.mainstreetiq.com/intro-call-confirm">
-          <input type="hidden" name="Lead Source" value="MSIQ Website">
+          <input type="hidden" name="Lead Source" value="Calendly Booking">
           <input type="hidden" name="Lead Status" value="Pre-Qualified">
           <input type="hidden" name="Revenue Band" id="msiqIntroCallRevenueBand" value="">
 
@@ -180,12 +180,12 @@
             <label class="msiq-form__label msiq-form__label--required" for="msiqIntroRevenueRange">Annual revenue band</label>
             <select class="msiq-form__select" id="msiqIntroRevenueRange" required aria-label="Annual revenue band">
               <option value="">Select a range...</option>
-              <option value="Under $1M">Under $1M</option>
-              <option value="$1M-$5M">$1M to $5M</option>
+              <option value="Under $5M">Under $1M</option>
+              <option value="Under $5M">$1M to $5M</option>
               <option value="$5M-$10M">$5M to $10M</option>
               <option value="$10M-$25M">$10M to $25M</option>
               <option value="$25M-$50M">$25M to $50M</option>
-              <option value="Over $50M">Over $50M (likely out of scope)</option>
+              <option value="$50M-$100M">Over $50M (likely out of scope)</option>
             </select>
             <div class="msiq-form__error"></div>
           </div>
@@ -420,10 +420,16 @@
 
         // Compose Description prefix for downstream attribution
         var ctx = (document.getElementById('msiqIntroContext').value || '').trim();
+        // Revenue picklist stores the coarse Zoho band (option value); the Description
+        // keeps the granular label (e.g. "Under $1M" vs "$1M to $5M") so the finer
+        // qualification signal survives even though Revenue_Band only has "Under $5M".
+        var revenueLabel = revenueSel.selectedIndex > 0
+          ? revenueSel.options[revenueSel.selectedIndex].text
+          : 'Unknown';
         var lines = [];
         lines.push(
           'Intro Call | Vertical: ' + (verticalSel.value || 'Unknown') +
-          ' | Revenue: ' + (revenueSel.value || 'Unknown')
+          ' | Revenue: ' + revenueLabel
         );
         if (ctx) lines.push('\nContext: ' + ctx);
         document.getElementById('msiqIntroDescription').value = lines.join('\n');
