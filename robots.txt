@@ -93,3 +93,27 @@ Allow: /
 # DuckDuckGo AI
 User-agent: DuckAssistBot
 Allow: /
+
+# ---------------------------------------------------------------------------
+# WCIR quarterly delivery pages and their PDFs.
+#
+# These two paths need OPPOSITE treatment, and getting it backwards is the
+# common mistake.
+#
+# /wcir/  is deliberately NOT disallowed. Those pages carry
+#         <meta name="robots" content="noindex, nofollow, noarchive">, and a
+#         crawler has to be ALLOWED to fetch a page in order to read its
+#         noindex. Disallowing the path would block the crawl, leave the
+#         noindex unread, and Google could still index the bare URL if it ever
+#         found it referenced anywhere. Allow + noindex is what actually keeps
+#         them out of the index.
+#
+# /reports/ IS disallowed, because a PDF cannot carry a meta robots tag and
+#         GitHub Pages cannot set an X-Robots-Tag header. robots.txt is the
+#         only lever available for those files.
+#
+# Neither mechanism is access control. Both are advisory and bind only
+# crawlers that choose to honor them. Anyone holding the link can read either.
+# ---------------------------------------------------------------------------
+User-agent: *
+Disallow: /reports/
