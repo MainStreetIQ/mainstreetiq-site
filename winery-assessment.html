@@ -335,7 +335,7 @@
         <div class="section-header">
           <span class="section-label">Who This Is For</span>
           <h2 class="section-title">Owner-operator wineries who want a clearer next step</h2>
-          <p class="section-subtitle">The assessment is calibrated for the wineries we already serve: small to mid-sized Central Coast operators who want growth, visibility, or peace of mind on the digital surface around their winery.</p>
+          <p class="section-subtitle">The assessment is calibrated for the wineries this practice is built for: small to mid-sized Central Coast operators who want growth, visibility, or peace of mind on the digital surface around their winery.</p>
         </div>
         <div class="problem-list">
           <div class="problem-item">
@@ -1158,15 +1158,15 @@
       },
       "Capture AI visibility (show up when customers ask ChatGPT, Claude, Perplexity for wine recommendations)": {
         headline: "Capture AI visibility across ChatGPT, Claude, Perplexity, Gemini",
-        detail: "Engage and Manage grow your mention count on the AI assistants buyers now ask for wine recommendations. Tracked monthly across 48 prompts on the four assistants."
+        detail: "Engage and Manage grow your mention count on the assistants buyers now ask for wine recommendations. Tracked monthly across 48 queries: 12 prompts run against each of the four assistants."
       },
       "Outperform a specific named competitor I have in mind": {
         headline: "Close the gap with a named competitor",
-        detail: "Diagnose: Competitor Benchmark scores you and four named peers across all 6 dimensions, with a prioritized plan to close each gap."
+        detail: "Diagnose: Competitor Benchmark scores you and four named peers across the Website Audit's 8 dimensions, with a prioritized plan to close each gap."
       },
       "Free up my time so I can focus on winemaking and team": {
         headline: "Free up owner hours each month",
-        detail: "Manage tier displaces monthly owner overhead by handling marketing decision-making, partner coordination, and vendor management, so you can stay on winemaking and team."
+        detail: "Manage takes the finance and vendor work off your desk: monthly close, cash forecasting, vendor invoice validation, and a monthly CFO narrative. You still make the calls; the hours come back to winemaking and team."
       },
       "Reduce wasted marketing spend / agency frustration": {
         headline: "Reduce wasted marketing spend",
@@ -1198,7 +1198,7 @@
       "monitor_plus": {
         headline: "Monitor Plus: monthly depth and a recurring 1-on-1 with Scott, without retainer commitment",
         pricing: "Scoped on an Intro Call. The annual plan includes the Discover Bundle.",
-        roi: "Cohort-aware Drift Watch, custom 6-peer tracking, monthly written commentary, and 1-on-1 office hours."
+        roi: "Cohort-aware Drift Watch, custom four-peer tracking, monthly written commentary, and 1-on-1 office hours."
       },
       "diagnose_audit": {
         headline: "Diagnose: Website Audit, vendor-ready findings across every accessible page on the site",
@@ -1213,7 +1213,7 @@
       "diagnose_benchmark": {
         headline: "Diagnose: Competitor Benchmark, head-to-head scoring against four named peers",
         pricing: "Scoped on an Intro Call. 10-14 business days; a strategy call is available.",
-        roi: "Side-by-side 6-dimension scoring with a prioritized closing plan. Ideal when peer competition is the named concern."
+        roi: "Side-by-side scoring across the Website Audit's 8 dimensions, with a prioritized closing plan. Ideal when peer competition is the named concern."
       },
       "diagnose_full": {
         headline: "Diagnose: Full Business Diagnostic, 90-day plan with quantified opportunity sizing",
@@ -1294,7 +1294,7 @@
       if (wantsCompetitorWin) {
         return { tier: "diagnose_benchmark",
           reasons: [
-            `You named a specific peer-competition concern. Competitor Benchmark gives you head-to-head 6-dimension scoring against four named peers.`,
+            `You named a specific peer-competition concern. Competitor Benchmark gives you head-to-head scoring against four named peers across the Website Audit's 8 dimensions.`,
             `Output is a prioritized closing plan, not a deck.`,
             `Most operators take this as a one-time project; some convert to ongoing Monitor or Engage to track progress quarterly.`
           ]
@@ -1328,7 +1328,7 @@
         return { tier: "monitor_plus",
           reasons: [
             `Your scale supports the deeper analysis tier without the partner-coordination commitment of Engage.`,
-            `Monthly 1-on-1 office hours with Scott, custom 6-peer tracking, and analyst commentary on what's changing in your cohort.`,
+            `Monthly 1-on-1 office hours with Scott, custom four-peer tracking, and analyst commentary on what's changing in your cohort.`,
             `Cohort-aware Drift Watch tells you when peers move on AI visibility, pricing, or wine club tiers, not just your own data.`
           ]
         };
@@ -1360,7 +1360,7 @@
       return { tier: "monitor",
         reasons: [
           `Based on your answers, ongoing monthly intelligence is the cleanest starting point.`,
-          `Monitor gives you the auto-generated scorecard, peer cohort positioning, AI visibility tracking, and the Drift Watch.`,
+          `Monitor gives you the auto-generated scorecard, AI visibility tracking, and the Drift Watch covering five self-monitoring alerts.`,
           `If your situation changes, you can step up to Monitor Plus, Engage, or a Diagnose project at any time.`
         ]
       };
@@ -1788,7 +1788,9 @@
         if (typeof gtag !== 'undefined') {
           gtag('event', 'book_call_click', {
             page_path: window.location.pathname,
-            link_url: a.href
+            // Strip the query string: the Calendly prefill carries the lead's
+            // name and email, which must never be transmitted to Analytics.
+            link_url: a.href.split('?')[0]
           });
         }
       });
