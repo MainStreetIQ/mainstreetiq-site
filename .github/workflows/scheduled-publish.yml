@@ -43,8 +43,11 @@ jobs:
           fi
           git config user.name "msiq-bot"
           git config user.email "actions@users.noreply.github.com"
-          # publish_scheduled.py only ever writes blog/*.html and llms.txt —
-          # stage exactly those so stray working-tree files can never be swept into prod
-          git add blog/ llms.txt
+          # publish_scheduled.py only ever writes blog/*.html, llms.txt and the
+          # marker-delimited blocks of sitemap.xml — stage exactly those so stray
+          # working-tree files can never be swept into prod. sitemap.xml MUST be
+          # here: it was omitted until 2026-08-03, which left every one of the 12
+          # posts this Action had ever published absent from the sitemap.
+          git add blog/ llms.txt sitemap.xml
           git commit -m "chore(blog): publish scheduled post(s) for $(date -u +%Y-%m-%d)"
           git push

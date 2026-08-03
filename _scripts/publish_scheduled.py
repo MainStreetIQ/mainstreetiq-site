@@ -17,12 +17,21 @@ For each due post (date <= today) it:
      the series' <!-- *-GRID-START --> / <!-- *-GRID-END --> markers.
   3. Rebuilds that series' block in llms.txt between its
      <!-- *-LLMS-START --> / <!-- *-LLMS-END --> markers.
+  4. Rebuilds that series' <url> entries in sitemap.xml between its
+     <!-- *-SITEMAP-START --> / <!-- *-SITEMAP-END --> markers.
+
+Step 4 exists because without it a drip-published post is invisible to search
+engines and to AI crawlers forever: nothing else ever adds a sitemap entry, so
+every post this script has ever promoted was missing from sitemap.xml (12 of
+them as of 2026-08-03). The GitHub Action must stage sitemap.xml alongside
+blog/ and llms.txt or the entry is written and then thrown away.
 
 It does NOT git commit/push -- the GitHub Action does that if anything changed.
 
 Adding a new series: drop an entry in SERIES below, create
 _scheduled/<key>/manifest.json + post HTML, and add the matching marker pairs to
-blog/index.html and llms.txt. A series whose dir/manifest is absent is skipped.
+blog/index.html, llms.txt, and sitemap.xml. A series whose dir/manifest is
+absent is skipped.
 
 Usage:
   python _scripts/publish_scheduled.py                # today (UTC date)
@@ -41,8 +50,13 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 BLOG_DIR = ROOT / "blog"
 INDEX = BLOG_DIR / "index.html"
 LLMS = ROOT / "llms.txt"
+SITEMAP = ROOT / "sitemap.xml"
 
 BASE_URL = "https://www.mainstreetiq.com"
+
+# Matches the priority/changefreq the hand-maintained blog entries already carry.
+SITEMAP_CHANGEFREQ = "monthly"
+SITEMAP_PRIORITY = "0.6"
 
 # --- Series registry ---------------------------------------------------------
 # Each series promotes its own posts and owns its own marker pair in index.html
@@ -56,6 +70,8 @@ SERIES = [
         "grid_end": "<!-- ATC-GRID-END -->",
         "llms_start": "<!-- ATC-LLMS-START -->",
         "llms_end": "<!-- ATC-LLMS-END -->",
+        "sitemap_start": "<!-- ATC-SITEMAP-START -->",
+        "sitemap_end": "<!-- ATC-SITEMAP-END -->",
     },
     {
         "key": "aiv",
@@ -65,6 +81,8 @@ SERIES = [
         "grid_end": "<!-- AIV-GRID-END -->",
         "llms_start": "<!-- AIV-LLMS-START -->",
         "llms_end": "<!-- AIV-LLMS-END -->",
+        "sitemap_start": "<!-- AIV-SITEMAP-START -->",
+        "sitemap_end": "<!-- AIV-SITEMAP-END -->",
     },
 ]
 
@@ -132,6 +150,25 @@ def build_llms_block(due_newest_first, llms_title, total):
     return "\n".join(lines)
 
 
+def build_sitemap_block(due_newest_first):
+    """One <url> entry per live post in this series, oldest first.
+
+    lastmod is the post's own slot date: the date the post went live and, absent
+    a later edit, the date its content last changed. Priority/changefreq match
+    what the hand-maintained blog entries in sitemap.xml already carry, so a
+    drip-published post is indistinguishable from a hand-added one.
+    """
+    lines = []
+    for post in reversed(due_newest_first):
+        lines.append("  <url>")
+        lines.append(f'    <loc>{BASE_URL}/blog/{post["slug"]}</loc>')
+        lines.append(f'    <lastmod>{post["date"]}</lastmod>')
+        lines.append(f"    <changefreq>{SITEMAP_CHANGEFREQ}</changefreq>")
+        lines.append(f"    <priority>{SITEMAP_PRIORITY}</priority>")
+        lines.append("  </url>")
+    return "\n".join(lines)
+
+
 def replace_between(text, start, end, new_inner):
     # capture the indentation that precedes the start marker so the regenerated
     # end marker lines up the same way in whichever file we are editing.
@@ -163,9 +200,10 @@ def main():
     changed = []
     summary = []
 
-    # Read index/llms once, apply every series' grid/llms edits, write once.
+    # Read index/llms/sitemap once, apply every series' edits, write once each.
     idx = INDEX.read_text(encoding="utf-8")
     llms = LLMS.read_text(encoding="utf-8")
+    sitemap = SITEMAP.read_text(encoding="utf-8")
 
     for series in SERIES:
         series_dir = ROOT / "_scheduled" / series["key"]
@@ -184,6 +222,7 @@ def main():
             write_if_changed(BLOG_DIR / f"{p['slug']}.html", out, changed, args.check)
 
         # 2. rebuild this series' index grid + 3. its llms block (cards newest-first)
+        #    + 4. its sitemap entries
         if due:
             due_newest_first = sorted(due, key=lambda p: p["date"], reverse=True)
             cards = "\n\n".join(build_card(p, series["case_tag"]) for p in due_newest_first)
@@ -194,11 +233,18 @@ def main():
                 series["llms_end"],
                 build_llms_block(due_newest_first, series["llms_title"], len(posts)),
             )
+            sitemap = replace_between(
+                sitemap,
+                series["sitemap_start"],
+                series["sitemap_end"],
+                build_sitemap_block(due_newest_first),
+            )
 
         summary.append(f"{series['key']}={len(due)}/{len(posts)}")
 
     write_if_changed(INDEX, idx, changed, args.check)
     write_if_changed(LLMS, llms, changed, args.check)
+    write_if_changed(SITEMAP, sitemap, changed, args.check)
 
     print(f"date={today} {' '.join(summary)}")
     if changed:
