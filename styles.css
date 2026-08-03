@@ -204,6 +204,11 @@ footer :focus-visible {
   font-size: 0.85rem;
   font-weight: 300;
   letter-spacing: 0.08em;
+  /* Two-lane IA (2026-08-03): "Fractional CFO" and "AI Discoverability"
+     replaced "Services" and "Discoverability". The longer two-word labels
+     overflowed the flex row and wrapped mid-item, which also pushed
+     "Our Work" onto two lines. nowrap restores the single-line baseline. */
+  white-space: nowrap;
   color: var(--color-neutral);
   transition: color 0.2s;
 }
