@@ -19,9 +19,9 @@ Governing brief for the site's two-offer structure. Overrides the earlier "site 
 
 Four decisions that unblocked the two-lane build, plus one standing geographic rule. Baton: `~/Mainstreet/_brain/handoffs/2026-07-26-cfo-hub-ai-visibility-built.md`.
 
-- **CFO hub is a NEW `/fractional-cfo` page** (`fractional-cfo.html`), built as the peer to `/discoverability`. `our-services.html` STAYS INTACT as the blended "how we work" page and its URL must keep working (every blog post carries its nav link). The hub is national in schema (`State: California` + `Country: United States`), not county-scoped; the 6 `fractional-cfo-<county>` pages child off it. It links out to `/glossary/fractional-cfo` (definitional intent) to avoid cannibalizing it; the glossary page does NOT yet link back up, which is worth adding.
+- **CFO hub is a NEW `/fractional-cfo` page** (`fractional-cfo.html`), built as the peer to `/discoverability`. ~~`our-services.html` STAYS INTACT as the blended "how we work" page~~ **AMENDED 2026-08-03 (Scott): `our-services.html` COLLAPSES to a "How We Work" page — see § Two-lane IA below.** Its URL must still keep working (every blog post carries its nav link). The hub is national in schema (`State: California` + `Country: United States`), not county-scoped; the 6 `fractional-cfo-<county>` pages child off it. It links out to `/glossary/fractional-cfo` (definitional intent) to avoid cannibalizing it; the glossary page does NOT yet link back up, which is worth adding.
 - **Discoverability local pages are named `ai-visibility-<county>`**, not `discoverability-<county>`, because that is how buyers search (precedent: `ai-visibility-tourism.html`). The hub stays `/discoverability`; the hub/child stem mismatch is ACCEPTED, do not "fix" it by renaming the hub (44 root pages and 35 blog posts link `/discoverability`).
-- **NO city pages.** The 56 cities already enumerated in the county pages' `City` JSON-LD stay as schema plus body text. Revisit only once both lanes are symmetric. Rationale: 56 to 112 templated near-duplicate pages is real doorway-page risk.
+- **NO city pages.** The 56 cities already enumerated in the county pages' `City` JSON-LD stay as schema plus body text. Revisit only once both lanes are symmetric. Rationale: 56 to 112 templated near-duplicate pages is real doorway-page risk. **SCOPE CLARIFIED 2026-08-03 (Scott): this rule governs the CFO and discoverability COUNTY lanes, where a city page would be a near-duplicate of its county parent with the place name swapped. It does NOT govern the wine-town data pages (`/wine-country/<town>`), which are a different artifact: each carries per-town MEASUREMENTS of named businesses from the CCIQ DB, so no two pages share substantive content. Do not delete them as doorway pages. If a town page ever ships without town-specific data, that page IS a doorway page and the rule applies to it.**
 - **DDMA re-home off the remaining 12 pages is a SEPARATE scoped pass.** See the blocker note under Gate adjudications below.
 
 - **HOME AND SERVICES PAGES MUST NOT ISOLATE MSIQ TO THE CENTRAL COAST (Scott, 2026-07-26).** Individual county pages, community pages, and the About section MAY speak to location. The practice serves the US remotely; the six counties are outbound and on-site CONCENTRATION, not client-acceptance scope (canonical-facts § Geographic scope, amended 2026-07-03). Executed 2026-07-26: `index.html` `areaServed` had listed the six counties and nothing broader, so `Country: United States` + `State: California` were added above them and `geo.placename` became "California, United States"; `our-services.html` `Place: "California Central Coast"` became `Country: United States` with the same `geo.placename` change; `fractional-cfo.html` carried it in VISIBLE copy and was rewritten to lead with national reach (it now contains zero instances of "Central Coast"). Both index and our-services edits were schema/meta ONLY, no visible copy, so no new prose entered the gate.
@@ -34,6 +34,54 @@ Four decisions that unblocked the two-lane build, plus one standing geographic r
      - **Open decision, deliberately NOT executed:** SLO now HAS a published count (95 of 252 cited, 157 of 252 not named), so `ai-visibility-san-luis-obispo.html` could move from the `covered` variant to `measured`. That is a scope change the rule above does not contemplate and it needs Scott's call. The `covered` variant's premise ("no published SLO-specific count") is now false; leaving it is conservative, not correct.
      - Q2 figures, derived via `CCIQ/generate_central_coast_report.ai_stats()` and confirmed against the rendered PDF: **SB 100 of 171 cited (58%), SLO 95 of 252 (38%), region 195 of 423 cited / 228 of 423 not named.**
   2. **GEOGRAPHIC HONESTY.** Only SLO and Santa Barbara are ON the Central Coast (`home_turf: True`); the other four are SERVED FROM it. An earlier draft hardcoded "the practice is based here on the Central Coast" onto all six, which is false for San Diego, LA, Orange, and Ventura, and shipped a "Local / Based on the Central Coast" hero stat alongside it. The CFO-lane sibling already had this right. Guard: `for f in ai-visibility-*.html; do printf "%s here=%s from=%s\n" "$f" "$(grep -c 'based here on the Central Coast' $f)" "$(grep -c "from California's Central Coast" $f)"; done` must be 2 and 4.
+
+### Two-lane IA (Scott, 2026-08-03) — SCOPED, NOT YET BUILT
+
+Scott's ruling on the site restructure. Plan: `~/.claude/plans/snoopy-moseying-feather.md`.
+**Nothing below is built yet except the three rule amendments themselves.**
+
+Diagnosis that drove it, all verified 2026-08-03:
+- **`/fractional-cfo` had ZERO inbound internal links and was not in the nav.** Built 2026-07-26 as
+  the peer to `/discoverability`, then never linked from anywhere. It also repeats three `index.html`
+  H2s verbatim ("The RAID model", "Two ways that work", "A CFO lens, not an agency lens").
+- **Three pages collide on the same head term:** `/` ("Fractional CFO for Ecommerce + Owner-Operated
+  Businesses"), `/our-services` ("Fractional CFO Services | How We Work"), `/fractional-cfo`
+  ("Fractional CFO Services for Owner-Operated Businesses").
+- **`/our-services` states the same SKU list three times** — "The Offerings Behind Each Reading"
+  (`:188-267`), "Each Step Builds on the Last" (`:269-337`), "Three Places You Can Be" (`:339-417`).
+- **Monitor and Engage have no SKU page**, while Discover/Diagnose/Manage do. Monitor is the SKU the
+  quarterly WCIR email exists to sell.
+- **`llms.txt` omits the entire discoverability lane** (`/discoverability`, `/wine-country-intelligence`,
+  `/audit`, `/winery-visibility-snapshot`, `/manage`, `/financial-stack`, `/partners`, and every
+  `ai-visibility-<county>` page except tourism) and claims "31 posts" against 48 on disk.
+- **0 of 48 blog posts link to `/fractional-cfo` or `/audit`.** Not an oversight in judgment: the
+  2026-07-23 in-body link pass recorded "there is NO bare `/fractional-cfo` page (it 404s)", which was
+  true that day. The hub shipped three days later and the pass was never re-run.
+
+The rulings:
+- **Nav becomes two lanes:** `Fractional CFO` (`/fractional-cfo`) | `AI Discoverability`
+  (`/discoverability`) | About | Our Work | Blog | Partners | Contact | [Book an Intro Call].
+  `/our-services` drops OUT of the nav, keeps its URL, and stays linked from both hubs.
+- **`/our-services` collapses to "How We Work."** Keeps the practice narrative, a brief "Four
+  Readings, One Engine", "Three Places You Can Be", "What You Get". The two catalog sections MOVE to
+  the SKU pages — move the copy, do not rewrite it. Retitle off "Fractional CFO Services" to end the
+  three-way collision.
+- **Build `/monitor` and `/engage`,** modeled on `manage.html` (the existing gated SKU-page pattern).
+  Both CROSS-VERTICAL with wine as a proof section. Monitor $400/mo, $4,000/yr and Monitor Plus
+  $600/mo, $6,000/yr are cleared for public surfaces; Engage carries no price ("scoped on an Intro
+  Call"), same as Manage. **Grow stays unnamed.**
+- **Build `/wine-country/<town>` x10** (Los Olivos, Solvang, Santa Ynez, Buellton, Lompoc, Los Alamos,
+  Santa Maria, Paso Robles, Templeton, Edna Valley) as the demand-creation surface. **GENERATED, not
+  hand-written** — follow `_scripts/build_ai_visibility_pages.py`. Figures come from the CCIQ queries
+  that build the PDFs, never retyped off `wine-country-intelligence.html`. Named wineries are
+  positively framed only. PROOF SCOPE applies per town: a town asserts only what its data supports,
+  and says so plainly where the count is too small.
+- **These town pages are also the backlink plan.** The WCIR is the only asset that earns links
+  (original research naming 423 businesses), and it earns none today because it has no linkable
+  public surface: `/reports/` is robots-disallowed and `/wcir/<quarter>` is deliberately unlisted.
+
+**The split-URL guard still binds.** Town pages link UP to `/wine-country-intelligence` only — never
+to the delivery page, never to a `/reports/*.pdf` (the PDF path contains the quarter slug).
 
 ### WCIR quarterly delivery pages + DDMA completion (Scott, 2026-07-30)
 
