@@ -134,3 +134,13 @@ Settled checker false positives for this site's pages live in `~/.claude/skills/
 - **Active participation, not "watch and wait" (Scott, 2026-07-20).** The passive "the CFO sits in the room while you decide" is retired everywhere; use active "the CFO works those decisions alongside you" / "is in the decisions with you". Canonical-facts.md § Brand identity carries the master line (amended 2026-07-20). Physical-presence ("work that benefits from being in the room") and structural metaphor ("A CFO in the room", "Where You Sit With Us") are legitimate and stay.
 
 Before editing copy on any checker's say-so, verify the finding against `~/MSIQ/canonical-facts.md` yourself — read the FULL change history for the item (renames get reverted; rules get amended).
+
+- **Bust the CDN cache before calling a deploy wrong (2026-08-03).** A plain `curl` of a
+  just-pushed asset measures the CDN edge, not the deploy. The Q2 CC report PDF read as md5
+  `2984e765…` / 46285 bytes against a repo file of `9a98dc9d…` / 48354 bytes, which looks like a
+  failed publish; the Pages build for that exact commit had already succeeded and a refetch with
+  `?cb=<sha>` returned correct parity immediately. Also note `mainstreetiq.com` 301s to `www.`,
+  so a `curl` without `-L` measures a redirect stub and its md5 is meaningless. Verify with
+  `curl -sL "<url>?cb=$(git rev-parse --short HEAD)"` plus `gh api repos/MainStreetIQ/mainstreetiq-site/actions/runs`
+  to confirm the build ran. Only call a deploy wrong when a cache-busted fetch of a
+  successfully-built commit still mismatches.
