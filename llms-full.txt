@@ -1,6 +1,6 @@
-# Main Street IQ — Full Site Content
+# Main Street IQ | Full Site Content
 
-> Main Street IQ is a fractional and interim CFO services firm led by Scott Hess, providing embedded finance leadership for growing companies between $15M and $100M in revenue. Based in California, the firm specializes in e-commerce, SaaS, manufacturing, hospitality, apparel/DTC, and PE-backed companies. All engagements use the RAID Framework (Redundant, Agile, Intelligent, Data-Driven).
+> Main Street IQ is a fractional CFO practice for owner-operated businesses under $50MM in revenue, with a built-in intelligence engine. Led by founder Scott Hess, it pairs a named fractional or interim CFO with an engine that reads your market, your funnel, your cohorts, and what AI search says about you; the CFO works those decisions alongside you, not from the sideline. The practice is rooted on California's Central Coast, concentrates on Central and Southern California coastal counties, and serves fitting owner-operated businesses nationwide. It goes deepest in four verticals: ecommerce, wine, health and wellness, and elective medicine. Every engagement is built on the RAID model (Redundant, Agile, Intelligent, Data-Driven). Veteran-owned and operated.
 
 ---
 
@@ -8,63 +8,118 @@
 
 ### Value Proposition
 
-Finance Teams Break. RAID Teams Scale.
+Finance teams break as you grow. We build one that scales.
 
-Most companies hit a wall at $20M. The close takes three weeks. Margins are a mystery. The CEO is flying blind. It's not a people problem — it's a systems problem. Main Street IQ fixes it.
+We build the finance function for owner-operated businesses under $50MM, and we run it alongside you: redundant so it never depends on one person, automation-first so it scales without new headcount, and staffed by operators who work the decisions with you, not scorekeepers who hand you last quarter's numbers. Underneath it runs a live intelligence engine that reads your market, your funnel, your cohorts, and what AI search says about you, so every call is made on a current read. Deepest in ecommerce and wine.
 
-### Key Metrics
-- 20+ years of CFO experience
-- 5-day average book close
-- $10M–$300M client revenue range
-- 100% embedded, not advisory
+### Key Facts
 
-### The Problem: You've Outgrown Your Finance Function
+- Twenty years in finance and operations behind the practice
+- Owner-led: founder-operated businesses under $50MM
+- RAID: the model every finance function is built on
+- Front door: a 30-minute Intro Call
+- Veteran-owned and operated
 
-The tools that worked at $8M don't work at $20M. Common symptoms:
+### The Problem: Finance Is the Function That Breaks Quietly
 
-- **Slow Closes**: Monthly close takes weeks, not days. Decisions are made before numbers arrive.
-- **No Margin Visibility**: Can't tell which products, channels, or customers make money.
-- **Knowledge Silos**: One person holds all the keys. If they leave, finance collapses.
-- **Spreadsheet Chaos**: Critical decisions run through disconnected spreadsheets nobody trusts.
-- **Cash Flow Surprises**: No forecasting, no runway visibility, no early warning system.
-- **Investor Anxiety**: Board meetings feel like fire drills. Reporting wouldn't survive due diligence.
+In most owner-operated businesses, the finance function grows by accident. One person learns where everything is. The close depends on them. The reporting is a stack of spreadsheets no one else can run. It works, until it doesn't: that person takes a week off, or leaves, or the business doubles and the manual process cannot keep up. By the time it breaks, the cost is already paid. Decisions get made on last month's numbers. Cash surprises show up late. The owner becomes the backstop for a function they never wanted to run.
 
-### The RAID Operating System
+A finance team should do the opposite. Run without depending on any one person. Catch the problem early. Tell you what to do next, not just what already happened.
 
-Every engagement is built on four principles:
+### The RAID Model
 
-- **Redundant**: Documented, cross-trained processes. No single points of failure. Finance runs whether any one person is there or not.
-- **Agile**: Automation-first. Build systems before hiring people. Technology handles repetitive work so the team handles thinking.
-- **Intelligent**: Finance teams operate as owner-operators, not scorekeepers. They don't just report what happened — they drive what happens next.
-- **Data-Driven**: Every team member owns 3–5 KPIs tied to real business levers. Real-time visibility into cash, margins, and metrics that matter.
+We build and run finance functions on four principles. They turn finance from the bottleneck that breaks into the function that scales with you.
 
-### Social Proof
+- **Redundant**: Documented, cross-trained processes. No single points of failure. The function runs whether any one person is in the building or not.
+- **Agile**: Automation before headcount. Systems handle the repetitive work so the people handle the thinking, and the function scales without a hiring spree.
+- **Intelligent**: Finance that operates like owner-operators, not scorekeepers. It does not just report what happened. It drives what happens next.
+- **Data-Driven**: Every workstream owner carries three to five KPIs tied to real business levers. Real-time visibility into cash, margin, and the metrics that move the business.
 
-Clients include IPS Corporation, RTA, Warner Loughlin, Watch Gang, and Simkhai.
+RAID is the standard behind every Engage and Manage engagement. Full explainer: https://www.mainstreetiq.com/raid-framework
 
-Testimonial: "Scott helped us close our books in under 5 days and finally gave us real visibility into our margins. It changed how we run the business." — CEO, $30M Ecommerce Brand
+### A CFO Lens, Not an Agency Lens
+
+Most market intelligence is built by marketers, for marketers. It tells you what's trending and where competitors are spending. Useful, but it stops at the top of the funnel. We read your acquisition the way a CFO reads a P&L: cash flow modeling, CAC and LTV at the segment level, forecasting, inventory planning, the pricing decision that adds margin and the one that quietly subtracts it, and which AI-search result is showing up for buyers who actually convert. The work product is intelligence; the discipline is finance.
+
+### AI Discoverability: The Growth Engine
+
+Before a prospect ever reaches your site, they ask ChatGPT, Claude, or Gemini who to trust in your category. That answer is built from your whole footprint, not just your website, and if you are absent from it you never get the visit. We map the touchpoints that answer draws on, optimize them, and manage them, so more of the buyers already looking for you arrive at your door. This is the front door to the practice; the CFO work deepens the relationship behind it. Hub: https://www.mainstreetiq.com/discoverability
+
+### Two Ways That Work
+
+The difference is not the size of the number. It is who owns the books.
+
+- **Engage | A CFO alongside your team.** You keep your finance team. We bring senior judgment and the intelligence engine to the decisions that actually move the business: pricing, hiring, capital, channel shifts, board prep. For owner-operators who have execution covered and want a CFO working the decision moments with them.
+- **Manage | Your finance department, run by us.** We are the finance function. Close, cash, books, investor reporting, and the CEO dashboard, built on RAID from the first close and run by the CFO with an embedded team and the engine underneath. For owner-operators who would rather not build a finance team at all. Run for a small number of clients at a time.
+
+Not sure which one is you? That is the Intro Call. Both are scoped there, against your actual situation, not off a price card.
 
 ### FAQ
 
-**What is a fractional CFO?**
-A fractional CFO is an experienced Chief Financial Officer who works with your company on a part-time basis — typically 10–15 hours per week. An interim CFO fills the same role on a temporary, full-time basis during leadership transitions or critical periods. Unlike a consultant who delivers a report and leaves, a fractional or interim CFO embeds in your operations. They attend your meetings, manage your finance team, and own the numbers. It's ideal for companies between $15M and $100M that need senior finance leadership but aren't ready for a $400K+ full-time hire.
+**What does Main Street IQ actually do?**
+We build and run a scalable finance function for owner-operated businesses under $50MM, on a model we call RAID: redundant, agile, intelligent, and data-driven. Underneath it runs a live intelligence engine that reads your market, your funnel, your cohorts, and what AI search says about you, so every call is made on a current read instead of last quarter's numbers. Engage and Manage are the two ways to have that CFO alongside you: Engage when you keep your finance team, Manage when you want us to be it.
 
-**How is a fractional CFO different from a bookkeeper or controller?**
-A bookkeeper records transactions. A controller ensures accuracy and compliance. A CFO drives strategy. A fractional CFO sits in leadership meetings, builds financial models that inform decisions, negotiates with banks and investors, and designs the systems that make your finance function scale. It's the difference between knowing what happened last month and knowing what to do next month.
+**Who is Main Street IQ for?**
+Owner-operated and founder-led businesses under $50MM, in four verticals: DTC ecommerce brands, wineries, health and wellness practices, and elective medicine practices. We are rooted on the California coast, from San Luis Obispo to San Diego, and we work with owner-operators nationwide. Main Street IQ is veteran-owned and operated.
 
-**What does the RAID Framework mean?**
-RAID stands for Redundant, Agile, Intelligent, and Data-Driven. It means no single points of failure in your finance team. Automation before headcount. Finance people who think like operators. And KPIs tied to real business levers. It's the operating system we install in every engagement.
+**How is Main Street IQ different from a marketing agency or a BI tool?**
+An agency sells you campaigns and reports on impressions. A BI tool sells you dashboards you will not open. We sell you the CFO's read on whether your acquisition pencils out, the cohorts that compound versus the ones that churn, and the pricing decision that adds margin versus the one that quietly subtracts it.
 
-**How much does a fractional CFO cost?**
-A full-time CFO at a growth-stage company typically costs $300K–$500K in total compensation. Fractional CFO services run at a fraction of that — the exact cost depends on the engagement model (ongoing, advisory, or project-based) and hours needed. We scope every engagement to your specific situation during an initial call.
+**How does pricing work at Main Street IQ?**
+Pricing depends on your vertical and your situation, so most of it is scoped on the Intro Call rather than printed on a tier card. The one published price is the Wine Country Intelligence Report, a fixed deliverable. Everything else, you hear the number once we understand the business. Same discipline either way: you only pay for the work that pays you back.
 
-**What industries do you work with?**
-We work across e-commerce and DTC brands, SaaS companies, manufacturers, restaurant and hospitality groups, designer-led apparel brands, PE-backed companies, and family offices. The common thread is companies between $10M and $300M that have outgrown their finance infrastructure.
-
-**How quickly will I see results?**
-Most clients have a 5-day close process within 90 days. Real-time dashboards and KPI tracking are typically live within the first month. The timeline depends on your current systems and team, but the RAID Framework is designed for fast implementation — we build systems while operating inside them.
+**How do I get started with Main Street IQ?**
+Book a 30-minute Intro Call. We talk about where the business is today, where the gaps are, and which offering fits your situation. If we are not the right fit we will say so.
 
 ---
+
+## The Two Lanes
+
+Main Street IQ runs two connected lines of work. Buyers usually arrive looking for one of them.
+
+- [Fractional CFO, the CFO lane hub](https://www.mainstreetiq.com/fractional-cfo): Senior finance leadership for owner-operated businesses under $50MM, built on the RAID model with a live intelligence engine underneath, delivered by a named CFO rather than software. Engage when you keep your finance team; Manage when you want Main Street IQ to be it. Start here for anything about CFO, controller, or finance-leadership work.
+- [AI Discoverability, the visibility lane hub](https://www.mainstreetiq.com/discoverability): Finds every place a prospect can discover a business across classical search, answer engines, and AI chat, then optimizes and manages that footprint. Proven first in wine, built to run across ecommerce, wellness, and elective medicine. Start here for anything about AI search visibility, AEO, GEO, or being recommended by AI assistants.
+
+---
+
+## Services
+
+### How We Work
+
+A fractional CFO practice with a built-in intelligence engine. The CFO works alongside you. The engine reads the market, the funnel, and the cohort, so the decisions you make are grounded in what is actually happening. Full page: https://www.mainstreetiq.com/our-services
+
+### Four Readings, One Engine
+
+The intelligence engine works in four readings. The specific deliverable is scoped to your situation.
+
+- **Discover**: What the practice surfaces about a market. In wine, this is a productized deliverable (the Wine Country Intelligence Report); in every engagement, it is the first weeks of work.
+- **Diagnose**: What the practice reads in your business. The Website Audit, the Buyer Alignment Audit, and the Full Business Diagnostic all live here.
+- **Monitor**: What the practice watches over time. A subscription cadence of cohort, competitive, and AI-visibility intelligence layered under any active engagement.
+- **Advise**: What the practice does in the room with the operator. The Engage and Manage retainers; the standing diagnostic and decision cadence.
+
+### Engagement Shapes
+
+- [Engage](https://www.mainstreetiq.com/our-services): A CFO alongside your team. You keep your finance team; Main Street IQ brings senior judgment plus the intelligence engine to the decision moments. Scoped on an Intro Call.
+- [Manage](https://www.mainstreetiq.com/manage): The productized embedded finance and accounting function for owner-operated companies under $50M. One fractional CFO, one named operator, four workstreams, and a CEO dashboard. Daily bookkeeping held to a 99%+ accuracy standard, 13-week cash forecasting, cohort unit economics. Scoped on an Intro Call.
+- [Interim Finance Leadership](https://www.mainstreetiq.com/interim-finance-leadership): For when a CFO, Finance Director, or Head of Finance has just left or is about to. Embeds quickly, stabilizes the function, and sets up the next permanent hire.
+- [Finance Director Services](https://www.mainstreetiq.com/finance-director-services): FP&A, management reporting, and operational finance leadership for companies that need the function but not the CFO price tag.
+- [The RAID Framework](https://www.mainstreetiq.com/raid-framework): How Main Street IQ builds and runs a finance function: Redundant, Agile, Intelligent, Data-Driven. The operating standard behind every Engage and Manage engagement.
+- [AI Consulting](https://www.mainstreetiq.com/ai-consulting): AI consulting from a firm that runs on it. Main Street IQ runs its own practice on AI agents, with a human CFO signing every conclusion, and helps owner-operated businesses under $50M in Santa Barbara and San Luis Obispo counties find where AI actually pays back: the back office, the finance function, and AI search visibility.
+
+### Category Comparison
+
+- [Fractional CFO vs. CPA](https://www.mainstreetiq.com/fractional-cfo-vs-cpa): The difference between a fractional CFO and a CPA or bookkeeper offering "CFO services." Covers what each role actually does, where the gap shows up, the four diagnostic questions to ask a fractional CFO candidate, and when a CPA route actually makes sense.
+
+---
+
+## AI Discoverability: What You Can Buy
+
+The discoverability lane is productized as a sequence: find out where you stand, get a written diagnosis, then keep it measured over time.
+
+- [Website Audit and Audit Pro](https://www.mainstreetiq.com/audit): A fixed-price, written, three-layer audit of a website's SEO, AEO, and AI-search visibility, synthesized into the decisions a founder actually has to make. A diagnosis, not a dashboard to interpret. Built for owner-operated wineries, wellness clinics, elective medicine practices, and ecommerce brands.
+- [Free Winery Visibility Snapshot](https://www.mainstreetiq.com/winery-visibility-snapshot): A free one-page snapshot of how findable a winery or tasting room is across search, answer engines, and AI assistants. Scored 0 to 100 from public data, sent within one business day. Open to any California winery or tasting room.
+- [The Wine Country Intelligence Report](https://www.mainstreetiq.com/wine-country-intelligence): A quarterly digital-performance benchmark of every tasting room in Santa Barbara and San Luis Obispo counties, scored on six dimensions, with an AI-visibility leaderboard measured across ChatGPT, Claude, Perplexity, and Gemini. The original primary research behind the discoverability practice.
+- [Center of Influence Program](https://www.mainstreetiq.com/partners): For the accountants, bankers, and advisors who already trust their clients to us. A COI introduces an owner-operator; Main Street IQ does the work; the COI earns a commission on the introduction.
 
 ## AI CFO
 
@@ -76,6 +131,12 @@ Most clients have a 5-day close process within 90 days. Real-time dashboards and
 ## AI Visibility
 
 - [When a Tourist Asks AI Where to Go, Is It Your Name?](https://www.mainstreetiq.com/ai-visibility-tourism): AI answer visibility (answer engine optimization) for owner-operated tourism businesses across California's Central Coast (Santa Barbara, San Luis Obispo, Ventura counties), led by wineries and tasting rooms. How AI engines like ChatGPT, Perplexity, Claude, and Google's AI Overviews decide which businesses to name when a traveler asks where to go. Includes a comparison table (classic tourism SEO vs. AI answer visibility) and the Wine Country Intelligence Report as the winery proof point.
+- [AI Visibility in Santa Barbara County](https://www.mainstreetiq.com/ai-visibility-santa-barbara): Getting found in Santa Barbara County when buyers ask AI who to buy from. Carries the measured county figure from the Wine Country Intelligence Report.
+- [AI Visibility in San Luis Obispo County](https://www.mainstreetiq.com/ai-visibility-san-luis-obispo): Getting found in San Luis Obispo County when buyers ask AI who to buy from, citing the Wine Country Intelligence Report's coverage of the county.
+- [AI Visibility in Ventura County](https://www.mainstreetiq.com/ai-visibility-ventura): Getting found in Ventura County when buyers ask AI who to buy from. Method and approach; no county-specific measurement is published for Ventura.
+- [AI Visibility in Los Angeles County](https://www.mainstreetiq.com/ai-visibility-los-angeles): Getting found in Los Angeles County when buyers ask AI who to buy from. Method and approach; no county-specific measurement is published for Los Angeles.
+- [AI Visibility in Orange County](https://www.mainstreetiq.com/ai-visibility-orange-county): Getting found in Orange County when buyers ask AI who to buy from. Method and approach; no county-specific measurement is published for Orange County.
+- [AI Visibility in San Diego County](https://www.mainstreetiq.com/ai-visibility-san-diego): Getting found in San Diego County when buyers ask AI who to buy from. Method and approach; no county-specific measurement is published for San Diego.
 
 ## Glossary
 
@@ -96,29 +157,51 @@ Most clients have a 5-day close process within 90 days. Real-time dashboards and
 - [Cash Conversion Cycle](https://www.mainstreetiq.com/glossary/cash-conversion-cycle): The cash conversion cycle is the time it takes for a dollar you spend, on inventory or delivering a service, to come back to you as collected cash from a customer.
 - [Cohort Analysis](https://www.mainstreetiq.com/glossary/cohort-analysis): Cohort analysis groups customers by when they first bought, then tracks how each group behaves over time, so you can see whether customers are getting more or less valuable, and whether retention is improving or decaying.
 
+---
+
+## Verticals
+
+The four verticals where the practice goes deepest. Each page reads the economics of that business model specifically, not a generic CFO pitch.
+
+- [Ecommerce and DTC Brands](https://www.mainstreetiq.com/ecommerce): Fractional CFO and business advisory for owner-operated ecommerce and DTC brands, wherever they are headquartered. DTC site, Amazon, wholesale, retail, subscription: each channel has its own acquisition cost, margin, and cash cycle, and they all land in one P&L. The vertical Main Street IQ knows deepest.
+- [Wineries and Tasting Rooms](https://www.mainstreetiq.com/wineries): The wine practice. Fractional CFO and business intelligence for owner-operator wineries and tasting rooms. Wine club, tasting room, DTC shipping, distribution: each has its own acquisition, lifetime value, and retention math.
+- [Wellness Clinics](https://www.mainstreetiq.com/wellness): Fractional CFO and business intelligence for owner-operated wellness clinics. Longevity, IV therapy, hormone optimization, functional medicine, recovery. Each modality has its own economics.
+- [Elective Medicine Practices](https://www.mainstreetiq.com/aesthetics): Fractional CFO and business intelligence for owner-operated elective medicine practices. Cosmetic surgery, dermatology, MedSpa, cosmetic dental, adult cosmetic orthodontics. Each modality has its own economics.
+
+## Assessments
+
+Short, self-serve reads that return a scored profile and a recommended starting point.
+
+- [Winery Assessment](https://www.mainstreetiq.com/winery-assessment): A 6-minute assessment for Central Coast wineries. Returns a personalized Winery Profile naming the growth outcomes worth going after first, and a recommended starting point. Free.
+- [Wellness Practice Assessment](https://www.mainstreetiq.com/wellness-assessment): A short assessment for multi-modality wellness practices. Surfaces where the practice is winning, where it is leaking, and where the next 12 months should go across service lines.
+- [Elective Medicine Practice Assessment](https://www.mainstreetiq.com/aesthetics-assessment): A short assessment for elective medicine, cosmetic dental, and adult orthodontic practices. Surfaces where the practice is winning, where it is leaking, and where the next 12 months should go.
+- [Ecommerce Brand Assessment](https://www.mainstreetiq.com/ecommerce-assessment): A short assessment for owner-operated ecommerce and DTC brands. Surfaces where the brand is winning, where margin is leaking, and where the next 12 months should go.
+- [Financial Stack Quick Read](https://www.mainstreetiq.com/financial-stack): A five-minute, ten-question read of the financial operations underneath a business. Scores how resilient the banking, treasury, float, credit, and liquidity layers are, and shows where the gaps sit. Free, scored on the spot.
+
+---
+
 ## About Scott Hess
 
 ### Bio
 
 "I Don't Report on the Business. I Run Inside It."
 
-Scott Hess is a CFO with 20+ years of experience building finance functions that operationalize business decisions. He has worked across DTC, ecommerce, SaaS, and PE-backed companies ranging from $10M to $300M in revenue. He is a Navy veteran with an MBA from Pepperdine's Graziadio School of Business.
+Scott Hess is the Founder and Fractional CFO of Main Street IQ, with twenty years in finance and operations before founding the practice. Much of that span was spent with high-net-worth clients at Northern Trust, and with luxury brands and owner-operated brands. He is a U.S. Navy Veteran. Today the practice is focused on owner-operated businesses under $50MM in ecommerce, wine, health and wellness, and elective medicine, rooted on the California coast and working with owner-operators nationwide.
 
 ### Experience
 
-**Watch Gang — CFO**
-$40M subscription ecommerce company.
-Results: 5% CAC reduction, 7% retention increase, 40% faster close cycle, 22% ARR growth with 12% OPEX reduction.
+**Watch Gang | CFO**
+Subscription ecommerce company; joined as the first finance hire and served as CFO as the business grew from $18M to $40M+ in revenue.
 
-**Haberdash — CFO, VP Operations**
-Luxury menswear retailer.
-Results: Restructured sales compensation around profitability (23% sales increase, 9% comp expense reduction). Led Shopify migration with 30% ecommerce revenue growth.
+**Haberdash | CFO, VP Operations**
+Luxury menswear retailer. Restructured sales compensation around profitability and led a Shopify migration.
 
-**Northern Trust — 12 years**
-Institutional finance, modeling, M&A due diligence, ERP implementation.
+**Northern Trust**
+Institutional finance: modeling, M&A due diligence, ERP implementation, work with high-net-worth clients.
 
 ### Capabilities
-- RAID Framework implementation
+
+- RAID model implementation
 - Finance function optimization
 - Marketing analytics integration
 - Supply chain strategy
@@ -126,136 +209,63 @@ Institutional finance, modeling, M&A due diligence, ERP implementation.
 
 ---
 
-## Services
-
-### Engagement Models
-
-**Fractional CFO — Ongoing (10–15 hours/week)**
-Embedded finance leadership as fractional or interim CFO. Month-end close, cash and margin visibility, investor reporting, cross-functional strategy — without full-time cost. Weekly on-site presence plus remote availability.
-
-**Advisory — Light Touch (~10 hours/month)**
-Strategic oversight for companies with competent finance teams. Senior-level perspective on major decisions and growth planning.
-
-**Project-Based (Defined scope)**
-Discrete engagements: financial modeling, finance team assessments, close process redesign, M&A preparation, investor reporting packages. Also available as interim CFO during leadership transitions or critical operational periods.
-
-### Promised Outcomes
-- Book closes in 5 days or less
-- Real-time visibility into cash, margin, and KPIs
-- Finance team ready for investor scrutiny
-- No knowledge silos
-- Systems that scale without adding headcount
-- Clean financials that survive due diligence
-
----
-
 ## Case Studies
 
-### $15M E-Commerce Company — Scaling Finance Through Hypergrowth
+A selection of past engagements from twenty years of finance and operations work, across a range of industries and company stages. They are here as proof of how the work gets done: embedded, operator-led, built to run without single points of failure. Today the practice is focused on owner-operated ecommerce brands, wineries, health and wellness practices, and elective medicine practices. No client names; that is intentional. Full page: https://www.mainstreetiq.com/our-work
 
-**Industry**: E-Commerce
-**Challenge**: 20%+ annual growth with finance processes from $8M stage. Inventory managed by intuition, invisible margins by channel, no real-time profitability.
+### E-Commerce Company | Scaling Finance Through Hypergrowth
 
-**Solutions**:
-- Inventory & Cash Flow Integration: Forecasting models tied to cash flow projections
-- Margin Analysis: Contribution margin tracking by product line and marketing channel
-- KPI Dashboard: Unified CAC, LTV, inventory turns, fulfillment cost tracking
-- Strategic Finance: Warehouse vs 3PL economics, credit facilities, QuickBooks to enterprise migration
+**Challenge**: 20%+ annual growth with finance processes built for an $8M stage. Inventory managed by intuition, invisible margins by channel, no real-time profitability.
 
-**Engagement**: 25–30 hours/month, weekly on-site, embedded operational role.
+**Solutions**: Inventory forecasting models tied to cash flow projections; contribution margin tracking by product line and marketing channel; a unified KPI dashboard (CAC, LTV, inventory turns, fulfillment cost); warehouse vs 3PL economics; credit facilities; QuickBooks-to-enterprise migration.
 
-### $300M Manufacturer — Divesting a Business Unit at Maximum Value
+### Designer-Led Apparel Brand | Building Financial Infrastructure
 
-**Industry**: Manufacturing
-**Challenge**: Making a business unit look like a standalone profitable business for sale, not a cost center.
+**Challenge**: Product-market fit without financial infrastructure. Unpredictable seasonal cash flow, estimated margins, production decisions without cost visibility.
 
-**Solutions**:
-- Financial Carve-Out: Clean standalone financials, proper shared services allocation
-- Deal Support: Investment banking coordination, data room construction, buyer inquiry management
-- Post-Divestiture: P&L impact modeling, overhead obligation identification, transition service agreements
+**Solutions**: Detailed product costing with margin transparency before production; seasonal cash flow forecasting tied to the fashion calendar; channel profitability analysis across wholesale, DTC, and department store channels; working capital and inventory management; investment-ready financial documentation.
 
-**Engagement**: Project-based with success fee tied to transaction value.
+### Six-Location Restaurant Group | Financial Discipline for a Multi-Unit Operation
 
-### $10M Designer-Led Apparel Brand — Building Financial Infrastructure
-
-**Industry**: Apparel / DTC
-**Challenge**: Had product-market fit but lacked financial infrastructure. Unpredictable seasonal cash flow, estimated margins, production decisions without cost visibility.
-
-**Solutions**:
-- Product Costing: Detailed models with margin transparency before production
-- Cash Flow Forecasting: Seasonal forecasting tied to fashion calendar
-- Channel Profitability: Analysis across wholesale, DTC, department store channels
-- Working Capital: Inventory management, renegotiated manufacturer terms
-- Investment-Ready Packages: Financial documentation for partnerships
-
-**Engagement**: 20 hours/month retainer with surge capacity during peak seasons.
-
-### Six-Location Restaurant Group — Financial Discipline
-
-**Industry**: Hospitality
 **Challenge**: Six California Central Coast locations operating independently with inconsistent reporting and no cross-portfolio visibility.
 
-**Solutions**:
-- Standardization: Unified financial reporting across all locations
-- Operational Controls: Food/labor cost systems, centralized purchasing, multi-location KPI dashboard
-- Financial Planning: Expansion models, seasonal cash flow analysis, reserve requirements, bank lending preparation
+**Solutions**: Unified financial reporting across all locations; food and labor cost systems; centralized purchasing; a multi-location KPI dashboard; expansion models, seasonal cash flow analysis, reserve requirements, and bank lending preparation.
 
-**Engagement**: Bi-weekly on-site rotation plus monthly reviews.
+### Management-Led Asset Purchase | Building from Bankruptcy
 
-### Management-Led Asset Purchase — Building from Bankruptcy
+**Challenge**: Acquiring assets from a bankrupt company. Required rapid execution, lender persuasion, and operational readiness from day one.
 
-**Industry**: Turnaround
-**Challenge**: Acquiring assets from bankrupt company. Required rapid execution, lender persuasion, and operational readiness from day one.
+**Solutions**: Valuation, financing proposals, and comprehensive financial modeling pre-close; a 100-day integration plan, accounting systems from scratch, internal controls, and reporting cadences post-close; quick-win profitability improvements with milestone-based tracking.
 
-**Solutions**:
-- Pre-Close: Valuation, financing proposals, comprehensive financial modeling
-- Post-Close: 100-day integration plan, accounting systems from scratch, internal controls, reporting cadences
-- Stabilization: Quick-win profitability improvements, milestone-based tracking
+### SaaS Company Post-Seed | Series A Preparation
 
-**Engagement**: 30+ hours/week during acquisition, scaled to retainer once stabilized.
+**Challenge**: Needed financial infrastructure for a Series A. Inconsistent metrics, unformalized revenue recognition, cap table not integrated with the financial story.
 
-### SaaS Company Post-Seed — Series A Preparation
+**Solutions**: Proper SaaS metrics (ARR, MRR, CAC, LTV, churn) with consistent definitions; cohort analysis for acquisition, retention, and funnel visibility; financial models connecting product milestones to revenue projections; formalized revenue recognition; growth-aligned compensation design.
 
-**Industry**: SaaS
-**Challenge**: Needed financial infrastructure for Series A. Inconsistent metrics, unformalized revenue recognition, cap table not integrated with financial story.
+### Family Office | Institutional Discipline for Private Wealth
 
-**Solutions**:
-- Metrics: Proper SaaS metrics (ARR, MRR, CAC, LTV, churn) with consistent definitions
-- Cohort Analysis: Customer acquisition, retention, and funnel visibility
-- Financial Modeling: Product milestones connected to revenue projections
-- Revenue Recognition: Formalized policies for due diligence
-- Compensation Design: Growth-aligned incentives managing burn rate
-
-**Engagement**: 15–20 hours/month retainer with equity option.
-
-### Family Office — Institutional Discipline for Private Wealth
-
-**Industry**: Family Office
 **Challenge**: Complexity outpacing oversight. Fragmented reporting, no holistic risk assessment, missing multigenerational governance.
 
-**Solutions**:
-- Unified Reporting: All investment vehicles (PE, real estate, operating businesses, liquid investments)
-- Investment Analysis: Institutional-grade rigor, stress testing, risk-adjusted returns
-- Structural Optimization: Tax efficiency, liability protection, coordinated with counsel
-- Governance: Distribution forecasting, multigenerational decision-making structures
-
-**Engagement**: Quarterly reviews, monthly reporting, ongoing investment analysis.
+**Solutions**: Unified reporting across investment vehicles (PE, real estate, operating businesses, liquid investments); institutional-grade investment analysis with stress testing and risk-adjusted returns; structural optimization coordinated with counsel; distribution forecasting and multigenerational governance structures.
 
 ---
 
-## MSIQ Wine (formerly CCIQ)
+## MSIQ Wine
 
-The wine practice of Main Street IQ. Customer acquisition intelligence and fractional CFO advisory for owner-operator wineries on California's Central Coast. We read your wine business the way a CFO reads a P&L, not the way an agency reads a campaign.
+The wine practice of Main Street IQ. Customer acquisition intelligence and fractional CFO work for owner-operator wineries on California's Central Coast. We read your wine business the way a CFO reads a P&L, not the way an agency reads a campaign.
 
-Flagship product: the Wine Country Intelligence Report (WCIR), a quarterly digital-performance benchmark scoring every Central Coast tasting room (423 in Q2 2026: 171 in Santa Barbara County, 252 in San Luis Obispo County) on six dimensions, with an AI-visibility leaderboard and town-by-town standings. San Luis Obispo County joined the benchmark in Q2 2026.
+Flagship product: the Wine Country Intelligence Report (WCIR), a quarterly digital-performance benchmark scoring every Central Coast tasting room (423 in Q2 2026: 171 in Santa Barbara County, 252 in San Luis Obispo County) on six dimensions, with an AI-visibility leaderboard and town-by-town standings. San Luis Obispo County joined the benchmark in Q2 2026. Published by county, with a free regional edition covering both.
 
-Services: Discover (one-time market read), Monitor (recurring quarterly intelligence + WCIR subscription), Diagnose (deep one-time diagnostic), Advisory (embedded fractional CFO leadership for the few clients who need a CFO in the room). Based on California's Central Coast.
+The four readings in wine: Discover (the WCIR market read), Diagnose (the Website Audit and deeper one-time diagnostics), Monitor (recurring quarterly intelligence plus the WCIR subscription), Advise (the Engage and Manage retainers, for the few clients who want a CFO in the decisions).
+
+Published pricing (wine only): Wine Country Intelligence Report $800/yr, single issue $250, bundle $1,000/yr; Monitor $400/mo or $4,000/yr; Monitor Plus $600/mo or $6,000/yr. Every other engagement is scoped on an Intro Call; Main Street IQ does not publish those prices.
 
 ---
 
 ## Contact
 
-- **Book a call**: https://calendly.com/scott_mainstreetiq/30min (free 30-minute consultation)
+- **Book an Intro Call**: https://calendly.com/scott_mainstreetiq/30min (30 minutes, founder-to-founder)
 - **LinkedIn**: https://www.linkedin.com/in/johnscotthess
 - **Website**: https://www.mainstreetiq.com
 
@@ -263,17 +273,20 @@ Services: Discover (one-time market read), Monitor (recurring quarterly intellig
 
 ## Service Areas
 
-- [Santa Barbara County](https://www.mainstreetiq.com/fractional-cfo-santa-barbara): Fractional and interim CFO services for Santa Barbara County — wine, tourism, tech, agriculture.
-- [San Luis Obispo County](https://www.mainstreetiq.com/fractional-cfo-san-luis-obispo): Fractional and interim CFO services for SLO County — Paso Robles wine, agriculture, Cal Poly tech pipeline.
-- [Ventura County](https://www.mainstreetiq.com/fractional-cfo-ventura): Fractional and interim CFO services for Ventura County — agriculture, defense, manufacturing, biotech.
-- [Los Angeles](https://www.mainstreetiq.com/fractional-cfo-los-angeles): Fractional and interim CFO services for LA — entertainment, DTC/ecommerce, apparel, PE-backed companies.
-- [Orange County](https://www.mainstreetiq.com/fractional-cfo-orange-county): Fractional and interim CFO services for Orange County — tech/SaaS, ecommerce, medical devices, franchises.
+- [Santa Barbara County](https://www.mainstreetiq.com/fractional-cfo-santa-barbara): Fractional and interim CFO in Santa Barbara County for owner-operated wineries, DTC ecommerce, health and wellness, and elective medicine.
+- [San Luis Obispo County](https://www.mainstreetiq.com/fractional-cfo-san-luis-obispo): Fractional and interim CFO in San Luis Obispo County for owner-operated wineries, DTC ecommerce, health and wellness, and elective medicine.
+- [Ventura County](https://www.mainstreetiq.com/fractional-cfo-ventura): Fractional and interim CFO in Ventura County for owner-operated DTC ecommerce brands, wineries, health and wellness, and elective medicine.
+- [Los Angeles County](https://www.mainstreetiq.com/fractional-cfo-los-angeles): Fractional and interim CFO in Los Angeles County for owner-operated DTC ecommerce brands, wineries, health and wellness, and elective medicine practices.
+- [Orange County](https://www.mainstreetiq.com/fractional-cfo-orange-county): Fractional and interim CFO in Orange County for owner-operated DTC ecommerce brands, elective medicine and wellness practices, and wineries.
+- [San Diego County](https://www.mainstreetiq.com/fractional-cfo-san-diego): Fractional and interim CFO in San Diego County for owner-operated DTC ecommerce brands, health and wellness practices, elective medicine practices, and wineries.
+
+The six counties are where outbound work and on-site availability concentrate; they are not a client-acceptance boundary. Inbound owner-operators anywhere in the US that otherwise fit are welcome and served remotely.
 
 ---
 
 ## RAID in Action
 
-A real-world case study of the RAID Framework applied to a growing company. Covers the specific problems found — slow close, single points of failure, manual processes, no KPI ownership — and the step-by-step fixes that resolved them, with measurable results.
+A real-world case study of the RAID model applied to a growing company. Covers the specific problems found (slow close, single points of failure, manual processes, no KPI ownership) and the step-by-step fixes that resolved them, including cutting the close from 20+ days to 6.
 
 ---
 
@@ -281,15 +294,15 @@ A real-world case study of the RAID Framework applied to a growing company. Cove
 
 ### Why an Annual Plan Matters: Building a Roadmap
 
-The real value of annual planning isn't the document — it's the process of forcing alignment between revenue targets, expense budgets, headcount plans, and cash flow. A good annual plan gives leadership a shared set of assumptions to test decisions against all year long. Covers how to structure the plan, why you need to plan the entire business (not just revenue), how the RAID framework applies, and best practices by industry.
+The real value of annual planning isn't the document; it's the process of forcing alignment between revenue targets, expense budgets, headcount plans, and cash flow. A good annual plan gives leadership a shared set of assumptions to test decisions against all year long. Covers how to structure the plan, why you need to plan the entire business (not just revenue), how the RAID model applies, and best practices by industry.
 
 ### Revenue Growth Planning: Building Realistic and Stretch Targets
 
-Revenue planning isn't about picking a growth target and hoping — it's about building a bottoms-up model that connects channel-level inputs to a topline number you can actually defend. Start with unit economics by channel, layer in capacity constraints, and stress-test against 3 scenarios. Covers cross-functional collaboration between finance, sales, and marketing, and the real cost of revenue growth.
+Revenue planning isn't about picking a growth target and hoping; it's about building a bottoms-up model that connects channel-level inputs to a topline number you can actually defend. Start with unit economics by channel, layer in capacity constraints, and stress-test against 3 scenarios. Covers cross-functional collaboration between finance, sales, and marketing, and the real cost of revenue growth.
 
 ### Expense Controls: Protecting Margins While Scaling
 
-Cutting costs is easy. Building expense controls that don't kill growth is hard. The goal isn't spending less — it's spending better. Covers separating fixed from variable costs, headcount planning, how expenses affect cash flow, expense control by industry, RAID framework application, and KPI tracking.
+Cutting costs is easy. Building expense controls that don't kill growth is hard. The goal isn't spending less; it's spending better. Covers separating fixed from variable costs, headcount planning, how expenses affect cash flow, expense control by industry, RAID model application, and KPI tracking.
 
 ### Marketing Spend Planning
 
@@ -301,7 +314,7 @@ Most growing companies obsess over the P&L and ignore the balance sheet until ca
 
 ### Planning for Unknowns
 
-No annual plan survives contact with reality — so build one that doesn't need to. Scenario planning, contingency reserves, and monthly reforecasting turn your plan from a rigid target into a flexible operating framework. The companies that navigate uncertainty best aren't the ones with the best predictions — they're the ones with the fastest response time.
+No annual plan survives contact with reality, so build one that doesn't need to. Scenario planning, contingency reserves, and monthly reforecasting turn your plan from a rigid target into a flexible operating framework. The companies that navigate uncertainty best aren't the ones with the best predictions; they're the ones with the fastest response time.
 
 ---
 
@@ -313,15 +326,15 @@ Three acronyms have shown up in the last 18 months and most operators assume the
 
 ### If Your Month-End Close Takes More Than 7 Days, Read This
 
-A slow month-end close isn't a minor inconvenience — it's a structural problem that compounds every month. Covers why closes take too long (manual reconciliations, vendor invoice waiting, one-person bottlenecks, no close checklist, unclear ownership), how to get to a 5-day close, and the specific automation and process changes that make it happen. Most companies can achieve a 5-day close within 90 days.
+A slow month-end close isn't a minor inconvenience; it's a structural problem that compounds every month. Covers why closes take too long (manual reconciliations, vendor invoice waiting, one-person bottlenecks, no close checklist, unclear ownership), how to get to a 5-day close, and the specific automation and process changes that make it happen.
 
 ### Your Marketing Team Might Be Destroying Your Margin
 
-Your marketing team might be hitting their MER targets while quietly destroying your margins. The gap between marketing efficiency and actual profitability lives in COGS assumptions, shipping costs, and return rates that never make it into the marketing dashboard. Finance needs to own the contribution margin view — not to overrule marketing, but to make sure everyone is optimizing for the same number.
+Your marketing team might be hitting their MER targets while quietly destroying your margins. The gap between marketing efficiency and actual profitability lives in COGS assumptions, shipping costs, and return rates that never make it into the marketing dashboard. Finance needs to own the contribution margin view, not to overrule marketing, but to make sure everyone is optimizing for the same number.
 
 ### Tariffs and Lower Middle Market COGS
 
-Tariffs don't just raise your COGS — they cascade through pricing, margins, inventory strategy, and cash flow in ways most finance teams aren't modeling. Covers what the founders handling it well are doing differently vs. those who are struggling, and how to build scenario models before the next tariff announcement forces reactive decision-making.
+Tariffs don't just raise your COGS; they cascade through pricing, margins, inventory strategy, and cash flow in ways most finance teams aren't modeling. Covers what the founders handling it well are doing differently vs. those who are struggling, and how to build scenario models before the next tariff announcement forces reactive decision-making.
 
 ### Your Comp Structure Is Driving the Wrong Behavior
 
@@ -329,21 +342,21 @@ Your compensation structure is driving behavior whether you designed it to or no
 
 ### The Payback Window Problem
 
-Most companies know their CAC. Far fewer know their payback period — and the ones that do are often calculating it wrong. Payback isn't CAC divided by monthly revenue — it's CAC divided by monthly contribution margin, net of returns and churn. Getting this number right changes which channels you scale and which you cut.
+Most companies know their CAC. Far fewer know their payback period, and the ones that do are often calculating it wrong. Payback isn't CAC divided by monthly revenue; it's CAC divided by monthly contribution margin, net of returns and churn. Getting this number right changes which channels you scale and which you cut.
 
 ---
 
 ## Finance Leadership & Operations (11 posts)
 
-### The Cash Flow Illusion — Why Your Bank Balance Lies
+### The Cash Flow Illusion: Why Your Bank Balance Lies
 
 Your bank account looks healthy but your business might not be. Cash hides in three places: inventory you've paid for but haven't sold, accounts receivable you've booked but haven't collected, and expenses you've committed to but haven't paid. Covers the difference between bank balance and cash position, where cash actually hides, and why every company needs a 13-week rolling cash flow forecast.
 
-### MER Looks Healthy — Here's Why Your Margin Is Still Disappearing
+### MER Looks Healthy: Here's Why Your Margin Is Still Disappearing
 
 Marketing efficiency ratio (MER) is the metric everyone watches. Contribution margin is the one that matters. Covers why MER can look great while margins erode, how to break down contribution margin by channel, why companies keep optimizing for the wrong metric, and how to fix marketing spend allocation.
 
-### CFO vs. Finance Director vs. Controller — Which Do You Actually Need?
+### CFO vs. Finance Director vs. Controller: Which Do You Actually Need?
 
 Three titles. Three very different roles. Covers what each role actually owns, what your company is really asking of the finance seat, which role fits your revenue stage, what happens when one person wears all three hats, and how to decide between fractional, interim, or permanent.
 
@@ -351,21 +364,21 @@ Three titles. Three very different roles. Covers what each role actually owns, w
 
 Not all fractional CFOs are the same. Covers what to look for: industry experience that matches your business, engagement models that fit your needs, communication style, and red flags that signal a bad fit. Practical evaluation criteria for companies making this hiring decision.
 
-### Your Finance Team Stopped Scaling — Five Signs
+### Your Finance Team Stopped Scaling: Five Signs
 
 Five signs your finance function has stalled: the close keeps getting slower, the CEO has stopped trusting the numbers, nobody can explain variances, the team is reactive instead of proactive, and one person holds all the keys. Covers why the fix is structural (better systems and processes) rather than tactical (more headcount).
 
 ### The Hero Problem Is a Liability
 
-When one person holds all the keys to your finance function — the close process, the system passwords, the vendor relationships, the reconciliation workarounds — you don't have a team. You have a single point of failure with a salary. Covers how to identify hero dependencies, what happens when the hero leaves, and how to build redundancy.
+When one person holds all the keys to your finance function (the close process, the system passwords, the vendor relationships, the reconciliation workarounds) you don't have a team. You have a single point of failure with a salary. Covers how to identify hero dependencies, what happens when the hero leaves, and how to build redundancy.
 
 ### The Marketing Problem Is a Merchandising Problem
 
-When revenue underperforms, the instinct is to blame marketing — increase spend, change creative, switch agencies. But the root cause is often product mix and merchandising. Covers how to diagnose whether the gap is marketing (can't drive traffic) or merchandising (wrong products, wrong pricing, wrong assortment).
+When revenue underperforms, the instinct is to blame marketing: increase spend, change creative, switch agencies. But the root cause is often product mix and merchandising. Covers how to diagnose whether the gap is marketing (can't drive traffic) or merchandising (wrong products, wrong pricing, wrong assortment).
 
 ### Running a Business With a Better CFO
 
-What changes when you bring in senior finance leadership that actually understands the business — not just the books. Covers the difference between a CFO who reports on the business and one who runs inside it, and how embedded finance leadership drives better decisions across operations, marketing, and growth strategy.
+What changes when you bring in senior finance leadership that actually understands the business, not just the books. Covers the difference between a CFO who reports on the business and one who runs inside it, and how embedded finance leadership drives better decisions across operations, marketing, and growth strategy.
 
 ### What Your CAC Number Doesn't Include
 
@@ -377,8 +390,14 @@ What gets tested in a serious quality of earnings (QofE) process and how to prep
 
 ### What PE Sponsors Actually Ask About EBITDA
 
-The specific EBITDA questions PE firms ask in diligence — and what "can answer them cleanly" actually means. Covers addbacks, normalization adjustments, run-rate assumptions, and how to present EBITDA in a way that builds credibility rather than raising questions.
+The specific EBITDA questions PE firms ask in diligence, and what "can answer them cleanly" actually means. Covers addbacks, normalization adjustments, run-rate assumptions, and how to present EBITDA in a way that builds credibility rather than raising questions.
 
 ### Why Your CPA's "Fractional CFO" Service Isn't Actually CFO Work
 
-Most "fractional CFO" services are CPA firms adding a strategic line item to a tax-and-bookkeeping package. Real CFO work is different — capital allocation, tech stack revitalization, AI-first operations, and the operator judgment that turns numbers into decisions. Covers what CPAs are trained to do vs. what CFOs actually do, where the gap shows up in practice (contribution margin, cash conversion cycle, tech stack, AI integration, board reporting, fundraising), how to tell the difference before hiring, and the four diagnostic questions to ask a fractional CFO candidate. The test: ask your current provider what they've rebuilt in your finance function in the last six months. If the answer is "we closed the books," they're a controller, not a CFO.
+Most "fractional CFO" services are CPA firms adding a strategic line item to a tax-and-bookkeeping package. Real CFO work is different: capital allocation, tech stack revitalization, AI-first operations, and the operator judgment that turns numbers into decisions. Covers what CPAs are trained to do vs. what CFOs actually do, where the gap shows up in practice (contribution margin, cash conversion cycle, tech stack, AI integration, board reporting, fundraising), how to tell the difference before hiring, and the four diagnostic questions to ask a fractional CFO candidate. The test: ask your current provider what they've rebuilt in your finance function in the last six months. If the answer is "we closed the books," they're a controller, not a CFO.
+
+---
+
+## More on the Blog
+
+Two additional series publish on a rolling schedule at https://www.mainstreetiq.com/blog: "After the Close" (7 parts, what happens after the month-end close lands) and "Found by the Machine" (6 parts, how AI search decides which businesses to name and what owner-operators can do about it). The blog index carries every published post.
