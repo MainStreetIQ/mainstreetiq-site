@@ -471,6 +471,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://www.mainstreetiq.com/blog/lead-with-your-scar</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
   <!-- ATC-SITEMAP-END -->
   <!-- AIV-SITEMAP-START -->
   <url>

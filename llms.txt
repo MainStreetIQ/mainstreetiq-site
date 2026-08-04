@@ -128,13 +128,14 @@ hand-written into this heading is wrong within days. The list below is the count
 - [Blog Index](https://www.mainstreetiq.com/blog): Every Main Street IQ post, grouped by series.
 
 <!-- ATC-LLMS-START -->
-### After the Close Series (6 of 7 parts live)
+### After the Close Series (7 of 7 parts live)
 - [Who Owns the So-What After the Books Close?](https://www.mainstreetiq.com/blog/who-owns-the-so-what): After your books close, who owns the so-what? Why automation produces output but judgment, naming the one number that matters and the next move, is still human work. Opener of the After the Close series.
 - [Your Real Bottleneck Is Hours, Not Tools](https://www.mainstreetiq.com/blog/the-real-bottleneck-is-hours): The strongest operators already have tools and data; their bottleneck is hours and judgment load. Why the fix is a finance partner, not more software.
 - [Does Your Finance Partner Know Where You're Going?](https://www.mainstreetiq.com/blog/finance-that-knows-where-youre-going): Finance that stops at the company misses the founder. Tying growth to the owner's long-term security, distributions, and timeline, the half of finance most partners skip.
 - [Why Growth Is What Breaks Your Cash](https://www.mainstreetiq.com/blog/why-growth-breaks-your-cash): Why fast growth breaks cash: the cash conversion cycle, working capital, and the float gap that revenue growth widens. The metric that decides whether you survive scaling.
 - [Your Blended ROAS Is Hiding Your Best Channel](https://www.mainstreetiq.com/blog/blended-roas-hides-your-best-channel): Blended ROAS hides your best channel and protects your worst. Breaking marketing performance apart by channel and payback window to fund what actually pays back.
 - [The Custom AI Build the Platform Makes Free](https://www.mainstreetiq.com/blog/custom-ai-the-platform-makes-free): The custom AI build the platform makes free six months later: the finance framing for build-vs-wait decisions on bespoke AI systems.
+- [Lead With Your Scar, Not Your Resume](https://www.mainstreetiq.com/blog/lead-with-your-scar): Founders trust scars over resumes. Why leading with a hard, specific failure builds more trust than credentials, and what that means for how finance shows up. Close of the After the Close series.
 <!-- ATC-LLMS-END -->
 
 <!-- AIV-LLMS-START -->
