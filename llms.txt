@@ -9,13 +9,11 @@ Main Street IQ runs two connected lines of work. Buyers usually arrive looking f
 - [Main Street IQ, Homepage](https://www.mainstreetiq.com/): A fractional CFO practice with a built-in intelligence engine. Reads your market, funnel, cohorts, and AI-search visibility, then works those decisions alongside you. For owner-operated ecommerce brands, wineries, wellness practices, and elective medicine practices under $50MM. Rooted on the California coast, working with owner-operators nationwide. Veteran-owned and operated.
 - [Fractional CFO, the CFO lane hub](https://www.mainstreetiq.com/fractional-cfo): Senior finance leadership for owner-operated businesses under $50MM, built on the RAID model with a live intelligence engine underneath, delivered by a named CFO rather than software. Engage when you keep your finance team; Manage when you want Main Street IQ to be it. Start here for anything about CFO, controller, or finance-leadership work.
 - [AI Discoverability, the visibility lane hub](https://www.mainstreetiq.com/discoverability): Finds every place a prospect can discover a business across classical search, answer engines, and AI chat, then optimizes and manages that footprint. Proven first in wine, built to run across ecommerce, wellness, and elective medicine. Start here for anything about AI search visibility, AEO, GEO, or being recommended by AI assistants.
-- [Book an Intro Call](https://www.mainstreetiq.com/intro-call): Thirty minutes, founder-to-founder, no pitch and no obligation.
+- [Book an Intro Call](https://www.mainstreetiq.com/intro-call): Thirty minutes, founder-to-founder.
 
 ## Core Services
 
-- [Fractional CFO, Ongoing](https://www.mainstreetiq.com/our-services): 10–15 hours/week embedded finance leadership (fractional or interim CFO) covering month-end close, cash/margin visibility, investor reporting, and cross-functional strategy.
-- [Advisory, Light Touch](https://www.mainstreetiq.com/our-services): ~10 hours/month strategic oversight for companies with existing finance teams.
-- [Project-Based](https://www.mainstreetiq.com/our-services): Discrete engagements: financial modeling, M&A preparation, close process redesign, investor reporting packages.
+- [Engage](https://www.mainstreetiq.com/our-services): A CFO alongside your team. You keep your finance team; Main Street IQ brings senior judgment plus the intelligence engine to the decision moments. Scoped on an Intro Call.
 - [Manage](https://www.mainstreetiq.com/manage): The productized embedded finance and accounting function for owner-operated companies under $50M. One fractional CFO, one named operator, four workstreams, and a CEO dashboard. Daily bookkeeping held to a 99%+ accuracy standard, 13-week cash forecasting, cohort unit economics, monthly close signed in eight days. Scoped on an Intro Call.
 - [Interim Finance Leadership](https://www.mainstreetiq.com/interim-finance-leadership): For when a CFO, Finance Director, or Head of Finance has just left or is about to. Embeds quickly, stabilizes the function, and sets up the next permanent hire.
 - [Finance Director Services](https://www.mainstreetiq.com/finance-director-services): FP&A, management reporting, and operational finance leadership for companies that need the function but not the CFO price tag.
@@ -71,7 +69,7 @@ The discoverability lane is productized as a sequence: find out where you stand,
 
 ## Verticals
 
-The four verticals where the practice goes deepest. Each page reads the economics of that business model specifically, not a generic CFO pitch.
+The four verticals where the practice goes deepest. Each page reads the economics of that business model specifically, not generically.
 
 - [Ecommerce and DTC Brands](https://www.mainstreetiq.com/ecommerce): Fractional CFO and business advisory for owner-operated ecommerce and DTC brands, wherever they are headquartered. How a CFO reads the channel mix, one channel at a time.
 - [Wineries and Tasting Rooms](https://www.mainstreetiq.com/wineries): The wine practice. Customer acquisition intelligence and fractional CFO advisory for owner-operator wineries and tasting rooms on California's Central Coast.
@@ -94,12 +92,11 @@ Short, self-serve reads that return a scored profile and a recommended starting 
 
 ## About
 
-- [About Scott Hess](https://www.mainstreetiq.com/about): 20+ years CFO experience. Former CFO at Watch Gang ($40M subscription ecommerce) and Haberdash (luxury menswear). 12 years at Northern Trust in institutional finance. Navy veteran. MBA from Pepperdine Graziadio School of Business.
+- [About Scott Hess](https://www.mainstreetiq.com/about): Twenty years in finance and operations. Former CFO at Watch Gang ($40M subscription ecommerce) and Haberdash (luxury menswear). Institutional finance at Northern Trust. U.S. Navy Veteran.
 
 ## Case Studies
 
 - [E-Commerce: $15M Company](https://www.mainstreetiq.com/our-work/e-commercegrowth): Scaling finance through hypergrowth: inventory forecasting, margin analysis by channel, KPI dashboards, enterprise accounting migration.
-- [Manufacturing: $300M Divestiture](https://www.mainstreetiq.com/our-work/divesting-manufacturer): Financial carve-out, standalone financials, data room construction, deal support for business unit sale.
 - [Apparel/DTC: $10M Brand](https://www.mainstreetiq.com/our-work/designer-led-apparel): Product costing, seasonal cash flow forecasting, channel profitability analysis, working capital optimization.
 - [Hospitality: Six-Location Restaurant Group](https://www.mainstreetiq.com/our-work/restaurant-group): Unified multi-location reporting, food/labor cost controls, expansion modeling for coastal California restaurants.
 - [Turnaround: Asset Purchase](https://www.mainstreetiq.com/our-work/asset-purchase): Management-led acquisition from bankruptcy: valuation, financing, 100-day integration, finance function built from scratch.
@@ -112,11 +109,11 @@ Every engagement is structured around four principles:
 - **Redundant**: Documented, cross-trained processes with no single points of failure.
 - **Agile**: Automation-first: build systems before hiring people.
 - **Intelligent**: Finance teams as owner-operators, not scorekeepers.
-- **Data-Driven**: Every team member owns 3–5 KPIs tied to real business levers.
+- **Data-Driven**: Every team member owns 3-5 KPIs tied to real business levers.
 
 ## Contact
 
-- [Book a 30-Minute Call](https://calendly.com/scott_mainstreetiq/30min): A 30-minute introductory call with Scott Hess. No pitch, no obligation.
+- [Book a 30-Minute Call](https://calendly.com/scott_mainstreetiq/30min): A 30-minute introductory call with Scott Hess.
 - [Contact Page](https://www.mainstreetiq.com/contact): Calendly booking and contact information.
 - [LinkedIn](https://www.linkedin.com/in/johnscotthess): Scott Hess profile.
 

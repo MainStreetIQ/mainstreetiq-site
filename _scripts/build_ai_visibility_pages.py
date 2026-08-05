@@ -440,8 +440,8 @@ def render(c):
       <nav class="nav-inner">
         <a href="/" class="logo"><img src="assets/logos/logo-horizontal-light.svg" alt="Main Street IQ"></a>
         <div class="nav-links" id="nav-links">
-          <a href="/our-services">Services</a>
-          <a href="/discoverability">Discoverability</a>
+          <a href="/fractional-cfo">Fractional CFO</a>
+          <a href="/discoverability">AI Discoverability</a>
           <a href="/about">About</a>
           <a href="/our-work">Our Work</a>
           <a href="/blog">Blog</a>
@@ -470,7 +470,7 @@ def render(c):
         <a href="/intro-call" class="btn btn-white">Book an Intro Call &rarr;</a>
         <a href="/audit" class="btn btn-outline-white">Start with a finding</a>
       </div>
-      <p style="font-size: 0.9rem; color: rgba(255,255,255,0.6); margin-top: 1rem; max-width: 560px;">Book a call, send a message, or just ask a question. No pitch, no obligation.</p>
+      <p style="font-size: 0.9rem; color: rgba(255,255,255,0.6); margin-top: 1rem; max-width: 560px;">Book a call, send a message, or just ask a question.</p>
       <div class="stat-bar">
         <div class="stat-item">
           <p class="stat-num">4 layers</p>
@@ -627,7 +627,7 @@ def render(c):
   <section class="bg-navy">
     <div class="container" style="text-align: center;">
       <h2 class="section-title">Find out where you show up when {article} {short} buyer asks AI.</h2>
-      <p style="max-width: 640px; margin: 0 auto 1.5rem; color: rgba(255,255,255,0.7);">One conversation. A straight read on where you stand and what moves it. No pitch, no obligation.</p>
+      <p style="max-width: 640px; margin: 0 auto 1.5rem; color: rgba(255,255,255,0.7);">One conversation. A straight read on where you stand and what moves it.</p>
       <div class="hero-buttons" style="justify-content: center;">
         <a href="/intro-call" class="btn btn-white">Book an Intro Call &rarr;</a>
       </div>
@@ -641,7 +641,7 @@ def render(c):
       <div class="footer-newsletter">
         <div class="footer-newsletter-pitch">
           <h4>Founder-to-founder thinking on revenue</h4>
-          <p>One short note when there's something worth saying. No drip, no sequence, no pitch.</p>
+          <p>One short note when there's something worth saying. No drip, no sequence.</p>
         </div>
         <form class="footer-newsletter-form" id="footerNewsletterForm" novalidate>
           <input type="email" id="footerNewsletterEmail" name="email" placeholder="you@company.com" required autocomplete="email" maxlength="100" aria-label="Email address">

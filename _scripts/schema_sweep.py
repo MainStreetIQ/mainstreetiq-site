@@ -68,7 +68,7 @@ PAYLOADS: dict[str, str] = {
       "url": "https://www.mainstreetiq.com"
     },
     "serviceType": "Introductory consultation",
-    "description": "A twenty-minute founder-to-founder call with Scott Hess, founder of Main Street IQ. No pitch. Walk away with a clear read on whether Main Street IQ can help and what to do if it cannot. Free and paid variants available.",
+    "description": "A twenty-minute founder-to-founder call with Scott Hess, founder of Main Street IQ. Walk away with a clear read on whether Main Street IQ can help and what to do if it cannot. Free and paid variants available.",
     "areaServed": [
       {
         "@type": "State",
