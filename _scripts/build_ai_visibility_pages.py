@@ -22,9 +22,12 @@ invisible side, which is the honest read of the same measurement and preserves
 the loss-aversion frame: 71 of 171 SB tasting rooms are named by no AI assistant.
 The rest of the site carries the REGION-wide version of that same figure (228 of
 423 across both counties); this page stays SB-scoped on purpose, see below.
-  - santa-barbara carries the 86/175 stat, labeled as SB County.
-  - san-luis-obispo references the WCIR (which does cover SLO) but asserts NO
-    SLO-specific visibility count, because we do not have one published.
+  - santa-barbara carries the SB-scoped invisible stat (71 of 171), labeled as SB County.
+  - san-luis-obispo moved from the "covered" variant to "measured" on 2026-08-05
+    (Scott's ruling): Q2 published an SLO-specific count (95 of 252 cited), so the
+    page now carries the SLO-scoped invisible stat, 157 of 252. Each measured
+    county prints ITS OWN county-scoped figure via the stat_invisible field;
+    never print one county's number on the other's page.
   - ventura / los-angeles / orange-county / san-diego carry NO local wine stat.
     They describe the published method and are explicit that the benchmark was
     measured in wine, on the Central Coast. Extrapolating the SB number to a
@@ -57,7 +60,8 @@ COUNTIES = [
         "hero_img": "slo-downtown.jpg",
         "cities": ["San Luis Obispo", "Paso Robles", "Templeton", "Atascadero",
                    "Arroyo Grande", "Pismo Beach", "Grover Beach", "Morro Bay", "Nipomo"],
-        "wcir": "covered",   # in the WCIR footprint, but no published SLO-specific count
+        "wcir": "measured",  # Q2 2026 published the SLO count; switched from "covered" per Scott 2026-08-05
+        "stat_invisible": "157 of 252",  # SLO tasting rooms named by no AI assistant, Q2 2026 WCIR
         "verticals_line": ("wineries across Paso Robles and the Edna Valley, DTC ecommerce brands, "
                            "health and wellness practices, and elective medicine practices"),
         "local_para": (
@@ -77,7 +81,8 @@ COUNTIES = [
         "hero_img": "santa-barbara-waterfront.jpg",
         "cities": ["Santa Barbara", "Goleta", "Santa Ynez", "Solvang", "Buellton",
                    "Lompoc", "Los Olivos", "Carpinteria", "Montecito", "Santa Maria"],
-        "wcir": "measured",  # the 71-of-171 invisible figure is SB-scoped
+        "wcir": "measured",  # SB-scoped invisible figure
+        "stat_invisible": "71 of 171",  # SB tasting rooms named by no AI assistant, Q2 2026 WCIR
         "verticals_line": ("wineries across the Santa Ynez Valley and the Sta. Rita Hills, DTC "
                            "ecommerce brands, health and wellness practices, and elective medicine practices"),
         "local_para": (
@@ -173,8 +178,8 @@ def proof_section(c):
         <p>The <a href="/wineries" style="color: var(--color-sky);">Wine Country Intelligence Report</a> benchmarks every tracked winery in Santa Barbara and San Luis Obispo counties on exactly this: who shows up in the AI answer and who does not. The finding in this county was stark.</p>
         <div class="stat-bar" style="border-top-color: rgba(255,255,255,0.15); margin-top: 1.5rem;">
           <div class="stat-item">
-            <p class="stat-num" style="color: var(--color-sky);">71 of 171</p>
-            <p style="color: rgba(255,255,255,0.7);">Santa Barbara County tasting rooms named by no AI assistant (Q2 2026 WCIR)</p>
+            <p class="stat-num" style="color: var(--color-sky);">{c['stat_invisible']}</p>
+            <p style="color: rgba(255,255,255,0.7);">{c['county']} tasting rooms named by no AI assistant (Q2 2026 WCIR)</p>
           </div>
           <div class="stat-item">
             <p class="stat-num" style="color: var(--color-sky);">Every quarter</p>
@@ -237,7 +242,7 @@ def faqs(c):
     if c["wcir"] == "measured":
         measure = (f"We built the measurement in wine and published it. The Wine Country Intelligence "
                    f"Report benchmarks every tracked winery in Santa Barbara and San Luis Obispo counties "
-                   f"on AI visibility, and it found that 71 of 171 {county} tasting rooms were named by no "
+                   f"on AI visibility, and it found that {c['stat_invisible']} {county} tasting rooms were named by no "
                    f"AI assistant at all last quarter. That same benchmark is how we read where your business stands: which "
                    f"surfaces the AI answer is built from, where you show up, and where you are absent. "
                    f"Then we name the fixes and re-check your visibility every month.")
