@@ -700,6 +700,18 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://www.mainstreetiq.com/monitor</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.mainstreetiq.com/engage</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://www.mainstreetiq.com/raid-framework</loc>
     <lastmod>2026-07-21</lastmod>
     <changefreq>monthly</changefreq>
