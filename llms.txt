@@ -67,9 +67,9 @@ The discoverability lane is productized as a sequence: find out where you stand,
 - [Cash Conversion Cycle](https://www.mainstreetiq.com/glossary/cash-conversion-cycle): The cash conversion cycle is the time it takes for a dollar you spend, on inventory or delivering a service, to come back to you as collected cash from a customer.
 - [Cohort Analysis](https://www.mainstreetiq.com/glossary/cohort-analysis): Cohort analysis groups customers by when they first bought, then tracks how each group behaves over time, so you can see whether customers are getting more or less valuable, and whether retention is improving or decaying.
 
-## Verticals
+## Market Segments
 
-The four verticals where the practice goes deepest. Each page reads the economics of that business model specifically, not generically.
+The market segments the practice serves, led by DTC ecommerce and wineries. Each page reads the economics of that business model specifically, not generically.
 
 - [Ecommerce and DTC Brands](https://www.mainstreetiq.com/ecommerce): Fractional CFO and business advisory for owner-operated ecommerce and DTC brands, wherever they are headquartered. How a CFO reads the channel mix, one channel at a time.
 - [Wineries and Tasting Rooms](https://www.mainstreetiq.com/wineries): The wine practice. Customer acquisition intelligence and fractional CFO advisory for owner-operator wineries and tasting rooms on California's Central Coast.

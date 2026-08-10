@@ -6,7 +6,7 @@ with the canonical version on all msiq-site pages still carrying the old
 Run from the msiq-site root:
     python _scripts/footer_sweep.py
 
-Skips pages that already use the canonical footer (Verticals column).
+Skips pages that already use the canonical footer (Market Segments column).
 """
 
 import re
@@ -39,7 +39,8 @@ CANONICAL_FOOTER = """<div class="footer-grid">
           <a href="https://www.linkedin.com/in/johnscotthess" target="_blank" rel="noopener">LinkedIn</a>
         </div>
         <div class="footer-col">
-          <h4>Verticals</h4>
+          <h4>Market Segments</h4>
+          <a href="/ecommerce">DTC &amp; Ecommerce</a>
           <a href="/wineries">Wineries</a>
           <a href="/wellness">Health &amp; Wellness</a>
           <a href="/aesthetics">Elective Medicine</a>
@@ -80,8 +81,10 @@ def process_file(path: Path) -> str:
     if '<div class="footer-grid">' not in text:
         return "skipped"
 
-    # Skip files that already have the canonical Verticals column
-    if "<h4>Verticals</h4>" in text:
+    # Skip files that already have the canonical Market Segments column.
+    # (Renamed from "Verticals" 2026-08-10 with the market-segment ruling; the old
+    # heading is still checked so a legacy page is not silently treated as canonical.)
+    if "<h4>Market Segments</h4>" in text or "<h4>Verticals</h4>" in text:
         return "skipped"
 
     new_text, count = LEGACY_FOOTER_RE.subn(CANONICAL_FOOTER + "\n      ", text, count=1)

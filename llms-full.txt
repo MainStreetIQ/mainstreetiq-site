@@ -1,6 +1,6 @@
 # Main Street IQ | Full Site Content
 
-> Main Street IQ is a fractional CFO practice for owner-operated businesses under $50MM in revenue, with a built-in intelligence engine. Led by founder Scott Hess, it pairs a named fractional or interim CFO with an engine that reads your market, your funnel, your cohorts, and what AI search says about you; the CFO works those decisions alongside you, not from the sideline. The practice is rooted on California's Central Coast, concentrates on Central and Southern California coastal counties, and serves fitting owner-operated businesses nationwide. It goes deepest in four verticals: ecommerce, wine, health and wellness, and elective medicine. Every engagement is built on the RAID model (Redundant, Agile, Intelligent, Data-Driven). Veteran-owned and operated.
+> Main Street IQ is a fractional CFO practice for owner-operated businesses under $50MM in revenue, with a built-in intelligence engine. Led by founder Scott Hess, it pairs a named fractional or interim CFO with an engine that reads your market, your funnel, your cohorts, and what AI search says about you; the CFO works those decisions alongside you, not from the sideline. The practice is rooted on California's Central Coast, concentrates on Central and Southern California coastal counties, and serves fitting owner-operated businesses nationwide. It goes deepest in two market segments, ecommerce and wine, and also works with health and wellness and elective medicine. Every engagement is built on the RAID model (Redundant, Agile, Intelligent, Data-Driven). Veteran-owned and operated.
 
 ---
 
@@ -60,7 +60,7 @@ Not sure which one is you? That is the Intro Call. Both are scoped there, agains
 We build and run a scalable finance function for owner-operated businesses under $50MM, on a model we call RAID: redundant, agile, intelligent, and data-driven. Underneath it runs a live intelligence engine that reads your market, your funnel, your cohorts, and what AI search says about you, so every call is made on a current read instead of last quarter's numbers. Engage and Manage are the two ways to have that CFO alongside you: Engage when you keep your finance team, Manage when you want us to be it.
 
 **Who is Main Street IQ for?**
-Owner-operated and founder-led businesses under $50MM, in four verticals: DTC ecommerce brands, wineries, health and wellness practices, and elective medicine practices. We are rooted on the California coast, from San Luis Obispo to San Diego, and we work with owner-operators nationwide. Main Street IQ is veteran-owned and operated.
+Owner-operated and founder-led businesses under $50MM. We go deepest in two market segments, DTC ecommerce brands and wineries, and we also work with health and wellness and elective medicine practices. We are rooted on the California coast, from San Luis Obispo to San Diego, and we work with owner-operators nationwide. Main Street IQ is veteran-owned and operated.
 
 **How is Main Street IQ different from a marketing agency or a BI tool?**
 An agency sells you campaigns and reports on impressions. A BI tool sells you dashboards you will not open. We sell you the CFO's read on whether your acquisition pencils out, the cohorts that compound versus the ones that churn, and the pricing decision that adds margin versus the one that quietly subtracts it.
@@ -159,9 +159,9 @@ The discoverability lane is productized as a sequence: find out where you stand,
 
 ---
 
-## Verticals
+## Market Segments
 
-The four verticals where the practice goes deepest. Each page reads the economics of that business model specifically, not a generic CFO pitch.
+The market segments the practice serves, led by DTC ecommerce and wineries. Each page reads the economics of that business model specifically, not a generic CFO pitch.
 
 - [Ecommerce and DTC Brands](https://www.mainstreetiq.com/ecommerce): Fractional CFO and business advisory for owner-operated ecommerce and DTC brands, wherever they are headquartered. DTC site, Amazon, wholesale, retail, subscription: each channel has its own acquisition cost, margin, and cash cycle, and they all land in one P&L. The vertical Main Street IQ knows deepest.
 - [Wineries and Tasting Rooms](https://www.mainstreetiq.com/wineries): The wine practice. Fractional CFO and business intelligence for owner-operator wineries and tasting rooms. Wine club, tasting room, DTC shipping, distribution: each has its own acquisition, lifetime value, and retention math.
