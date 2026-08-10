@@ -62,8 +62,9 @@ COUNTIES = [
                    "Arroyo Grande", "Pismo Beach", "Grover Beach", "Morro Bay", "Nipomo"],
         "wcir": "measured",  # Q2 2026 published the SLO count; switched from "covered" per Scott 2026-08-05
         "stat_invisible": "157 of 252",  # SLO tasting rooms named by no AI assistant, Q2 2026 WCIR
-        "verticals_line": ("wineries across Paso Robles and the Edna Valley, DTC ecommerce brands, "
-                           "health and wellness practices, and elective medicine practices"),
+        "audience_line": ("We go deepest in two market segments, wineries across Paso Robles and the "
+                          "Edna Valley and DTC and ecommerce brands, and we also work with health and "
+                          "wellness and elective medicine practices."),
         "local_para": (
             "San Luis Obispo County runs on businesses a visitor or a buyer has to find before they "
             "can choose: tasting rooms in Paso Robles and the Edna Valley, practices in San Luis "
@@ -83,8 +84,9 @@ COUNTIES = [
                    "Lompoc", "Los Olivos", "Carpinteria", "Montecito", "Santa Maria"],
         "wcir": "measured",  # SB-scoped invisible figure
         "stat_invisible": "71 of 171",  # SB tasting rooms named by no AI assistant, Q2 2026 WCIR
-        "verticals_line": ("wineries across the Santa Ynez Valley and the Sta. Rita Hills, DTC "
-                           "ecommerce brands, health and wellness practices, and elective medicine practices"),
+        "audience_line": ("We go deepest in two market segments, wineries across the Santa Ynez Valley "
+                          "and the Sta. Rita Hills and DTC and ecommerce brands, and we also work with "
+                          "health and wellness and elective medicine practices."),
         "local_para": (
             "Between the Santa Ynez Valley, Solvang, Los Olivos, and the Sta. Rita Hills, Santa "
             "Barbara County packs a dense field of businesses into the same short AI answer, and "
@@ -101,8 +103,8 @@ COUNTIES = [
         "cities": ["Ventura", "Oxnard", "Camarillo", "Thousand Oaks", "Simi Valley",
                    "Moorpark", "Ojai", "Port Hueneme", "Santa Paula", "Fillmore"],
         "wcir": "method",
-        "verticals_line": ("DTC ecommerce brands, health and wellness practices, elective medicine "
-                           "practices, and wineries"),
+        "audience_line": ("We go deepest in two market segments, DTC and ecommerce brands and wineries, "
+                          "and we also work with health and wellness and elective medicine practices."),
         "local_para": (
             "Ventura County businesses sit close enough to Los Angeles to compete with its marketing "
             "budgets and far enough out to lose the default search result. When a buyer in Thousand "
@@ -120,8 +122,8 @@ COUNTIES = [
         "cities": ["Los Angeles", "Santa Monica", "Beverly Hills", "West Hollywood",
                    "Manhattan Beach", "Culver City", "Pasadena", "Burbank", "Long Beach"],
         "wcir": "method",
-        "verticals_line": ("DTC ecommerce brands, elective medicine practices, health and wellness "
-                           "practices, and wineries"),
+        "audience_line": ("We go deepest in two market segments, DTC and ecommerce brands and wineries, "
+                          "and we also work with elective medicine and health and wellness practices."),
         "local_para": (
             "Los Angeles County is the hardest version of this problem: the category is crowded, the "
             "competitors spend heavily, and the AI answer still names only a few. Paid acquisition "
@@ -139,8 +141,8 @@ COUNTIES = [
         "cities": ["Irvine", "Costa Mesa", "Newport Beach", "Anaheim", "Santa Ana",
                    "Huntington Beach", "Fullerton", "Laguna Beach", "Mission Viejo", "San Clemente"],
         "wcir": "method",
-        "verticals_line": ("elective medicine practices, DTC ecommerce brands, health and wellness "
-                           "practices, and wineries"),
+        "audience_line": ("We go deepest in two market segments, DTC and ecommerce brands and wineries, "
+                          "and we also work with elective medicine and health and wellness practices."),
         "local_para": (
             "Orange County concentrates exactly the businesses this shift hits hardest: "
             "high-consideration practices in Newport Beach and Irvine where a patient researches for "
@@ -158,8 +160,8 @@ COUNTIES = [
         "cities": ["San Diego", "La Jolla", "Del Mar", "Encinitas", "Carlsbad",
                    "Escondido", "Ramona", "Chula Vista"],
         "wcir": "method",
-        "verticals_line": ("DTC ecommerce brands, health and wellness practices, elective medicine "
-                           "practices, and wineries"),
+        "audience_line": ("We go deepest in two market segments, DTC and ecommerce brands and wineries, "
+                          "and we also work with health and wellness and elective medicine practices."),
         "local_para": (
             "San Diego County spreads demand across distinct markets, from La Jolla and Encinitas to "
             "Escondido and Chula Vista, and a buyer in each one asks the same AI the same question. A "
@@ -283,7 +285,7 @@ def faqs(c):
          f"lives off your website. We read both layers and the classical-search layer underneath them."),
         (f"How do you measure AI visibility in {county}?", measure),
         (f"Which businesses in {county} is this for?",
-         f"Owner-operated businesses under $50MM in the four verticals we work: {c['verticals_line']}. "
+         f"Owner-operated businesses under $50MM. {c['audience_line']} "
          f"The practice is based on California's Central Coast and {county} is one of six counties where "
          f"our outbound and on-site availability concentrate, which is not a limit on who we accept. If "
          f"buyers in your category are starting to ask AI who to trust, the work applies to you."),
@@ -582,17 +584,17 @@ def render(c):
     </div>
   </section>
 
-  <!-- ===== YOUR VERTICAL ===== -->
+  <!-- ===== YOUR MARKET SEGMENT ===== -->
   <section>
     <div class="container">
       <div class="section-header">
-        <span class="section-label">Your vertical is next</span>
+        <span class="section-label">Your market segment is next</span>
         <h2 class="section-title">The same read, tuned to how buyers find you</h2>
-        <p class="section-subtitle">Discoverability is horizontal, but the queries, the touchpoints, and the buyer are not. We tune the engine to your vertical.</p>
+        <p class="section-subtitle">Discoverability is horizontal, but the queries, the touchpoints, and the buyer are not. We tune the engine to your market segment.</p>
       </div>
       <div class="card-grid">
         <div class="card">
-          <h3>Ecommerce &amp; DTC</h3>
+          <h3>DTC &amp; Ecommerce</h3>
           <p>When a shopper asks AI what to buy in your category, is your brand in the answer, or is paid acquisition backfilling a gap that keeps getting wider?</p>
           <p style="margin-top: 0.75rem;"><a href="/ecommerce" style="color: var(--color-navy);">Discoverability for ecommerce &rarr;</a></p>
         </div>
