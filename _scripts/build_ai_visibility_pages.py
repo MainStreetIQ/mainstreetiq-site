@@ -449,7 +449,7 @@ def render(c):
           <a href="/discoverability">AI Discoverability</a>
           <a href="/about">About</a>
           <a href="/our-work">Our Work</a>
-          <a href="/blog">Blog</a>
+          <a href="/blog/">Blog</a>
           <a href="/partners">Partners</a>
           <a href="/contact">Contact</a>
           <a href="/intro-call" class="nav-cta">Book an Intro Call</a>
@@ -666,7 +666,7 @@ def render(c):
           <a href="/about">About</a>
           <a href="/our-services">Services</a>
           <a href="/our-work">Our Work</a>
-          <a href="/blog">Blog</a>
+          <a href="/blog/">Blog</a>
         </div>
         <div class="footer-col">
           <h4>Connect</h4>

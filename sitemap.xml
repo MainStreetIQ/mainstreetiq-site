@@ -213,7 +213,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mainstreetiq.com/blog</loc>
+    <loc>https://www.mainstreetiq.com/blog/</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.75</priority>
@@ -591,7 +591,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.mainstreetiq.com/glossary</loc>
+    <loc>https://www.mainstreetiq.com/glossary/</loc>
     <lastmod>2026-07-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
