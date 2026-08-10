@@ -140,7 +140,7 @@ The discoverability lane is productized as a sequence: find out where you stand,
 
 ## Glossary
 
-- [Finance & AI Glossary](https://www.mainstreetiq.com/glossary): Plain-language definitions of the finance and AI-search terms behind an AI CFO.
+- [Finance & AI Glossary](https://www.mainstreetiq.com/glossary/): Plain-language definitions of the finance and AI-search terms behind an AI CFO.
 - [AI Visibility](https://www.mainstreetiq.com/glossary/ai-visibility): AI visibility is how often, and how accurately, AI assistants like ChatGPT, Claude, Gemini, and Perplexity name your business when someone asks them a question you should be the answer to.
 - [Answer Engine Optimization (AEO)](https://www.mainstreetiq.com/glossary/answer-engine-optimization): Answer Engine Optimization (AEO) is the practice of structuring your content so that answer engines, the AI systems and featured-snippet tools that give a single direct answer, pull from your business as the source.
 - [Generative Engine Optimization (GEO)](https://www.mainstreetiq.com/glossary/generative-engine-optimization): Generative Engine Optimization (GEO) is optimizing your business's presence so that generative AI models, the large language models behind ChatGPT, Claude, Gemini, and Perplexity, represent and recommend you accurately when they generate a response.

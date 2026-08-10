@@ -29,7 +29,7 @@ CANONICAL_FOOTER = """<div class="footer-grid">
           <a href="/about">About</a>
           <a href="/our-services">Services</a>
           <a href="/our-work">Our Work</a>
-          <a href="/blog">Blog</a>
+          <a href="/blog/">Blog</a>
         </div>
         <div class="footer-col">
           <h4>Connect</h4>
