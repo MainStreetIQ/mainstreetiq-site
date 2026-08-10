@@ -66,7 +66,7 @@ Owner-operated and founder-led businesses under $50MM. We go deepest in two mark
 An agency sells you campaigns and reports on impressions. A BI tool sells you dashboards you will not open. We sell you the CFO's read on whether your acquisition pencils out, the cohorts that compound versus the ones that churn, and the pricing decision that adds margin versus the one that quietly subtracts it.
 
 **How does pricing work at Main Street IQ?**
-Pricing depends on your vertical and your situation, so most of it is scoped on the Intro Call rather than printed on a tier card. The one published price is the Wine Country Intelligence Report, a fixed deliverable. Everything else, you hear the number once we understand the business. Same discipline either way: you only pay for the work that pays you back.
+Pricing depends on your market segment and your situation, so most of it is scoped on the Intro Call rather than printed on a tier card. The one published price is the Wine Country Intelligence Report, a fixed deliverable. Everything else, you hear the number once we understand the business. Same discipline either way: you only pay for the work that pays you back.
 
 **How do I get started with Main Street IQ?**
 Book a 30-minute Intro Call. We talk about where the business is today, where the gaps are, and which offering fits your situation. If we are not the right fit we will say so.
@@ -163,7 +163,7 @@ The discoverability lane is productized as a sequence: find out where you stand,
 
 The market segments the practice serves, led by DTC ecommerce and wineries. Each page reads the economics of that business model specifically, not a generic CFO pitch.
 
-- [Ecommerce and DTC Brands](https://www.mainstreetiq.com/ecommerce): Fractional CFO and business advisory for owner-operated ecommerce and DTC brands, wherever they are headquartered. DTC site, Amazon, wholesale, retail, subscription: each channel has its own acquisition cost, margin, and cash cycle, and they all land in one P&L. The vertical Main Street IQ knows deepest.
+- [Ecommerce and DTC Brands](https://www.mainstreetiq.com/ecommerce): Fractional CFO and business advisory for owner-operated ecommerce and DTC brands, wherever they are headquartered. DTC site, Amazon, wholesale, retail, subscription: each channel has its own acquisition cost, margin, and cash cycle, and they all land in one P&L. The market segment Main Street IQ knows deepest.
 - [Wineries and Tasting Rooms](https://www.mainstreetiq.com/wineries): The wine practice. Fractional CFO and business intelligence for owner-operator wineries and tasting rooms. Wine club, tasting room, DTC shipping, distribution: each has its own acquisition, lifetime value, and retention math.
 - [Wellness Clinics](https://www.mainstreetiq.com/wellness): Fractional CFO and business intelligence for owner-operated wellness clinics. Longevity, IV therapy, hormone optimization, functional medicine, recovery. Each modality has its own economics.
 - [Elective Medicine Practices](https://www.mainstreetiq.com/aesthetics): Fractional CFO and business intelligence for owner-operated elective medicine practices. Cosmetic surgery, dermatology, MedSpa, cosmetic dental, adult cosmetic orthodontics. Each modality has its own economics.
