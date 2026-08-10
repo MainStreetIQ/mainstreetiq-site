@@ -6,7 +6,8 @@ with the canonical version on all msiq-site pages still carrying the old
 Run from the msiq-site root:
     python _scripts/footer_sweep.py
 
-Skips pages that already use the canonical footer (Market Segments column).
+Skips pages that already use the canonical footer (Market Segments column),
+and pages carrying a DELIBERATE bespoke footer (see LEGACY_MARKERS).
 """
 
 import re
@@ -72,9 +73,23 @@ LEGACY_FOOTER_RE = re.compile(
     re.DOTALL,
 )
 
+# A footer is LEGACY only if it carries one of these. The heading check below
+# is a NEGATIVE test ("does not say Market Segments"), which is not the same
+# question as "is legacy" — a page can lack that column on purpose. Without
+# this positive test the sweep would flatten wcir/q2-2026-central-coast.html,
+# whose wine-scoped Company / Connect / Wine / Legal footer is deliberate
+# (2026-08-10). Same producer-clobbers-hand-tuned-output class as the
+# build_ai_visibility_pages.py gap, opposite direction: there the template was
+# stale, here the target is an intentional exception.
+LEGACY_MARKERS = (
+    "<h4>Industries</h4>",
+    "/central-coast-iq",
+    "/cfo-diagnostic",
+)
+
 
 def process_file(path: Path) -> str:
-    """Return 'updated', 'skipped', or 'no-match' for a given file."""
+    """Return 'updated', 'skipped', 'bespoke', or 'no-match' for a given file."""
     text = path.read_text(encoding="utf-8")
 
     # Skip files without a footer-grid at all
@@ -86,6 +101,16 @@ def process_file(path: Path) -> str:
     # heading is still checked so a legacy page is not silently treated as canonical.)
     if "<h4>Market Segments</h4>" in text or "<h4>Verticals</h4>" in text:
         return "skipped"
+
+    match = LEGACY_FOOTER_RE.search(text)
+    if match is None:
+        return "no-match"
+
+    # Positive legacy test. Anything that reaches here without a legacy marker
+    # is a deliberate variant, not an unswept page — leave it alone and SAY SO
+    # (a silent skip is how a producer bug hides).
+    if not any(marker in match.group(0) for marker in LEGACY_MARKERS):
+        return "bespoke"
 
     new_text, count = LEGACY_FOOTER_RE.subn(CANONICAL_FOOTER + "\n      ", text, count=1)
     if count == 0:
@@ -100,6 +125,7 @@ def process_file(path: Path) -> str:
 def main():
     updated = []
     skipped = []
+    bespoke = []
     no_match = []
 
     # Collect all .html files
@@ -116,6 +142,8 @@ def main():
             updated.append(rel)
         elif result == "no-match":
             no_match.append(rel)
+        elif result == "bespoke":
+            bespoke.append(rel)
         else:
             skipped.append(rel)
 
@@ -123,6 +151,10 @@ def main():
     for p in updated:
         print(f"  {p}")
     print(f"Skipped:  {len(skipped)} files (already canonical or no footer)")
+    if bespoke:
+        print(f"BESPOKE:  {len(bespoke)} files (deliberate non-canonical footer, left alone)")
+        for p in bespoke:
+            print(f"  {p}")
     if no_match:
         print(f"NO MATCH: {len(no_match)} files (had Industries but regex did not find footer-grid)")
         for p in no_match:
