@@ -1,0 +1,162 @@
+<!--sitegen:params
+{
+  "assets": "assets/",
+  "styles": "styles.css",
+  "nav": {
+    "logo": "/assets/logos/logo-horizontal-light.svg",
+    "links": [
+      {
+        "href": "/fractional-cfo",
+        "attrs": "",
+        "label": "Fractional CFO"
+      },
+      {
+        "href": "/discoverability",
+        "attrs": "",
+        "label": "AI Discoverability"
+      },
+      {
+        "href": "/about",
+        "attrs": "",
+        "label": "About"
+      },
+      {
+        "href": "/our-work",
+        "attrs": "",
+        "label": "Our Work"
+      },
+      {
+        "href": "/blog/",
+        "attrs": "",
+        "label": "Blog"
+      },
+      {
+        "href": "/contact",
+        "attrs": "",
+        "label": "Contact"
+      },
+      {
+        "href": "/intro-call",
+        "attrs": "class=\"nav-cta\"",
+        "label": "Book an Intro Call"
+      }
+    ]
+  },
+  "footer": {
+    "logo": "/assets/logos/logo-horizontal-dark.svg",
+    "tagline": "A fractional CFO practice with a built-in intelligence engine, for owner-operated businesses under $50MM. Veteran-owned and operated.",
+    "cta_href": "/intro-call",
+    "newsletter": false,
+    "apos": null,
+    "social": false,
+    "refunds": true,
+    "trust": true
+  }
+}
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/svg+xml" href="assets/logos/favicon.svg">
+  <title>Confirm your Intro Call | Main Street IQ</title>
+{{ga4}}
+  <meta name="description" content="Confirm your Main Street IQ Intro Call.">
+  <link rel="canonical" href="https://www.mainstreetiq.com/intro-call-confirm">
+
+{{fonts}}
+
+{{styles}}
+  <link rel="stylesheet" href="/assets/css/forms.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- ===== HEADER ===== -->
+  {{nav}}
+
+  <main id="main">
+
+  <!-- ===== BOOK PATH ===== -->
+  <section id="introcall-free" class="introcall-confirm-section">
+    <div class="container">
+      <div class="introcall-confirm-wrap">
+        <span class="section-label">Almost done</span>
+        <h1>Thanks. Grab a slot on the calendar.</h1>
+        <p>We got your details. Pick a 30-minute window that works. If nothing here suits you, reply to the confirmation email and we'll find another time.</p>
+        <div class="introcall-calendly-wrap">
+          <div class="calendly-inline-widget" data-url="https://calendly.com/scott_mainstreetiq/30min?utm_source=mainstreetiq-site&utm_medium=website&utm_campaign=intro-call-free" style="min-width:320px;height:720px;"></div>
+          <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  {{footer}}
+
+  <style>
+    .introcall-confirm-section {
+      padding: 4rem 0;
+    }
+    .introcall-confirm-wrap {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .introcall-confirm-wrap h1 {
+      font-weight: 500;
+      color: var(--color-midnight, #0F1C2E);
+      font-size: 2rem;
+      letter-spacing: -0.4px;
+      margin: 0.5rem 0 1rem;
+      line-height: 1.2;
+    }
+    .introcall-confirm-wrap p {
+      font-weight: 300;
+      color: var(--color-dark-text, #1A1F2B);
+      line-height: 1.6;
+      font-size: 1.05rem;
+      margin-bottom: 1rem;
+    }
+    .introcall-calendly-wrap {
+      margin-top: 2rem;
+      border: 1px solid var(--color-border, #E5E2DC);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .section-label {
+      display: inline-block;
+      font-size: 0.78rem;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: var(--color-navy, #2B4E8C);
+      margin-bottom: 0.5rem;
+    }
+  </style>
+
+  <script>
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 20);
+    });
+    const toggle = document.getElementById('nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      toggle.classList.toggle('active');
+    });
+
+    // Single Intro Call path: the Calendly booking widget is shown to everyone
+    // who lands here, whether redirected from the intake form or arriving direct.
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'intro_call_confirm_view');
+    }
+  </script>
+
+</body>
+</html>

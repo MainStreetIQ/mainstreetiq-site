@@ -1,0 +1,254 @@
+<!--sitegen:params
+{
+  "assets": "assets/",
+  "styles": "styles.css",
+  "nav": {
+    "logo": "assets/logos/logo-horizontal-light.svg",
+    "links": [
+      {
+        "href": "/fractional-cfo",
+        "attrs": "",
+        "label": "Fractional CFO"
+      },
+      {
+        "href": "/discoverability",
+        "attrs": "",
+        "label": "AI Discoverability"
+      },
+      {
+        "href": "/about",
+        "attrs": "",
+        "label": "About"
+      },
+      {
+        "href": "/our-work",
+        "attrs": "",
+        "label": "Our Work"
+      },
+      {
+        "href": "/blog/",
+        "attrs": "",
+        "label": "Blog"
+      },
+      {
+        "href": "/contact",
+        "attrs": "",
+        "label": "Contact"
+      },
+      {
+        "href": "/intro-call",
+        "attrs": "class=\"nav-cta\"",
+        "label": "Book an Intro Call"
+      }
+    ]
+  },
+  "footer": {
+    "logo": "/assets/logos/logo-horizontal-dark.svg",
+    "tagline": "A fractional CFO practice with a built-in intelligence engine, for owner-operated businesses under $50MM. Veteran-owned and operated.",
+    "cta_href": "/intro-call",
+    "newsletter": true,
+    "apos": "'",
+    "social": true,
+    "refunds": false,
+    "trust": true
+  }
+}
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{{meta_base}}
+  <title>Trust Center | Main Street IQ</title>
+{{ga4}}
+  <meta name="description" content="Main Street IQ Trust Center. Full stack walkthrough for engagements that handle financial data: data residency, credential brokering, PII tokenization, audit logging, enterprise add-ons, and HIPAA readiness.">
+  <meta name="keywords" content="trust center, data security, financial data handling, credential vault, PII tokenization, audit logging, AWS Bedrock PrivateLink, HIPAA BAA, Zero Data Retention, fractional CFO security">
+  <link rel="canonical" href="https://www.mainstreetiq.com/trust">
+  <meta name="robots" content="noindex, follow">
+
+  <meta property="og:title" content="Trust Center | Main Street IQ">
+  <meta property="og:description" content="Full stack walkthrough for engagements that handle financial data. Every control named, every vendor named, the data flow end to end.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.mainstreetiq.com/trust">
+  <meta property="og:image" content="https://www.mainstreetiq.com/assets/images/og-image.jpg">
+  <meta property="og:locale" content="en_US">
+
+{{fonts}}
+
+{{styles}}
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.mainstreetiq.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Trust Center", "item": "https://www.mainstreetiq.com/trust"}
+    ]
+  }
+  </script>
+
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- ===== HEADER ===== -->
+  {{nav}}
+
+  <main id="main">
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="container">
+      <span class="section-label">Trust Center</span>
+      <h1>The Full Stack. Every Vendor. Every Control.</h1>
+      <p>This page exists for the security teams, compliance officers, lenders, and legal counsel who need the long version. Owner-operator finance does not get the same documentation that institutional finance gets, by default. So we wrote it ourselves. Every control we use, every vendor we depend on, the data flow end to end. Ask us anything we did not cover.</p>
+    </div>
+  </section>
+
+  <!-- ===== PLATFORM + PRACTICE ===== -->
+  <section>
+    <div class="container">
+      <div class="section-header section-header-left">
+        <span class="section-label">Platform + Practice</span>
+        <h2 class="section-title">What We Use From Anthropic, and What We Build Ourselves</h2>
+        <p class="section-subtitle">Manage runs on Anthropic's generally-available Claude products with a Zero Data Retention arrangement on the inference layer. The practice layer on top is MSIQ-built. Honest about which is which.</p>
+      </div>
+
+      <div class="split-section">
+        <div>
+          <h3 style="font-size: 22px; font-weight: 600; margin-bottom: 12px;">What we use from Anthropic</h3>
+          <p style="margin-bottom: 14px;">Generally-available Claude products, configured for your engagement:</p>
+          <ul style="list-style: none; padding: 0;">
+            <li style="padding: 8px 0; border-bottom: 1px solid var(--border, #e8eaed);"><strong>Claude Messages API with Zero Data Retention.</strong> The inference layer for every skill output. ZDR means Anthropic does not retain your prompts or outputs at rest after the API response is returned. The arrangement is per-organization and provisioned via Anthropic's sales team.</li>
+            <li style="padding: 8px 0; border-bottom: 1px solid var(--border, #e8eaed);"><strong>Claude Agent SDK.</strong> The Python and TypeScript libraries Anthropic ships for building agent loops. Our skills are built on this SDK directly. ZDR is preserved because the SDK uses the Messages API underneath.</li>
+            <li style="padding: 8px 0; border-bottom: 1px solid var(--border, #e8eaed);"><strong>Claude Cowork.</strong> Anthropic's collaborative writing surface ($20/mo per seat). Where Scott and your team draft monthly close narratives, board decks, and lender packages with Claude as a real-time collaborator.</li>
+            <li style="padding: 8px 0; border-bottom: 1px solid var(--border, #e8eaed);"><strong>Claude for Excel.</strong> The Microsoft Excel add-in ($20/mo per seat). Where your CEO and growth team edit driver-based forecasts and scenario models live, with Claude tracing references across tabs and diagnosing model structure.</li>
+            <li style="padding: 8px 0;"><strong>Claude on AWS Bedrock with PrivateLink (enterprise add-on).</strong> Available for clients who require network-isolated deployment and have an existing AWS posture. Not the default; scoped per engagement.</li>
+          </ul>
+          <p style="margin-top: 12px; font-size: 12.5px; color: var(--muted, #5a6573); font-style: italic;">Cowork and Claude for Excel are not currently ZDR-eligible by Anthropic's policy. We use them transparently for collaborative work; high-sensitivity flows run on the ZDR-eligible Messages API.</p>
+        </div>
+        <div>
+          <h3 style="font-size: 22px; font-weight: 600; margin-bottom: 12px;">What we build ourselves</h3>
+          <p style="margin-bottom: 14px;">The practice and security layers on top:</p>
+          <ul style="list-style: none; padding: 0;">
+            <li style="padding: 8px 0; border-bottom: 1px solid var(--border, #e8eaed);"><strong>Credential broker.</strong> MSIQ-built local secrets store with OS-keychain-backed encryption. Issues short-lived per-call tokens. AI context never holds real refresh tokens, so a prompt-injection attack cannot exfiltrate credentials. ZDR-compatible by design.</li>
+            <li style="padding: 8px 0; border-bottom: 1px solid var(--border, #e8eaed);"><strong>Pre-prompt PII redaction.</strong> Customer names, account numbers, EINs, and other identifiers are tokenized before any data reaches the LLM. The model reasons about tokens; only authorized humans see the un-tokenized output.</li>
+            <li style="padding: 8px 0; border-bottom: 1px solid var(--border, #e8eaed);"><strong>Per-client read scoping and structured audit log.</strong> A decorator on every skill enforces single-client reads. Every skill run writes a JSONL audit entry to your encrypted client folder. You can read it directly.</li>
+            <li style="padding: 8px 0; border-bottom: 1px solid var(--border, #e8eaed);"><strong>49 vertical-specific skills.</strong> Marketplace settlement reconciliation, cohort economics with long-window variants, marketing halo attribution, multi-location inventory, 3PL invoice forensics, cash-forecast drift detection.</li>
+            <li style="padding: 8px 0; border-bottom: 1px solid var(--border, #e8eaed);"><strong>Four market-segment packs.</strong> Ecommerce, wine, health and wellness, elective medicine. Different stacks, different cohort definitions, different compliance calendars.</li>
+            <li style="padding: 8px 0; border-bottom: 1px solid var(--border, #e8eaed);"><strong>Per-client CEO dashboard.</strong> Four tiers, phone-first, with the disclosure tier discipline (real / benchmark / fixture) we ship on every artifact.</li>
+            <li style="padding: 8px 0;"><strong>The pre-publish gate.</strong> Four-checker integrity chain (canonical facts, scope, voice, factual verification) on every artifact that leaves the engagement. Plus Scott signs every monthly close.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SIX CONTROLS ===== -->
+  <section class="bg-light">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">The Six Controls</span>
+        <h2 class="section-title">Three From Anthropic. Three From Us.</h2>
+        <p class="section-subtitle">Every embedded finance engagement should be able to name its security controls specifically. Here are ours.</p>
+      </div>
+      <div class="raid-grid">
+        <div class="raid-card">
+          <h4>Zero Data Retention on the Inference Layer</h4>
+          <p>The Claude Messages API is ZDR-eligible by Anthropic's published policy. Under a ZDR arrangement, your prompts and outputs are not stored at rest after the API response is returned. The arrangement is per-organization and provisioned through Anthropic's sales team. We apply for ZDR before any client integration touches live data.</p>
+        </div>
+        <div class="raid-card">
+          <h4>No Training on Your Data</h4>
+          <p>Anthropic does not train on commercial API customer data. This is contractual under the API terms of service and applies independently of ZDR.</p>
+        </div>
+        <div class="raid-card">
+          <h4>Optional PrivateLink via AWS Bedrock</h4>
+          <p>For enterprise clients requiring network-isolated inference, we deploy Claude on AWS Bedrock with PrivateLink. Your queries route through your own AWS VPC; financial data does not transit the public internet. Added as a scoped per-engagement option, not the default. See pricing and architecture spec on request.</p>
+        </div>
+        <div class="raid-card">
+          <h4>MSIQ Credential Broker</h4>
+          <p>Tokens for QuickBooks, Shopify, Amazon, bank feeds, and ad platforms live in an MSIQ-built local secrets store backed by OS-level keychain encryption. Skills request short-lived per-call tokens via placeholder substitution. AI context never holds real refresh tokens, so a prompt-injection attack cannot exfiltrate credentials.</p>
+        </div>
+        <div class="raid-card">
+          <h4>MSIQ Pre-Prompt Redaction + Client Scope</h4>
+          <p>Customer names, account numbers, EINs, and other identifiers are tokenized before any LLM call. A decorator on every skill enforces single-client read scoping so cross-client access is structurally impossible.</p>
+        </div>
+        <div class="raid-card">
+          <h4>MSIQ Audit Log + Pre-Publish Gate</h4>
+          <p>Every skill run writes a structured JSONL audit entry to your encrypted client folder, accessible to your team directly. Every artifact bound for outside our engagement (CPA, lender, board) passes through a four-checker gate: canonical facts, scope, brand voice, factual verification.</p>
+        </div>
+      </div>
+
+      <p style="margin-top: 28px; font-size: 14px; color: var(--muted, #5a6573); max-width: 760px;">
+        Claude Cowork and Claude for Excel, which we use for collaborative document work, are not currently ZDR-eligible by Anthropic's published policy. We disclose this transparently and route high-sensitivity flows through the ZDR-eligible Messages API path.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== HIPAA + DATA RESIDENCY ===== -->
+  <section>
+    <div class="container">
+      <div class="section-header section-header-left">
+        <span class="section-label">Regulated Engagements</span>
+        <h2 class="section-title">HIPAA Readiness and Data Residency</h2>
+      </div>
+      <div class="container-narrow" style="max-width: 800px;">
+        <p><strong>HIPAA.</strong> For elective medicine clients handling protected health information, we run engagements under a signed Business Associate Agreement on a HIPAA-enabled Anthropic organization. HIPAA readiness is provisioned at the organization level via Anthropic's sales team. Note: HIPAA-ready API access is not available on AWS Bedrock; PHI engagements run on the first-party Claude API with the BAA.</p>
+        <p style="margin-top: 12px;"><strong>Data residency.</strong> Standard engagements process data in US-based Anthropic infrastructure. Bedrock-deployed clients choose their AWS region directly.</p>
+        <p style="margin-top: 12px;"><strong>Subprocessor list.</strong> Our full subprocessor list is maintained at <a href="/legal/privacy">our Privacy page</a> and updated whenever we add or change a vendor.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHAT WE EXPLICITLY DO NOT USE ===== -->
+  <section class="bg-light">
+    <div class="container">
+      <div class="section-header section-header-left">
+        <span class="section-label">For The Buyer Who Probes</span>
+        <h2 class="section-title">A Note On Claude for Financial Services</h2>
+      </div>
+      <div class="container-narrow" style="max-width: 800px;">
+        <p>Anthropic released "Claude for Financial Services" on May 5, 2026. It is a product for institutional finance firms: Citadel, Carlyle, BNY, Travelers, Walleye Capital, Hg. It ships ten agent templates designed for investment banking workflows (pitchbook construction, KYC screening, model building, earnings review) and a set of data-partner integrations (FactSet, S&P Capital IQ, MSCI, PitchBook).</p>
+        <p style="margin-top: 12px;">Manage does not use that product. The institutional-FS agent templates are not designed for owner-operator finance and the data-partner integrations are not relevant for the buyer we serve. We use the underlying generally-available Claude products (the Messages API, the Agent SDK, Cowork, Excel) directly. If a security team asks whether MSIQ is "on the same platform as Citadel," the answer is honest: same Anthropic platform underneath, very different product surface on top.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Anything We Did Not Cover?</h2>
+      <p>If your security team, compliance officer, or legal counsel has a specific question, write to <a href="mailto:security@mainstreetiq.com" style="color: #fff; text-decoration: underline;">security@mainstreetiq.com</a>. We answer in writing, on the record, with the specifics you need to take the engagement to your reviewers.</p>
+      <div class="cta-buttons">
+        <a href="/intro-call" class="btn btn-white">Book an Intro Call &rarr;</a>
+        <a href="/contact" class="btn btn-outline-white">Send a Message</a>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  {{footer}}
+
+  <script src="/assets/js/newsletter.js" defer></script>
+
+  <script>
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 20); });
+    const toggle = document.getElementById('nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+    toggle.addEventListener('click', () => { navLinks.classList.toggle('open'); });
+
+    document.querySelectorAll('a[href*="calendly.com"]').forEach(function(a) {
+      a.addEventListener('click', function() {
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'book_call_click', {
+            page_path: window.location.pathname,
+            link_url: a.href
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

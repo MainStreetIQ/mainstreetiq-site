@@ -1,0 +1,154 @@
+<!--sitegen:params
+{
+  "assets": "assets/",
+  "styles": "styles.css",
+  "nav": {
+    "logo": "/assets/logos/logo-horizontal-light.svg",
+    "links": [
+      {
+        "href": "/fractional-cfo",
+        "attrs": "",
+        "label": "Fractional CFO"
+      },
+      {
+        "href": "/discoverability",
+        "attrs": "",
+        "label": "AI Discoverability"
+      },
+      {
+        "href": "/about",
+        "attrs": "",
+        "label": "About"
+      },
+      {
+        "href": "/our-work",
+        "attrs": "",
+        "label": "Our Work"
+      },
+      {
+        "href": "/blog/",
+        "attrs": "",
+        "label": "Blog"
+      },
+      {
+        "href": "/contact",
+        "attrs": "",
+        "label": "Contact"
+      },
+      {
+        "href": "/intro-call",
+        "attrs": "class=\"nav-cta\"",
+        "label": "Book an Intro Call"
+      }
+    ]
+  },
+  "footer": {
+    "logo": "/assets/logos/logo-horizontal-dark.svg",
+    "tagline": "A fractional CFO practice with a built-in intelligence engine, for owner-operated businesses under $50MM. Veteran-owned and operated.",
+    "cta_href": "/intro-call",
+    "newsletter": false,
+    "apos": null,
+    "social": false,
+    "refunds": true,
+    "trust": true
+  }
+}
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/svg+xml" href="assets/logos/favicon.svg">
+  <title>Quick Read received | Main Street IQ</title>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SBC31MGCEV"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SBC31MGCEV');gtag('event','financial_stack_lead_complete');</script>
+  <meta name="description" content="Your Main Street IQ Financial Stack Quick Read is on its way.">
+  <link rel="canonical" href="https://www.mainstreetiq.com/financial-stack-thanks">
+
+{{fonts}}
+
+{{styles}}
+  <link rel="stylesheet" href="/assets/css/forms.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- ===== HEADER ===== -->
+  {{nav}}
+
+  <main id="main">
+
+  <section class="fsthanks-section">
+    <div class="container">
+      <div class="fsthanks-wrap">
+        <span class="section-label">Quick Read received</span>
+        <h1>Your Financial Stack Quick Read is on its way.</h1>
+        <p>Thanks. You have already seen your score. Here is what happens next:</p>
+        <ol class="fsthanks-steps">
+          <li><strong>Check your inbox.</strong> We send a branded one-page PDF of your Quick Read within one business day, scored across all five layers with the gaps laid out clearly.</li>
+          <li><strong>Read it with whoever runs your money.</strong> The Quick Read works best as a five-minute conversation with your bookkeeper, controller, or partner, not a solo read.</li>
+          <li><strong>If you want the plan, we will walk it.</strong> A 30-minute review turns the score into a sequence: the two or three moves that matter most, in the order to do them.</li>
+        </ol>
+        <div class="fsthanks-cta">
+          <a href="/intro-call" class="msiq-form__btn msiq-form__btn--primary" style="text-decoration:none; display:inline-block;">Book a 30-minute review</a>
+        </div>
+
+        <p class="fsthanks-meta">Watch for an email from Scott at Main Street IQ. If you do not see it within one business day, check spam or <a href="mailto:scott@mainstreetiq.com">email Scott directly</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  {{footer}}
+
+  <style>
+    .fsthanks-section { padding: 4rem 0; }
+    .fsthanks-wrap { max-width: 720px; margin: 0 auto; }
+    .fsthanks-wrap h1 {
+      font-weight: 500; color: var(--color-midnight, #0F1C2E); font-size: 2rem;
+      letter-spacing: -0.4px; margin: 0.5rem 0 1rem; line-height: 1.2;
+    }
+    .fsthanks-wrap p {
+      font-weight: 300; color: var(--color-dark-text, #1A1F2B); line-height: 1.6;
+      font-size: 1.05rem; margin-bottom: 1rem;
+    }
+    .fsthanks-steps { padding-left: 1.25rem; margin: 0 0 1.5rem; }
+    .fsthanks-steps li {
+      font-weight: 300; color: var(--color-dark-text, #1A1F2B); line-height: 1.55;
+      margin-bottom: 0.7rem; font-size: 0.98rem;
+    }
+    .fsthanks-steps li strong { color: var(--color-midnight, #0F1C2E); font-weight: 500; }
+    .fsthanks-cta { margin: 2rem 0; }
+    .fsthanks-meta {
+      font-size: 0.88rem !important; color: var(--color-neutral, #6B7480);
+      border-top: 1px solid var(--color-border, #E5E2DC);
+      padding-top: 1rem; margin-top: 2rem;
+    }
+    .fsthanks-meta a { color: var(--color-navy, #2B4E8C); font-weight: 500; text-decoration: none; }
+    .fsthanks-meta a:hover { text-decoration: underline; }
+    .section-label {
+      display: inline-block; font-size: 0.78rem; letter-spacing: 1.2px;
+      text-transform: uppercase; font-weight: 500;
+      color: var(--color-success, #2E7D52); margin-bottom: 0.5rem;
+    }
+  </style>
+
+  <script>
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 20);
+    });
+    const toggle = document.getElementById('nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      toggle.classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>

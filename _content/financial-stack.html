@@ -1,0 +1,645 @@
+<!--sitegen:params
+{
+  "assets": "assets/",
+  "styles": "styles.css",
+  "nav": {
+    "logo": "/assets/logos/logo-horizontal-light.svg",
+    "links": [
+      {
+        "href": "/fractional-cfo",
+        "attrs": "",
+        "label": "Fractional CFO"
+      },
+      {
+        "href": "/discoverability",
+        "attrs": "",
+        "label": "AI Discoverability"
+      },
+      {
+        "href": "/about",
+        "attrs": "",
+        "label": "About"
+      },
+      {
+        "href": "/our-work",
+        "attrs": "",
+        "label": "Our Work"
+      },
+      {
+        "href": "/blog/",
+        "attrs": "",
+        "label": "Blog"
+      },
+      {
+        "href": "/contact",
+        "attrs": "",
+        "label": "Contact"
+      },
+      {
+        "href": "/intro-call",
+        "attrs": "class=\"nav-cta\"",
+        "label": "Book an Intro Call"
+      }
+    ]
+  },
+  "footer": {
+    "logo": "/assets/logos/logo-horizontal-dark.svg",
+    "tagline": "A fractional CFO practice with a built-in intelligence engine, for owner-operated businesses under $50MM. Veteran-owned and operated.",
+    "cta_href": "/intro-call",
+    "newsletter": true,
+    "apos": "'",
+    "social": true,
+    "refunds": true,
+    "trust": true
+  }
+}
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{{meta_base}}
+  <title>Financial Stack Quick Read | Main Street IQ</title>
+{{ga4}}
+  <meta name="description" content="A five-minute, ten-question read of the financial operations underneath your business. Score how resilient your banking, treasury, float, credit, and liquidity layers are, and see where the gaps sit. Free, scored on the spot.">
+  <meta name="keywords" content="financial stack assessment, cash flow resilience, treasury maturity, working capital assessment, fractional CFO assessment, small business financial health">
+  <link rel="canonical" href="https://www.mainstreetiq.com/financial-stack">
+
+  <meta property="og:title" content="Financial Stack Quick Read | Main Street IQ">
+  <meta property="og:description" content="Ten questions, five minutes, your score on the spot. See how resilient the money side of your business is.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.mainstreetiq.com/financial-stack">
+  <meta property="og:image" content="https://www.mainstreetiq.com/assets/images/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Financial Stack Quick Read | Main Street IQ">
+  <meta name="twitter:description" content="Ten questions, five minutes, your score on the spot. See how resilient the money side of your business is.">
+
+{{fonts}}
+
+{{styles}}
+  <link rel="stylesheet" href="/assets/css/forms.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Financial Stack Quick Read",
+    "description": "A ten-question assessment that scores the five layers of financial infrastructure underneath a business: banking, treasury, float, credit architecture, and liquidity. Scored instantly, free.",
+    "url": "https://www.mainstreetiq.com/financial-stack",
+    "provider": {
+      "@type": "ProfessionalService",
+      "name": "Main Street IQ",
+      "sameAs": [
+        "https://www.linkedin.com/company/107523729",
+        "https://www.linkedin.com/in/johnscotthess"
+      ],
+      "url": "https://www.mainstreetiq.com"
+    },
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "Owner-operator and founder-led businesses"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- ===== HEADER ===== -->
+  {{nav}}
+
+  <main id="main">
+
+  <!-- ===== HERO ===== -->
+  <section class="about-hero hero-has-bg">
+    <img src="/assets/images/hero-central-coast.jpg" alt="" class="hero-bg" aria-hidden="true">
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <span class="section-label">Financial Stack Quick Read</span>
+      <h1>How resilient is the money side of your business?</h1>
+      <p>Five layers sit underneath every business: how it banks, how it sees its cash, how cash moves, how it borrows, and how it manages liquidity. Answer ten quick questions and see where yours stands. About five minutes, and you get your score on the spot.</p>
+    </div>
+  </section>
+
+  <!-- ===== ASSESSMENT ===== -->
+  <section class="assessment-form-section">
+    <div class="container">
+
+      <!-- STATE 1: assessment -->
+      <div class="assessment-form-wrap" id="fsAssessmentWrap">
+        <div class="msiq-form__intro">
+          <h2>Ten questions. Your score on the spot.</h2>
+          <p>Answer Yes or No to each. There is no wrong answer here. Most owner-led businesses land between three and five, and the gaps are usually the most fixable part of the whole picture.</p>
+        </div>
+
+        <div class="fs-field">
+          <label class="fs-field__label" for="fsBusinessType">What kind of business is this?</label>
+          <select class="msiq-form__select" id="fsBusinessType" aria-label="Business type">
+            <option value="default">Other or food and beverage</option>
+            <option value="wine">Wine or winery</option>
+            <option value="aesthetic">Wellness or aesthetics practice</option>
+            <option value="jewelry">Luxury jewelry</option>
+            <option value="hospitality">Hospitality</option>
+          </select>
+          <p class="fs-field__help">This sets the last two questions, which read differently by business type.</p>
+        </div>
+
+        <div class="fs-questions" id="fsQuestions">
+          <p class="fs-group-label">The eight core questions</p>
+
+          <div class="fs-question" data-q="FS1">
+            <p class="fs-question__text">1. Do you use more than one bank?</p>
+            <div class="fs-question__answers">
+              <label class="fs-radio"><input type="radio" name="FS1" value="yes"><span>Yes</span></label>
+              <label class="fs-radio"><input type="radio" name="FS1" value="no"><span>No</span></label>
+            </div>
+          </div>
+
+          <div class="fs-question" data-q="FS2">
+            <p class="fs-question__text">2. Are operating, payroll, tax-reserve, and savings dollars held in separate accounts?</p>
+            <div class="fs-question__answers">
+              <label class="fs-radio"><input type="radio" name="FS2" value="yes"><span>Yes</span></label>
+              <label class="fs-radio"><input type="radio" name="FS2" value="no"><span>No</span></label>
+            </div>
+          </div>
+
+          <div class="fs-question" data-q="FS3">
+            <p class="fs-question__text">3. Without logging into a bank, can you state your current total cash position right now?</p>
+            <div class="fs-question__answers">
+              <label class="fs-radio"><input type="radio" name="FS3" value="yes"><span>Yes</span></label>
+              <label class="fs-radio"><input type="radio" name="FS3" value="no"><span>No</span></label>
+            </div>
+          </div>
+
+          <div class="fs-question" data-q="FS4">
+            <p class="fs-question__text">4. Do you have a documented minimum operating balance, with an alert when you cross it?</p>
+            <div class="fs-question__answers">
+              <label class="fs-radio"><input type="radio" name="FS4" value="yes"><span>Yes</span></label>
+              <label class="fs-radio"><input type="radio" name="FS4" value="no"><span>No</span></label>
+            </div>
+          </div>
+
+          <div class="fs-question" data-q="FS5">
+            <p class="fs-question__text">5. Do you have active credit relationships with more than one lender or institution?</p>
+            <div class="fs-question__answers">
+              <label class="fs-radio"><input type="radio" name="FS5" value="yes"><span>Yes</span></label>
+              <label class="fs-radio"><input type="radio" name="FS5" value="no"><span>No</span></label>
+            </div>
+          </div>
+
+          <div class="fs-question" data-q="FS6">
+            <p class="fs-question__text">6. Could you secure new credit today, on terms you would accept, without changing your business position?</p>
+            <div class="fs-question__answers">
+              <label class="fs-radio"><input type="radio" name="FS6" value="yes"><span>Yes</span></label>
+              <label class="fs-radio"><input type="radio" name="FS6" value="no"><span>No</span></label>
+            </div>
+          </div>
+
+          <div class="fs-question" data-q="FS7">
+            <p class="fs-question__text">7. Do you maintain a rolling 13-week cash forecast, updated at least monthly?</p>
+            <div class="fs-question__answers">
+              <label class="fs-radio"><input type="radio" name="FS7" value="yes"><span>Yes</span></label>
+              <label class="fs-radio"><input type="radio" name="FS7" value="no"><span>No</span></label>
+            </div>
+          </div>
+
+          <div class="fs-question" data-q="FS8">
+            <p class="fs-question__text">8. Do you have a documented way of collecting what you are owed, covering when invoices go out, when reminders fire, and when you escalate?</p>
+            <div class="fs-question__answers">
+              <label class="fs-radio"><input type="radio" name="FS8" value="yes"><span>Yes</span></label>
+              <label class="fs-radio"><input type="radio" name="FS8" value="no"><span>No</span></label>
+            </div>
+          </div>
+
+          <p class="fs-group-label fs-group-label--spaced">Two questions for your business type</p>
+
+          <div class="fs-question" data-q="FS9">
+            <p class="fs-question__text" id="fsQ9Text">9.</p>
+            <div class="fs-question__answers">
+              <label class="fs-radio"><input type="radio" name="FS9" value="yes"><span>Yes</span></label>
+              <label class="fs-radio"><input type="radio" name="FS9" value="no"><span>No</span></label>
+            </div>
+          </div>
+
+          <div class="fs-question" data-q="FS10">
+            <p class="fs-question__text" id="fsQ10Text">10.</p>
+            <div class="fs-question__answers">
+              <label class="fs-radio"><input type="radio" name="FS10" value="yes"><span>Yes</span></label>
+              <label class="fs-radio"><input type="radio" name="FS10" value="no"><span>No</span></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="fs-actions">
+          <button type="button" class="msiq-form__btn msiq-form__btn--primary" id="fsScoreBtn">See my score</button>
+        </div>
+      </div>
+
+      <!-- STATE 2: results -->
+      <div class="fs-results" id="fsResults" style="display:none;">
+        <span class="section-label">Your result</span>
+        <div class="fs-score-head">
+          <div class="fs-score-big"><span id="fsScoreNum">0</span><span class="fs-score-of">/ 10</span></div>
+          <div class="fs-bucket" id="fsBucket">Bucket</div>
+        </div>
+        <p class="fs-blurb" id="fsBlurb"></p>
+
+        <h3 class="fs-results__h3">The five layers</h3>
+        <table class="fs-layer-table">
+          <thead><tr><th>Layer</th><th>Score</th></tr></thead>
+          <tbody id="fsLayerBody"></tbody>
+        </table>
+
+        <div id="fsGapsBlock">
+          <h3 class="fs-results__h3">Where the gaps sit</h3>
+          <ul class="fs-gaps" id="fsGapsList"></ul>
+        </div>
+
+        <h3 class="fs-results__h3">What a strong stack looks like</h3>
+        <p class="fs-strong">A resilient stack is not complicated, it is just deliberate. Banking keeps a second relationship and separate accounts so tax money is never spent by accident. Treasury means the cash position is visible at a glance. Float is knowing how long cash takes to come back after it goes out. Credit architecture is having more than one lender who already knows the business. And a liquidity system is a simple rolling forecast that turns next quarter from a guess into a plan. None of these are customer-facing, which is why they get postponed. They are also among the most fixable findings a business can act on.</p>
+      </div>
+
+      <!-- STATE 3: lead capture -->
+      <div class="assessment-form-wrap" id="fsLeadWrap" style="display:none;">
+        <form class="msiq-form msiq-form--wide" id="fsLeadForm" action="https://crm.zoho.com/crm/WebToLeadForm" method="POST" accept-charset="UTF-8">
+          <input type="hidden" name="xnQsjsdp" value="bd589a3bfc389a2b35246b7770d17c1dddfd9b5dc4446279b08798df1fdb9e82">
+          <input type="hidden" name="zc_gad" id="fsZcGad" value="">
+          <input type="hidden" name="xmIwtLD" value="b41c824141e3e85e9fb8d030284b5d9cd78fec633acfb28e3beb5f7c076d77e300ea0a8ebaf2695410cf55b19b1c76fe">
+          <input type="hidden" name="actionType" value="TGVhZHM=">
+          <input type="hidden" name="returnURL" value="https://www.mainstreetiq.com/financial-stack-thanks">
+          <input type="hidden" name="Lead Source" value="Financial Stack Quick Read">
+
+          <div class="msiq-form__intro">
+            <h2>Want this as a branded one-page Quick Read?</h2>
+            <p>We will send a branded PDF of your Financial Stack Quick Read you can keep or share, and if you would like, set up a 30-minute review to walk the gaps and name the two or three moves that matter most for your business.</p>
+          </div>
+
+          <div class="msiq-form__field msiq-form__field--inline-pair">
+            <div>
+              <label class="msiq-form__label" for="fsFirstName">First name</label>
+              <input class="msiq-form__input" type="text" id="fsFirstName" name="First Name" maxlength="40" autocomplete="given-name">
+            </div>
+            <div>
+              <label class="msiq-form__label msiq-form__label--required" for="fsLastName">Last name</label>
+              <input class="msiq-form__input" type="text" id="fsLastName" name="Last Name" required maxlength="80" autocomplete="family-name">
+              <div class="msiq-form__error"></div>
+            </div>
+          </div>
+
+          <div class="msiq-form__field">
+            <label class="msiq-form__label msiq-form__label--required" for="fsEmail">Email</label>
+            <input class="msiq-form__input" type="email" id="fsEmail" name="Email" required maxlength="100" autocomplete="email">
+            <div class="msiq-form__error"></div>
+          </div>
+
+          <div class="msiq-form__field msiq-form__field--inline-pair">
+            <div>
+              <label class="msiq-form__label msiq-form__label--required" for="fsCompany">Business name</label>
+              <input class="msiq-form__input" type="text" id="fsCompany" name="Company" required maxlength="100" autocomplete="organization">
+              <div class="msiq-form__error"></div>
+            </div>
+            <div>
+              <label class="msiq-form__label" for="fsPhone">Phone</label>
+              <input class="msiq-form__input" type="tel" id="fsPhone" name="Phone" maxlength="30" autocomplete="tel">
+            </div>
+          </div>
+
+          <div class="msiq-form__field">
+            <label class="msiq-form__label" for="fsPartner">Referred by a partner? If a banker, CPA, or advisor pointed you here, tell us who.</label>
+            <input class="msiq-form__input" type="text" id="fsPartner" maxlength="120" placeholder="Name or firm (optional)">
+          </div>
+
+          <textarea name="Description" id="fsDescription" style="display:none;" aria-hidden="true"></textarea>
+          <input type="text" name="aG9uZXlwb3Q" class="msiq-form__honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+          <div class="msiq-form__buttons msiq-form__buttons--end">
+            <button type="submit" class="msiq-form__btn msiq-form__btn--primary" data-action="submit">Email my Quick Read</button>
+          </div>
+        </form>
+        <p class="assessment-form-fineprint">We send the branded PDF within one business day. If you asked for a review, Scott reaches out within 48 business hours. Unsubscribe any time.</p>
+      </div>
+
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ===== FOOTER (canonical) ===== -->
+  {{footer}}
+
+  <script src="/assets/js/newsletter.js" defer></script>
+
+  <style>
+    .assessment-form-section { background: var(--color-ice, #F4F6FA); padding: 4rem 0; }
+    .assessment-form-wrap {
+      max-width: 760px; margin: 0 auto; background: var(--color-white, #FFFFFF);
+      padding: 2.5rem; border-radius: 8px; border: 1px solid var(--color-border, #E5E2DC);
+    }
+    .assessment-form-fineprint {
+      max-width: 760px; margin: 1.5rem auto 0; text-align: center;
+      font-size: 0.85rem; color: var(--color-neutral, #6B7480); font-weight: 300; line-height: 1.5;
+    }
+    .fs-field { margin-bottom: 1.75rem; }
+    .fs-field__label {
+      display: block; font-weight: 500; color: var(--color-midnight, #0F1C2E);
+      margin-bottom: 0.5rem; font-size: 0.98rem;
+    }
+    .fs-field__help, .msiq-form__help {
+      font-size: 0.85rem; color: var(--color-neutral, #6B7480); font-weight: 300; margin: 0.4rem 0 0;
+    }
+    .fs-group-label {
+      font-size: 0.78rem; letter-spacing: 1.2px; text-transform: uppercase; font-weight: 600;
+      color: var(--color-navy, #2B4E8C); margin: 0 0 0.5rem;
+    }
+    .fs-group-label--spaced { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--color-border, #E5E2DC); }
+    .fs-question {
+      padding: 1rem 0; border-bottom: 1px solid var(--color-border, #E5E2DC);
+      display: flex; gap: 1.5rem; align-items: flex-start; justify-content: space-between;
+    }
+    .fs-question__text {
+      margin: 0; font-weight: 300; color: var(--color-dark-text, #1A1F2B);
+      line-height: 1.5; font-size: 0.98rem; flex: 1;
+    }
+    .fs-question__answers { display: flex; gap: 0.5rem; flex-shrink: 0; }
+    .fs-radio {
+      display: inline-flex; align-items: center; cursor: pointer;
+      border: 1px solid var(--color-border, #E5E2DC); border-radius: 6px;
+      padding: 0.4rem 0.9rem; font-size: 0.9rem; color: var(--color-neutral, #6B7480);
+      font-weight: 500; transition: all 0.15s ease; user-select: none;
+    }
+    .fs-radio input { position: absolute; opacity: 0; width: 0; height: 0; }
+    .fs-radio:hover { border-color: var(--color-navy, #2B4E8C); }
+    .fs-radio:has(input:checked) {
+      background: var(--color-navy, #2B4E8C); border-color: var(--color-navy, #2B4E8C); color: #FFFFFF;
+    }
+    .fs-question.fs-question--missing { background: #FDF3F3; }
+    .fs-actions { margin-top: 2rem; text-align: right; }
+    @media (max-width: 640px) {
+      .assessment-form-wrap { padding: 1.75rem; }
+      .assessment-form-section { padding: 2.5rem 0; }
+      .fs-question { flex-direction: column; gap: 0.75rem; }
+      .fs-actions { text-align: stretch; }
+      .fs-actions .msiq-form__btn { width: 100%; }
+    }
+
+    .fs-results {
+      max-width: 760px; margin: 0 auto 2rem; background: var(--color-white, #FFFFFF);
+      padding: 2.5rem; border-radius: 8px; border: 1px solid var(--color-border, #E5E2DC);
+    }
+    .fs-score-head { display: flex; align-items: baseline; gap: 1.25rem; flex-wrap: wrap; margin: 0.5rem 0 1rem; }
+    .fs-score-big {
+      font-weight: 600; color: var(--color-midnight, #0F1C2E); font-size: 3.25rem;
+      line-height: 1; letter-spacing: -1px;
+    }
+    .fs-score-of { font-size: 1.5rem; color: var(--color-neutral, #6B7480); font-weight: 300; margin-left: 0.35rem; }
+    .fs-bucket {
+      font-size: 1.15rem; font-weight: 500; color: var(--color-navy, #2B4E8C);
+      padding-bottom: 0.4rem;
+    }
+    .fs-blurb {
+      font-weight: 300; color: var(--color-dark-text, #1A1F2B); line-height: 1.65;
+      font-size: 1.02rem; margin: 0 0 1.5rem;
+    }
+    .fs-results__h3 {
+      font-weight: 600; color: var(--color-navy, #2B4E8C); font-size: 0.95rem;
+      letter-spacing: 0.3px; margin: 1.75rem 0 0.75rem;
+    }
+    .fs-layer-table { width: 100%; border-collapse: collapse; }
+    .fs-layer-table th {
+      background: var(--color-navy, #2B4E8C); color: #FFFFFF; font-weight: 500;
+      text-align: left; padding: 0.6rem 0.9rem; font-size: 0.9rem;
+    }
+    .fs-layer-table td {
+      padding: 0.6rem 0.9rem; font-size: 0.95rem; font-weight: 300;
+      color: var(--color-dark-text, #1A1F2B); border-bottom: 1px solid var(--color-border, #E5E2DC);
+    }
+    .fs-layer-table tr:nth-child(even) td { background: var(--color-ice, #F4F6FA); }
+    .fs-gaps { margin: 0; padding-left: 1.25rem; }
+    .fs-gaps li {
+      font-weight: 300; color: var(--color-dark-text, #1A1F2B); line-height: 1.55;
+      margin-bottom: 0.5rem; font-size: 0.96rem;
+    }
+    .fs-strong {
+      font-weight: 300; color: var(--color-dark-text, #1A1F2B); line-height: 1.65;
+      font-size: 0.98rem; margin: 0;
+    }
+    @media (max-width: 640px) {
+      .fs-results { padding: 1.75rem; }
+      .fs-score-big { font-size: 2.5rem; }
+    }
+  </style>
+
+  <script>
+    // Header + nav
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 20);
+    });
+    const toggle = document.getElementById('nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      toggle.classList.toggle('active');
+    });
+  </script>
+
+  <script>
+  // ===========================================================
+  // Financial Stack scoring.
+  // SOURCE OF TRUTH: ~/.claude/skills/_shared/financial_stack.py
+  // This is a hand-port of that rubric. If the rubric changes,
+  // change BOTH. Score, layers, and gaps here match score_answers()
+  // exactly; the 0-3 bucket blurb says "this picture" instead of
+  // "this Diagnostic" for the web context.
+  // ===========================================================
+  (function(){
+    var LAYER_ORDER = ["banking","treasury","float","credit","liquidity"];
+    var LAYER_LABEL = {
+      banking: "Banking", treasury: "Treasury", float: "Float",
+      credit: "Credit architecture", liquidity: "Liquidity system"
+    };
+    var UNIVERSAL_LAYER = {
+      FS1:"banking", FS2:"banking", FS3:"treasury", FS4:"treasury",
+      FS5:"credit", FS6:"credit", FS7:"liquidity", FS8:"liquidity"
+    };
+    var UNIVERSAL_GAP = {
+      FS1:"Single banking relationship, no redundancy if one bank fails or freezes",
+      FS2:"Operating, payroll, tax, and reserve dollars are not held in separate accounts",
+      FS3:"No at-a-glance cash visibility; the position is not known without logging in",
+      FS4:"No documented minimum operating balance and no alert when it is crossed",
+      FS5:"Single lender relationship, no competitive option when credit is needed",
+      FS6:"Credit is not accessible on demand from a position of strength",
+      FS7:"No rolling 13-week cash forecast maintained on a monthly cadence",
+      FS8:"No documented AR collection cadence covering invoice timing, reminders, and escalation"
+    };
+    var OVERLAY = {
+      wine: {
+        q9:"9. Do you know your inventory carry cost per case per month?",
+        q9gap:"Inventory carry cost per case per month is not known",
+        q10:"10. Do you measure wholesale days-sales-outstanding separately from direct-to-consumer?",
+        q10gap:"Wholesale days-sales-outstanding is not measured separately from DTC"
+      },
+      aesthetic: {
+        q9:"9. Do you track prepaid-package revenue separately from revenue you have actually earned?",
+        q9gap:"Prepaid-package deferred revenue is not tracked separately from realized revenue",
+        q10:"10. Do you know your cash conversion cycle on retail product resale?",
+        q10gap:"Cash conversion cycle on retail product resale is not known"
+      },
+      jewelry: {
+        q9:"9. Do you know your inventory carry cost per piece per month?",
+        q9gap:"Inventory carry cost per piece per month is not known",
+        q10:"10. Do you measure trade or wholesale days-sales-outstanding separately from retail?",
+        q10gap:"Trade or wholesale days-sales-outstanding is not measured separately from retail"
+      },
+      hospitality: {
+        q9:"9. Do you know your booking-window-to-cash timeline by segment?",
+        q9gap:"Booking-window-to-cash timeline is not known by segment",
+        q10:"10. Do you carry prepaid deposit balances as a separate liability from earned revenue?",
+        q10gap:"Prepaid deposit balances are not carried as a separate liability"
+      },
+      "default": {
+        q9:"9. Do you measure your cash conversion cycle, the days between spending on inventory and receiving payment?",
+        q9gap:"Cash conversion cycle is not measured",
+        q10:"10. Do you track aged receivables by 30, 60, and 90-plus day buckets?",
+        q10gap:"Aged AR is not tracked by 30, 60, and 90-plus day buckets"
+      }
+    };
+    var BUCKETS = [
+      { max:3, name:"Foundational gap",
+        blurb:"The financial operations underneath the business are running on instinct rather than infrastructure. This is the most common score for an owner-led company, and it is also the most fixable part of this picture. A single external shock, a frozen account, a lender saying no, a slow-paying month, would land harder than it should today." },
+      { max:6, name:"Operational but fragile",
+        blurb:"The financial operations work in calm conditions but have not been hardened for stress. The layers that are missing are the ones that matter most when a month goes sideways. Closing two or three of the gaps below moves the business from fragile to genuinely resilient." },
+      { max:9, name:"Investor-grade",
+        blurb:"The financial operations are in strong shape and would hold up under lender, buyer, or board scrutiny. The remaining gap or two are worth closing to reach a fully optimized stack, but nothing here is urgent." },
+      { max:10, name:"Optimized",
+        blurb:"The financial operations are fully built out across all five layers. This is rare for an owner-led business and worth protecting; the cadence to maintain it now matters more than any new build." }
+    ];
+    var IDS = ["FS1","FS2","FS3","FS4","FS5","FS6","FS7","FS8","FS9","FS10"];
+
+    function scoreStack(answers, type){
+      var ov = OVERLAY[type] || OVERLAY["default"];
+      var layerFor = Object.assign({}, UNIVERSAL_LAYER, { FS9:"float", FS10:"float" });
+      var gapFor = Object.assign({}, UNIVERSAL_GAP, { FS9:ov.q9gap, FS10:ov.q10gap });
+      var total = 0;
+      IDS.forEach(function(id){ if (answers[id] === "yes") total++; });
+      var layers = LAYER_ORDER.map(function(lk){
+        var lids = IDS.filter(function(id){ return layerFor[id] === lk; });
+        var ls = lids.filter(function(id){ return answers[id] === "yes"; }).length;
+        return { key:lk, label:LAYER_LABEL[lk], score:ls, max:lids.length };
+      });
+      var gaps = [];
+      LAYER_ORDER.forEach(function(lk){
+        IDS.filter(function(id){ return layerFor[id] === lk; }).forEach(function(id){
+          if (answers[id] === "no") gaps.push(gapFor[id]);
+        });
+      });
+      var bucket = BUCKETS.filter(function(b){ return total <= b.max; })[0];
+      return { score:total, bucket:bucket.name, blurb:bucket.blurb, layers:layers, gaps:gaps };
+    }
+
+    // ----- UI wiring -----
+    var typeSel = document.getElementById('fsBusinessType');
+    var q9 = document.getElementById('fsQ9Text');
+    var q10 = document.getElementById('fsQ10Text');
+
+    function refreshFloatQuestions(){
+      var ov = OVERLAY[typeSel.value] || OVERLAY["default"];
+      q9.textContent = ov.q9;
+      q10.textContent = ov.q10;
+    }
+    typeSel.addEventListener('change', refreshFloatQuestions);
+    refreshFloatQuestions();
+
+    function collectAnswers(){
+      var a = {};
+      IDS.forEach(function(id){
+        var checked = document.querySelector('input[name="' + id + '"]:checked');
+        a[id] = checked ? checked.value : null;
+      });
+      return a;
+    }
+
+    document.getElementById('fsScoreBtn').addEventListener('click', function(){
+      var answers = collectAnswers();
+      var missing = IDS.filter(function(id){ return !answers[id]; });
+      document.querySelectorAll('.fs-question').forEach(function(el){
+        el.classList.toggle('fs-question--missing', missing.indexOf(el.getAttribute('data-q')) > -1);
+      });
+      if (missing.length){
+        var first = document.querySelector('.fs-question--missing');
+        if (first) first.scrollIntoView({ behavior:'smooth', block:'center' });
+        alert('Please answer all ten questions. ' + missing.length + ' still need an answer.');
+        return;
+      }
+
+      var result = scoreStack(answers, typeSel.value);
+
+      document.getElementById('fsScoreNum').textContent = result.score;
+      document.getElementById('fsBucket').textContent = result.bucket;
+      document.getElementById('fsBlurb').textContent = result.blurb;
+
+      var body = document.getElementById('fsLayerBody');
+      body.innerHTML = '';
+      result.layers.forEach(function(l){
+        var tr = document.createElement('tr');
+        var td1 = document.createElement('td'); td1.textContent = l.label;
+        var td2 = document.createElement('td'); td2.textContent = l.score + ' / ' + l.max;
+        tr.appendChild(td1); tr.appendChild(td2); body.appendChild(tr);
+      });
+
+      var gapsBlock = document.getElementById('fsGapsBlock');
+      var gapsList = document.getElementById('fsGapsList');
+      gapsList.innerHTML = '';
+      if (result.gaps.length){
+        gapsBlock.style.display = 'block';
+        result.gaps.forEach(function(g){
+          var li = document.createElement('li'); li.textContent = g; gapsList.appendChild(li);
+        });
+      } else {
+        gapsBlock.style.display = 'none';
+      }
+
+      // Pack the Zoho Description field
+      var lines = [];
+      lines.push('Financial Stack Quick Read | Score: ' + result.score + '/10 ' + result.bucket
+        + ' | Business type: ' + typeSel.value);
+      lines.push('Layers: ' + result.layers.map(function(l){ return l.label + ' ' + l.score + '/' + l.max; }).join(', '));
+      lines.push('Answers: ' + IDS.map(function(id){ return id + '=' + (answers[id] === 'yes' ? 'Y' : 'N'); }).join(' '));
+      document.getElementById('fsDescription').value = lines.join('\n');
+
+      // Reveal results + lead form, hide the assessment
+      document.getElementById('fsAssessmentWrap').style.display = 'none';
+      document.getElementById('fsResults').style.display = 'block';
+      document.getElementById('fsLeadWrap').style.display = 'block';
+      document.getElementById('fsResults').scrollIntoView({ behavior:'smooth', block:'start' });
+
+      if (typeof gtag !== 'undefined'){
+        gtag('event', 'financial_stack_score', {
+          page_path: window.location.pathname,
+          fs_score: result.score,
+          fs_bucket: result.bucket,
+          fs_business_type: typeSel.value
+        });
+      }
+    });
+
+    // Lead form: append the partner referral to Description before submit
+    var leadForm = document.getElementById('fsLeadForm');
+    leadForm.addEventListener('submit', function(){
+      var partner = (document.getElementById('fsPartner').value || '').trim();
+      var desc = document.getElementById('fsDescription');
+      if (partner) desc.value = desc.value + '\nReferred by partner: ' + partner;
+      if (typeof gtag !== 'undefined'){
+        gtag('event', 'financial_stack_lead', { page_path: window.location.pathname });
+      }
+    }, true);
+  })();
+  </script>
+
+  <script src="/assets/js/form-guard.js" defer></script>
+</body>
+</html>
