@@ -648,7 +648,7 @@ def render(c):
       <div class="footer-newsletter">
         <div class="footer-newsletter-pitch">
           <h4>Founder-to-founder thinking on revenue</h4>
-          <p>One short note when there's something worth saying. No drip, no sequence.</p>
+          <p>One short note when there’s something worth saying. No drip, no sequence.</p>
         </div>
         <form class="footer-newsletter-form" id="footerNewsletterForm" novalidate>
           <input type="email" id="footerNewsletterEmail" name="email" placeholder="you@company.com" required autocomplete="email" maxlength="100" aria-label="Email address">

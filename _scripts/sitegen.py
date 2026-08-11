@@ -142,6 +142,28 @@ def normalize_nav_toggle(header: str) -> str:
     return RE_NAV_TOGGLE.sub(lambda _: CANONICAL_TOGGLE, header)
 
 
+# THE nav link list. One copy. Adding, removing or reordering a nav item is an
+# edit here and a `build`, not a 131-file sweep.
+NAV_LINKS = [
+    ("/fractional-cfo", "Fractional CFO"),
+    ("/discoverability", "AI Discoverability"),
+    ("/about", "About"),
+    ("/our-work", "Our Work"),
+    ("/blog/", "Blog"),
+    ("/partners", "Partners"),
+    ("/contact", "Contact"),
+]
+
+# Per-page nav parameters and their site-wide defaults. A _content/ file records
+# a parameter ONLY when it differs from the default, so every override in that
+# file is a real, visible deviation rather than boilerplate.
+NAV_DEFAULTS = {
+    "logo": "assets/logos/logo-horizontal-light.svg",
+    "active": None,
+    "cta_href": "/intro-call",
+    "cta_class": "nav-cta",
+}
+
 RE_NAV_LOGO = re.compile(r'<a href="/" class="logo"><img src="([^"]+)"')
 RE_NAV_LINKS_BLOCK = re.compile(r'<div class="nav-links" id="nav-links">(.*?)</div>', re.S)
 RE_ANCHOR = re.compile(r'<a href="([^"]*)"([^>]*)>(.*?)</a>', re.S)
@@ -152,19 +174,33 @@ def derive_nav_params(header: str) -> dict | None:
     m_block = RE_NAV_LINKS_BLOCK.search(header)
     if not m_logo or not m_block:
         return None
-    links = []
-    for href, attrs, label in RE_ANCHOR.findall(m_block.group(1)):
-        links.append({"href": href, "attrs": attrs.strip(), "label": label})
-    return {"logo": m_logo.group(1), "links": links}
+    found = RE_ANCHOR.findall(m_block.group(1))
+    if not found:
+        return None
+    *body, cta = found
+    active = None
+    for href, attrs, _label in body:
+        if "active" in attrs:
+            active = href
+    return {
+        "logo": m_logo.group(1),
+        "active": active,
+        "links": [(h, l) for h, _a, l in body],
+        "cta_href": cta[0],
+        "cta_class": cta[1].strip().replace('class="', "").rstrip('"'),
+    }
 
 
 def render_nav(params: dict) -> str:
+    p = {**NAV_DEFAULTS, **params}
+    links = p.get("links") or [(h, l) for h, l in NAV_LINKS]
     lines = []
-    for a in params["links"]:
-        attrs = (" " + a["attrs"]) if a["attrs"] else ""
-        lines.append(f'          <a href="{a["href"]}"{attrs}>{a["label"]}</a>')
+    for href, label in links:
+        cls = ' class="active"' if href == p["active"] else ""
+        lines.append(f'          <a href="{href}"{cls}>{label}</a>')
+    lines.append(f'          <a href="{p["cta_href"]}" class="{p["cta_class"]}">Book an Intro Call</a>')
     return (NAV_TEMPLATE
-            .replace("{{logo}}", params["logo"])
+            .replace("{{logo}}", p["logo"])
             .replace("{{links}}", "\n".join(lines)))
 
 
@@ -253,6 +289,24 @@ FOOTER_TEMPLATE = '''<footer class="site-footer">
 FOOTER_REFUNDS = '          <a href="/legal/refund-cancellation">Refunds</a>\n'
 FOOTER_TRUST = '          <a href="/trust">Trust Center</a>\n'
 
+# Per-page footer parameters and their site-wide defaults. Same rule as the nav:
+# a _content/ file records only what deviates.
+FOOTER_DEFAULTS = {
+    "logo": "/assets/logos/logo-horizontal-dark.svg",
+    "tagline": "A fractional CFO practice with a built-in intelligence engine, for "
+               "owner-operated businesses under $50MM. Veteran-owned and operated.",
+    "cta_href": "/intro-call",
+    "newsletter": True,
+    "apos": "’",
+    "social": True,
+    "refunds": True,
+    "trust": True,
+}
+
+
+def strip_defaults(params: dict, defaults: dict) -> dict:
+    return {k: v for k, v in params.items() if k not in defaults or defaults[k] != v}
+
 # One page indents the footer grid 12 spaces instead of 6. Whitespace between
 # a `</div>` and a `<div>`, both block-level, so it is inert. Normalized so the
 # comparison below can stay byte-exact rather than whitespace-tolerant.
@@ -293,7 +347,8 @@ def derive_footer_params(footer: str) -> dict | None:
     }
 
 
-def render_footer(p: dict) -> str:
+def render_footer(params: dict) -> str:
+    p = {**FOOTER_DEFAULTS, **params}
     newsletter = FOOTER_NEWSLETTER.replace("{{apos}}", p["apos"] or "") if p["newsletter"] else ""
     return (FOOTER_TEMPLATE
             .replace("{{newsletter}}", newsletter)
@@ -389,7 +444,11 @@ def build_content(rel: str, html: str) -> tuple[str, dict] | None:
         if exact or rendered == normalize_nav_toggle(parts["header"]):
             out = out[:parts["header_span"][0]] + "{{nav}}" + out[parts["header_span"][1]:]
             report["nav"] = True
-            params["nav"] = nav_params
+            stored = strip_defaults(nav_params, NAV_DEFAULTS)
+            if stored.get("links") == [list(x) for x in NAV_LINKS] or \
+               stored.get("links") == [tuple(x) for x in NAV_LINKS]:
+                stored.pop("links", None)
+            params["nav"] = stored
             delta = len("{{nav}}") - (parts["header_span"][1] - parts["header_span"][0])
             if not exact:
                 report["normalized"].append("nav")
@@ -403,7 +462,7 @@ def build_content(rel: str, html: str) -> tuple[str, dict] | None:
             e = parts["footer_span"][1] + delta
             out = out[:s] + "{{footer}}" + out[e:]
             report["footer"] = True
-            params["footer"] = foot_params
+            params["footer"] = strip_defaults(foot_params, FOOTER_DEFAULTS)
             if not exact:
                 report["normalized"].append("footer")
 
