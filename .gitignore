@@ -27,6 +27,10 @@ node_modules/
 __pycache__/
 _screens/
 
+# Print-vendor artwork. Local only — this repo is publish-on-push, so anything
+# tracked here is publicly fetchable at mainstreetiq.com. Ruled 2026-08-10.
+assets/logos/print/
+
 # Pre-publish-gate sidecars (tooling artifacts; not site content)
 *.gate.json
 *.canonical_facts.json

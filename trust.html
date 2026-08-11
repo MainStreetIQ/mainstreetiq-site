@@ -78,7 +78,7 @@
       <div class="section-header section-header-left">
         <span class="section-label">Platform + Practice</span>
         <h2 class="section-title">What We Use From Anthropic, and What We Build Ourselves</h2>
-        <p class="section-subtitle">Manage runs on Anthropic's generally-available Claude products with a Zero Data Retention arrangement on the inference layer. The vertical practice on top is MSIQ-built. Honest about which is which.</p>
+        <p class="section-subtitle">Manage runs on Anthropic's generally-available Claude products with a Zero Data Retention arrangement on the inference layer. The practice layer on top is MSIQ-built. Honest about which is which.</p>
       </div>
 
       <div class="split-section">
@@ -96,7 +96,7 @@
         </div>
         <div>
           <h3 style="font-size: 22px; font-weight: 600; margin-bottom: 12px;">What we build ourselves</h3>
-          <p style="margin-bottom: 14px;">The vertical practice and the security layer on top:</p>
+          <p style="margin-bottom: 14px;">The practice and security layers on top:</p>
           <ul style="list-style: none; padding: 0;">
             <li style="padding: 8px 0; border-bottom: 1px solid var(--border, #e8eaed);"><strong>Credential broker.</strong> MSIQ-built local secrets store with OS-keychain-backed encryption. Issues short-lived per-call tokens. AI context never holds real refresh tokens, so a prompt-injection attack cannot exfiltrate credentials. ZDR-compatible by design.</li>
             <li style="padding: 8px 0; border-bottom: 1px solid var(--border, #e8eaed);"><strong>Pre-prompt PII redaction.</strong> Customer names, account numbers, EINs, and other identifiers are tokenized before any data reaches the LLM. The model reasons about tokens; only authorized humans see the un-tokenized output.</li>
