@@ -315,7 +315,7 @@ FOOTER_TRUST = '          <a href="/trust">Trust Center</a>\n'
 # a _content/ file records only what deviates.
 FOOTER_DEFAULTS = {
     "logo": "/assets/logos/logo-horizontal-dark.svg",
-    "tagline": "Financial IQ for owner-operated businesses under $50MM. "
+    "tagline": "Financial IQ for owner-operated, lower middle market companies. "
                "Veteran-owned and operated.",
     "cta_href": "/intro-call",
     "newsletter": True,

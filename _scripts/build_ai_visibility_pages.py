@@ -288,7 +288,7 @@ def faqs(c):
          f"lives off your website. We read both layers and the classical-search layer underneath them."),
         (f"How do you measure AI visibility in {county}?", measure),
         (f"Which businesses in {county} is this for?",
-         f"Owner-operated businesses under $50MM. {c['audience_line']} "
+         f"Owner-operated, lower middle market companies, and small and family wineries. {c['audience_line']} "
          f"The practice is based on California's Central Coast and {county} is one of six counties where "
          f"our outbound and on-site availability concentrate, which is not a limit on who we accept. If "
          f"buyers in your category are starting to ask AI who to trust, the work applies to you."),
@@ -341,7 +341,7 @@ def render(c):
                         f"wine through the Wine Country Intelligence Report."),
         "areaServed": area_served(c),
         "audience": {"@type": "Audience",
-                     "audienceType": "Owner-operated ecommerce, winery, wellness, and elective medicine businesses under $50MM"},
+                     "audienceType": "Owner-operated ecommerce, winery, wellness, and elective medicine businesses"},
         "url": url,
     }
     prof_ld = {
