@@ -61,6 +61,7 @@ BESPOKE = {
     "fit-call.html": "redirect stub, no chrome",
     "fit-call-confirm.html": "redirect stub, no chrome",
     "fractional-cfo-dtc-ecommerce.html": "redirect stub, consolidates SEO into /ecommerce",
+    "winery-assessment.html": "redirect stub, retired 2026-09-23 for /winery-visibility-snapshot",
     # Only file on the site containing literal Liquid-style braces.
     "legal/index.html": "contains literal {{ }} braces",
 }

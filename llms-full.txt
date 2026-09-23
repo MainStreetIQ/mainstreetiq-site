@@ -94,7 +94,7 @@ Main Street IQ runs two lines of work: Fractional CFO and Wine Country Intellige
 
 ### How We Work
 
-A fractional CFO practice with a built-in intelligence engine. The CFO works alongside you. The engine reads the market, the funnel, and the cohort, so the decisions you make are grounded in what is actually happening. Full page: https://www.mainstreetiq.com/our-services
+Main Street IQ's Fractional CFO line comes with a built-in intelligence engine. The CFO works alongside you. The engine reads the market, the funnel, and the cohort, so the decisions you make are grounded in what is actually happening. Full page: https://www.mainstreetiq.com/our-services
 
 ### Four Readings, One Engine
 
@@ -180,7 +180,6 @@ The market segments the practice serves, led by DTC ecommerce and wineries. Each
 
 Short, self-serve reads that return a scored profile and a recommended starting point.
 
-- [Winery Assessment](https://www.mainstreetiq.com/winery-assessment): A 6-minute assessment for Central Coast wineries. Returns a personalized Winery Profile naming the growth outcomes worth going after first, and a recommended starting point. Free.
 - [Wellness Practice Assessment](https://www.mainstreetiq.com/wellness-assessment): A short assessment for multi-modality wellness practices. Surfaces where the practice is winning, where it is leaking, and where the next 12 months should go across service lines.
 - [Elective Medicine Practice Assessment](https://www.mainstreetiq.com/aesthetics-assessment): A short assessment for elective medicine, cosmetic dental, and adult orthodontic practices. Surfaces where the practice is winning, where it is leaking, and where the next 12 months should go.
 - [Ecommerce Brand Assessment](https://www.mainstreetiq.com/ecommerce-assessment): A short assessment for owner-operated ecommerce and DTC brands. Surfaces where the brand is winning, where margin is leaking, and where the next 12 months should go.
@@ -194,7 +193,7 @@ Short, self-serve reads that return a scored profile and a recommended starting 
 
 "I Don't Report on the Business. I Run Inside It."
 
-Scott Hess is the Founder and Fractional CFO of Main Street IQ, with twenty years in finance and operations before founding the practice. Much of that span was spent with high-net-worth clients at Northern Trust, and with luxury brands and owner-operated brands. He is a U.S. Navy Veteran. Today the practice is focused on owner-operated businesses under $50MM in ecommerce, wine, health and wellness, and elective medicine, rooted on the California coast and working with owner-operators nationwide.
+Scott Hess is the Founder and Fractional CFO of Main Street IQ, with twenty years in finance and operations before founding the company. Much of that span was in corporate finance at Northern Trust, supporting the leadership of the business, and embedded with owner-operated brands and luxury brands. He is a U.S. Navy Veteran. Today the practice is focused on owner-operated businesses under $50MM in ecommerce, wine, health and wellness, and elective medicine, rooted on the California coast and working with owner-operators nationwide.
 
 ### Experience
 
@@ -205,7 +204,7 @@ Subscription ecommerce company; joined as the first finance hire and served as C
 Luxury menswear retailer. Restructured sales compensation around profitability and led a Shopify migration.
 
 **Northern Trust**
-Institutional finance: modeling, M&A due diligence, ERP implementation, work with high-net-worth clients.
+Corporate finance: modeling, M&A due diligence, ERP implementation, supporting the leadership of the business.
 
 ### Capabilities
 
