@@ -46,12 +46,25 @@
       <nav class="nav-inner">
         <a href="/" class="logo"><img src="assets/logos/logo-horizontal-light.svg" alt="Main Street IQ"></a>
         <div class="nav-links" id="nav-links">
-          <a href="/fractional-cfo">Fractional CFO</a>
-          <a href="/discoverability">AI Discoverability</a>
+          <div class="nav-group">
+            <a href="/fractional-cfo">Fractional CFO</a>
+            <div class="nav-sub">
+              <a href="/fractional-cfo">Fractional CFO Services</a>
+              <a href="/interim-finance-leadership">Interim Leadership</a>
+              <a href="/discoverability">AI Discoverability</a>
+            </div>
+          </div>
+          <div class="nav-group">
+            <a href="/wine-country-intelligence">Wine Country Intelligence</a>
+            <div class="nav-sub">
+              <a href="/wineries">AI Advisory for Wineries</a>
+              <a href="/wine-country-intelligence">The Quarterly Report</a>
+              <a href="/winery-visibility-snapshot">Winery Visibility Snapshot</a>
+            </div>
+          </div>
           <a href="/about">About</a>
           <a href="/our-work">Our Work</a>
           <a href="/blog/">Blog</a>
-          <a href="/partners">Partners</a>
           <a href="/contact">Contact</a>
           <a href="/intro-call" class="nav-cta">Book an Intro Call</a>
         </div>
@@ -79,7 +92,7 @@
       <div class="section-header section-header-left">
         <span class="section-label">Platform + Practice</span>
         <h2 class="section-title">What We Use From Anthropic, and What We Build Ourselves</h2>
-        <p class="section-subtitle">Manage runs on Anthropic's generally-available Claude products with a Zero Data Retention arrangement on the inference layer. The practice layer on top is MSIQ-built. Honest about which is which.</p>
+        <p class="section-subtitle">Manage runs on Anthropic's generally-available Claude products with a Zero Data Retention arrangement on the inference layer. The practice layer on top is built by Main Street IQ. Honest about which is which.</p>
       </div>
 
       <div class="split-section">
@@ -99,7 +112,7 @@
           <h3 style="font-size: 22px; font-weight: 600; margin-bottom: 12px;">What we build ourselves</h3>
           <p style="margin-bottom: 14px;">The practice and security layers on top:</p>
           <ul style="list-style: none; padding: 0;">
-            <li style="padding: 8px 0; border-bottom: 1px solid var(--border, #e8eaed);"><strong>Credential broker.</strong> MSIQ-built local secrets store with OS-keychain-backed encryption. Issues short-lived per-call tokens. AI context never holds real refresh tokens, so a prompt-injection attack cannot exfiltrate credentials. ZDR-compatible by design.</li>
+            <li style="padding: 8px 0; border-bottom: 1px solid var(--border, #e8eaed);"><strong>Credential broker.</strong> A local secrets store built by Main Street IQ, with OS-keychain-backed encryption. Issues short-lived per-call tokens. AI context never holds real refresh tokens, so a prompt-injection attack cannot exfiltrate credentials. ZDR-compatible by design.</li>
             <li style="padding: 8px 0; border-bottom: 1px solid var(--border, #e8eaed);"><strong>Pre-prompt PII redaction.</strong> Customer names, account numbers, EINs, and other identifiers are tokenized before any data reaches the LLM. The model reasons about tokens; only authorized humans see the un-tokenized output.</li>
             <li style="padding: 8px 0; border-bottom: 1px solid var(--border, #e8eaed);"><strong>Per-client read scoping and structured audit log.</strong> A decorator on every skill enforces single-client reads. Every skill run writes a JSONL audit entry to your encrypted client folder. You can read it directly.</li>
             <li style="padding: 8px 0; border-bottom: 1px solid var(--border, #e8eaed);"><strong>49 vertical-specific skills.</strong> Marketplace settlement reconciliation, cohort economics with long-window variants, marketing halo attribution, multi-location inventory, 3PL invoice forensics, cash-forecast drift detection.</li>
@@ -134,15 +147,15 @@
           <p>For enterprise clients requiring network-isolated inference, we deploy Claude on AWS Bedrock with PrivateLink. Your queries route through your own AWS VPC; financial data does not transit the public internet. Added as a scoped per-engagement option, not the default. See pricing and architecture spec on request.</p>
         </div>
         <div class="raid-card">
-          <h4>MSIQ Credential Broker</h4>
-          <p>Tokens for QuickBooks, Shopify, Amazon, bank feeds, and ad platforms live in an MSIQ-built local secrets store backed by OS-level keychain encryption. Skills request short-lived per-call tokens via placeholder substitution. AI context never holds real refresh tokens, so a prompt-injection attack cannot exfiltrate credentials.</p>
+          <h4>Main Street IQ Credential Broker</h4>
+          <p>Tokens for QuickBooks, Shopify, Amazon, bank feeds, and ad platforms live in a local secrets store built by Main Street IQ and backed by OS-level keychain encryption. Skills request short-lived per-call tokens via placeholder substitution. AI context never holds real refresh tokens, so a prompt-injection attack cannot exfiltrate credentials.</p>
         </div>
         <div class="raid-card">
-          <h4>MSIQ Pre-Prompt Redaction + Client Scope</h4>
+          <h4>Pre-Prompt Redaction + Client Scope</h4>
           <p>Customer names, account numbers, EINs, and other identifiers are tokenized before any LLM call. A decorator on every skill enforces single-client read scoping so cross-client access is structurally impossible.</p>
         </div>
         <div class="raid-card">
-          <h4>MSIQ Audit Log + Pre-Publish Gate</h4>
+          <h4>Audit Log + Pre-Publish Gate</h4>
           <p>Every skill run writes a structured JSONL audit entry to your encrypted client folder, accessible to your team directly. Every artifact bound for outside our engagement (CPA, lender, board) passes through a four-checker gate: canonical facts, scope, brand voice, factual verification.</p>
         </div>
       </div>
@@ -177,7 +190,7 @@
       </div>
       <div class="container-narrow" style="max-width: 800px;">
         <p>Anthropic released "Claude for Financial Services" on May 5, 2026. It is a product for institutional finance firms: Citadel, Carlyle, BNY, Travelers, Walleye Capital, Hg. It ships ten agent templates designed for investment banking workflows (pitchbook construction, KYC screening, model building, earnings review) and a set of data-partner integrations (FactSet, S&P Capital IQ, MSCI, PitchBook).</p>
-        <p style="margin-top: 12px;">Manage does not use that product. The institutional-FS agent templates are not designed for owner-operator finance and the data-partner integrations are not relevant for the buyer we serve. We use the underlying generally-available Claude products (the Messages API, the Agent SDK, Cowork, Excel) directly. If a security team asks whether MSIQ is "on the same platform as Citadel," the answer is honest: same Anthropic platform underneath, very different product surface on top.</p>
+        <p style="margin-top: 12px;">Manage does not use that product. The institutional-FS agent templates are not designed for owner-operator finance and the data-partner integrations are not relevant for the buyer we serve. We use the underlying generally-available Claude products (the Messages API, the Agent SDK, Cowork, Excel) directly. If a security team asks whether Main Street IQ is "on the same platform as Citadel," the answer is honest: same Anthropic platform underneath, very different product surface on top.</p>
       </div>
     </div>
   </section>
@@ -214,12 +227,13 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="/" class="logo"><img src="/assets/logos/logo-horizontal-dark.svg" alt="Main Street IQ"></a>
-          <p>A fractional CFO practice with a built-in intelligence engine, for owner-operated businesses under $50MM. Veteran-owned and operated.</p>
+          <p>Financial IQ for owner-operated businesses under $50MM. Veteran-owned and operated.</p>
         </div>
         <div class="footer-col">
           <h4>Company</h4>
           <a href="/about">About</a>
           <a href="/our-services">Services</a>
+          <a href="/interim-finance-leadership">Interim Leadership</a>
           <a href="/our-work">Our Work</a>
           <a href="/blog/">Blog</a>
         </div>

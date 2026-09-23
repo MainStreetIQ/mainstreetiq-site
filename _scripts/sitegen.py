@@ -144,13 +144,24 @@ def normalize_nav_toggle(header: str) -> str:
 
 # THE nav link list. One copy. Adding, removing or reordering a nav item is an
 # edit here and a `build`, not a 131-file sweep.
+#
+# The first two items are the two lines of work, each with a submenu. A
+# submenu opens on hover or keyboard focus (CSS :focus-within, no JS) and is
+# listed inline under its lane in the mobile menu.
 NAV_LINKS = [
-    ("/fractional-cfo", "Fractional CFO"),
-    ("/discoverability", "AI Discoverability"),
+    ("/fractional-cfo", "Fractional CFO", [
+        ("/fractional-cfo", "Fractional CFO Services"),
+        ("/interim-finance-leadership", "Interim Leadership"),
+        ("/discoverability", "AI Discoverability"),
+    ]),
+    ("/wine-country-intelligence", "Wine Country Intelligence", [
+        ("/wineries", "AI Advisory for Wineries"),
+        ("/wine-country-intelligence", "The Quarterly Report"),
+        ("/winery-visibility-snapshot", "Winery Visibility Snapshot"),
+    ]),
     ("/about", "About"),
     ("/our-work", "Our Work"),
     ("/blog/", "Blog"),
-    ("/partners", "Partners"),
     ("/contact", "Contact"),
 ]
 
@@ -193,11 +204,20 @@ def derive_nav_params(header: str) -> dict | None:
 
 def render_nav(params: dict) -> str:
     p = {**NAV_DEFAULTS, **params}
-    links = p.get("links") or [(h, l) for h, l in NAV_LINKS]
+    links = p.get("links") or NAV_LINKS
     lines = []
-    for href, label in links:
+    for href, label, *sub in links:
         cls = ' class="active"' if href == p["active"] else ""
-        lines.append(f'          <a href="{href}"{cls}>{label}</a>')
+        if not sub:
+            lines.append(f'          <a href="{href}"{cls}>{label}</a>')
+            continue
+        lines.append('          <div class="nav-group">')
+        lines.append(f'            <a href="{href}"{cls}>{label}</a>')
+        lines.append('            <div class="nav-sub">')
+        for s_href, s_label in sub[0]:
+            lines.append(f'              <a href="{s_href}">{s_label}</a>')
+        lines.append('            </div>')
+        lines.append('          </div>')
     lines.append(f'          <a href="{p["cta_href"]}" class="{p["cta_class"]}">Book an Intro Call</a>')
     return (NAV_TEMPLATE
             .replace("{{logo}}", p["logo"])
@@ -245,6 +265,7 @@ FOOTER_TEMPLATE = '''<footer class="site-footer">
           <h4>Company</h4>
           <a href="/about">About</a>
           <a href="/our-services">Services</a>
+          <a href="/interim-finance-leadership">Interim Leadership</a>
           <a href="/our-work">Our Work</a>
           <a href="/blog/">Blog</a>
         </div>
@@ -293,8 +314,8 @@ FOOTER_TRUST = '          <a href="/trust">Trust Center</a>\n'
 # a _content/ file records only what deviates.
 FOOTER_DEFAULTS = {
     "logo": "/assets/logos/logo-horizontal-dark.svg",
-    "tagline": "A fractional CFO practice with a built-in intelligence engine, for "
-               "owner-operated businesses under $50MM. Veteran-owned and operated.",
+    "tagline": "Financial IQ for owner-operated businesses under $50MM. "
+               "Veteran-owned and operated.",
     "cta_href": "/intro-call",
     "newsletter": True,
     "apos": "’",

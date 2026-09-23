@@ -46,6 +46,9 @@ import json
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from sitegen import render_footer, render_nav  # noqa: E402  (one copy of the chrome)
+
 ROOT = Path(__file__).resolve().parent.parent
 BASE = "https://www.mainstreetiq.com"
 
@@ -298,6 +301,7 @@ def render(c):
     slug = f"ai-visibility-{c['slug']}"
     url = f"{BASE}/{slug}"
     county, short = c["county"], c["short"]
+    nav, footer = render_nav({}), render_footer({})
     cities_prose = ", ".join(c["cities"][:-1]) + ", and " + c["cities"][-1]
     article = c["article"]
 
@@ -442,26 +446,7 @@ def render(c):
   <a href="#main" class="skip-link">Skip to main content</a>
 
   <!-- ===== HEADER ===== -->
-  <header class="site-header" id="site-header">
-    <div class="container">
-      <nav class="nav-inner">
-        <a href="/" class="logo"><img src="assets/logos/logo-horizontal-light.svg" alt="Main Street IQ"></a>
-        <div class="nav-links" id="nav-links">
-          <a href="/fractional-cfo">Fractional CFO</a>
-          <a href="/discoverability">AI Discoverability</a>
-          <a href="/about">About</a>
-          <a href="/our-work">Our Work</a>
-          <a href="/blog/">Blog</a>
-          <a href="/partners">Partners</a>
-          <a href="/contact">Contact</a>
-          <a href="/intro-call" class="nav-cta">Book an Intro Call</a>
-        </div>
-        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
-          <span></span><span></span><span></span>
-        </button>
-      </nav>
-    </div>
-  </header>
+  {nav}
 
   <main id="main">
 
@@ -643,77 +628,7 @@ def render(c):
 
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-newsletter">
-        <div class="footer-newsletter-pitch">
-          <h4>Founder-to-founder thinking on revenue</h4>
-          <p>One short note when there’s something worth saying. No drip, no sequence.</p>
-        </div>
-        <form class="footer-newsletter-form" id="footerNewsletterForm" novalidate>
-          <input type="email" id="footerNewsletterEmail" name="email" placeholder="you@company.com" required autocomplete="email" maxlength="100" aria-label="Email address">
-          <input type="text" name="honeypot" class="footer-newsletter-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
-          <button type="submit">Subscribe</button>
-          <div class="footer-newsletter-msg" id="footerNewsletterMsg" role="status" aria-live="polite"></div>
-        </form>
-          <p class="footer-newsletter-privacy" style="font-size: 0.8rem; color: var(--slate); margin-top: 0.5rem;">We use your email only for this note. <a href="/legal/privacy">Privacy Policy</a>.</p>
-      </div>
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="/" class="logo"><img src="/assets/logos/logo-horizontal-dark.svg" alt="Main Street IQ"></a>
-          <p>A fractional CFO practice with a built-in intelligence engine, for owner-operated businesses under $50MM. Veteran-owned and operated.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Company</h4>
-          <a href="/about">About</a>
-          <a href="/our-services">Services</a>
-          <a href="/our-work">Our Work</a>
-          <a href="/blog/">Blog</a>
-        </div>
-        <div class="footer-col">
-          <h4>Connect</h4>
-          <a href="/contact">Contact</a>
-          <a href="/partners">Partners</a>
-          <a href="/intro-call">Book an Intro Call</a>
-          <a href="https://www.linkedin.com/in/johnscotthess" target="_blank" rel="noopener">LinkedIn</a>
-        </div>
-        <div class="footer-col">
-          <h4>Market Segments</h4>
-          <a href="/ecommerce">DTC &amp; Ecommerce</a>
-          <a href="/wineries">Wineries</a>
-          <a href="/wellness">Health &amp; Wellness</a>
-          <a href="/aesthetics">Elective Medicine</a>
-        </div>
-        <div class="footer-col">
-          <h4>Locations</h4>
-          <a href="/fractional-cfo-san-luis-obispo">San Luis Obispo</a>
-          <a href="/fractional-cfo-santa-barbara">Santa Barbara</a>
-          <a href="/fractional-cfo-ventura">Ventura</a>
-          <a href="/fractional-cfo-los-angeles">Los Angeles</a>
-          <a href="/fractional-cfo-orange-county">Orange County</a>
-          <a href="/fractional-cfo-san-diego">San Diego</a>
-        </div>
-        <div class="footer-col">
-          <h4>Legal</h4>
-          <a href="/legal/privacy">Privacy</a>
-          <a href="/legal/terms">Terms of Use</a>
-          <a href="/legal/cookies">Cookies</a>
-          <a href="/legal/subscription-terms">Subscription Terms</a>
-          <a href="/legal/refund-cancellation">Refunds</a>
-          <a href="/trust">Trust Center</a>
-          <a href="/legal/ai-use">AI Use</a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 Main Street IQ. All rights reserved.</span>
-        <div class="footer-social">
-          <a href="https://www.linkedin.com/in/johnscotthess" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" role="img" aria-label="LinkedIn"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          </a>
-        </div>
-      </div>
-    </div>
-  </footer>
+  {footer}
 
   <script src="/assets/js/newsletter.js" defer></script>
 

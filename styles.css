@@ -190,6 +190,7 @@ footer :focus-visible {
 .logo {
   display: inline-block;
   line-height: 0;
+  flex-shrink: 0;
 }
 .logo img {
   height: 44px;
@@ -213,6 +214,40 @@ footer :focus-visible {
   transition: color 0.2s;
 }
 .nav-links a:hover, .nav-links a.active { color: var(--color-navy); }
+
+/* Lane submenus (two lines of work, 2026-09-23). Open on hover or keyboard
+   focus with no JS; the mobile menu lists them inline under each lane. */
+.nav-group { position: relative; }
+.nav-sub {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -1rem;
+  min-width: 15rem;
+  padding: 0.75rem 0;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-top: 2px solid var(--color-navy);
+  border-radius: 3px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  z-index: 100;
+}
+.nav-group::after {
+  /* hover bridge across the gap between the lane link and its submenu */
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 0.75rem;
+}
+.nav-group:hover .nav-sub,
+.nav-group:focus-within .nav-sub { display: block; margin-top: 0.75rem; }
+.nav-sub a { display: block; padding: 0.5rem 1rem; }
+@media (max-width: 1200px) and (min-width: 1001px) {
+  .nav-links { gap: 1.1rem; }
+  .nav-links a { letter-spacing: 0.04em; }
+}
 
 .nav-cta {
   background: var(--color-navy) !important;
@@ -714,7 +749,9 @@ section { padding: var(--section-padding); }
   .stat-bar        { grid-template-columns: repeat(2, 1fr); }
 }
 
-@media (max-width: 768px) {
+/* Nav collapses to the hamburger below 1000px: the two lane labels plus the
+   logo and CTA no longer fit one row (measured 2026-09-23). */
+@media (max-width: 1000px) {
   .nav-links     { display: none; }
   .nav-toggle    { display: flex; }
   .nav-links.open {
@@ -729,6 +766,23 @@ section { padding: var(--section-padding); }
     border-bottom: 1px solid var(--border);
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   }
+  .nav-group::after { display: none; }
+  .nav-sub,
+  .nav-group:hover .nav-sub,
+  .nav-group:focus-within .nav-sub {
+    display: block;
+    position: static;
+    margin-top: 0.4rem;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    min-width: 0;
+    text-align: center;
+  }
+  .nav-sub a { padding: 0.3rem 0; font-size: 0.8rem; }
+}
+
+@media (max-width: 768px) {
   .hero { padding: 8rem 0 4rem; }
   .footer-grid { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
