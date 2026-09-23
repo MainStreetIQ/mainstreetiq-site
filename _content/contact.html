@@ -136,12 +136,12 @@
               <label class="msiq-form__label msiq-form__label--required" for="msiqRevenueRange">Annual revenue band</label>
               <select class="msiq-form__select" id="msiqRevenueRange" required aria-label="Annual revenue band">
                 <option value="">Select a range...</option>
-                <option value="Under $1M">Under $1M</option>
-                <option value="$1M-$5M">$1M – $5M</option>
+                <option value="Under $1M" data-zoho="Under $5M">Under $1M</option>
+                <option value="$1M-$5M" data-zoho="Under $5M">$1M – $5M</option>
                 <option value="$5M-$10M">$5M – $10M</option>
                 <option value="$10M-$25M">$10M – $25M</option>
                 <option value="$25M-$50M">$25M – $50M</option>
-                <option value="Over $50M">Over $50M (likely out of scope)</option>
+                <option value="Over $50M" data-zoho="$50M-$100M">Over $50M (likely out of scope)</option>
               </select>
               <div class="msiq-form__error"></div>
             </div>
@@ -225,7 +225,10 @@
       var sel = document.getElementById('msiqRevenueRange');
       var hidden = document.getElementById('msiqHiddenRevenueBand');
       if (!sel || !hidden) return;
-      var sync = function(){ hidden.value = sel.value; };
+      var sync = function(){
+        var opt = sel.options[sel.selectedIndex];
+        hidden.value = (opt && opt.dataset.zoho) || sel.value;
+      };
       sel.addEventListener('change', sync);
       sel.addEventListener('blur', sync);
       document.getElementById('msiqContactForm').addEventListener('submit', sync, true);

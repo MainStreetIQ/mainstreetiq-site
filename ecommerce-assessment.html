@@ -166,12 +166,12 @@
             <label class="msiq-form__label msiq-form__label--required" for="msiqEcomRevenue">Annual revenue band</label>
             <select class="msiq-form__select" id="msiqEcomRevenue" required aria-label="Annual revenue band">
               <option value="">Select a range...</option>
-              <option value="Under $1M">Under $1M</option>
-              <option value="$1M-$5M">$1M to $5M</option>
+              <option value="Under $1M" data-zoho="Under $5M">Under $1M</option>
+              <option value="$1M-$5M" data-zoho="Under $5M">$1M to $5M</option>
               <option value="$5M-$10M">$5M to $10M</option>
               <option value="$10M-$25M">$10M to $25M</option>
               <option value="$25M-$50M">$25M to $50M</option>
-              <option value="Over $50M">Over $50M (likely out of scope)</option>
+              <option value="Over $50M" data-zoho="$50M-$100M">Over $50M (likely out of scope)</option>
             </select>
             <div class="msiq-form__error"></div>
           </div>
@@ -505,7 +505,10 @@
 
       form.addEventListener('submit', function(e){
         var rev = document.getElementById('msiqEcomRevenue').value || '';
-        document.getElementById('msiqEcomRevenueBand').value = rev;
+        // Zoho's Revenue_Band picklist has no Under $1M / $1M-$5M / Over $50M;
+        // data-zoho carries the band it does have. Description keeps the granular value.
+        var revOpt = document.getElementById('msiqEcomRevenue').selectedOptions[0];
+        document.getElementById('msiqEcomRevenueBand').value = (revOpt && revOpt.dataset.zoho) || rev;
 
         var challenges = form.querySelectorAll('input[name="challenges"]:checked');
         var goal = form.querySelector('input[name="growth_goal"]:checked');
