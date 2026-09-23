@@ -1,6 +1,6 @@
 # Main Street IQ | Full Site Content
 
-> Main Street IQ is a fractional CFO practice for owner-operated businesses under $50MM in revenue, with a built-in intelligence engine. Led by founder Scott Hess, it pairs a named fractional or interim CFO with an engine that reads your market, your funnel, your cohorts, and what AI search says about you; the CFO works those decisions alongside you, not from the sideline. The practice is rooted on California's Central Coast, concentrates on Central and Southern California coastal counties, and serves fitting owner-operated businesses nationwide. It goes deepest in two market segments, ecommerce and wine, and also works with health and wellness and elective medicine. Every engagement is built on the RAID model (Redundant, Agile, Intelligent, Data-Driven). Veteran-owned and operated.
+> Main Street IQ is financial IQ for owner-operated businesses under $50MM. It works in two ways. Fractional CFO: fractional and interim CFO leadership that works the decisions alongside you, not from the sideline. Wine Country Intelligence: AI advisory for wineries, built on a quarterly benchmark of Central Coast tasting rooms and what AI search says about each one. Led by founder Scott Hess. Main Street IQ is rooted on California's Central Coast, concentrates on Central and Southern California coastal counties, and serves fitting owner-operated businesses nationwide. It goes deepest in two market segments, ecommerce and wine, and also works with health and wellness and elective medicine. Every Fractional CFO engagement is built on the RAID model (Redundant, Agile, Intelligent, Data-Driven). Veteran-owned and operated.
 
 ---
 
@@ -11,6 +11,13 @@
 Finance teams break as you grow. We build one that scales.
 
 We build the finance function for owner-operated businesses under $50MM, and we run it alongside you: redundant so it never depends on one person, automation-first so it scales without new headcount, and staffed by operators who work the decisions with you, not scorekeepers who hand you last quarter's numbers. Underneath it runs a live intelligence engine that reads your market, your funnel, your cohorts, and what AI search says about you, so every call is made on a current read. Deepest in ecommerce and wine.
+
+### Two Lines of Work
+
+Main Street IQ is financial IQ for owner-operated businesses under $50MM. We work in two ways.
+
+- Fractional CFO: fractional and interim CFO leadership that works the decisions alongside you, not from the sideline.
+- Wine Country Intelligence: AI advisory for wineries, built on a quarterly benchmark of Central Coast tasting rooms and what AI search says about each one.
 
 ### Key Facts
 
@@ -73,12 +80,13 @@ Book a 30-minute Intro Call. We talk about where the business is today, where th
 
 ---
 
-## The Two Lanes
+## The Two Lines of Work
 
-Main Street IQ runs two connected lines of work. Buyers usually arrive looking for one of them.
+Main Street IQ runs two lines of work: Fractional CFO and Wine Country Intelligence. Buyers usually arrive looking for one of them.
 
-- [Fractional CFO, the CFO lane hub](https://www.mainstreetiq.com/fractional-cfo): Senior finance leadership for owner-operated businesses under $50MM, built on the RAID model with a live intelligence engine underneath, delivered by a named CFO rather than software. Engage when you keep your finance team; Manage when you want Main Street IQ to be it. Start here for anything about CFO, controller, or finance-leadership work.
-- [AI Discoverability, the visibility lane hub](https://www.mainstreetiq.com/discoverability): Finds every place a prospect can discover a business across classical search, answer engines, and AI chat, then optimizes and manages that footprint. Proven first in wine, built to run across ecommerce, wellness, and elective medicine. Start here for anything about AI search visibility, AEO, GEO, or being recommended by AI assistants.
+- [Fractional CFO, the CFO lane hub](https://www.mainstreetiq.com/fractional-cfo): Senior finance leadership for owner-operated businesses under $50MM, built on the RAID model with a live intelligence engine underneath, delivered by a named CFO rather than software. Engage when you keep your finance team; Manage when you want Main Street IQ to be it. Interim leadership sits here, and so does AI discoverability for markets outside wine, as part of the CFO method. Start here for anything about CFO, controller, or finance-leadership work.
+- [Wine Country Intelligence, the wine line of work](https://www.mainstreetiq.com/wine-country-intelligence): AI advisory for wineries, built on a quarterly benchmark of Central Coast tasting rooms and what AI search says about each one. Holds the Wine Country Intelligence Report, the Winery Visibility Snapshot, and AI advisory for individual wineries. Start here for anything about a winery's AI search visibility.
+- [AI Discoverability, within the Fractional CFO line](https://www.mainstreetiq.com/discoverability): Finds every place a prospect can discover a business across classical search, answer engines, and AI chat, then optimizes and manages that footprint. Built first in wine, and part of the Fractional CFO method across ecommerce, wellness, and elective medicine. Start here for AI search visibility outside wine.
 
 ---
 
@@ -251,9 +259,9 @@ A selection of past engagements from twenty years of finance and operations work
 
 ---
 
-## MSIQ Wine
+## Wine Country Intelligence
 
-The wine practice of Main Street IQ. Customer acquisition intelligence and fractional CFO work for owner-operator wineries on California's Central Coast. We read your wine business the way a CFO reads a P&L, not the way an agency reads a campaign.
+Main Street IQ's second line of work: AI advisory for wineries, built on a quarterly benchmark of Central Coast tasting rooms and what AI search says about each one. We read your wine business the way a CFO reads a P&L, not the way an agency reads a campaign. Wineries can also work with the Fractional CFO line for fractional and interim CFO leadership.
 
 Flagship product: the Wine Country Intelligence Report (WCIR), a quarterly digital-performance benchmark scoring every Central Coast tasting room (423 in Q2 2026: 171 in Santa Barbara County, 252 in San Luis Obispo County) on six dimensions, with an AI-visibility leaderboard and town-by-town standings. San Luis Obispo County joined the benchmark in Q2 2026. Published by county, with a free regional edition covering both.
 
