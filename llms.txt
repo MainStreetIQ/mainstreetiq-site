@@ -77,12 +77,6 @@ The market segments the practice serves, led by DTC ecommerce and wineries. Each
 - [Wellness Clinics](https://www.mainstreetiq.com/wellness): Fractional CFO and business intelligence for owner-operated wellness clinics. Longevity, IV therapy, hormone optimization, functional medicine, recovery. Each modality has its own economics.
 - [Elective Medicine Practices](https://www.mainstreetiq.com/aesthetics): Fractional CFO and business intelligence for owner-operated elective medicine practices. Cosmetic surgery, dermatology, MedSpa, cosmetic dental, adult cosmetic orthodontics. Each modality has its own economics.
 
-## Assessments
-
-Short, self-serve reads that return a scored profile and a recommended starting point.
-
-- [Financial Stack Quick Read](https://www.mainstreetiq.com/financial-stack): A five-minute, ten-question read of the financial operations underneath a business. Scores how resilient the banking, treasury, float, credit, and liquidity layers are, and shows where the gaps sit. Free, scored on the spot.
-
 ## Referral Partners
 
 - [Center of Influence Program](https://www.mainstreetiq.com/partners): For accountants, bankers, and advisors who introduce owner-operators to Main Street IQ.
@@ -164,7 +158,7 @@ hand-written into this heading is wrong within days. The list below is the count
 - [Planning for Unknowns](https://www.mainstreetiq.com/blog/planning-for-unknowns): Scenario planning, contingency reserves, and monthly reforecasting that turn a rigid plan into a flexible operating framework.
 
 ### Acquisition & Growth Series (6 parts)
-- [SEO vs GEO vs AEO: What Each One Actually Does for Growth](https://www.mainstreetiq.com/blog/seo-vs-geo-vs-aeo-explained): Three acronyms, three different optimization targets. SEO ranks you, GEO finds you, AEO quotes you. What each one unlocks for growth and which layer is most likely leaking today.
+- [SEO vs GEO vs AEO: What Each One Actually Does for Growth](https://www.mainstreetiq.com/blog/seo-vs-geo-vs-aeo-explained): Three acronyms, three different optimization targets. SEO ranks you, GEO finds you, AEO quotes you. What each one does for growth and which layer is most likely leaking today.
 - [If Your Month-End Close Takes More Than 7 Days](https://www.mainstreetiq.com/blog/month-end-close): How to go from an 18-day close to a 5-day close in 90 days.
 - [Your Marketing Team Might Be Destroying Your Margin](https://www.mainstreetiq.com/blog/marketing-team-destroying-margin): The gap between marketing efficiency (MER) and actual profitability lives in COGS assumptions, shipping costs, and return rates.
 - [Tariffs and Lower Middle Market COGS](https://www.mainstreetiq.com/blog/tariffs-lower-middle-market-cogs): How tariffs cascade through pricing, margins, inventory strategy, and cash flow, plus how to model for them.

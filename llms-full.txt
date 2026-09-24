@@ -56,7 +56,7 @@ Before a prospect ever reaches your site, they ask ChatGPT, Claude, or Gemini wh
 
 The difference is not the size of the number. It is who owns the books.
 
-- **Engage | A CFO alongside your team.** You keep your finance team. We bring senior judgment and the intelligence engine to the decisions that actually move the business: pricing, hiring, capital, channel shifts, board prep. For owner-operators who have execution covered and want a CFO working the decision moments with them.
+- **Engage | A CFO alongside your team.** You keep your finance team. We bring senior judgment and the intelligence engine to the decisions that actually move the business: pricing, hiring, capital, channel shifts, annual planning. For owner-operators who have execution covered and want a CFO working the decision moments with them.
 - **Manage | Your finance department, run by us.** We are the finance function. Close, cash, books, investor reporting, and the CEO dashboard, built on RAID from the first close and run by the CFO with an embedded team and the engine underneath. For owner-operators who would rather not build a finance team at all. Run for a small number of clients at a time.
 
 Not sure which one is you? That is the Intro Call. Both are scoped there, against your actual situation, not off a price card.
@@ -176,12 +176,6 @@ The market segments the practice serves, led by DTC ecommerce and wineries. Each
 - [Wellness Clinics](https://www.mainstreetiq.com/wellness): Fractional CFO and business intelligence for owner-operated wellness clinics. Longevity, IV therapy, hormone optimization, functional medicine, recovery. Each modality has its own economics.
 - [Elective Medicine Practices](https://www.mainstreetiq.com/aesthetics): Fractional CFO and business intelligence for owner-operated elective medicine practices. Cosmetic surgery, dermatology, MedSpa, cosmetic dental, adult cosmetic orthodontics. Each modality has its own economics.
 
-## Assessments
-
-Short, self-serve reads that return a scored profile and a recommended starting point.
-
-- [Financial Stack Quick Read](https://www.mainstreetiq.com/financial-stack): A five-minute, ten-question read of the financial operations underneath a business. Scores how resilient the banking, treasury, float, credit, and liquidity layers are, and shows where the gaps sit. Free, scored on the spot.
-
 ---
 
 ## About Scott Hess
@@ -249,7 +243,7 @@ A selection of past engagements from twenty years of finance and operations work
 
 ### Family Office | Institutional Discipline for Private Wealth
 
-**Challenge**: Complexity outpacing oversight. Fragmented reporting, no holistic risk assessment, missing multigenerational governance.
+**Challenge**: Complexity outpacing oversight. Fragmented reporting, no consolidated risk assessment, missing multigenerational governance.
 
 **Solutions**: Unified reporting across investment vehicles (PE, real estate, operating businesses, liquid investments); institutional-grade investment analysis with stress testing and risk-adjusted returns; structural optimization coordinated with counsel; distribution forecasting and multigenerational governance structures.
 
@@ -298,7 +292,7 @@ A real-world case study of the RAID model applied to a growing company. Covers t
 
 ### Why an Annual Plan Matters: Building a Roadmap
 
-The real value of annual planning isn't the document; it's the process of forcing alignment between revenue targets, expense budgets, headcount plans, and cash flow. A good annual plan gives leadership a shared set of assumptions to test decisions against all year long. Covers how to structure the plan, why you need to plan the entire business (not just revenue), how the RAID model applies, and best practices by industry.
+The real value of annual planning isn't the document; it's the process of forcing alignment between revenue targets, expense budgets, headcount plans, and cash flow. A good annual plan gives leadership a shared set of assumptions to test decisions against all year long. Covers how to structure the plan, why you need to plan the entire business (not just revenue), how the RAID model applies, and what works by industry.
 
 ### Revenue Growth Planning: Building Realistic and Stretch Targets
 
@@ -398,7 +392,7 @@ The specific EBITDA questions PE firms ask in diligence, and what "can answer th
 
 ### Why Your CPA's "Fractional CFO" Service Isn't Actually CFO Work
 
-Most "fractional CFO" services are CPA firms adding a strategic line item to a tax-and-bookkeeping package. Real CFO work is different: capital allocation, tech stack revitalization, AI-first operations, and the operator judgment that turns numbers into decisions. Covers what CPAs are trained to do vs. what CFOs actually do, where the gap shows up in practice (contribution margin, cash conversion cycle, tech stack, AI integration, board reporting, fundraising), how to tell the difference before hiring, and the four diagnostic questions to ask a fractional CFO candidate. The test: ask your current provider what they've rebuilt in your finance function in the last six months. If the answer is "we closed the books," they're a controller, not a CFO.
+Most "fractional CFO" services are CPA firms adding a strategic line item to a tax-and-bookkeeping package. Real CFO work is different: capital allocation, tech stack revitalization, AI where it pays back, and the operator judgment that turns numbers into decisions. Covers what CPAs are trained to do vs. what CFOs actually do, where the gap shows up in practice (contribution margin, cash conversion cycle, tech stack, AI integration, board reporting, fundraising), how to tell the difference before hiring, and the four diagnostic questions to ask a fractional CFO candidate. The test: ask your current provider what they've rebuilt in your finance function in the last six months. If the answer is "we closed the books," they're a controller, not a CFO.
 
 ---
 

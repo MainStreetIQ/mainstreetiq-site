@@ -66,6 +66,8 @@ BESPOKE = {
     "aesthetics-assessment.html": "redirect stub, retired 2026-09-24 for /intro-call",
     "ecommerce-assessment.html": "redirect stub, retired 2026-09-24 for /intro-call",
     "wellness-assessment.html": "redirect stub, retired 2026-09-24 for /intro-call",
+    "financial-stack.html": "redirect stub, retired 2026-09-24 for /intro-call",
+    "financial-stack-thanks.html": "redirect stub, retired 2026-09-24 for /intro-call",
     # 2026-09-13 redirect-stub work order: vercel.json paths that 404 on Pages.
     "cfo-assessment.html": "redirect stub, vercel.json path, to /intro-call",
     "cciq-assessment.html": "redirect stub, vercel.json path, to /intro-call",
@@ -250,7 +252,7 @@ def render_nav(params: dict) -> str:
 FOOTER_NEWSLETTER = '''      <div class="footer-newsletter">
         <div class="footer-newsletter-pitch">
           <h4>Founder-to-founder thinking on revenue</h4>
-          <p>One short note when there{{apos}}s something worth saying.</p>
+          <p>Join the Main Street IQ email list: a short series to start, then a note when there{{apos}}s something worth saying.</p>
         </div>
         <form class="footer-newsletter-form" id="footerNewsletterForm" novalidate>
           <input type="email" id="footerNewsletterEmail" name="email" placeholder="you@company.com" required autocomplete="email" maxlength="100" aria-label="Email address">
@@ -258,7 +260,7 @@ FOOTER_NEWSLETTER = '''      <div class="footer-newsletter">
           <button type="submit">Subscribe</button>
           <div class="footer-newsletter-msg" id="footerNewsletterMsg" role="status" aria-live="polite"></div>
         </form>
-          <p class="footer-newsletter-privacy" style="font-size: 0.8rem; color: var(--slate); margin-top: 0.5rem;">We use your email only for this note. <a href="/legal/privacy">Privacy Policy</a>.</p>
+          <p class="footer-newsletter-privacy" style="font-size: 0.8rem; color: var(--slate); margin-top: 0.5rem;">Subscribing adds you to our email list. Unsubscribe anytime. <a href="/legal/privacy">Privacy Policy</a>.</p>
       </div>
 '''
 
