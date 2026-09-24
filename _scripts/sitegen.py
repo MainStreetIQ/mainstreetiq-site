@@ -62,6 +62,20 @@ BESPOKE = {
     "fit-call-confirm.html": "redirect stub, no chrome",
     "fractional-cfo-dtc-ecommerce.html": "redirect stub, consolidates SEO into /ecommerce",
     "winery-assessment.html": "redirect stub, retired 2026-09-23 for /winery-visibility-snapshot",
+    # Retired 2026-09-24: the three assessments (only bookable item is the Intro Call).
+    "aesthetics-assessment.html": "redirect stub, retired 2026-09-24 for /intro-call",
+    "ecommerce-assessment.html": "redirect stub, retired 2026-09-24 for /intro-call",
+    "wellness-assessment.html": "redirect stub, retired 2026-09-24 for /intro-call",
+    # 2026-09-13 redirect-stub work order: vercel.json paths that 404 on Pages.
+    "cfo-assessment.html": "redirect stub, vercel.json path, to /intro-call",
+    "cciq-assessment.html": "redirect stub, vercel.json path, to /intro-call",
+    "cciq-methodology.html": "redirect stub, vercel.json path, to /wineries",
+    "central-coast-iq.html": "redirect stub, vercel.json path, to /wineries",
+    "head-of-finance-services.html": "redirect stub, vercel.json path, to /our-services",
+    "pe-ops-partner.html": "redirect stub, vercel.json path, to /our-services",
+    "cfo-for-series-a-prep.html": "redirect stub, vercel.json path, to /our-services",
+    "5-day-close.html": "redirect stub, vercel.json path, to /our-services",
+    "fractional-cfo-inland-empire.html": "redirect stub, vercel.json path, to /",
     # Only file on the site containing literal Liquid-style braces.
     "legal/index.html": "contains literal {{ }} braces",
 }

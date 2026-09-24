@@ -30,9 +30,6 @@ TARGETS: list[str] = [
     "fit-call.html",
     "ecommerce.html",
     "wine-country-intelligence.html",
-    "wellness-assessment.html",
-    "aesthetics-assessment.html",
-    "ecommerce-assessment.html",
 ]
 
 OG_TITLE_RE = re.compile(

@@ -180,9 +180,6 @@ The market segments the practice serves, led by DTC ecommerce and wineries. Each
 
 Short, self-serve reads that return a scored profile and a recommended starting point.
 
-- [Wellness Practice Assessment](https://www.mainstreetiq.com/wellness-assessment): A short assessment for multi-modality wellness practices. Surfaces where the practice is winning, where it is leaking, and where the next 12 months should go across service lines.
-- [Elective Medicine Practice Assessment](https://www.mainstreetiq.com/aesthetics-assessment): A short assessment for elective medicine, cosmetic dental, and adult orthodontic practices. Surfaces where the practice is winning, where it is leaking, and where the next 12 months should go.
-- [Ecommerce Brand Assessment](https://www.mainstreetiq.com/ecommerce-assessment): A short assessment for owner-operated ecommerce and DTC brands. Surfaces where the brand is winning, where margin is leaking, and where the next 12 months should go.
 - [Financial Stack Quick Read](https://www.mainstreetiq.com/financial-stack): A five-minute, ten-question read of the financial operations underneath a business. Scores how resilient the banking, treasury, float, credit, and liquidity layers are, and shows where the gaps sit. Free, scored on the spot.
 
 ---
