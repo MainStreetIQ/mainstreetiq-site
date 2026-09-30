@@ -87,8 +87,8 @@
           <h2 class="section-title">From brief to first scorecard.</h2>
         </div>
         <ol style="margin: 1rem 0 2rem 1.5rem; line-height: 1.8;">
-          <li><strong>Fill out the brief below</strong> (~5 minutes). It's the minimum we need to run the work well, no padding.</li>
-          <li><strong>First scorecard + welcome packet</strong> land in your inbox within 5-7 business days.</li>
+          <li><strong>Fill out the brief below</strong> (about 5 minutes). It's the minimum we need to run the work well, no padding.</li>
+          <li><strong>First scorecard + welcome packet</strong> land in your inbox within 5-7 business days of receiving your brief.</li>
           <li><strong>Monthly cadence</strong> begins from there. Quarterly group office hours are open to every Monitor subscriber.</li>
         </ol>
         <p style="color: var(--color-neutral); font-size: 0.95em;">If you close this page before finishing, no problem. Your purchase confirmation email links back to this same form.</p>
@@ -101,9 +101,9 @@
     <div class="container">
       <div class="container-narrow" style="max-width: 800px; margin: 0 auto;">
         <div class="section-header section-header-left">
-          <span class="section-label">Step 1 of 1</span>
+          <span class="section-label">Intake</span>
           <h2 class="section-title">Your Monitor Intake</h2>
-          <p class="section-subtitle">Three short sections, about five minutes. Every field is required. Your answers go straight to Scott.</p>
+          <p class="section-subtitle">Three short sections, about 5 minutes. Every field is required. Your answers go to Scott and into our client records; see our <a href="/legal/privacy">Privacy Policy</a>.</p>
         </div>
         <div class="intake-card">
           <div class="intake-alert" id="intakeNoSession" role="alert" hidden>
@@ -346,11 +346,9 @@
 
     // GA4: log the conversion landing for funnel attribution.
     if (typeof gtag !== 'undefined') {
-      const params = new URLSearchParams(window.location.search);
       gtag('event', 'purchase_thank_you_view', {
         page_path: window.location.pathname,
-        sku_family: 'monitor',
-        session_id: params.get('session_id') || ''
+        sku_family: 'monitor'
       });
     }
   </script>
