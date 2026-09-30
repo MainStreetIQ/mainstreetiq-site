@@ -25,6 +25,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="/assets/css/forms.css">
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
@@ -87,37 +88,157 @@
         </div>
         <ol style="margin: 1rem 0 2rem 1.5rem; line-height: 1.8;">
           <li><strong>Fill out the brief below</strong> (~5 minutes). It's the minimum we need to run the work well, no padding.</li>
-          <li><strong>We confirm by email</strong> within one business day with your expected first-scorecard date.</li>
           <li><strong>First scorecard + welcome packet</strong> land in your inbox within 5-7 business days.</li>
           <li><strong>Monthly cadence</strong> begins from there. Quarterly group office hours are open to every Monitor subscriber.</li>
         </ol>
-        <p style="color: var(--color-muted); font-size: 0.95em;">If you close this page before finishing, no problem; you'll also receive an email with the same form link as a backup.</p>
+        <p style="color: var(--color-neutral); font-size: 0.95em;">If you close this page before finishing, no problem. Your purchase confirmation email links back to this same form.</p>
       </div>
     </div>
   </section>
 
-  <!-- ===== EMBEDDED FORM ===== -->
+  <!-- ===== INTAKE FORM ===== -->
   <section class="bg-light" id="intake-form">
     <div class="container">
       <div class="container-narrow" style="max-width: 800px; margin: 0 auto;">
         <div class="section-header section-header-left">
           <span class="section-label">Step 1 of 1</span>
           <h2 class="section-title">Your Monitor Intake</h2>
-          <p class="section-subtitle">Eight fields. Five minutes. Your answers go straight to Scott.</p>
+          <p class="section-subtitle">Three short sections, about five minutes. Every field is required. Your answers go straight to Scott.</p>
         </div>
-        <div style="background: #fff; border: 1px solid var(--color-border); border-radius: 4px; padding: 2rem;">
-          <iframe
-            id="zoho-intake-form"
-            aria-label="Main Street IQ Monitor Intake"
-            src="https://forms.zohopublic.com/mainstreetiq1/form/MSIQMonitorIntake/formperma/QyRvC8kMMUo-SlF5ZUh-IDkDU65lTYb7yH-o80aPubQ"
-            style="height:900px;width:100%;border:none;"
-            frameborder="0"
-            title="Monitor Intake Form"
-            allow="fullscreen">
-          </iframe>
-          <noscript>
-            <p>Your browser blocked the embedded form. <a href="https://forms.zohopublic.com/mainstreetiq1/form/MSIQMonitorIntake/formperma/QyRvC8kMMUo-SlF5ZUh-IDkDU65lTYb7yH-o80aPubQ">Open the intake form in a new tab</a> or <a href="mailto:scott@mainstreetiq.com?subject=Monitor%20intake%20-%20form%20blocked">email scott@mainstreetiq.com</a>.</p>
-          </noscript>
+        <div class="intake-card">
+          <div class="intake-alert" id="intakeNoSession" role="alert" hidden>
+            <p><strong>We couldn't find your order on this link.</strong> Open the link in your purchase confirmation email, or send your answers to <a href="mailto:scott@mainstreetiq.com?subject=Monitor%20intake">scott@mainstreetiq.com</a> and he'll take it from there.</p>
+          </div>
+
+          <form class="msiq-form msiq-form--wide" id="intakeForm" data-form="monitor" data-endpoint="https://msiq-stripe-webhook.vercel.app/api/intake" novalidate>
+
+            <h3 class="msiq-form__step-title">The basics</h3>
+            <div class="msiq-form__field">
+              <label class="msiq-form__label msiq-form__label--required" for="business_name">Business name</label>
+              <input class="msiq-form__input" type="text" id="business_name" name="business_name" required maxlength="120" autocomplete="organization">
+              <div class="msiq-form__error">Enter your business name.</div>
+            </div>
+            <div class="msiq-form__field">
+              <label class="msiq-form__label msiq-form__label--required" for="domain">Primary website</label>
+              <input class="msiq-form__input" type="text" id="domain" name="domain" required maxlength="200" inputmode="url" autocomplete="url" placeholder="yourbusiness.com" data-kind="url">
+              <div class="msiq-form__error">Enter your website address, like yourbusiness.com.</div>
+            </div>
+            <div class="msiq-form__field">
+              <label class="msiq-form__label msiq-form__label--required" for="industry">Industry</label>
+              <select class="msiq-form__select" id="industry" name="industry" required>
+                <option value="">Select one...</option>
+                <option>Wine</option>
+                <option>Health &amp; Wellness</option>
+                <option>Aesthetic Medicine</option>
+                <option>Luxury Retail</option>
+                <option>Hospitality</option>
+                <option>Food &amp; Beverage</option>
+              </select>
+              <div class="msiq-form__error">Choose the industry closest to yours.</div>
+            </div>
+            <div class="msiq-form__field--inline-pair">
+              <div class="msiq-form__field">
+                <label class="msiq-form__label msiq-form__label--required" for="owner_name">Your name</label>
+                <input class="msiq-form__input" type="text" id="owner_name" name="owner_name" required maxlength="100" autocomplete="name">
+                <div class="msiq-form__error">Enter your name.</div>
+              </div>
+              <div class="msiq-form__field">
+                <label class="msiq-form__label msiq-form__label--required" for="owner_email">Your email</label>
+                <input class="msiq-form__input" type="email" id="owner_email" name="owner_email" required maxlength="120" autocomplete="email" data-kind="email">
+                <div class="msiq-form__error">Enter a valid email address.</div>
+              </div>
+            </div>
+
+            <h3 class="msiq-form__step-title intake-section">Posture and goal</h3>
+            <div class="msiq-form__field">
+              <label class="msiq-form__label msiq-form__label--required" for="biggest_goal">In one sentence, what is your single biggest business goal in the next 12 months?</label>
+              <textarea class="msiq-form__textarea" id="biggest_goal" name="biggest_goal" required maxlength="300" rows="3" aria-describedby="biggest_goal_count"></textarea>
+              <p class="msiq-form__help" id="biggest_goal_count" aria-live="polite">Aim for 100 to 300 characters. 0 / 300</p>
+              <div class="msiq-form__error">Tell us your goal in a sentence.</div>
+            </div>
+            <fieldset class="msiq-form__field intake-fieldset" id="brand_posture_group">
+              <legend class="msiq-form__label msiq-form__label--required">Brand positioning posture</legend>
+              <p class="msiq-form__help intake-lede">Pick the posture you actually run, not what sounds best. Volume isn't lesser than Premium; it's a different model.</p>
+              <div class="msiq-form__choice-group">
+                <label class="msiq-form__choice"><input type="radio" name="brand_posture" value="Exclusive" required><span class="msiq-form__choice-label">Exclusive<span class="msiq-form__choice-label-sub">You actively filter who you serve. Allocation, invitation, or membership. Marker: friction at the door is intentional.</span></span></label>
+                <label class="msiq-form__choice"><input type="radio" name="brand_posture" value="Premium"><span class="msiq-form__choice-label">Premium<span class="msiq-form__choice-label-sub">Top of your market, priced for it, but no access barriers. Marker: high price, no gate.</span></span></label>
+                <label class="msiq-form__choice"><input type="radio" name="brand_posture" value="Accessible"><span class="msiq-form__choice-label">Accessible<span class="msiq-form__choice-label-sub">Reachable to a broad cross-section. Quality and approachability both matter. Marker: clear pricing, low-friction entry.</span></span></label>
+                <label class="msiq-form__choice"><input type="radio" name="brand_posture" value="Volume"><span class="msiq-form__choice-label">Volume<span class="msiq-form__choice-label-sub">Many customers per period. Throughput is the lever. Marker: revenue grows with transaction count.</span></span></label>
+                <label class="msiq-form__choice"><input type="radio" name="brand_posture" value="Community"><span class="msiq-form__choice-label">Community<span class="msiq-form__choice-label-sub">Returning, engaged customers who identify with your brand. Membership and shared identity matter most. Marker: customers talk about you as part of who they are.</span></span></label>
+                <label class="msiq-form__choice"><input type="radio" name="brand_posture" value="Mixed"><span class="msiq-form__choice-label">Mixed<span class="msiq-form__choice-label-sub">Two postures genuinely apply across distinct lines or segments. Use only if you can name which goes where.</span></span></label>
+              </div>
+              <div class="msiq-form__error">Pick the posture you run.</div>
+            </fieldset>
+
+            <h3 class="msiq-form__step-title intake-section">Competitors</h3>
+            <p class="msiq-form__step-subtitle">The four businesses your customers weigh you against. We watch them alongside you every month.</p>
+            <div class="intake-competitors">
+              <div class="msiq-form__field--inline-pair" data-competitor="1">
+                <div class="msiq-form__field">
+                  <label class="msiq-form__label msiq-form__label--required" for="competitor_1_name">Competitor 1</label>
+                  <input class="msiq-form__input" type="text" id="competitor_1_name" required maxlength="120" placeholder="Business name">
+                  <div class="msiq-form__error">Enter a competitor name.</div>
+                </div>
+                <div class="msiq-form__field">
+                  <label class="msiq-form__label msiq-form__label--required" for="competitor_1_site">Website</label>
+                  <input class="msiq-form__input" type="text" id="competitor_1_site" required maxlength="200" inputmode="url" placeholder="theirsite.com" data-kind="url">
+                  <div class="msiq-form__error">Enter their website, like theirsite.com.</div>
+                </div>
+              </div>
+              <div class="msiq-form__field--inline-pair" data-competitor="2">
+                <div class="msiq-form__field">
+                  <label class="msiq-form__label msiq-form__label--required" for="competitor_2_name">Competitor 2</label>
+                  <input class="msiq-form__input" type="text" id="competitor_2_name" required maxlength="120" placeholder="Business name">
+                  <div class="msiq-form__error">Enter a competitor name.</div>
+                </div>
+                <div class="msiq-form__field">
+                  <label class="msiq-form__label msiq-form__label--required" for="competitor_2_site">Website</label>
+                  <input class="msiq-form__input" type="text" id="competitor_2_site" required maxlength="200" inputmode="url" placeholder="theirsite.com" data-kind="url">
+                  <div class="msiq-form__error">Enter their website, like theirsite.com.</div>
+                </div>
+              </div>
+              <div class="msiq-form__field--inline-pair" data-competitor="3">
+                <div class="msiq-form__field">
+                  <label class="msiq-form__label msiq-form__label--required" for="competitor_3_name">Competitor 3</label>
+                  <input class="msiq-form__input" type="text" id="competitor_3_name" required maxlength="120" placeholder="Business name">
+                  <div class="msiq-form__error">Enter a competitor name.</div>
+                </div>
+                <div class="msiq-form__field">
+                  <label class="msiq-form__label msiq-form__label--required" for="competitor_3_site">Website</label>
+                  <input class="msiq-form__input" type="text" id="competitor_3_site" required maxlength="200" inputmode="url" placeholder="theirsite.com" data-kind="url">
+                  <div class="msiq-form__error">Enter their website, like theirsite.com.</div>
+                </div>
+              </div>
+              <div class="msiq-form__field--inline-pair" data-competitor="4">
+                <div class="msiq-form__field">
+                  <label class="msiq-form__label msiq-form__label--required" for="competitor_4_name">Competitor 4</label>
+                  <input class="msiq-form__input" type="text" id="competitor_4_name" required maxlength="120" placeholder="Business name">
+                  <div class="msiq-form__error">Enter a competitor name.</div>
+                </div>
+                <div class="msiq-form__field">
+                  <label class="msiq-form__label msiq-form__label--required" for="competitor_4_site">Website</label>
+                  <input class="msiq-form__input" type="text" id="competitor_4_site" required maxlength="200" inputmode="url" placeholder="theirsite.com" data-kind="url">
+                  <div class="msiq-form__error">Enter their website, like theirsite.com.</div>
+                </div>
+              </div>
+            </div>
+
+            <input type="text" name="honeypot" class="msiq-form__honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+            <div class="intake-alert intake-alert--error" id="intakeError" role="alert" hidden>
+              <p><strong>That didn't go through.</strong> Your answers are still on this page, so you can try again. If it fails twice, <a id="intakeErrorMail" href="mailto:scott@mainstreetiq.com?subject=Monitor%20intake">email your answers to scott@mainstreetiq.com</a> and he'll take it from there.</p>
+            </div>
+
+            <div class="msiq-form__buttons msiq-form__buttons--end">
+              <button type="submit" class="msiq-form__btn msiq-form__btn--primary" data-action="submit">Send my intake &rarr;</button>
+            </div>
+          </form>
+
+          <div class="msiq-form__success" id="intakeSuccess" role="status" tabindex="-1">
+            <svg class="msiq-form__success-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <h3 class="msiq-form__success-title">Got it. Your intake is with Scott.</h3>
+            <p class="msiq-form__success-body">Your first scorecard and welcome packet follow within 5-7 business days. Anything to add or change, email <a href="mailto:scott@mainstreetiq.com?subject=Monitor%20intake%20update">scott@mainstreetiq.com</a>.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -212,6 +333,7 @@
   </footer>
 
   <script src="/assets/js/newsletter.js" defer></script>
+  <script src="/assets/js/intake.js" defer></script>
 
   <script>
     const header = document.getElementById('site-header');
