@@ -10,16 +10,21 @@
  *   data-endpoint  intake URL
  *   data-form      form discriminator sent to the endpoint ("monitor")
  *
- * GET  <endpoint>?session_id=cs_...  -> {"prefill": {<field>: <value>, ...}}
- *      Optional. Any key matching a named control fills it if it is empty.
- *      400 {"error": "invalid_session"} swaps the form for the no-order
- *      notice; any other failure is silent and the customer types the answers.
- * POST <endpoint>  {"form", "session_id", "honeypot", "fields": {...}}
- *      -> 2xx {"ok": true, ...} on success; anything else is an error.
+ * The contract of record is the "Intake endpoint" section of the
+ * msiq-stripe-webhook README. In short:
  *
- * "fields" uses the client-onboarding-intake payload keys verbatim, so the
- * endpoint can pass them through: business_name, domain, industry, owner_name,
- * owner_email, biggest_goal, brand_posture, competitor_1..4 ("Name, domain").
+ * GET  <endpoint>?session_id=cs_...
+ *      200 {"ok": true, "business_name", "contact_name", "contact_email"}
+ *      fills any empty matching control (see PREFILL). 400 invalid_session
+ *      swaps the form for the no-order notice; any other failure is silent
+ *      and the customer types the answers.
+ * POST <endpoint>  flat JSON: form, session_id, company_website (honeypot),
+ *      and the client-onboarding-intake keys business_name, domain, industry,
+ *      owner_name, owner_email, biggest_goal, brand_posture, competitor_1..4
+ *      ("Name, domain").
+ *      200 {"ok": true} -> success. 400 invalid_session -> no-order notice.
+ *      400 missing_fields / invalid_fields + "fields" -> mark those fields.
+ *      Anything else (402 unpaid, 502, network) -> the error state.
  */
 (function () {
   var form = document.getElementById('intakeForm');
@@ -36,6 +41,8 @@
 
   var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   var URL_RE = /^(https?:\/\/)?[^\s\/.]+(\.[^\s\/.]+)+(\/\S*)?$/i;
+  // GET response key -> form control name.
+  var PREFILL = { business_name: 'business_name', contact_name: 'owner_name', contact_email: 'owner_email' };
 
   // ---- No order reference: nothing this page can submit will be accepted.
   if (!/^cs_/.test(sessionId)) {
@@ -63,11 +70,10 @@
       return null;
     })
     .then(function (data) {
-      var prefill = data && data.prefill;
-      if (!prefill) return;
-      Object.keys(prefill).forEach(function (key) {
-        var value = prefill[key];
-        var el = form.elements[key];
+      if (!data || !data.ok) return;
+      Object.keys(PREFILL).forEach(function (key) {
+        var value = data[key];
+        var el = form.elements[PREFILL[key]];
         if (!value || !el) return;
         if (el instanceof RadioNodeList) {
           if (!el.value) el.value = value;
@@ -171,6 +177,24 @@
       '&body=' + encodeURIComponent(body);
   }
 
+  // ---- Server-side field rejections: the endpoint names competitor_N; the
+  // page splits each competitor into a name and a site input.
+  function markFields(names) {
+    var first = null;
+    names.forEach(function (name) {
+      var els = /^competitor_\d$/.test(name)
+        ? [document.getElementById(name + '_name'), document.getElementById(name + '_site')]
+        : [form.elements[name] instanceof RadioNodeList ? form.elements[name][0] : form.elements[name]];
+      els.forEach(function (el) {
+        if (!el) return;
+        fieldOf(el).classList.add('msiq-form__field--invalid');
+        el.setAttribute('aria-invalid', 'true');
+        if (!first) first = el;
+      });
+    });
+    if (first) first.focus();
+  }
+
   // ---- Submit.
   var busy = false;
   form.addEventListener('submit', function (e) {
@@ -196,15 +220,24 @@
     fetch(endpoint, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
+      body: JSON.stringify(Object.assign({
         form: formType,
         session_id: sessionId,
-        honeypot: form.elements['honeypot'].value,
-        fields: fields
-      }),
+        company_website: form.elements['company_website'].value
+      }, fields)),
       signal: controller ? controller.signal : undefined
     }).then(function (r) {
       return r.json().catch(function () { return {}; }).then(function (data) {
+        if (r.status === 400 && data.error === 'invalid_session') {
+          noSession.hidden = false;
+          form.hidden = true;
+          noSession.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          return;
+        }
+        if (r.status === 400 && Array.isArray(data.fields) && data.fields.length) {
+          markFields(data.fields);
+          return;
+        }
         if (!r.ok || data.ok === false) throw new Error('intake rejected');
         form.hidden = true;
         success.classList.add('msiq-form__success--active');
