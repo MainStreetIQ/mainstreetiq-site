@@ -12,7 +12,8 @@
  *
  * GET  <endpoint>?session_id=cs_...  -> {"prefill": {<field>: <value>, ...}}
  *      Optional. Any key matching a named control fills it if it is empty.
- *      A failure is silent; the customer just types the answers.
+ *      400 {"error": "invalid_session"} swaps the form for the no-order
+ *      notice; any other failure is silent and the customer types the answers.
  * POST <endpoint>  {"form", "session_id", "honeypot", "fields": {...}}
  *      -> 2xx {"ok": true, ...} on success; anything else is an error.
  *
@@ -44,8 +45,23 @@
   }
 
   // ---- Prefill from the verified session (best effort).
+  // A 400 invalid_session means the POST will be refused too, so say so now
+  // rather than after the customer fills in every field. Any other failure
+  // (402 unpaid, network) leaves the form up; the POST reports the outcome.
   fetch(endpoint + '?session_id=' + encodeURIComponent(sessionId), { method: 'GET' })
-    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (r) {
+      if (r.ok) return r.json();
+      if (r.status === 400) {
+        return r.json().then(function (body) {
+          if (body && body.error === 'invalid_session') {
+            noSession.hidden = false;
+            form.hidden = true;
+          }
+          return null;
+        });
+      }
+      return null;
+    })
     .then(function (data) {
       var prefill = data && data.prefill;
       if (!prefill) return;
