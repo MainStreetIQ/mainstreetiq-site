@@ -54,8 +54,9 @@ EXCLUDE_DIRS = {"_examples", "_scheduled", "_scripts", "_content", "_templates",
 
 # Pages that must keep their existing markup verbatim. Each needs a reason.
 BESPOKE = {
-    # Deliberate wine-scoped footer; footer_sweep.py reports it as BESPOKE 1.
+    # Deliberate wine-scoped footer; footer_sweep.py reports these as BESPOKE 2.
     "wcir/q2-2026-central-coast.html": "deliberate wine-scoped footer",
+    "wcir/q3-2026-central-coast.html": "deliberate wine-scoped footer",
     # Redirect stubs: no nav, no footer, no main.
     "card.html": "redirect stub, no chrome",
     "fit-call.html": "redirect stub, no chrome",
