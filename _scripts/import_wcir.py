@@ -336,7 +336,7 @@ PAGE_CSS = """  <style>
     .wcir-table-wrap tbody tr:last-child td { border-bottom: 0; }
     .wcir-table-wrap .num { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
     .wcir-table-wrap .ctr { text-align: center; }
-    .wcir-options { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.25rem; margin-top: 1.5rem; }
+    .wcir-options { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr)); gap: 1.25rem; margin-top: 1.5rem; }
     .wcir-option { position: relative; background: var(--color-white); border: 1px solid var(--color-border); border-top: 3px solid var(--color-navy); border-radius: 6px; padding: 1.5rem 1.25rem 1.25rem; display: flex; flex-direction: column; }
     .wcir-option-featured { border-color: var(--color-navy); }
     .wcir-option-badge { position: absolute; top: -0.8rem; left: 1.25rem; background: var(--color-navy); color: var(--color-white); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.2rem 0.6rem; border-radius: 4px; }
@@ -369,29 +369,24 @@ PAGE_CSS = """  <style>
 # Monitor / Monitor Plus wording follows the gated /wineries subscribe block.
 # "{quarter}" is filled from the report cover.
 OPTIONS = [
-    {"title": "Discover Bundle", "badge": "Recommended",
-     "body": "The county Wine Country Intelligence Report every quarter, plus the Wine Pricing Report twice a year. You'll confirm your county after checkout.",
-     "price": "$1,000/yr per county",
-     "buy": [("Discover Bundle, annual", "https://buy.stripe.com/3cIbJ2d0T7xO1eG1M9a3u00", "wine-discover-bundle-annual")],
-     "detail": "#subscribe-county"},
-    {"title": "County edition, annual", "badge": None,
-     "body": "The county report every quarter for a year, for Santa Barbara County or San Luis Obispo County, with every winery ranked. You choose the county at checkout.",
+    {"title": "County edition, annual", "badge": "Recommended",
+     "body": "The county report every quarter plus the Wine Pricing Report twice a year, for Santa Barbara County or San Luis Obispo County, with every winery ranked. You choose the county at checkout.",
      "price": "$800/yr per county",
      "buy": [("County edition, annual", "https://buy.stripe.com/00w4gA1ib19q8H8duRa3u01", "wine-wcir-county-annual")],
      "detail": "#subscribe-county"},
     {"title": "County edition, one issue", "badge": None,
-     "body": "The {quarter} county report for one county, one time. You'll confirm your county after checkout.",
-     "price": "$250",
+     "body": "The {quarter} county report for one county, one time. Single issues are not discounted. You'll confirm your county after checkout.",
+     "price": "$250 per county",
      "buy": [("County edition, one issue", "https://buy.stripe.com/cNi9AUe4X19q4qS4Yla3u02", "wine-wcir-county-single")],
      "detail": "#subscribe-county"},
     {"title": "Monitor", "badge": None,
-     "body": "The monthly report card for your own winery. The annual plan includes the Discover Bundle (the county report plus the Wine Pricing Report) for the one county you choose.",
+     "body": "The monthly report card for your own winery. The annual plan includes the county edition for the one county you choose: the county report every quarter plus the Wine Pricing Report twice a year.",
      "price": "$400/mo, or $4,000/yr",
      "buy": [("Monitor, annual", "https://buy.stripe.com/8x2bJ21ib7xO2iKcqNa3u0W", "wine-monitor-annual"),
              ("Monitor, monthly", "https://buy.stripe.com/7sY8wQ5yr05m5uW1M9a3u05", "wine-monitor-monthly")],
      "detail": "#subscribe-monitor"},
     {"title": "Monitor Plus", "badge": None,
-     "body": "The same report card with four peers you name, tracked beside you. The annual plan includes the Discover Bundle (the county report plus the Wine Pricing Report) for the one county you choose.",
+     "body": "The same report card with four peers you name, tracked beside you. Each extra peer beyond the four is $50/mo, or $500/yr on the annual plan. The annual plan includes the county edition for the one county you choose: the county report every quarter plus the Wine Pricing Report twice a year.",
      "price": "$600/mo, or $6,000/yr",
      "buy": [("Monitor Plus, annual", "https://buy.stripe.com/6oUcN6d0T7xOe1saiFa3u08", "wine-monitor-plus-annual"),
              ("Monitor Plus, monthly", "https://buy.stripe.com/aFa9AUe4X2du3mO76ta3u07", "wine-monitor-plus-monthly")],
@@ -401,7 +396,7 @@ OPTIONS = [
 # Renewal and cancellation line, exactly as /wineries states it beside its Payment
 # Links (canonical-facts 2026-08-13 ruling 4: a Payment Link buyer sees no other
 # disclosure before paying).
-RENEWAL_LINE = ('Subscriptions renew until canceled; cancel online anytime, effective at the end of your current '
+RENEWAL_LINE = ('Subscriptions bought online renew until canceled; cancel online anytime, effective at the end of your current '
                 'paid period. Annual plans run a 12-month initial term, and prices are subject to a standard annual '
                 'adjustment of up to 10% at renewal, with at least 30 days notice. See '
                 '<a href="/legal/subscription-terms">Subscription Terms</a> and '
@@ -409,10 +404,11 @@ RENEWAL_LINE = ('Subscriptions renew until canceled; cancel online anytime, effe
 
 
 # Second county (Scott, 2026-10-09, canonical-facts § Discover): 25% off, invoiced, no Payment Link.
-SECOND_COUNTY_LINE = ('Adding a second county? The second county is 25% off: if your first county is the $800/yr report, '
-                      'the second is $600/yr. Email '
-                      '<a href="mailto:scott@mainstreetiq.com?subject=Second%20county">scott@mainstreetiq.com</a> '
-                      'and we\u2019ll set it up.')
+SECOND_COUNTY_LINE = ('Adding a second county? A second county edition, annual, is 25% off: $600/yr instead of $800, '
+                      'including when your first county comes with a Monitor or Monitor Plus annual plan, and it stays '
+                      '25% off as long as you keep both counties. The second county is invoiced: we send a renewal invoice '
+                      'before each term, it renews when paid, and you cancel by replying. To set it up, write to '
+                      '<a href="mailto:scott@mainstreetiq.com?subject=Second%20county">scott@mainstreetiq.com</a>.')
 
 
 def render_options(quarter: str) -> str:

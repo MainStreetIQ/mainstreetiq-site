@@ -56,7 +56,7 @@
     .wcir-table-wrap tbody tr:last-child td { border-bottom: 0; }
     .wcir-table-wrap .num { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
     .wcir-table-wrap .ctr { text-align: center; }
-    .wcir-options { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.25rem; margin-top: 1.5rem; }
+    .wcir-options { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr)); gap: 1.25rem; margin-top: 1.5rem; }
     .wcir-option { position: relative; background: var(--color-white); border: 1px solid var(--color-border); border-top: 3px solid var(--color-navy); border-radius: 6px; padding: 1.5rem 1.25rem 1.25rem; display: flex; flex-direction: column; }
     .wcir-option-featured { border-color: var(--color-navy); }
     .wcir-option-badge { position: absolute; top: -0.8rem; left: 1.25rem; background: var(--color-navy); color: var(--color-white); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.2rem 0.6rem; border-radius: 4px; }
@@ -419,43 +419,36 @@
       <div class="wcir-options">
           <div class="wcir-option wcir-option-featured">
             <span class="wcir-option-badge">Recommended</span>
-            <h3>Discover Bundle</h3>
-            <p class="wcir-option-price">$1,000/yr per county</p>
-            <p>The county Wine Country Intelligence Report every quarter, plus the Wine Pricing Report twice a year. You'll confirm your county after checkout.</p>
-            <p class="wcir-option-buy"><a href="https://buy.stripe.com/3cIbJ2d0T7xO1eG1M9a3u00" target="_blank" rel="noopener" class="btn btn-primary" data-stripe-product="wine-discover-bundle-annual" data-vertical="wine">Discover Bundle, annual &rarr;</a></p>
-            <p class="wcir-option-detail"><a href="/wineries#subscribe-county" data-vertical="wine">What this includes &rarr;</a></p>
-          </div>
-          <div class="wcir-option">
             <h3>County edition, annual</h3>
             <p class="wcir-option-price">$800/yr per county</p>
-            <p>The county report every quarter for a year, for Santa Barbara County or San Luis Obispo County, with every winery ranked. You choose the county at checkout.</p>
+            <p>The county report every quarter plus the Wine Pricing Report twice a year, for Santa Barbara County or San Luis Obispo County, with every winery ranked. You choose the county at checkout.</p>
             <p class="wcir-option-buy"><a href="https://buy.stripe.com/00w4gA1ib19q8H8duRa3u01" target="_blank" rel="noopener" class="btn btn-primary" data-stripe-product="wine-wcir-county-annual" data-vertical="wine">County edition, annual &rarr;</a></p>
             <p class="wcir-option-detail"><a href="/wineries#subscribe-county" data-vertical="wine">What this includes &rarr;</a></p>
           </div>
           <div class="wcir-option">
             <h3>County edition, one issue</h3>
-            <p class="wcir-option-price">$250</p>
-            <p>The Q3 2026 county report for one county, one time. You'll confirm your county after checkout.</p>
+            <p class="wcir-option-price">$250 per county</p>
+            <p>The Q3 2026 county report for one county, one time. Single issues are not discounted. You'll confirm your county after checkout.</p>
             <p class="wcir-option-buy"><a href="https://buy.stripe.com/cNi9AUe4X19q4qS4Yla3u02" target="_blank" rel="noopener" class="btn btn-primary" data-stripe-product="wine-wcir-county-single" data-vertical="wine">County edition, one issue &rarr;</a></p>
             <p class="wcir-option-detail"><a href="/wineries#subscribe-county" data-vertical="wine">What this includes &rarr;</a></p>
           </div>
           <div class="wcir-option">
             <h3>Monitor</h3>
             <p class="wcir-option-price">$400/mo, or $4,000/yr</p>
-            <p>The monthly report card for your own winery. The annual plan includes the Discover Bundle (the county report plus the Wine Pricing Report) for the one county you choose.</p>
+            <p>The monthly report card for your own winery. The annual plan includes the county edition for the one county you choose: the county report every quarter plus the Wine Pricing Report twice a year.</p>
             <p class="wcir-option-buy"><a href="https://buy.stripe.com/8x2bJ21ib7xO2iKcqNa3u0W" target="_blank" rel="noopener" class="btn btn-primary" data-stripe-product="wine-monitor-annual" data-vertical="wine">Monitor, annual &rarr;</a><a href="https://buy.stripe.com/7sY8wQ5yr05m5uW1M9a3u05" target="_blank" rel="noopener" class="btn btn-secondary" data-stripe-product="wine-monitor-monthly" data-vertical="wine">Monitor, monthly &rarr;</a></p>
             <p class="wcir-option-detail"><a href="/wineries#subscribe-monitor" data-vertical="wine">What this includes &rarr;</a></p>
           </div>
           <div class="wcir-option">
             <h3>Monitor Plus</h3>
             <p class="wcir-option-price">$600/mo, or $6,000/yr</p>
-            <p>The same report card with four peers you name, tracked beside you. The annual plan includes the Discover Bundle (the county report plus the Wine Pricing Report) for the one county you choose.</p>
+            <p>The same report card with four peers you name, tracked beside you. Each extra peer beyond the four is $50/mo, or $500/yr on the annual plan. The annual plan includes the county edition for the one county you choose: the county report every quarter plus the Wine Pricing Report twice a year.</p>
             <p class="wcir-option-buy"><a href="https://buy.stripe.com/6oUcN6d0T7xOe1saiFa3u08" target="_blank" rel="noopener" class="btn btn-primary" data-stripe-product="wine-monitor-plus-annual" data-vertical="wine">Monitor Plus, annual &rarr;</a><a href="https://buy.stripe.com/aFa9AUe4X2du3mO76ta3u07" target="_blank" rel="noopener" class="btn btn-secondary" data-stripe-product="wine-monitor-plus-monthly" data-vertical="wine">Monitor Plus, monthly &rarr;</a></p>
             <p class="wcir-option-detail"><a href="/wineries#subscribe-monitor-plus" data-vertical="wine">What this includes &rarr;</a></p>
           </div>
       </div>
-      <p class="wcir-options-terms">Adding a second county? The second county is 25% off: if your first county is the $800/yr report, the second is $600/yr. Email <a href="mailto:scott@mainstreetiq.com?subject=Second%20county">scott@mainstreetiq.com</a> and we’ll set it up.</p>
-      <p class="wcir-options-terms">Subscriptions renew until canceled; cancel online anytime, effective at the end of your current paid period. Annual plans run a 12-month initial term, and prices are subject to a standard annual adjustment of up to 10% at renewal, with at least 30 days notice. See <a href="/legal/subscription-terms">Subscription Terms</a> and <a href="/legal/refund-cancellation">Refunds</a>.</p>
+      <p class="wcir-options-terms">Adding a second county? A second county edition, annual, is 25% off: $600/yr instead of $800, including when your first county comes with a Monitor or Monitor Plus annual plan, and it stays 25% off as long as you keep both counties. The second county is invoiced: we send a renewal invoice before each term, it renews when paid, and you cancel by replying. To set it up, write to <a href="mailto:scott@mainstreetiq.com?subject=Second%20county">scott@mainstreetiq.com</a>.</p>
+      <p class="wcir-options-terms">Subscriptions bought online renew until canceled; cancel online anytime, effective at the end of your current paid period. Annual plans run a 12-month initial term, and prices are subject to a standard annual adjustment of up to 10% at renewal, with at least 30 days notice. See <a href="/legal/subscription-terms">Subscription Terms</a> and <a href="/legal/refund-cancellation">Refunds</a>.</p>
     </div>
   </section>
 
