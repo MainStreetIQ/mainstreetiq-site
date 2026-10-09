@@ -73,7 +73,7 @@ Owner-operated and founder-led companies in the lower middle market, and small a
 An agency sells you campaigns and reports on impressions. A BI tool sells you dashboards you will not open. We sell you the CFO's read on whether your acquisition pencils out, the cohorts that compound versus the ones that churn, and the pricing decision that adds margin versus the one that quietly subtracts it.
 
 **How does pricing work at Main Street IQ?**
-Pricing depends on your market segment and your situation, so most of it is scoped on the Intro Call rather than printed on a tier card. The one published price is the Wine Country Intelligence Report, a fixed deliverable. Everything else, you hear the number once we understand the business. Same discipline either way: you only pay for the work that pays you back.
+Pricing depends on your market segment and your situation, so most of it is scoped on the Intro Call rather than printed on a tier card. The published prices are three wine products: the county edition of the Wine Country Intelligence Report, Monitor, and Monitor Plus. Everything else, you hear the number once we understand the business. Same discipline either way: you only pay for the work that pays you back.
 
 **How do I get started with Main Street IQ?**
 Book a 30-minute Intro Call. We talk about where the business is today, where the gaps are, and which offering fits your situation. If we are not the right fit we will say so.
@@ -126,7 +126,7 @@ The discoverability lane is productized as a sequence: find out where you stand,
 
 - [Website Audit and Audit Pro](https://www.mainstreetiq.com/audit): A fixed-price, written, three-layer audit of a website's SEO, AEO, and AI-search visibility, synthesized into the decisions a founder actually has to make. A diagnosis, not a dashboard to interpret. Built for owner-operated wineries, wellness clinics, elective medicine practices, and ecommerce brands.
 - [Free Winery Visibility Snapshot](https://www.mainstreetiq.com/winery-visibility-snapshot): A free one-page snapshot of how findable a winery or tasting room is across search, answer engines, and AI assistants. Scored 0 to 100 from public data, sent within one business day. Open to any California winery or tasting room.
-- [The Wine Country Intelligence Report](https://www.mainstreetiq.com/wine-country-intelligence): A quarterly digital-performance benchmark of every tasting room in Santa Barbara and San Luis Obispo counties, scored on six dimensions, with an AI-visibility leaderboard measured across ChatGPT, Claude, Perplexity, and Gemini. The original primary research behind the discoverability practice.
+- [The Wine Country Intelligence Report](https://www.mainstreetiq.com/wine-country-intelligence): A quarterly digital-performance benchmark of every tracked winery in Santa Barbara and San Luis Obispo counties, 442 in Q3 2026, scored on seven categories, with an AI-visibility read measured across six AI assistants. The original primary research behind the discoverability practice.
 - [Center of Influence Program](https://www.mainstreetiq.com/partners): For the accountants, bankers, and advisors who already trust their clients to us. A COI introduces an owner-operator; Main Street IQ does the work; the COI earns a commission on the introduction.
 
 ## AI CFO
@@ -253,11 +253,11 @@ A selection of past engagements from twenty years of finance and operations work
 
 Main Street IQ's second line of work: AI advisory for wineries, built on a quarterly benchmark of Central Coast tasting rooms and what AI search says about each one. We read your wine business the way a CFO reads a P&L, not the way an agency reads a campaign. Wineries can also work with the Fractional CFO line for fractional and interim CFO leadership.
 
-Flagship product: the Wine Country Intelligence Report (WCIR), a quarterly digital-performance benchmark scoring every Central Coast tasting room (423 in Q2 2026: 171 in Santa Barbara County, 252 in San Luis Obispo County) on six dimensions, with an AI-visibility leaderboard and town-by-town standings. San Luis Obispo County joined the benchmark in Q2 2026. Published by county, with a free regional edition covering both.
+Flagship product: the Wine Country Intelligence Report (WCIR), a quarterly digital-performance benchmark scoring every tracked Central Coast winery (442 in Q3 2026: 169 in Santa Barbara County, 273 in San Luis Obispo County) on seven categories, with an AI-visibility leaderboard and town-by-town standings. In Q3 2026, 45 of 442 wineries accounted for 47.5% of every time AI named a winery. San Luis Obispo County joined the benchmark in Q2 2026. Published by county, with a free regional edition covering both.
 
-The four readings in wine: Discover (the WCIR market read), Diagnose (the Website Audit and deeper one-time diagnostics), Monitor (recurring quarterly intelligence plus the WCIR subscription), Advise (the Engage and Manage retainers, for the few clients who want a CFO in the decisions).
+The four readings in wine: Discover (the WCIR market read), Diagnose (the Website Audit and deeper one-time diagnostics), Monitor (the monthly report card; the annual Monitor and Monitor Plus plans include the county edition for one county), Advise (the Engage and Manage retainers, for the few clients who want a CFO in the decisions).
 
-Published pricing (wine only): Wine Country Intelligence Report, county edition, annual $800/yr per county (includes the Wine Pricing Report twice a year; a second county's annual is 25% off), single issue $250 per county; Monitor $400/mo or $4,000/yr; Monitor Plus $600/mo or $6,000/yr. Every other engagement is scoped on an Intro Call; Main Street IQ does not publish those prices.
+Published pricing (wine only): Wine Country Intelligence Report, county edition, annual $800/yr per county (includes the Wine Pricing Report twice a year; a second county is $600/yr, annual only), single issue $250 per county; Monitor $400/mo or $4,000/yr; Monitor Plus $600/mo or $6,000/yr. Every other engagement is scoped on an Intro Call; Main Street IQ does not publish those prices.
 
 ---
 

@@ -15,6 +15,16 @@ PROOF CONSTRAINT (do not "fix" this into symmetry):
 The Wine Country Intelligence Report covers Santa Barbara and San Luis Obispo
 counties only, and the headline figure is SANTA BARBARA-scoped. So:
 
+REFRESHED 2026-10-09 to Q3 2026 (WCI bundle.json build 4011d659f802). The Q3
+story is concentration, not invisibility: 388 of 442 wineries were named at least
+once for their own county, and 45 of 442 account for 47.5% of every naming. That
+headline is REGION-wide, so it does not go on a county page. Each measured county
+page now carries its own county's "never named in an answer to its own county's
+questions" count: Santa Barbara 16 of 169, San Luis Obispo 38 of 273. Use that
+exact meaning only; never restate it as "invisible to AI".
+
+History below is kept for context.
+
 REFRESHED 2026-07-30 to Q2 2026. Was "86 of 175 AI-visible" from the Q1 edition.
 Q2 measured SB at 100 of 171 cited, so the visible-side framing now describes a
 MAJORITY and no longer supports the word "only". The stat was flipped to the
@@ -64,7 +74,7 @@ COUNTIES = [
         "cities": ["San Luis Obispo", "Paso Robles", "Templeton", "Atascadero",
                    "Arroyo Grande", "Pismo Beach", "Grover Beach", "Morro Bay", "Nipomo"],
         "wcir": "measured",  # Q2 2026 published the SLO count; switched from "covered" per Scott 2026-08-05
-        "stat_invisible": "157 of 252",  # SLO tasting rooms named by no AI assistant, Q2 2026 WCIR
+        "stat_invisible": "38 of 273",  # SLO wineries never named in an answer to SLO questions, Q3 2026 WCIR
         "audience_line": ("We go deepest in two market segments, wineries across Paso Robles and the "
                           "Edna Valley and DTC and ecommerce brands, and we also work with health and "
                           "wellness and elective medicine practices."),
@@ -86,7 +96,7 @@ COUNTIES = [
         "cities": ["Santa Barbara", "Goleta", "Santa Ynez", "Solvang", "Buellton",
                    "Lompoc", "Los Olivos", "Carpinteria", "Montecito", "Santa Maria"],
         "wcir": "measured",  # SB-scoped invisible figure
-        "stat_invisible": "71 of 171",  # SB tasting rooms named by no AI assistant, Q2 2026 WCIR
+        "stat_invisible": "16 of 169",  # SB wineries never named in an answer to SB questions, Q3 2026 WCIR
         "audience_line": ("We go deepest in two market segments, wineries across the Santa Ynez Valley "
                           "and the Sta. Rita Hills and DTC and ecommerce brands, and we also work with "
                           "health and wellness and elective medicine practices."),
@@ -180,11 +190,11 @@ def proof_section(c):
     """Wine proof, scoped honestly per county. See PROOF CONSTRAINT in the docstring."""
     if c["wcir"] == "measured":
         body = f"""        <p>Wine is where the AI-search shift hit hardest and earliest, and {c['county']} is where we measured it and published the result. A visitor searching for the best wineries in the county used to get a map; now they get a three-to-five-name answer, and the wineries left off it lose the visit.</p>
-        <p>The <a href="/wineries" style="color: var(--color-sky);">Wine Country Intelligence Report</a> benchmarks every tracked winery in Santa Barbara and San Luis Obispo counties on exactly this: who shows up in the AI answer and who does not. The finding in this county was stark.</p>
+        <p>The <a href="/wineries" style="color: var(--color-sky);">Wine Country Intelligence Report</a> benchmarks every tracked winery in Santa Barbara and San Luis Obispo counties on exactly this: who shows up in the AI answer and who does not. Here is what it found in this county.</p>
         <div class="stat-bar" style="border-top-color: rgba(255,255,255,0.15); margin-top: 1.5rem;">
           <div class="stat-item">
             <p class="stat-num" style="color: var(--color-sky);">{c['stat_invisible']}</p>
-            <p style="color: rgba(255,255,255,0.7);">{c['county']} tasting rooms named by no AI assistant (Q2 2026 WCIR)</p>
+            <p style="color: rgba(255,255,255,0.7);">{c['county']} wineries never named in an answer to their own county's questions (Q3 2026 WCIR)</p>
           </div>
           <div class="stat-item">
             <p class="stat-num" style="color: var(--color-sky);">Every quarter</p>
@@ -247,8 +257,8 @@ def faqs(c):
     if c["wcir"] == "measured":
         measure = (f"We built the measurement in wine and published it. The Wine Country Intelligence "
                    f"Report benchmarks every tracked winery in Santa Barbara and San Luis Obispo counties "
-                   f"on AI visibility, and it found that {c['stat_invisible']} {county} tasting rooms were named by no "
-                   f"AI assistant at all last quarter. That same benchmark is how we read where your business stands: which "
+                   f"on AI visibility, and in Q3 2026 it found that {c['stat_invisible']} {county} wineries were never "
+                   f"named in an AI answer to their own county's questions. That same benchmark is how we read where your business stands: which "
                    f"surfaces the AI answer is built from, where you show up, and where you are absent. "
                    f"Then we name the fixes and re-check your visibility every month.")
     elif c["wcir"] == "covered":

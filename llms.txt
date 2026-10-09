@@ -37,7 +37,7 @@ The discoverability lane is productized as a sequence: find out where you stand,
 
 - [Website Audit and Audit Pro](https://www.mainstreetiq.com/audit): A fixed-price, written, three-layer audit of a website's SEO, AEO, and AI-search visibility, synthesized into the decisions a founder actually has to make. A diagnosis, not a dashboard to interpret. Built for owner-operated wineries, wellness clinics, elective medicine practices, and ecommerce brands.
 - [Free Winery Visibility Snapshot](https://www.mainstreetiq.com/winery-visibility-snapshot): A free one-page snapshot of how findable a winery or tasting room is across search, answer engines, and AI assistants. Scored 0 to 100 from public data, sent within one business day. Open to any California winery or tasting room.
-- [The Wine Country Intelligence Report](https://www.mainstreetiq.com/wine-country-intelligence): A quarterly digital-performance benchmark of every tasting room in Santa Barbara and San Luis Obispo counties, scored on six dimensions, with an AI-visibility leaderboard measured across ChatGPT, Claude, Perplexity, and Gemini. The original primary research behind the discoverability practice.
+- [The Wine Country Intelligence Report](https://www.mainstreetiq.com/wine-country-intelligence): A quarterly digital-performance benchmark of every tracked winery in Santa Barbara and San Luis Obispo counties, 442 in Q3 2026, scored on seven categories, with an AI-visibility read measured across six AI assistants. The original primary research behind the discoverability practice.
 
 ## AI Visibility
 
