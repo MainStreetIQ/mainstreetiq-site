@@ -409,7 +409,8 @@ RENEWAL_LINE = ('Subscriptions renew until canceled; cancel online anytime, effe
 
 
 # Second county (Scott, 2026-10-09, canonical-facts § Discover): 25% off, invoiced, no Payment Link.
-SECOND_COUNTY_LINE = ('Adding a second county? It\u2019s 25% off. Email '
+SECOND_COUNTY_LINE = ('Adding a second county? The second county is 25% off: if your first county is the $800/yr report, '
+                      'the second is $600/yr. Email '
                       '<a href="mailto:scott@mainstreetiq.com?subject=Second%20county">scott@mainstreetiq.com</a> '
                       'and we\u2019ll set it up.')
 

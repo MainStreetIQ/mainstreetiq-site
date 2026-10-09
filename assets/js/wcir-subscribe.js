@@ -5,7 +5,7 @@
 // only after the infra/msiq-stripe-webhook session confirms the newsletter
 // endpoint accepts list=wcir and reports failures honestly. Flipping it changes
 // this one file; no report page needs rebuilding.
-var WCIR_FORM_LIVE = false;
+var WCIR_FORM_LIVE = true;
 
 (function () {
   if (!WCIR_FORM_LIVE) return;
