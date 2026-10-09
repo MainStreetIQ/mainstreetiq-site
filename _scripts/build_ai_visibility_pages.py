@@ -190,7 +190,7 @@ def proof_section(c):
     """Wine proof, scoped honestly per county. See PROOF CONSTRAINT in the docstring."""
     if c["wcir"] == "measured":
         body = f"""        <p>Wine is where the AI-search shift hit hardest and earliest, and {c['county']} is where we measured it and published the result. A visitor searching for the best wineries in the county used to get a map; now they get a three-to-five-name answer, and the wineries left off it lose the visit.</p>
-        <p>The <a href="/wineries" style="color: var(--color-sky);">Wine Country Intelligence Report</a> benchmarks every tracked winery in Santa Barbara and San Luis Obispo counties on exactly this: who shows up in the AI answer and who does not. Here is what it found in this county.</p>
+        <p>The <a href="/wineries" style="color: var(--color-sky);">Wine Country Intelligence Report</a> benchmarks every tracked winery in Santa Barbara and San Luis Obispo counties on exactly this: which wineries the AI answer names, and how often. Here is what it found in this county.</p>
         <div class="stat-bar" style="border-top-color: rgba(255,255,255,0.15); margin-top: 1.5rem;">
           <div class="stat-item">
             <p class="stat-num" style="color: var(--color-sky);">{c['stat_invisible']}</p>
