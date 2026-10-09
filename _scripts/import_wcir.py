@@ -396,7 +396,7 @@ OPTIONS = [
 # Renewal and cancellation line, exactly as /wineries states it beside its Payment
 # Links (canonical-facts 2026-08-13 ruling 4: a Payment Link buyer sees no other
 # disclosure before paying).
-RENEWAL_LINE = ('Subscriptions bought online renew until canceled; cancel online anytime, effective at the end of your current '
+RENEWAL_LINE = ('Subscriptions bought online renew automatically until canceled; cancel online anytime, effective at the end of your current '
                 'paid period. Annual plans run a 12-month initial term, and prices are subject to a standard annual '
                 'adjustment of up to 10% at renewal, with at least 30 days notice. See '
                 '<a href="/legal/subscription-terms">Subscription Terms</a> and '
