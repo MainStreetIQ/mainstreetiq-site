@@ -37,8 +37,11 @@ ROOT = Path(__file__).resolve().parent.parent
 
 # Cover lines that only make sense on the printed page.
 COVER_LINES = {"MAIN STREET IQ", "Wine Country Intelligence"}
-# The print footer line carrying the build hash.
+# The build hash: a print footer line (to 2026-10-09 10:33) or an HTML comment (from 10:58).
 RE_BUILD_LINE = re.compile(r"^<small>.*\bbuild ([0-9a-f]{6,})</small>$")
+RE_BUILD_COMMENT = re.compile(r"^<!-- build ([0-9a-f]{6,}) -->$")
+# The print running footer ("mainstreetiq.com | ... | Q3 2026"): print-only, dropped.
+RE_PRINT_FOOTER = re.compile(r"^<small>mainstreetiq\.com \|.*</small>$")
 # Print-only cross references. None exist today; if one appears, stop.
 RE_PRINT_REF = re.compile(r"\bsee page \d+|\bpage \d+ of\b|\bon page \d+", re.I)
 
@@ -186,9 +189,12 @@ def parse_body(lines: list[str]) -> tuple[list[dict], str | None]:
             blocks.append({"type": f"h{level}", "text": m.group(2)})
             i += 1
             continue
-        mb = RE_BUILD_LINE.match(st)
+        mb = RE_BUILD_LINE.match(st) or RE_BUILD_COMMENT.match(st)
         if mb:
             build = mb.group(1)
+            i += 1
+            continue
+        if RE_PRINT_FOOTER.match(st):
             i += 1
             continue
         ms = RE_SMALL.match(st)
@@ -364,28 +370,28 @@ PAGE_CSS = """  <style>
 # "{quarter}" is filled from the report cover.
 OPTIONS = [
     {"title": "Discover Bundle", "badge": "Recommended",
-     "body": "The county edition of the Wine Country Intelligence Report every quarter, plus the Wine Pricing Report.",
-     "price": "$1,000/yr",
+     "body": "The county Wine Country Intelligence Report every quarter, plus the Wine Pricing Report twice a year. You'll confirm your county after checkout.",
+     "price": "$1,000/yr per county",
      "buy": [("Discover Bundle, annual", "https://buy.stripe.com/3cIbJ2d0T7xO1eG1M9a3u00", "wine-discover-bundle-annual")],
      "detail": "#subscribe-county"},
     {"title": "County edition, annual", "badge": None,
-     "body": "The full quarterly report for Santa Barbara County or San Luis Obispo County, with every winery ranked. You choose the county at checkout.",
+     "body": "The county report every quarter for a year, for Santa Barbara County or San Luis Obispo County, with every winery ranked. You choose the county at checkout.",
      "price": "$800/yr per county",
      "buy": [("County edition, annual", "https://buy.stripe.com/00w4gA1ib19q8H8duRa3u01", "wine-wcir-county-annual")],
      "detail": "#subscribe-county"},
     {"title": "County edition, one issue", "badge": None,
-     "body": "The {quarter} county edition only, one time.",
+     "body": "The {quarter} county report for one county, one time. You'll confirm your county after checkout.",
      "price": "$250",
      "buy": [("County edition, one issue", "https://buy.stripe.com/cNi9AUe4X19q4qS4Yla3u02", "wine-wcir-county-single")],
      "detail": "#subscribe-county"},
     {"title": "Monitor", "badge": None,
-     "body": "The monthly report card for your own winery. The annual plan includes the county edition of the Wine Country Intelligence Report.",
+     "body": "The monthly report card for your own winery. The annual plan includes the Discover Bundle (the county report plus the Wine Pricing Report) for the one county you choose.",
      "price": "$400/mo, or $4,000/yr",
      "buy": [("Monitor, annual", "https://buy.stripe.com/8x2bJ21ib7xO2iKcqNa3u0W", "wine-monitor-annual"),
              ("Monitor, monthly", "https://buy.stripe.com/7sY8wQ5yr05m5uW1M9a3u05", "wine-monitor-monthly")],
      "detail": "#subscribe-monitor"},
     {"title": "Monitor Plus", "badge": None,
-     "body": "The same report card with four peers you name, tracked beside you. The annual plan includes the county edition of the Wine Country Intelligence Report.",
+     "body": "The same report card with four peers you name, tracked beside you. The annual plan includes the Discover Bundle (the county report plus the Wine Pricing Report) for the one county you choose.",
      "price": "$600/mo, or $6,000/yr",
      "buy": [("Monitor Plus, annual", "https://buy.stripe.com/6oUcN6d0T7xOe1saiFa3u08", "wine-monitor-plus-annual"),
              ("Monitor Plus, monthly", "https://buy.stripe.com/aFa9AUe4X2du3mO76ta3u07", "wine-monitor-plus-monthly")],
@@ -400,6 +406,12 @@ RENEWAL_LINE = ('Subscriptions renew until canceled; cancel online anytime, effe
                 'adjustment of up to 10% at renewal, with at least 30 days notice. See '
                 '<a href="/legal/subscription-terms">Subscription Terms</a> and '
                 '<a href="/legal/refund-cancellation">Refunds</a>.')
+
+
+# Second county (Scott, 2026-10-09, canonical-facts § Discover): 25% off, invoiced, no Payment Link.
+SECOND_COUNTY_LINE = ('Adding a second county? It\u2019s 25% off. Email '
+                      '<a href="mailto:scott@mainstreetiq.com?subject=Second%20county">scott@mainstreetiq.com</a> '
+                      'and we\u2019ll set it up.')
 
 
 def render_options(quarter: str) -> str:
@@ -549,11 +561,12 @@ def render_page(cover: dict, body: str, toc: list, slug: str, source_name: str, 
       <div class="section-header section-header-left">
         <span class="section-label">Choose your option</span>
         <h2 class="section-title">See where your own winery stands</h2>
-        <p class="section-subtitle">Buy online. Each card links to the full detail of what it includes.</p>
+        <p class="section-subtitle">Buy online. Each card links to more about the option on our wineries page.</p>
       </div>
       <div class="wcir-options">
 {render_options(q)}
       </div>
+      <p class="wcir-options-terms">{SECOND_COUNTY_LINE}</p>
       <p class="wcir-options-terms">{RENEWAL_LINE}</p>
     </div>
   </section>
