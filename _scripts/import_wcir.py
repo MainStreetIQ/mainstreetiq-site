@@ -375,7 +375,7 @@ OPTIONS = [
      "buy": [("County edition, annual", "https://buy.stripe.com/00w4gA1ib19q8H8duRa3u01", "wine-wcir-county-annual")],
      "detail": "#subscribe-county"},
     {"title": "County edition, one issue", "badge": None,
-     "body": "The {quarter} county report for one county, one time. Single issues are not discounted. You'll confirm your county after checkout.",
+     "body": "The {quarter} county report for one county, one time. Single issues are not discounted. You choose the county at checkout.",
      "price": "$250 per county",
      "buy": [("County edition, one issue", "https://buy.stripe.com/dRm5kE9OHcS8bTkbmJa3u16", "wine-wcir-county-single")],
      "detail": "#subscribe-county"},
