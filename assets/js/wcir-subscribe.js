@@ -1,5 +1,5 @@
 // Subscribe box on the WCIR report pages (/wcir/*), built by _scripts/import_wcir.py,
-// and the email gate on /wineries. A form with data-next opens that page once the
+// and the email gate on /wine-country-intelligence. A form with data-next opens that page once the
 // Zoho write has landed (the gate to the free summary); without it, the box confirms
 // in place.
 //

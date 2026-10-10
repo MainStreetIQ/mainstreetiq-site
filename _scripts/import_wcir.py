@@ -74,9 +74,15 @@ def attr(text: str) -> str:
     return html.escape(text, quote=True)
 
 
+RE_WINERIES_SHELF = re.compile(r"(mainstreetiq\.com)/wineries(?=(?:\?[^#\s]*)?#subscribe-)")
+
+
 def web_url(url: str) -> str:
     # The report's links are tagged for the PDF; on the page they are web clicks.
-    return url.replace("utm_medium=pdf", "utm_medium=web")
+    # Its #subscribe-* links point at /wineries, where the buying options used to
+    # live; since 2026-10-10 they live on /wine-country-intelligence, which carries
+    # the same anchors. Other /wineries links (the CFO work) stay as written.
+    return RE_WINERIES_SHELF.sub(r"\1/wine-country-intelligence", url.replace("utm_medium=pdf", "utm_medium=web"))
 
 
 def inline(text: str) -> str:
@@ -377,7 +383,7 @@ PAGE_CSS = """  <style>
 # Prices: canonical-facts.md § Discover and § Monitor (public prices allowed for
 # wine Discover, Monitor and Monitor Plus only). Links: Payment Link URLs from
 # ~/MSIQ/infra/stripe-bootstrap/stripe-bootstrap-manifest-live.json, no UTMs.
-# Monitor / Monitor Plus wording follows the gated /wineries subscribe block.
+# Monitor / Monitor Plus wording follows the subscribe block on /wine-country-intelligence.
 # "{quarter}" is filled from the report cover.
 OPTIONS = [
     {"title": "County edition, annual", "badge": "Recommended",
@@ -584,7 +590,7 @@ def render_page(cover: dict, body: str, toc: list, slug: str, source_name: str, 
       <div class="section-header section-header-left">
         <span class="section-label">Choose your option</span>
         <h2 class="section-title">See where your own winery stands</h2>
-        <p class="section-subtitle">Buy online. Each card links to more about the option on our wineries page.</p>
+        <p class="section-subtitle">Buy online. Each card links to more about the option on the Wine Country Intelligence page.</p>
       </div>
       <div class="wcir-options">
 {render_options(q)}
