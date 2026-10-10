@@ -173,7 +173,7 @@ NAV_LINKS = [
         ("/interim-finance-leadership", "Interim Leadership"),
         ("/discoverability", "AI Discoverability"),
     ]),
-    ("/wine-country-intelligence", "Wine Country Intelligence", [
+    ("/wineries", "Wine Country Intelligence", [
         ("/wineries", "AI Advisory for Wineries"),
         ("/wine-country-intelligence", "The Quarterly Report"),
         ("/winery-visibility-snapshot", "Winery Visibility Snapshot"),
