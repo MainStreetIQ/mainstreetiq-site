@@ -13,9 +13,10 @@ Sitemap: https://www.mainstreetiq.com/sitemap.xml
 # Explicit allows for AI crawlers and answer engines.
 # MSIQ wants AI surfaces (ChatGPT, Claude, Perplexity, Google AI Overviews,
 # Apple Intelligence, Meta AI, etc.) to discover, index, and cite this site.
-# A wildcard Allow above already covers everything; these explicit rules are
-# defensive against future stricter defaults and against bot owners who
-# require an exact User-agent match before indexing.
+# The wildcard group above allows everything except the two paths it disallows;
+# these explicit groups are defensive against future stricter defaults and
+# against bot owners who require an exact User-agent match before indexing.
+# Each one repeats the same Disallow lines (see the note at the end).
 
 # OpenAI
 User-agent: GPTBot
