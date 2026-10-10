@@ -467,7 +467,6 @@ WINE_FOOTER = """  <footer class="site-footer">
           <h4>Wine</h4>
           <a href="/wineries">Winery practice</a>
           <a href="/wine-country-intelligence">The report</a>
-          <a href="/wine-country-intelligence">The quarterly report</a>
         </div>
         <div class="footer-col">
           <h4>Legal</h4>
