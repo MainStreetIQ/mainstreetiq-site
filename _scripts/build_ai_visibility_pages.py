@@ -207,7 +207,7 @@ def proof_section(c):
         </div>
         <p style="margin-top: 1.5rem;">Wine is the proof, not the limit. The same engine reads discoverability for any business we work with in the county.</p>
         <div class="hero-buttons" style="margin-top: 1.5rem;">
-          <a href="/winery-visibility-snapshot" class="btn btn-white">See a Winery Visibility Snapshot &rarr;</a>
+          <a href="/wine-country-intelligence" class="btn btn-white">Read the quarterly report &rarr;</a>
           <a href="/wineries" class="btn btn-outline-white">How the wine work runs</a>
         </div>"""
     elif c["wcir"] == "covered":
@@ -215,7 +215,7 @@ def proof_section(c):
         <p>The <a href="/wineries" style="color: var(--color-sky);">Wine Country Intelligence Report</a> benchmarks every tracked winery in Santa Barbara and San Luis Obispo counties on exactly that question: who the AI answer names, and who it skips. {c['county']} is inside that footprint, which means the read here runs against a benchmark we already publish rather than one we invent for the engagement.</p>
         <p style="margin-top: 1.5rem;">Wine is the proof, not the limit. The same engine reads discoverability for any business we work with in the county.</p>
         <div class="hero-buttons" style="margin-top: 1.5rem;">
-          <a href="/winery-visibility-snapshot" class="btn btn-white">See a Winery Visibility Snapshot &rarr;</a>
+          <a href="/wine-country-intelligence" class="btn btn-white">Read the quarterly report &rarr;</a>
           <a href="/wineries" class="btn btn-outline-white">How the wine work runs</a>
         </div>"""
     else:

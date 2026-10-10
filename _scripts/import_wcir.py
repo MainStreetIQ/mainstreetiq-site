@@ -2,7 +2,7 @@
 """
 import_wcir.py — turn an approved WCIR report build into an unlisted site page.
 
-    python _scripts/import_wcir.py <source.md> <slug>
+    python _scripts/import_wcir.py <source.md> <slug> [<sample-slug>]
     python _scripts/import_wcir.py "~/WCI/.../Main Street IQ Central Coast Wine Country Report - Q3 2026.md" q3-2026-central-coast
 
 Writes _content/wcir/<slug>.html. Then run `python _scripts/sitegen.py build`
@@ -435,7 +435,7 @@ def render_options(quarter: str) -> str:
             <p class="wcir-option-price">{esc(o['price'])}</p>
             <p>{esc(o['body'].replace('{quarter}', quarter))}</p>
             <p class="wcir-option-buy">{buttons}</p>
-            <p class="wcir-option-detail"><a href="/wineries{o['detail']}" data-vertical="wine">What this includes &rarr;</a></p>
+            <p class="wcir-option-detail"><a href="/wine-country-intelligence{o['detail']}" data-vertical="wine">What this includes &rarr;</a></p>
           </div>""")
     return "\n".join(cards)
 
@@ -467,7 +467,7 @@ WINE_FOOTER = """  <footer class="site-footer">
           <h4>Wine</h4>
           <a href="/wineries">Winery practice</a>
           <a href="/wine-country-intelligence">The report</a>
-          <a href="/winery-visibility-snapshot">Free visibility snapshot</a>
+          <a href="/wine-country-intelligence">The quarterly report</a>
         </div>
         <div class="footer-col">
           <h4>Legal</h4>
@@ -489,13 +489,17 @@ WINE_FOOTER = """  <footer class="site-footer">
   </footer>"""
 
 
-def render_page(cover: dict, body: str, toc: list, slug: str, source_name: str, build: str | None) -> str:
+def render_page(cover: dict, body: str, toc: list, slug: str, source_name: str, build: str | None,
+                sample_slug: str | None = None) -> str:
     q, title = cover["quarter"], cover["title"]
     count = cover["count_phrase"][0].upper() + cover["count_phrase"][1:]
     desc = f"{title}, {q} edition: {cover['count_phrase'].lower()} across {cover['subtitle']}."
     if "banner" in cover:
         desc = f"Sample: {desc} Winery names and per-winery figures are illustrative."
     sample = "banner" in cover
+    # A summary page links the current sample edition when the importer is given its slug.
+    sample_link = (f'\n      <p class="wcir-pdf"><a href="/wcir/{sample_slug}?utm_source=site&amp;utm_medium=summary&amp;utm_campaign={slug}" '
+                   f'data-vertical="wine">See the full sample edition</a></p>' if sample_slug and not sample else "")
     pdf = SAMPLE_PDF if sample else f"/reports/wcir-{slug}.pdf"
     banner = (f'\n      <p class="wcir-sample-banner" style="display: inline-block; background: rgba(255,255,255,0.12); '
               f'color: var(--color-white); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.04em; '
@@ -558,7 +562,7 @@ def render_page(cover: dict, body: str, toc: list, slug: str, source_name: str, 
       <h1>{esc(title)}</h1>
       <p>{esc(cover['subtitle'])} | {esc(count)}</p>
       <p class="wcir-hero-meta">{inline(cover['byline'])}</p>
-      <p class="wcir-pdf"><a href="{pdf}" target="_blank" rel="noopener" data-vertical="wine">Download the PDF</a></p>
+      <p class="wcir-pdf"><a href="{pdf}" target="_blank" rel="noopener" data-vertical="wine">Download the PDF</a></p>{sample_link}
     </div>
   </section>
 
@@ -635,10 +639,14 @@ def render_page(cover: dict, body: str, toc: list, slug: str, source_name: str, 
 
 
 def main(argv: list[str]) -> int:
-    if len(argv) != 3:
+    if len(argv) not in (3, 4):
         print(__doc__.strip().split("\n\n")[1], file=sys.stderr)
         return 2
     src, slug = Path(argv[1]).expanduser(), argv[2]
+    sample_slug = argv[3] if len(argv) == 4 else None
+    if sample_slug and not re.fullmatch(r"q[1-4]-\d{4}-[a-z0-9-]+", sample_slug):
+        print(f"sample slug must look like q3-2026-santa-barbara-sample, got {sample_slug!r}", file=sys.stderr)
+        return 2
     if not re.fullmatch(r"q[1-4]-\d{4}-[a-z0-9-]+", slug):
         print(f"slug must look like q3-2026-central-coast, got {slug!r}", file=sys.stderr)
         return 2
@@ -656,7 +664,7 @@ def main(argv: list[str]) -> int:
     except ImportError_ as e:
         print(f"import_wcir: {e}", file=sys.stderr)
         return 1
-    page = render_page(cover, body, toc, slug, src.name, build)
+    page = render_page(cover, body, toc, slug, src.name, build, sample_slug)
     for bad in ("—", "–"):
         if bad in page:
             print(f"import_wcir: output contains {bad!r}; fix the source in WCI", file=sys.stderr)

@@ -64,7 +64,8 @@ BESPOKE = {
     "fit-call.html": "redirect stub, no chrome",
     "fit-call-confirm.html": "redirect stub, no chrome",
     "fractional-cfo-dtc-ecommerce.html": "redirect stub, consolidates SEO into /ecommerce",
-    "winery-assessment.html": "redirect stub, retired 2026-09-23 for /winery-visibility-snapshot",
+    "winery-assessment.html": "redirect stub, retired 2026-09-23; points at /wine-country-intelligence since 2026-10-10",
+    "winery-visibility-snapshot.html": "redirect stub, retired 2026-10-10 for /wine-country-intelligence",
     # Retired 2026-09-24: the three assessments (only bookable item is the Intro Call).
     "aesthetics-assessment.html": "redirect stub, retired 2026-09-24 for /intro-call",
     "ecommerce-assessment.html": "redirect stub, retired 2026-09-24 for /intro-call",
@@ -175,9 +176,8 @@ NAV_LINKS = [
         ("/discoverability", "AI Discoverability"),
     ]),
     ("/wineries", "Wine Country Intelligence", [
-        ("/wineries", "AI Advisory for Wineries"),
+        ("/wineries", "CFO Work for Wineries"),
         ("/wine-country-intelligence", "The Quarterly Report"),
-        ("/winery-visibility-snapshot", "Winery Visibility Snapshot"),
     ]),
     ("/about", "About"),
     ("/our-work", "Our Work"),

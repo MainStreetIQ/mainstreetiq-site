@@ -21,6 +21,7 @@ var WCIR_FORM_LIVE = true;
   var msg = document.getElementById('wcirSubscribeMsg');
   var email = document.getElementById('wcirEmail');
   var winery = document.getElementById('wcirWinery');
+  var name = document.getElementById('wcirName'); // optional: only the report page's box has it
   var btn = form.querySelector('button[type="submit"]');
   var label = btn.textContent;
   var FAIL = 'That didn\u2019t go through. Email wci@mainstreetiq.com and we\u2019ll add you.';
@@ -38,6 +39,11 @@ var WCIR_FORM_LIVE = true;
     e.preventDefault();
     setMsg('');
     var value = (email.value || '').trim();
+    var firstName = name ? (name.value || '').trim() : '';
+    if (name && !firstName) {
+      setMsg('Please enter your name.', 'err');
+      return;
+    }
     if (!value || value.indexOf('@') < 1) {
       setMsg('Please enter a valid email.', 'err');
       return;
@@ -51,6 +57,7 @@ var WCIR_FORM_LIVE = true;
       body: JSON.stringify({
         email: value,
         winery: (winery.value || '').trim(),
+        first_name: firstName,
         list: form.getAttribute('data-list') || 'wcir',
         source: path,
         honeypot: honeypot ? honeypot.value : ''
@@ -66,6 +73,7 @@ var WCIR_FORM_LIVE = true;
         setMsg('Thanks. The next edition will come to ' + value + '.', 'ok');
         email.value = '';
         winery.value = '';
+        if (name) name.value = '';
       } else {
         setMsg(FAIL, 'err');
       }
