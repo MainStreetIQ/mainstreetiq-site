@@ -75,6 +75,7 @@ def attr(text: str) -> str:
 
 
 RE_WINERIES_SHELF = re.compile(r"(mainstreetiq\.com)/wineries(?=(?:\?[^#\s]*)?#subscribe-)")
+RE_WINERIES_BARE = re.compile(r"(?<![\w/@.])((?:www\.)?mainstreetiq\.com)/wineries(?![\w/?#-])")
 
 
 def web_url(url: str) -> str:
@@ -89,6 +90,10 @@ def inline(text: str) -> str:
     """Markdown inline -> HTML. Links and autolinks are parked as placeholders
     first so the emphasis passes never see the underscores inside a URL."""
     parked: list[str] = []
+    if RE_WINERIES_SHELF.search(text):
+        # A buying line ("Get your county report: mainstreetiq.com/wineries") also
+        # prints the bare URL; it follows its #subscribe-* links to the report page.
+        text = RE_WINERIES_BARE.sub(r"\1/wine-country-intelligence", text)
 
     def park(s: str) -> str:
         parked.append(s)
@@ -390,24 +395,24 @@ OPTIONS = [
      "body": "The county report every quarter plus the Wine Pricing Report twice a year, for Santa Barbara County or San Luis Obispo County, with every winery ranked. You choose the county at checkout.",
      "price": "$800/yr per county",
      "buy": [("County edition, annual", "https://buy.stripe.com/00w4gA1ib19q8H8duRa3u01", "wine-wcir-county-annual")],
-     "detail": "#subscribe-county"},
+     "detail": "/wine-country-intelligence#county-edition"},
     {"title": "County edition, one issue", "badge": None,
      "body": "The {quarter} county report for one county, one time. Single issues are not discounted. You choose the county at checkout.",
      "price": "$250 per county",
      "buy": [("County edition, one issue", "https://buy.stripe.com/dRm5kE9OHcS8bTkbmJa3u16", "wine-wcir-county-single")],
-     "detail": "#subscribe-county-issue"},
+     "detail": "/wine-country-intelligence#county-edition"},
     {"title": "Monitor", "badge": None,
      "body": "The monthly report card for your own winery. The annual plan includes the county edition for the one county you choose: the county report every quarter plus the Wine Pricing Report twice a year.",
      "price": "$400/mo, or $4,000/yr",
      "buy": [("Monitor, annual", "https://buy.stripe.com/8x2bJ21ib7xO2iKcqNa3u0W", "wine-monitor-annual"),
              ("Monitor, monthly", "https://buy.stripe.com/7sY8wQ5yr05m5uW1M9a3u05", "wine-monitor-monthly")],
-     "detail": "#subscribe-monitor"},
+     "detail": "/monitor"},
     {"title": "Monitor Plus", "badge": None,
      "body": "The same report card with four peers you name, tracked beside you. Each extra peer beyond the four is $50/mo, or $500/yr on the annual plan. The annual plan includes the county edition for the one county you choose: the county report every quarter plus the Wine Pricing Report twice a year.",
      "price": "$600/mo, or $6,000/yr",
      "buy": [("Monitor Plus, annual", "https://buy.stripe.com/6oUcN6d0T7xOe1saiFa3u08", "wine-monitor-plus-annual"),
              ("Monitor Plus, monthly", "https://buy.stripe.com/aFa9AUe4X2du3mO76ta3u07", "wine-monitor-plus-monthly")],
-     "detail": "#subscribe-monitor-plus"},
+     "detail": "/monitor"},
 ]
 
 # Renewal and cancellation line, exactly as /wineries states it beside its Payment
@@ -441,7 +446,7 @@ def render_options(quarter: str) -> str:
             <p class="wcir-option-price">{esc(o['price'])}</p>
             <p>{esc(o['body'].replace('{quarter}', quarter))}</p>
             <p class="wcir-option-buy">{buttons}</p>
-            <p class="wcir-option-detail"><a href="/wine-country-intelligence{o['detail']}" data-vertical="wine">What this includes &rarr;</a></p>
+            <p class="wcir-option-detail"><a href="{o['detail']}" data-vertical="wine">What this includes &rarr;</a></p>
           </div>""")
     return "\n".join(cards)
 
@@ -590,7 +595,7 @@ def render_page(cover: dict, body: str, toc: list, slug: str, source_name: str, 
       <div class="section-header section-header-left">
         <span class="section-label">Choose your option</span>
         <h2 class="section-title">See where your own winery stands</h2>
-        <p class="section-subtitle">Buy online. Each card links to more about the option on the Wine Country Intelligence page.</p>
+        <p class="section-subtitle">Buy online. Each card links to more about the option.</p>
       </div>
       <div class="wcir-options">
 {render_options(q)}
