@@ -50,6 +50,8 @@ RE_H = re.compile(r"^(#{1,6}) (.+)$")
 RE_SAMPLE_BANNER = re.compile(r"^> \*\*(SAMPLE EDITION \| [^*]+)\*\*$")
 # A sample page has no /reports/ PDF of its own; its PDF is the public sample.
 SAMPLE_PDF = "/samples/wine-country-intelligence-report-sample.pdf"
+# The free list sends the regional Central Coast report, whatever edition a page shows.
+FREE_REPORT = "Central Coast Wine Country Report"
 RE_OL = re.compile(r"^(\d+)\. (.+)$")
 RE_SMALL = re.compile(r"^<small>(.+)</small>$")
 
@@ -491,6 +493,8 @@ def render_page(cover: dict, body: str, toc: list, slug: str, source_name: str, 
     q, title = cover["quarter"], cover["title"]
     count = cover["count_phrase"][0].upper() + cover["count_phrase"][1:]
     desc = f"{title}, {q} edition: {cover['count_phrase'].lower()} across {cover['subtitle']}."
+    if "banner" in cover:
+        desc = f"Sample: {desc} Winery names and per-winery figures are illustrative."
     sample = "banner" in cover
     pdf = SAMPLE_PDF if sample else f"/reports/wcir-{slug}.pdf"
     banner = (f'\n      <p class="wcir-sample-banner" style="display: inline-block; background: rgba(255,255,255,0.12); '
@@ -504,7 +508,7 @@ def render_page(cover: dict, body: str, toc: list, slug: str, source_name: str, 
              "nav/footer/body link on any other page. The only path to it is the emailed\n"
              "       link. See the msiq-site operating doc, \"WCIR quarterly delivery pages\".")
     toc_items = "\n".join(f'              <li><a href="#{hid}">{esc(text)}</a></li>' for hid, text in toc)
-    subject = f"Send me the next {title}"
+    subject = f"Send me the next {FREE_REPORT}"
     mailto = "mailto:wci@mainstreetiq.com?subject=" + subject.replace(" ", "%20")
     provenance = f"{source_name}" + (f", build {build}" if build else "")
     return f"""<!--sitegen:params
@@ -532,7 +536,7 @@ def render_page(cover: dict, body: str, toc: list, slug: str, source_name: str, 
 
   <meta name="description" content="{attr(desc)}">
 
-  <meta property="og:title" content="{attr(title)} | {q}">
+  <meta property="og:title" content="{attr(title)} | {q}{' Sample' if sample else ''}">
   <meta property="og:description" content="{attr(desc)}">
   <meta property="og:type" content="article">
   <meta property="og:image" content="https://www.mainstreetiq.com/assets/images/og-image.jpg">
@@ -591,7 +595,7 @@ def render_page(cover: dict, body: str, toc: list, slug: str, source_name: str, 
     <div class="container">
       <div class="wcir-subscribe">
         <h2 class="section-title">Get the next edition when it is out.</h2>
-        <p>The {esc(title)} is free and comes out every quarter. Wine Country Intelligence keeps its own list, separate from the Main Street IQ email list.</p>
+        <p>The {esc(FREE_REPORT)} is free and comes out every quarter. Wine Country Intelligence keeps its own list, separate from the Main Street IQ email list.</p>
         <p id="wcirSubscribeFallback">Email <a href="{mailto}" data-vertical="wine">wci@mainstreetiq.com</a> to get the next edition.</p>
         <form id="wcirSubscribeForm" data-list="wcir" novalidate hidden>
           <label for="wcirEmail">Email</label>
