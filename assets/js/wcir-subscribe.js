@@ -1,4 +1,7 @@
-// Subscribe box on the WCIR report pages (/wcir/*), built by _scripts/import_wcir.py.
+// Subscribe box on the WCIR report pages (/wcir/*), built by _scripts/import_wcir.py,
+// and the email gate on /wineries. A form with data-next opens that page once the
+// Zoho write has landed (the gate to the free summary); without it, the box confirms
+// in place.
 //
 // THE SWITCH. While false, the page shows the mailto line and the form stays
 // hidden, which is also what a visitor without JavaScript sees. Set it to true
@@ -54,6 +57,12 @@ var WCIR_FORM_LIVE = true;
       })
     }).then(function (r) {
       if (r.ok) {
+        var next = form.getAttribute('data-next');
+        if (next) {
+          setMsg('Thanks. Opening the summary\u2026', 'ok');
+          window.location.assign(next);
+          return;
+        }
         setMsg('Thanks. The next edition will come to ' + value + '.', 'ok');
         email.value = '';
         winery.value = '';

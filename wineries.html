@@ -113,123 +113,91 @@
     <div class="container">
       <span class="section-label">Wine Country Intelligence | Main Street IQ</span>
       <h1>When a visitor asks AI where to taste, does your winery come up?</h1>
-      <p>AI advisory for wineries, built on a quarterly benchmark of Central Coast wineries and what AI search says about each one. In Q3 2026, 45 of 442 wineries accounted for 47.5% of every time AI named a winery.</p>
+      <p>AI advisory for wineries, built on a quarterly benchmark of Central Coast wineries and what AI search says about each one.</p>
       <div class="hero-buttons">
-        <a href="#subscribe" class="btn btn-white">See the options &rarr;</a>
-        <a href="https://calendly.com/scott_mainstreetiq/30min?utm_source=mainstreetiq-site&utm_medium=website&utm_campaign=wineries-hero" class="btn btn-outline-white" target="_blank" rel="noopener">Book an Intro Call &rarr;</a>
+        <a href="#q3-findings" class="btn btn-white" data-vertical="wine">Read the free Q3 summary &rarr;</a>
+        <a href="#subscribe" class="hero-text-link" data-vertical="wine">See the options</a>
       </div>
+      <p class="hero-fine">The free Central Coast edition is a condensed summary of this quarter's findings. The full quarterly report for your county, with every winery we score ranked, is available to buy by the issue or by the year.</p>
     </div>
   </section>
 
-  <!-- ===== THE SHELF (Phase 2, 2026-10-09). One product shelf, high on the page.
-       Card copy comes from _scripts/import_wcir.py OPTIONS (the gated Q3 page cards);
-       change it there, then mirror it here. data-stripe-product fires purchase_click. ===== -->
-  <section id="subscribe">
+  <!-- ===== WHAT THE Q3 REPORT FOUND (value-first spec, 2026-10-10). Every figure is taken from
+       ~/WCI/reports/wcir/build/2026-10/Main Street IQ Central Coast Wine Country Report - Q3 2026.md
+       (build 4011d659f802); never retype one from another page. Names no winery, so no client
+       disclosure. The free-report box below is the email gate: a successful sign-up writes the
+       Zoho Lead (list=wcir) and wcir-subscribe.js then opens the form's data-next page. ===== -->
+  <section class="bg-light" id="q3-findings">
     <div class="container">
       <div class="section-header">
-        <span class="section-label">Choose your option</span>
-        <h2 class="section-title">Start with the report, or put your winery on a monthly report card</h2>
-        <p class="section-subtitle">Every card below is self-serve. Pick one and check out online; no call required.</p>
+        <span class="section-label">What the Q3 report found</span>
+        <h2 class="section-title">The shortlist is increasingly written by AI</h2>
+        <p class="section-subtitle">From the Q3 2026 Central Coast Wine Country Report: 442 wineries scored across Santa Barbara and San Luis Obispo counties, and 2,644 answers from AI assistants on where to taste, which named a winery 23,432 times.</p>
       </div>
-      <div class="wcir-options">
-        <div class="wcir-option wcir-option-featured" id="subscribe-county">
-          <span class="wcir-option-badge">Recommended</span>
-          <h3>County edition, annual</h3>
-          <p class="wcir-option-price">$800/yr per county</p>
-          <p>The county report every quarter plus the Wine Pricing Report twice a year, for Santa Barbara County or San Luis Obispo County, with every winery ranked. You choose the county at checkout.</p>
-          <p class="wcir-option-buy"><a href="https://buy.stripe.com/00w4gA1ib19q8H8duRa3u01" target="_blank" rel="noopener" class="btn btn-primary" data-stripe-product="wine-wcir-county-annual" data-vertical="wine">County edition, annual &rarr;</a></p>
+      <div class="q3-stats">
+        <div class="q3-stat">
+          <p class="q3-stat-num">45 of 442</p>
+          <p>wineries account for 47.5%, nearly half, of every time AI names a winery.</p>
         </div>
-        <div class="wcir-option" id="subscribe-county-issue">
-          <h3>County edition, one issue</h3>
-          <p class="wcir-option-price">$250 per county</p>
-          <p>The Q3 2026 county report for one county, one time. Single issues are not discounted. You choose the county at checkout.</p>
-          <p class="wcir-option-buy"><a href="https://buy.stripe.com/dRm5kE9OHcS8bTkbmJa3u16" target="_blank" rel="noopener" class="btn btn-primary" data-stripe-product="wine-wcir-county-single" data-vertical="wine">County edition, one issue &rarr;</a></p>
+        <div class="q3-stat">
+          <p class="q3-stat-num">54 of 442</p>
+          <p>were never named in an answer about their own county.</p>
         </div>
-        <div class="wcir-option" id="subscribe-monitor">
-          <h3>Monitor</h3>
-          <p class="wcir-option-price">$400/mo, or $4,000/yr</p>
-          <p>The monthly report card for your own winery. The annual plan includes the county edition for the one county you choose: the county report every quarter plus the Wine Pricing Report twice a year.</p>
-          <p class="wcir-option-buy"><a href="https://buy.stripe.com/8x2bJ21ib7xO2iKcqNa3u0W" target="_blank" rel="noopener" class="btn btn-primary" data-stripe-product="wine-monitor-annual" data-vertical="wine">Monitor, annual &rarr;</a><a href="https://buy.stripe.com/7sY8wQ5yr05m5uW1M9a3u05" target="_blank" rel="noopener" class="btn btn-secondary" data-stripe-product="wine-monitor-monthly" data-vertical="wine">Monitor, monthly &rarr;</a></p>
-          <p class="wcir-option-detail"><a href="/monitor" data-vertical="wine">More on Monitor &rarr;</a></p>
-        </div>
-        <div class="wcir-option" id="subscribe-monitor-plus">
-          <h3>Monitor Plus</h3>
-          <p class="wcir-option-price">$600/mo, or $6,000/yr</p>
-          <p>The same report card with four peers you name, tracked beside you. Each extra peer beyond the four is $50/mo, or $500/yr on the annual plan. The annual plan includes the county edition for the one county you choose: the county report every quarter plus the Wine Pricing Report twice a year.</p>
-          <p class="wcir-option-buy"><a href="https://buy.stripe.com/6oUcN6d0T7xOe1saiFa3u08" target="_blank" rel="noopener" class="btn btn-primary" data-stripe-product="wine-monitor-plus-annual" data-vertical="wine">Monitor Plus, annual &rarr;</a><a href="https://buy.stripe.com/aFa9AUe4X2du3mO76ta3u07" target="_blank" rel="noopener" class="btn btn-secondary" data-stripe-product="wine-monitor-plus-monthly" data-vertical="wine">Monitor Plus, monthly &rarr;</a></p>
-          <p class="wcir-option-detail"><a href="/monitor" data-vertical="wine">More on Monitor &rarr;</a></p>
+        <div class="q3-stat">
+          <p class="q3-stat-num">40 and 15</p>
+          <p>Since Q2 2026, 40 wineries were named less often and 15 more often, of the 393 we measured both quarters.</p>
         </div>
       </div>
-      <p class="wcir-options-terms">Adding a second county? A second county edition, annual, is 25% off: $600/yr instead of $800, including when your first county comes with a Monitor or Monitor Plus annual plan, and it stays 25% off as long as you keep both counties. The second county is invoiced: we send a renewal invoice before each term, it renews when paid, and you cancel by replying. To set it up, write to <a href="mailto:scott@mainstreetiq.com?subject=Second%20county">scott@mainstreetiq.com</a>.</p>
-      <p class="wcir-options-terms">Subscriptions bought online renew automatically until canceled; cancel online anytime, effective at the end of your current paid period. Annual plans run a 12-month initial term: cancel within 30 days of a charge and we refund pro-rata for unused months; cancel later and the subscription stops at the end of the term without a refund of the remainder. Prices are subject to a standard annual adjustment of up to 10% at renewal, with at least 30 days notice. See <a href="/legal/subscription-terms">Subscription Terms</a> and <a href="/legal/refund-cancellation">Refunds</a>.</p>
-      <div class="wcir-subscribe shelf-free" id="subscribe-free">
-        <h3>The free quarterly report</h3>
-        <p>The Central Coast Wine Country Report is free and comes out every quarter: the region's leaders, the AI-visibility read and the market, across both counties. Wine Country Intelligence keeps its own list, separate from the Main Street IQ email list. Want to see a county edition first? <a href="/wine-country-intelligence#wcir-signup" data-vertical="wine">Request a sample</a>.</p>
+      <p class="q3-note">About as many wineries were named overall; what changed is which ones. Most of the drop came from what the assistants that search the web for every answer now find, which is a change in the answers, measured, not a finding about any winery.</p>
+
+      <h3 class="q3-gaps-title">The five gaps we found most often in the categories that take sustained work</h3>
+      <p class="q3-gaps-sub">Across the 442 wineries in both counties, each counted only where we could check.</p>
+      <ol class="q3-gaps">
+        <li><span class="q3-gap-num">338 of 442</span> not in the search results for &ldquo;wine tasting&rdquo; searches</li>
+        <li><span class="q3-gap-num">332 of 442</span> no press on the first page of its own name search</li>
+        <li><span class="q3-gap-num">273 of 442</span> not in the Google Maps results for discovery searches</li>
+        <li><span class="q3-gap-num">100 of 429</span> no new reviews in 90 days, of the wineries we could check</li>
+        <li><span class="q3-gap-num">72 of 442</span> few or no Google reviews</li>
+      </ol>
+
+      <div class="wcir-subscribe q3-gate" id="subscribe-free">
+        <h3>Read the free Q3 summary</h3>
+        <p>The Central Coast Wine Country Report is free and comes out every quarter: the region's leaders, the AI-visibility read and the market, across both counties. Leave your email and the Q3 summary opens; each new edition then comes to the same address. Wine Country Intelligence keeps its own list, separate from the Main Street IQ email list.</p>
         <p id="wcirSubscribeFallback">Email <a href="mailto:wci@mainstreetiq.com?subject=Send%20me%20the%20next%20Central%20Coast%20Wine%20Country%20Report" data-vertical="wine">wci@mainstreetiq.com</a> to get the next edition.</p>
-        <form id="wcirSubscribeForm" data-list="wcir" novalidate hidden>
+        <form id="wcirSubscribeForm" data-list="wcir" data-next="/wcir/q3-2026-central-coast?utm_source=site&amp;utm_medium=wineries&amp;utm_campaign=q3-2026-central-coast" novalidate hidden>
           <label for="wcirEmail">Email</label>
           <input type="email" id="wcirEmail" name="email" required autocomplete="email" maxlength="100" placeholder="you@winery.com">
           <label for="wcirWinery">Winery (optional)</label>
           <input type="text" id="wcirWinery" name="winery" autocomplete="organization" maxlength="120">
           <input type="text" name="honeypot" class="wcir-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
           <p class="wcir-fine">Sending this adds you to the Wine Country Intelligence list.</p>
-          <button type="submit" class="btn btn-primary">Send me the next edition</button>
+          <button type="submit" class="btn btn-primary">Read the free Q3 summary</button>
           <div class="wcir-subscribe-msg" id="wcirSubscribeMsg" role="status" aria-live="polite"></div>
         </form>
         <p class="wcir-fine">Unsubscribe anytime. <a href="/legal/privacy">Privacy Policy</a>.</p>
       </div>
-    </div>
-  </section>
-
-  <!-- ===== TWO LINES OF WORK FOR A WINERY (2026-09-23) ===== -->
-  <section class="bg-light">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label">Two ways we work with wineries</span>
-        <h2 class="section-title">Wine Country Intelligence and Fractional CFO</h2>
-        <p class="section-subtitle">A winery can use either one, or both.</p>
-      </div>
-      <div class="card-grid">
-        <div class="card" style="border-color: var(--navy);">
-          <h3><a href="/wine-country-intelligence" style="color: inherit; text-decoration: none;">Wine Country Intelligence &rarr;</a></h3>
-          <p>AI advisory for wineries, built on a quarterly benchmark of Central Coast wineries and what AI search says about each one. The quarterly report and the Winery Visibility Snapshot show where you rank, and where visitors cannot find you.</p>
-          <p><a href="/wine-country-intelligence" style="color: var(--color-navy);">The quarterly report</a> &middot; <a href="/winery-visibility-snapshot" style="color: var(--color-navy);">Winery Visibility Snapshot</a></p>
-        </div>
-        <div class="card" style="border-color: var(--navy);">
-          <h3><a href="/fractional-cfo" style="color: inherit; text-decoration: none;">Fractional CFO &rarr;</a></h3>
-          <p>Fractional and interim CFO leadership that works the decisions alongside you, not from the sideline: club pricing, allocation, capital, and the cash cycle between harvest and release. Engage and Manage are the retainers.</p>
-          <p><a href="/fractional-cfo" style="color: var(--color-navy);">Fractional CFO</a> &middot; <a href="/interim-finance-leadership" style="color: var(--color-navy);">Interim Leadership</a></p>
-        </div>
-      </div>
+      <p class="q3-full">The full quarterly report for your county, with every winery we score ranked, is available to buy. <a href="#subscribe" data-vertical="wine">See the options &rarr;</a></p>
     </div>
   </section>
 
   <section>
     <div class="container">
       <div class="section-header">
-        <span class="section-label">The unique problems wineries face</span>
-        <h2 class="section-title">Five operational pains we hear most often</h2>
+        <span class="section-label">Why it matters for a winery</span>
+        <h2 class="section-title">Where the findings meet the business</h2>
       </div>
       <div class="problem-list">
         <div class="problem-item">
-          <h3>1. Your customer base is several different customer bases</h3>
-          <p>Wine club members convert on a different signal than tasting-room visitors. DTC shipping buyers are not your wholesale buyers. Allocation-list members behave nothing like first-time tasting flight customers. Most wineries have one website, one marketing motion, and one sales pitch trying to serve all of them. Conversion and retention math gets fuzzy fast.</p>
+          <h3>1. The AI search shift hits wine harder than most market segments</h3>
+          <p>A prospect searching "best wineries in Santa Barbara County" used to get a Google map with photos and reviews. Now they get a ChatGPT or Claude summary that names three to five wineries, and if you are not in that list, you do not get the click. The lever that changes this is not on your website; it is in your external citation footprint. <a href="/audit" style="color: var(--color-navy);">A Website Audit measures exactly that footprint</a>.</p>
         </div>
         <div class="problem-item">
           <h3>2. Tasting room traffic is volatile and the trend is not your friend</h3>
           <p>Foot traffic is hostage to wildfires, weather, gas prices, regional tourism, and the slow generational shift away from "go to a winery" as a default weekend activity. The wineries doing best are the ones who stopped depending on it and built club + DTC + allocation as the financial floor.</p>
         </div>
         <div class="problem-item">
-          <h3>3. Wine club retention is where the math actually lives</h3>
-          <p>Club retention below roughly 60% is where the unit economics get fragile fast, but most operators cannot tell you their exact retention rate by club tier, cohort, or vintage. You cannot fix what you cannot measure.</p>
-        </div>
-        <div class="problem-item">
-          <h3>4. The AI search shift hits wine harder than most market segments</h3>
-          <p>A prospect searching "best wineries in Santa Barbara County" used to get a Google map with photos and reviews. Now they get a ChatGPT or Claude summary that names three to five wineries, and if you are not in that list, you do not get the click. The lever that changes this is not on your website; it is in your external citation footprint. <a href="/audit" style="color: var(--color-navy);">A Website Audit measures exactly that footprint</a>.</p>
-        </div>
-        <div class="problem-item">
-          <h3>5. Distribution is consolidating and pricing power is shrinking</h3>
-          <p>Wholesale margins are tightening as the three-tier system consolidates. The wineries that survive this are the ones who built direct channels strong enough to subsidize whatever wholesale becomes. The math on this transition is a CFO question, not a marketing question.</p>
+          <h3>3. Your customer base is several different customer bases</h3>
+          <p>Wine club members convert on a different signal than tasting-room visitors. DTC shipping buyers are not your wholesale buyers. Allocation-list members behave nothing like first-time tasting flight customers. Most wineries have one website, one marketing motion, and one sales pitch trying to serve all of them. Conversion and retention math gets fuzzy fast.</p>
         </div>
       </div>
     </div>
@@ -239,10 +207,16 @@
   <section class="bg-light" id="offerings">
     <div class="container">
       <div class="section-header">
-        <span class="section-label">How we work with you</span>
-        <h2 class="section-title">Discover, diagnose, monitor, advise</h2>
+        <span class="section-label">How Wine Country Intelligence helps</span>
+        <h2 class="section-title">From the region to your own winery</h2>
         <p class="section-subtitle">There are a few ways into this, and you do not have to know which one fits today. Start with a finding or an Intro Call; the right depth becomes obvious from there.</p>
       </div>
+      <ol class="wci-path">
+        <li><strong>The free report</strong> shows the region: who AI names, and the gaps we found most often.</li>
+        <li><strong>The county edition</strong> ranks every winery we score in your county, on all seven categories, every quarter.</li>
+        <li><strong>Monitor</strong> re-scores your own winery on the same seven categories every month, so you see what moved.</li>
+        <li><strong>Monitor Plus</strong> adds the four peers you name, tracked beside you.</li>
+      </ol>
 
       <!-- 7 scored categories x 4 readings (Q3 2026 rubric; rows match the seven
            categories on /wine-country-intelligence). Answers "what do I actually get at
@@ -370,19 +344,92 @@
     </div>
   </section>
 
-  <!-- ===== STATUS QUO RISK (loss-aversion frame) ===== -->
-  <section class="bg-navy">
+  <!-- ===== WHAT YOU GET EACH QUARTER (value-first spec, 2026-10-10). What the paid county
+       edition holds, in the gated Q3 report's own words. Q3 SAMPLE SLOT: a sample-link line
+       goes at the end of this section once msiq-66 sends the approved path; until then
+       nothing renders here. ===== -->
+  <section id="county-edition">
     <div class="container">
       <div class="section-header">
-        <span class="section-label" style="color: var(--color-sky);">Status quo math</span>
-        <h2 class="section-title">What another six months of waiting actually costs</h2>
+        <span class="section-label">What you get each quarter</span>
+        <h2 class="section-title">The county edition, in full</h2>
+        <p class="section-subtitle">The free summary covers the region. The county edition is the full quarterly report for Santa Barbara County or San Luis Obispo County.</p>
       </div>
-      <div class="container-narrow" style="max-width: 820px; margin: 0 auto; font-size: 1.05rem; line-height: 1.7;">
-        <p>Every harvest that sells out at last year's pricing is a harvest you under-priced. In the county benchmarks we publish, the top of the pricing curve sits materially above the bottom, and the wineries up there did not get there by accident.</p>
-        <p>Every wine club month with silent churn you do not see in your reports is two-to-three months of LTV gone. Most wineries discover their club is shrinking when the annual rollup shows the gap; by then the buyer who left has already replaced you in their cellar.</p>
-        <p>In Q3 2026, 45 of the 442 Central Coast wineries we measure accounted for 47.5% of every time an AI assistant named a winery, and the ten named most often took 17.4%. Every quarter outside that group is a quarter in which nearly half of every AI naming goes to someone else.</p>
-        <p>Every allocation released without modeled cohort LTV math is an allocation that may be priced for the wrong customer. The right tier at the wrong price funds a one-time buyer instead of a fifteen-year member.</p>
-        <p style="margin-top: 1.5rem; font-style: italic; opacity: 0.85;">Most of these are not catastrophic in any single month. The compounding is what hurts.</p>
+      <ul class="county-edition-list">
+        <li><strong>Every winery we score in your county, ranked</strong>, yours included: 169 in Santa Barbara County and 273 in San Luis Obispo County this quarter.</li>
+        <li><strong>All seven categories</strong>: Third-Party Presence, Review Volume &amp; Reputation, Search &amp; Map Discovery, AI-Ready Booking &amp; Buying, Profile Accuracy, Citation Readiness and Social.</li>
+        <li><strong>The moves</strong>: the wineries in your county that moved most this quarter, both ways.</li>
+        <li><strong>Three of the common gaps, counted across your county</strong>: few Google reviews, press and Maps.</li>
+        <li><strong>Your county's own grape market</strong>, and the full method.</li>
+        <li><strong>The Wine Pricing Report twice a year</strong>, on the annual plan.</li>
+      </ul>
+      <p class="county-edition-sample">Want to see a county edition first? <a href="/wine-country-intelligence#wcir-signup" data-vertical="wine">Request a sample</a>.</p>
+    </div>
+  </section>
+
+  <!-- ===== THE SHELF (Phase 2, 2026-10-09; moved below the case 2026-10-10). One product shelf.
+       Card copy comes from _scripts/import_wcir.py OPTIONS (the gated Q3 page cards);
+       change it there, then mirror it here. data-stripe-product fires purchase_click. ===== -->
+  <section class="bg-light" id="subscribe">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Choose your option</span>
+        <h2 class="section-title">Start with the report, or put your winery on a monthly report card</h2>
+        <p class="section-subtitle">Every card below is self-serve. Pick one and check out online; no call required.</p>
+      </div>
+      <div class="wcir-options">
+        <div class="wcir-option wcir-option-featured" id="subscribe-county">
+          <span class="wcir-option-badge">Recommended</span>
+          <h3>County edition, annual</h3>
+          <p class="wcir-option-price">$800/yr per county</p>
+          <p>The county report every quarter plus the Wine Pricing Report twice a year, for Santa Barbara County or San Luis Obispo County, with every winery ranked. You choose the county at checkout.</p>
+          <p class="wcir-option-buy"><a href="https://buy.stripe.com/00w4gA1ib19q8H8duRa3u01" target="_blank" rel="noopener" class="btn btn-primary" data-stripe-product="wine-wcir-county-annual" data-vertical="wine">County edition, annual &rarr;</a></p>
+        </div>
+        <div class="wcir-option" id="subscribe-county-issue">
+          <h3>County edition, one issue</h3>
+          <p class="wcir-option-price">$250 per county</p>
+          <p>The Q3 2026 county report for one county, one time. Single issues are not discounted. You choose the county at checkout.</p>
+          <p class="wcir-option-buy"><a href="https://buy.stripe.com/dRm5kE9OHcS8bTkbmJa3u16" target="_blank" rel="noopener" class="btn btn-primary" data-stripe-product="wine-wcir-county-single" data-vertical="wine">County edition, one issue &rarr;</a></p>
+        </div>
+        <div class="wcir-option" id="subscribe-monitor">
+          <h3>Monitor</h3>
+          <p class="wcir-option-price">$400/mo, or $4,000/yr</p>
+          <p>The monthly report card for your own winery. The annual plan includes the county edition for the one county you choose: the county report every quarter plus the Wine Pricing Report twice a year.</p>
+          <p class="wcir-option-buy"><a href="https://buy.stripe.com/8x2bJ21ib7xO2iKcqNa3u0W" target="_blank" rel="noopener" class="btn btn-primary" data-stripe-product="wine-monitor-annual" data-vertical="wine">Monitor, annual &rarr;</a><a href="https://buy.stripe.com/7sY8wQ5yr05m5uW1M9a3u05" target="_blank" rel="noopener" class="btn btn-secondary" data-stripe-product="wine-monitor-monthly" data-vertical="wine">Monitor, monthly &rarr;</a></p>
+          <p class="wcir-option-detail"><a href="/monitor" data-vertical="wine">More on Monitor &rarr;</a></p>
+        </div>
+        <div class="wcir-option" id="subscribe-monitor-plus">
+          <h3>Monitor Plus</h3>
+          <p class="wcir-option-price">$600/mo, or $6,000/yr</p>
+          <p>The same report card with four peers you name, tracked beside you. Each extra peer beyond the four is $50/mo, or $500/yr on the annual plan. The annual plan includes the county edition for the one county you choose: the county report every quarter plus the Wine Pricing Report twice a year.</p>
+          <p class="wcir-option-buy"><a href="https://buy.stripe.com/6oUcN6d0T7xOe1saiFa3u08" target="_blank" rel="noopener" class="btn btn-primary" data-stripe-product="wine-monitor-plus-annual" data-vertical="wine">Monitor Plus, annual &rarr;</a><a href="https://buy.stripe.com/aFa9AUe4X2du3mO76ta3u07" target="_blank" rel="noopener" class="btn btn-secondary" data-stripe-product="wine-monitor-plus-monthly" data-vertical="wine">Monitor Plus, monthly &rarr;</a></p>
+          <p class="wcir-option-detail"><a href="/monitor" data-vertical="wine">More on Monitor &rarr;</a></p>
+        </div>
+      </div>
+      <p class="wcir-options-terms">Adding a second county? A second county edition, annual, is 25% off: $600/yr instead of $800, including when your first county comes with a Monitor or Monitor Plus annual plan, and it stays 25% off as long as you keep both counties. The second county is invoiced: we send a renewal invoice before each term, it renews when paid, and you cancel by replying. To set it up, write to <a href="mailto:scott@mainstreetiq.com?subject=Second%20county">scott@mainstreetiq.com</a>.</p>
+      <p class="wcir-options-terms">Subscriptions bought online renew automatically until canceled; cancel online anytime, effective at the end of your current paid period. Annual plans run a 12-month initial term: cancel within 30 days of a charge and we refund pro-rata for unused months; cancel later and the subscription stops at the end of the term without a refund of the remainder. Prices are subject to a standard annual adjustment of up to 10% at renewal, with at least 30 days notice. See <a href="/legal/subscription-terms">Subscription Terms</a> and <a href="/legal/refund-cancellation">Refunds</a>.</p>
+    </div>
+  </section>
+
+  <!-- ===== TWO LINES OF WORK FOR A WINERY (2026-09-23) ===== -->
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Two ways we work with wineries</span>
+        <h2 class="section-title">Wine Country Intelligence and Fractional CFO</h2>
+        <p class="section-subtitle">A winery can use either one, or both.</p>
+      </div>
+      <div class="card-grid">
+        <div class="card" style="border-color: var(--navy);">
+          <h3><a href="/wine-country-intelligence" style="color: inherit; text-decoration: none;">Wine Country Intelligence &rarr;</a></h3>
+          <p>AI advisory for wineries, built on a quarterly benchmark of Central Coast wineries and what AI search says about each one. The quarterly report and the Winery Visibility Snapshot show where you rank, and where visitors cannot find you.</p>
+          <p><a href="/wine-country-intelligence" style="color: var(--color-navy);">The quarterly report</a> &middot; <a href="/winery-visibility-snapshot" style="color: var(--color-navy);">Winery Visibility Snapshot</a></p>
+        </div>
+        <div class="card" id="cfo-for-wineries" style="border-color: var(--navy);">
+          <h3><a href="/fractional-cfo" style="color: inherit; text-decoration: none;">Fractional CFO &rarr;</a></h3>
+          <p>Fractional and interim CFO leadership that works the decisions alongside you, not from the sideline: club pricing, allocation, capital, and the cash cycle between harvest and release. Engage and Manage are the retainers.</p>
+          <p><a href="/fractional-cfo" style="color: var(--color-navy);">Fractional CFO</a> &middot; <a href="/interim-finance-leadership" style="color: var(--color-navy);">Interim Leadership</a></p>
+        </div>
       </div>
     </div>
   </section>
@@ -556,7 +603,32 @@
     .wcir-subscribe-msg.ok { color: var(--color-success); }
     .wcir-subscribe-msg.err { color: var(--color-error); }
     .wcir-fine { font-size: 0.875rem; color: var(--color-neutral); }
-    .shelf-free { margin-top: 2.5rem; }
+
+    /* Value-first layout (2026-10-10) */
+    .hero .hero-buttons { align-items: center; }
+    .hero-text-link { color: var(--color-white); font-weight: 500; text-decoration: underline; text-underline-offset: 3px; padding: 0.5rem 0.25rem; }
+    .hero-text-link:hover { color: var(--color-sky); }
+    .hero p.hero-fine { font-size: 1rem; max-width: 620px; margin-top: 1.5rem; }
+    .q3-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 1.25rem; margin-top: 1rem; }
+    .q3-stat { background: var(--color-white); border: 1px solid var(--color-border); border-top: 3px solid var(--color-navy); border-radius: 6px; padding: 1.25rem; }
+    .q3-stat p { margin: 0; line-height: 1.55; }
+    .q3-stat .q3-stat-num { font-size: 1.9rem; font-weight: 300; color: var(--color-navy); margin-bottom: 0.35rem; font-variant-numeric: tabular-nums; }
+    .q3-note { max-width: 820px; margin-top: 1.25rem; font-size: 0.95rem; color: var(--color-neutral); line-height: 1.6; }
+    .q3-gaps-title { font-size: 1.3rem; margin: 2.75rem 0 0.35rem; color: var(--color-dark-text); }
+    .q3-gaps-sub { margin: 0 0 1rem; color: var(--color-neutral); font-size: 0.95rem; }
+    .q3-gaps { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 0.75rem; }
+    .q3-gaps li { background: var(--color-white); border: 1px solid var(--color-border); border-radius: 6px; padding: 1rem; line-height: 1.5; font-size: 0.95rem; }
+    .q3-gap-num { display: block; font-size: 1.35rem; font-weight: 300; color: var(--color-navy); margin-bottom: 0.25rem; font-variant-numeric: tabular-nums; }
+    .q3-gate { margin-top: 2.75rem; background: var(--color-white); border: 1px solid var(--color-border); border-radius: 8px; padding: 1.75rem; }
+    .q3-gate h3 { margin-top: 0; }
+    .q3-full { margin-top: 1.25rem; }
+    .q3-full a, .county-edition-sample a { color: var(--color-navy); text-decoration: underline; text-underline-offset: 2px; }
+    .wci-path { max-width: 860px; margin: 0 auto 2.25rem; padding-left: 1.25rem; line-height: 1.6; }
+    .wci-path li { margin-bottom: 0.5rem; }
+    .wci-path strong { color: var(--color-navy); }
+    .county-edition-list { max-width: 860px; margin: 0 auto; padding-left: 1.25rem; line-height: 1.6; }
+    .county-edition-list li { margin-bottom: 0.6rem; }
+    .county-edition-sample { max-width: 860px; margin: 1.25rem auto 0; }
 
     /* DDMA 7x4 matrix. Clones the .vscpa-table pattern from
        fractional-cfo-vs-cpa.html (row headers as tbody th, one highlighted
