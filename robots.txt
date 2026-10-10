@@ -1,4 +1,6 @@
 User-agent: *
+Disallow: /reports/
+Disallow: /samples/wine-country-intelligence-report-sample.pdf
 Allow: /
 
 Sitemap: https://www.mainstreetiq.com/sitemap.xml
@@ -17,81 +19,125 @@ Sitemap: https://www.mainstreetiq.com/sitemap.xml
 
 # OpenAI
 User-agent: GPTBot
+Disallow: /reports/
+Disallow: /samples/wine-country-intelligence-report-sample.pdf
 Allow: /
 
 User-agent: OAI-SearchBot
+Disallow: /reports/
+Disallow: /samples/wine-country-intelligence-report-sample.pdf
 Allow: /
 
 User-agent: ChatGPT-User
+Disallow: /reports/
+Disallow: /samples/wine-country-intelligence-report-sample.pdf
 Allow: /
 
 # Anthropic
 User-agent: anthropic-ai
+Disallow: /reports/
+Disallow: /samples/wine-country-intelligence-report-sample.pdf
 Allow: /
 
 User-agent: ClaudeBot
+Disallow: /reports/
+Disallow: /samples/wine-country-intelligence-report-sample.pdf
 Allow: /
 
 User-agent: Claude-Web
+Disallow: /reports/
+Disallow: /samples/wine-country-intelligence-report-sample.pdf
 Allow: /
 
 # Google AI (Search Generative Experience, Gemini, Vertex AI grounding)
 User-agent: Google-Extended
+Disallow: /reports/
+Disallow: /samples/wine-country-intelligence-report-sample.pdf
 Allow: /
 
 # Perplexity
 User-agent: PerplexityBot
+Disallow: /reports/
+Disallow: /samples/wine-country-intelligence-report-sample.pdf
 Allow: /
 
 User-agent: Perplexity-User
+Disallow: /reports/
+Disallow: /samples/wine-country-intelligence-report-sample.pdf
 Allow: /
 
 # Common Crawl (training data feedstock for many models)
 User-agent: CCBot
+Disallow: /reports/
+Disallow: /samples/wine-country-intelligence-report-sample.pdf
 Allow: /
 
 # Apple Intelligence
 User-agent: Applebot
+Disallow: /reports/
+Disallow: /samples/wine-country-intelligence-report-sample.pdf
 Allow: /
 
 User-agent: Applebot-Extended
+Disallow: /reports/
+Disallow: /samples/wine-country-intelligence-report-sample.pdf
 Allow: /
 
 # Meta AI
 User-agent: Meta-ExternalAgent
+Disallow: /reports/
+Disallow: /samples/wine-country-intelligence-report-sample.pdf
 Allow: /
 
 User-agent: Meta-ExternalFetcher
+Disallow: /reports/
+Disallow: /samples/wine-country-intelligence-report-sample.pdf
 Allow: /
 
 User-agent: FacebookBot
+Disallow: /reports/
+Disallow: /samples/wine-country-intelligence-report-sample.pdf
 Allow: /
 
 # Amazon (Alexa+, Rufus, etc.)
 User-agent: Amazonbot
+Disallow: /reports/
+Disallow: /samples/wine-country-intelligence-report-sample.pdf
 Allow: /
 
 # You.com
 User-agent: YouBot
+Disallow: /reports/
+Disallow: /samples/wine-country-intelligence-report-sample.pdf
 Allow: /
 
 # ByteDance / TikTok / Doubao
 User-agent: Bytespider
+Disallow: /reports/
+Disallow: /samples/wine-country-intelligence-report-sample.pdf
 Allow: /
 
 # Mistral
 User-agent: MistralAI-User
+Disallow: /reports/
+Disallow: /samples/wine-country-intelligence-report-sample.pdf
 Allow: /
 
 # Cohere
 User-agent: cohere-ai
+Disallow: /reports/
+Disallow: /samples/wine-country-intelligence-report-sample.pdf
 Allow: /
 
 User-agent: cohere-training-data-crawler
+Disallow: /reports/
+Disallow: /samples/wine-country-intelligence-report-sample.pdf
 Allow: /
 
 # DuckDuckGo AI
 User-agent: DuckAssistBot
+Disallow: /reports/
+Disallow: /samples/wine-country-intelligence-report-sample.pdf
 Allow: /
 
 # ---------------------------------------------------------------------------
@@ -112,8 +158,17 @@ Allow: /
 #         GitHub Pages cannot set an X-Robots-Tag header. robots.txt is the
 #         only lever available for those files.
 #
+# Every User-agent group above repeats the Disallow lines. Under RFC 9309 a
+# crawler that matches a named group ignores the * group, so a rule kept only
+# under * never reaches GPTBot, ClaudeBot, PerplexityBot and the rest
+# (corrected 2026-10-10; a lone trailing * group carried /reports/ until then).
+#
+# /samples/wine-country-intelligence-report-sample.pdf is disallowed because
+#         the sample edition is built on invented wineries with illustrative
+#         figures. It is labeled on every page, but an AI crawler that ingests
+#         it could repeat an invented winery as a real one. It stays linked for
+#         people; it is kept out of crawls.
+#
 # Neither mechanism is access control. Both are advisory and bind only
 # crawlers that choose to honor them. Anyone holding the link can read either.
 # ---------------------------------------------------------------------------
-User-agent: *
-Disallow: /reports/
