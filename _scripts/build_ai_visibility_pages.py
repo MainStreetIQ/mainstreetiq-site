@@ -190,7 +190,7 @@ def proof_section(c):
     """Wine proof, scoped honestly per county. See PROOF CONSTRAINT in the docstring."""
     if c["wcir"] == "measured":
         body = f"""        <p>Wine is where the AI-search shift hit hardest and earliest, and {c['county']} is where we measured it and published the result. A visitor searching for the best wineries in the county used to get a map; now they get a three-to-five-name answer, and the wineries left off it lose the visit.</p>
-        <p>The <a href="/wineries" style="color: var(--color-sky);">Wine Country Intelligence Report</a> benchmarks every tracked winery in Santa Barbara and San Luis Obispo counties on exactly this: which wineries the AI answer names, and how often. Here is what it found in this county.</p>
+        <p>The <a href="/wine-country-intelligence" style="color: var(--color-sky);">Wine Country Intelligence Report</a> benchmarks every tracked winery in Santa Barbara and San Luis Obispo counties on exactly this: which wineries the AI answer names, and how often. Here is what it found in this county.</p>
         <div class="stat-bar" style="border-top-color: rgba(255,255,255,0.15); margin-top: 1.5rem;">
           <div class="stat-item">
             <p class="stat-num" style="color: var(--color-sky);">{c['stat_invisible']}</p>
@@ -212,7 +212,7 @@ def proof_section(c):
         </div>"""
     elif c["wcir"] == "covered":
         body = f"""        <p>Wine is where the AI-search shift hit hardest and earliest, so it is where we built the measurement and published it. A visitor searching for the best wineries in the county used to get a map; now they get a three-to-five-name answer, and the wineries left off it lose the visit.</p>
-        <p>The <a href="/wineries" style="color: var(--color-sky);">Wine Country Intelligence Report</a> benchmarks every tracked winery in Santa Barbara and San Luis Obispo counties on exactly that question: who the AI answer names, and who it skips. {c['county']} is inside that footprint, which means the read here runs against a benchmark we already publish rather than one we invent for the engagement.</p>
+        <p>The <a href="/wine-country-intelligence" style="color: var(--color-sky);">Wine Country Intelligence Report</a> benchmarks every tracked winery in Santa Barbara and San Luis Obispo counties on exactly that question: who the AI answer names, and who it skips. {c['county']} is inside that footprint, which means the read here runs against a benchmark we already publish rather than one we invent for the engagement.</p>
         <p style="margin-top: 1.5rem;">Wine is the proof, not the limit. The same engine reads discoverability for any business we work with in the county.</p>
         <div class="hero-buttons" style="margin-top: 1.5rem;">
           <a href="/wine-country-intelligence" class="btn btn-white">Read the quarterly report &rarr;</a>
@@ -220,7 +220,7 @@ def proof_section(c):
         </div>"""
     else:
         body = f"""        <p>We did not start with a theory. We built the measurement in wine, on the Central Coast, because that is where the AI-search shift hit hardest and earliest, and then we published it.</p>
-        <p>The <a href="/wineries" style="color: var(--color-sky);">Wine Country Intelligence Report</a> benchmarks every tracked winery in Santa Barbara and San Luis Obispo counties on one question: who the AI answer names, and who it skips. That benchmark has not been run on {c['county']}, and we are not going to quote you a number from a county it was never measured in. What carries over is the method: the same engine, the same four layers, read against your category and your market here.</p>
+        <p>The <a href="/wine-country-intelligence" style="color: var(--color-sky);">Wine Country Intelligence Report</a> benchmarks every tracked winery in Santa Barbara and San Luis Obispo counties on one question: who the AI answer names, and who it skips. That benchmark has not been run on {c['county']}, and we are not going to quote you a number from a county it was never measured in. What carries over is the method: the same engine, the same four layers, read against your category and your market here.</p>
         <p style="margin-top: 1.5rem;">Wine is where the approach was proven in public. {c['county']} is where we would run it for you.</p>
         <div class="hero-buttons" style="margin-top: 1.5rem;">
           <a href="/discoverability" class="btn btn-white">How the engine works &rarr;</a>
