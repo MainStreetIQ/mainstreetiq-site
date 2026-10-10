@@ -69,7 +69,7 @@
       <p>A quarterly digital-performance benchmark of the Central Coast wine market. 442 wineries in Santa Barbara and San Luis Obispo counties scored on the same seven categories, and an AI-visibility read measured across six AI assistants. Published by county, with a free regional edition covering both. The report is the flagship of Wine Country Intelligence, Main Street IQ's AI advisory for wineries.</p>
       <div class="hero-buttons">
         <a href="/wineries#q3-findings" class="btn btn-white" data-vertical="wine">Read the free Q3 summary &rarr;</a>
-        <a href="/samples/wine-country-intelligence-report-sample.pdf" class="btn btn-outline-white" target="_blank" rel="noopener" data-sample="wcir" data-vertical="wine">View the sample edition (PDF)</a>
+        <a href="#wcir-signup" class="btn btn-outline-white" data-vertical="wine">Get the sample edition</a>
       </div>
     </div>
   </section>
@@ -283,9 +283,9 @@
     <div class="container">
       <div class="section-header">
         <span class="section-label">Get the sample</span>
-        <h2 class="section-title">Get the sample edition by email</h2>
-        <p class="section-subtitle">Tell us where your winery is and we will email you the sample edition within one business day, along with the free regional edition covering both Santa Barbara and San Luis Obispo.</p>
-        <p class="section-subtitle">Or open the sample edition now: <a href="/samples/wine-country-intelligence-report-sample.pdf" target="_blank" rel="noopener" data-sample="wcir" data-vertical="wine" style="color: var(--navy, #2B4E8C); font-weight: 500;">the Q3 2026 Santa Barbara County edition (PDF)</a>, with invented wineries and illustrative per-winery figures; the county figures are as published, except the top scores, which follow the invented wineries.</p>
+        <h2 class="section-title">Get the sample edition</h2>
+        <p class="section-subtitle">Tell us where your winery is and the sample edition opens in your browser.</p>
+        <p class="section-subtitle">The sample edition is the Q3 2026 Santa Barbara County edition with invented wineries and illustrative per-winery figures; the county figures are as published, except the top scores, which follow the invented wineries.</p>
       </div>
 
       <div class="wcir-form-wrap" id="wcir-signup-form-wrap">
@@ -294,7 +294,7 @@
           <input type="hidden" name="zc_gad" id="msiqWcirZcGad" value="">
           <input type="hidden" name="xmIwtLD" value="ee828617c80781627f001448b480f10f5101c71bd6d42c038682e0163a1bf0ffdb84b3a51c89993d3ebf16a2906cddf3">
           <input type="hidden" name="actionType" value="TGVhZHM=">
-          <input type="hidden" name="returnURL" value="https://www.mainstreetiq.com/wine-country-intelligence?signup=success">
+          <input type="hidden" name="returnURL" value="https://www.mainstreetiq.com/wcir/q3-2026-santa-barbara-sample?utm_source=site&amp;utm_medium=sample-form&amp;utm_campaign=sample-q3-2026-santa-barbara">
           <input type="hidden" name="Description" id="msiqWcirDescription" value="Wine Country Intelligence Report subscription interest (from WCIR page)">
           <!-- Lead Source value "CCIQ Webform" kept verbatim: strict Zoho picklist; CCIQ rebranded to MSIQ Wine on the site 2026-05-27 but the Zoho picklist must be renamed first per project_zoho_lead_source_rename / feedback_zoho_webtolead_picklist_strict; do not change this value until Zoho-side rename is staged. -->
           <input type="hidden" name="Lead Source" value="CCIQ Webform">
@@ -383,14 +383,9 @@
             <button type="submit" class="msiq-form__btn msiq-form__btn--primary" data-action="submit">Send Me the Sample &rarr;</button>
           </div>
         </form>
-        <p class="wcir-form-fineprint">Central Coast wineries receive the sample edition within one business day. Unsubscribe from our emails anytime. We use this to send the report and follow up. <a href="/legal/privacy">Privacy Policy</a>.</p>
+        <p class="wcir-form-fineprint">Unsubscribe from our emails anytime. We use this to follow up. <a href="/legal/privacy">Privacy Policy</a>.</p>
       </div>
 
-      <div class="wcir-success" id="wcir-signup-success" style="display:none;">
-        <svg class="wcir-success-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <h3>Thanks, your sample is on the way.</h3>
-        <p>We'll email the sample edition within one business day. Check your inbox (and spam folder, just in case). Or <a href="/samples/wine-country-intelligence-report-sample.pdf" target="_blank" rel="noopener" data-sample="wcir" data-vertical="wine" style="color: var(--navy, #2B4E8C); font-weight: 500;">open it now (PDF)</a>.</p>
-      </div>
     </div>
   </section>
 
@@ -593,19 +588,6 @@
           desc.value = lines.join(' | ');
         }
       }, true);
-    })();
-
-    // WCIR signup: show success state when Zoho redirects back with ?signup=success
-    (function(){
-      if (new URLSearchParams(window.location.search).get('signup') !== 'success') return;
-      var formWrap = document.getElementById('wcir-signup-form-wrap');
-      var success = document.getElementById('wcir-signup-success');
-      if (formWrap) formWrap.style.display = 'none';
-      if (success) success.style.display = 'block';
-      setTimeout(function(){
-        var target = document.getElementById('wcir-signup');
-        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }, 150);
     })();
 
     // Sample-view tracking (GA4)

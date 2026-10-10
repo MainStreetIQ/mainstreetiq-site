@@ -1,6 +1,7 @@
 User-agent: *
 Disallow: /reports/
 Disallow: /samples/wine-country-intelligence-report-sample.pdf
+Disallow: /wcir/q3-2026-santa-barbara-sample
 Allow: /
 
 Sitemap: https://www.mainstreetiq.com/sitemap.xml
@@ -13,7 +14,7 @@ Sitemap: https://www.mainstreetiq.com/sitemap.xml
 # Explicit allows for AI crawlers and answer engines.
 # MSIQ wants AI surfaces (ChatGPT, Claude, Perplexity, Google AI Overviews,
 # Apple Intelligence, Meta AI, etc.) to discover, index, and cite this site.
-# The wildcard group above allows everything except the two paths it disallows;
+# The wildcard group above allows everything except the three paths it disallows;
 # these explicit groups are defensive against future stricter defaults and
 # against bot owners who require an exact User-agent match before indexing.
 # Each one repeats the same Disallow lines (see the note at the end).
@@ -22,123 +23,145 @@ Sitemap: https://www.mainstreetiq.com/sitemap.xml
 User-agent: GPTBot
 Disallow: /reports/
 Disallow: /samples/wine-country-intelligence-report-sample.pdf
+Disallow: /wcir/q3-2026-santa-barbara-sample
 Allow: /
 
 User-agent: OAI-SearchBot
 Disallow: /reports/
 Disallow: /samples/wine-country-intelligence-report-sample.pdf
+Disallow: /wcir/q3-2026-santa-barbara-sample
 Allow: /
 
 User-agent: ChatGPT-User
 Disallow: /reports/
 Disallow: /samples/wine-country-intelligence-report-sample.pdf
+Disallow: /wcir/q3-2026-santa-barbara-sample
 Allow: /
 
 # Anthropic
 User-agent: anthropic-ai
 Disallow: /reports/
 Disallow: /samples/wine-country-intelligence-report-sample.pdf
+Disallow: /wcir/q3-2026-santa-barbara-sample
 Allow: /
 
 User-agent: ClaudeBot
 Disallow: /reports/
 Disallow: /samples/wine-country-intelligence-report-sample.pdf
+Disallow: /wcir/q3-2026-santa-barbara-sample
 Allow: /
 
 User-agent: Claude-Web
 Disallow: /reports/
 Disallow: /samples/wine-country-intelligence-report-sample.pdf
+Disallow: /wcir/q3-2026-santa-barbara-sample
 Allow: /
 
 # Google AI (Search Generative Experience, Gemini, Vertex AI grounding)
 User-agent: Google-Extended
 Disallow: /reports/
 Disallow: /samples/wine-country-intelligence-report-sample.pdf
+Disallow: /wcir/q3-2026-santa-barbara-sample
 Allow: /
 
 # Perplexity
 User-agent: PerplexityBot
 Disallow: /reports/
 Disallow: /samples/wine-country-intelligence-report-sample.pdf
+Disallow: /wcir/q3-2026-santa-barbara-sample
 Allow: /
 
 User-agent: Perplexity-User
 Disallow: /reports/
 Disallow: /samples/wine-country-intelligence-report-sample.pdf
+Disallow: /wcir/q3-2026-santa-barbara-sample
 Allow: /
 
 # Common Crawl (training data feedstock for many models)
 User-agent: CCBot
 Disallow: /reports/
 Disallow: /samples/wine-country-intelligence-report-sample.pdf
+Disallow: /wcir/q3-2026-santa-barbara-sample
 Allow: /
 
 # Apple Intelligence
 User-agent: Applebot
 Disallow: /reports/
 Disallow: /samples/wine-country-intelligence-report-sample.pdf
+Disallow: /wcir/q3-2026-santa-barbara-sample
 Allow: /
 
 User-agent: Applebot-Extended
 Disallow: /reports/
 Disallow: /samples/wine-country-intelligence-report-sample.pdf
+Disallow: /wcir/q3-2026-santa-barbara-sample
 Allow: /
 
 # Meta AI
 User-agent: Meta-ExternalAgent
 Disallow: /reports/
 Disallow: /samples/wine-country-intelligence-report-sample.pdf
+Disallow: /wcir/q3-2026-santa-barbara-sample
 Allow: /
 
 User-agent: Meta-ExternalFetcher
 Disallow: /reports/
 Disallow: /samples/wine-country-intelligence-report-sample.pdf
+Disallow: /wcir/q3-2026-santa-barbara-sample
 Allow: /
 
 User-agent: FacebookBot
 Disallow: /reports/
 Disallow: /samples/wine-country-intelligence-report-sample.pdf
+Disallow: /wcir/q3-2026-santa-barbara-sample
 Allow: /
 
 # Amazon (Alexa+, Rufus, etc.)
 User-agent: Amazonbot
 Disallow: /reports/
 Disallow: /samples/wine-country-intelligence-report-sample.pdf
+Disallow: /wcir/q3-2026-santa-barbara-sample
 Allow: /
 
 # You.com
 User-agent: YouBot
 Disallow: /reports/
 Disallow: /samples/wine-country-intelligence-report-sample.pdf
+Disallow: /wcir/q3-2026-santa-barbara-sample
 Allow: /
 
 # ByteDance / TikTok / Doubao
 User-agent: Bytespider
 Disallow: /reports/
 Disallow: /samples/wine-country-intelligence-report-sample.pdf
+Disallow: /wcir/q3-2026-santa-barbara-sample
 Allow: /
 
 # Mistral
 User-agent: MistralAI-User
 Disallow: /reports/
 Disallow: /samples/wine-country-intelligence-report-sample.pdf
+Disallow: /wcir/q3-2026-santa-barbara-sample
 Allow: /
 
 # Cohere
 User-agent: cohere-ai
 Disallow: /reports/
 Disallow: /samples/wine-country-intelligence-report-sample.pdf
+Disallow: /wcir/q3-2026-santa-barbara-sample
 Allow: /
 
 User-agent: cohere-training-data-crawler
 Disallow: /reports/
 Disallow: /samples/wine-country-intelligence-report-sample.pdf
+Disallow: /wcir/q3-2026-santa-barbara-sample
 Allow: /
 
 # DuckDuckGo AI
 User-agent: DuckAssistBot
 Disallow: /reports/
 Disallow: /samples/wine-country-intelligence-report-sample.pdf
+Disallow: /wcir/q3-2026-santa-barbara-sample
 Allow: /
 
 # ---------------------------------------------------------------------------
@@ -167,8 +190,13 @@ Allow: /
 # /samples/wine-country-intelligence-report-sample.pdf is disallowed because
 #         the sample edition is built on invented wineries with illustrative
 #         figures. It is labeled on every page, but an AI crawler that ingests
-#         it could repeat an invented winery as a real one. It stays linked for
-#         people; it is kept out of crawls.
+#         it could repeat an invented winery as a real one. It stays available
+#         to people; it is kept out of crawls.
+#
+# /wcir/q3-2026-santa-barbara-sample is the same sample as a web page, reached
+#         only through the sample form. It carries noindex too, but unlike the
+#         other /wcir/ pages it is also disallowed: keeping invented wineries out
+#         of AI crawls matters more here than letting a crawler read the noindex.
 #
 # Neither mechanism is access control. Both are advisory and bind only
 # crawlers that choose to honor them. Anyone holding the link can read either.
