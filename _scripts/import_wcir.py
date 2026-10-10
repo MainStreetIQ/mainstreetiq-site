@@ -378,7 +378,7 @@ OPTIONS = [
      "body": "The {quarter} county report for one county, one time. Single issues are not discounted. You choose the county at checkout.",
      "price": "$250 per county",
      "buy": [("County edition, one issue", "https://buy.stripe.com/dRm5kE9OHcS8bTkbmJa3u16", "wine-wcir-county-single")],
-     "detail": "#subscribe-county"},
+     "detail": "#subscribe-county-issue"},
     {"title": "Monitor", "badge": None,
      "body": "The monthly report card for your own winery. The annual plan includes the county edition for the one county you choose: the county report every quarter plus the Wine Pricing Report twice a year.",
      "price": "$400/mo, or $4,000/yr",
