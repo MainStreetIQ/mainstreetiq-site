@@ -12,7 +12,7 @@ Canonical brand spec for Main Street IQ. Single source of truth for any agent or
 
 ## Brand tokens
 
-Source: `msiq-site/styles.css` (canonical) and `~/MSIQ/CCIQ/cciq_brand.py` (Python mirror).
+Source: `msiq-site/styles.css` (canonical).
 
 ### Color
 
@@ -105,5 +105,4 @@ Bump `version` in the frontmatter when prohibitions change, when tokens shift, o
 
 - `~/MSIQ/CLAUDE.md` — portfolio-wide always-on rules
 - `~/.claude/skills/CLAUDE.md` — skill-building rules + canonical reference artifact list
-- `~/MSIQ/CCIQ/cciq_brand.py` — Python mirror of these tokens for the CCIQ pipeline
 - Memory index: `~/.claude/projects/c--Users-scott-MSIQ/memory/MEMORY.md`
