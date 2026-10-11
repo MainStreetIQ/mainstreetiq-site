@@ -57,7 +57,7 @@
     .wcir-table-wrap tbody tr:last-child td { border-bottom: 0; }
     .wcir-table-wrap .num { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
     .wcir-table-wrap .ctr { text-align: center; }
-    .wcir-options { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr)); gap: 1.25rem; margin-top: 1.5rem; }
+    .wcir-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 1.25rem; margin-top: 1.5rem; }
     .wcir-option { position: relative; background: var(--color-white); border: 1px solid var(--color-border); border-top: 3px solid var(--color-navy); border-radius: 6px; padding: 1.5rem 1.25rem 1.25rem; display: flex; flex-direction: column; }
     .wcir-option-featured { border-color: var(--color-navy); }
     .wcir-option-badge { position: absolute; top: -0.8rem; left: 1.25rem; background: var(--color-navy); color: var(--color-white); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.2rem 0.6rem; border-radius: 4px; }
@@ -420,17 +420,10 @@
       <div class="wcir-options">
           <div class="wcir-option wcir-option-featured">
             <span class="wcir-option-badge">Recommended</span>
-            <h3>County edition, annual</h3>
-            <p class="wcir-option-price">$800/yr per county</p>
-            <p>The county report every quarter plus the Wine Pricing Report twice a year, for Santa Barbara County or San Luis Obispo County, with every winery ranked. You choose the county at checkout.</p>
-            <p class="wcir-option-buy"><a href="https://buy.stripe.com/00w4gA1ib19q8H8duRa3u01" target="_blank" rel="noopener" class="btn btn-primary" data-stripe-product="wine-wcir-county-annual" data-vertical="wine">County edition, annual &rarr;</a></p>
-            <p class="wcir-option-detail"><a href="/wine-country-intelligence#county-edition" data-vertical="wine">What this includes &rarr;</a></p>
-          </div>
-          <div class="wcir-option">
-            <h3>County edition, one issue</h3>
-            <p class="wcir-option-price">$250 per county</p>
-            <p>The Q3 2026 county report for one county, one time. Single issues are not discounted. You choose the county at checkout.</p>
-            <p class="wcir-option-buy"><a href="https://buy.stripe.com/dRm5kE9OHcS8bTkbmJa3u16" target="_blank" rel="noopener" class="btn btn-primary" data-stripe-product="wine-wcir-county-single" data-vertical="wine">County edition, one issue &rarr;</a></p>
+            <h3>County edition</h3>
+            <p class="wcir-option-price">$800/yr per county, or $250 for one issue</p>
+            <p>The county report every quarter plus the Wine Pricing Report twice a year, for Santa Barbara County or San Luis Obispo County, with every winery ranked. One issue is the Q3 2026 county report, one time; single issues are not discounted. You choose the county at checkout.</p>
+            <p class="wcir-option-buy"><a href="https://buy.stripe.com/00w4gA1ib19q8H8duRa3u01" target="_blank" rel="noopener" class="btn btn-primary" data-stripe-product="wine-wcir-county-annual" data-vertical="wine">County edition, annual &rarr;</a><a href="https://buy.stripe.com/dRm5kE9OHcS8bTkbmJa3u16" target="_blank" rel="noopener" class="btn btn-secondary" data-stripe-product="wine-wcir-county-single" data-vertical="wine">County edition, one issue &rarr;</a></p>
             <p class="wcir-option-detail"><a href="/wine-country-intelligence#county-edition" data-vertical="wine">What this includes &rarr;</a></p>
           </div>
           <div class="wcir-option">

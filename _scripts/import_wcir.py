@@ -358,7 +358,7 @@ PAGE_CSS = """  <style>
     .wcir-table-wrap tbody tr:last-child td { border-bottom: 0; }
     .wcir-table-wrap .num { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
     .wcir-table-wrap .ctr { text-align: center; }
-    .wcir-options { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr)); gap: 1.25rem; margin-top: 1.5rem; }
+    .wcir-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 1.25rem; margin-top: 1.5rem; }
     .wcir-option { position: relative; background: var(--color-white); border: 1px solid var(--color-border); border-top: 3px solid var(--color-navy); border-radius: 6px; padding: 1.5rem 1.25rem 1.25rem; display: flex; flex-direction: column; }
     .wcir-option-featured { border-color: var(--color-navy); }
     .wcir-option-badge { position: absolute; top: -0.8rem; left: 1.25rem; background: var(--color-navy); color: var(--color-white); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.2rem 0.6rem; border-radius: 4px; }
@@ -383,7 +383,7 @@ PAGE_CSS = """  <style>
     @media (max-width: 640px) { .wcir-toc ol { columns: 1; } .wcir-table-wrap table { font-size: 0.875rem; } }
   </style>"""
 
-# "Choose your option" cards (spec amendment 2026-10-09). Page copy, not report
+# "Choose your option" cards (spec amendment 2026-10-09; the two county cards became one, Scott 2026-10-11). Page copy, not report
 # copy: each card's wording is ONE entry here, then re-run the importer.
 # Prices: canonical-facts.md § Discover and § Monitor (public prices allowed for
 # wine Discover, Monitor and Monitor Plus only). Links: Payment Link URLs from
@@ -391,15 +391,11 @@ PAGE_CSS = """  <style>
 # Monitor / Monitor Plus wording follows the subscribe block on /wine-country-intelligence.
 # "{quarter}" is filled from the report cover.
 OPTIONS = [
-    {"title": "County edition, annual", "badge": "Recommended",
-     "body": "The county report every quarter plus the Wine Pricing Report twice a year, for Santa Barbara County or San Luis Obispo County, with every winery ranked. You choose the county at checkout.",
-     "price": "$800/yr per county",
-     "buy": [("County edition, annual", "https://buy.stripe.com/00w4gA1ib19q8H8duRa3u01", "wine-wcir-county-annual")],
-     "detail": "/wine-country-intelligence#county-edition"},
-    {"title": "County edition, one issue", "badge": None,
-     "body": "The {quarter} county report for one county, one time. Single issues are not discounted. You choose the county at checkout.",
-     "price": "$250 per county",
-     "buy": [("County edition, one issue", "https://buy.stripe.com/dRm5kE9OHcS8bTkbmJa3u16", "wine-wcir-county-single")],
+    {"title": "County edition", "badge": "Recommended",
+     "body": "The county report every quarter plus the Wine Pricing Report twice a year, for Santa Barbara County or San Luis Obispo County, with every winery ranked. One issue is the {quarter} county report, one time; single issues are not discounted. You choose the county at checkout.",
+     "price": "$800/yr per county, or $250 for one issue",
+     "buy": [("County edition, annual", "https://buy.stripe.com/00w4gA1ib19q8H8duRa3u01", "wine-wcir-county-annual"),
+             ("County edition, one issue", "https://buy.stripe.com/dRm5kE9OHcS8bTkbmJa3u16", "wine-wcir-county-single")],
      "detail": "/wine-country-intelligence#county-edition"},
     {"title": "Monitor", "badge": None,
      "body": "The monthly report card for your own winery. The annual plan includes the county edition for the one county you choose: the county report every quarter plus the Wine Pricing Report twice a year.",

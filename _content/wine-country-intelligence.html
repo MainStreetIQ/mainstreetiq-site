@@ -93,10 +93,64 @@
       <p>A quarterly digital-performance benchmark of the Central Coast wine market. 442 wineries in Santa Barbara and San Luis Obispo counties scored on the same seven categories, and an AI-visibility read measured across six AI assistants. Published by county, with a free regional edition covering both. The report is the flagship of Wine Country Intelligence, Main Street IQ's AI advisory for wineries.</p>
       <div class="hero-buttons">
         <a href="#wcir-signup" class="btn btn-white" data-vertical="wine">Read the free Q3 summary &rarr;</a>
-        <a href="#subscribe" class="btn btn-outline-white" data-vertical="wine">See the options</a>
+        <a href="#county-edition" class="btn btn-outline-white" data-vertical="wine">See the full report</a>
       </div>
     </div>
   </section>
+
+  <!-- ===== WHAT THE REPORT MEASURES (2026-10-11, Scott: introduce the report, offer the free
+       summary, then the full report). The seven categories open the page. ===== -->
+  <section class="bg-light">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">What the report measures</span>
+        <h2 class="section-title">Seven categories, scored from public data</h2>
+        <p class="section-subtitle">Every winery is scored on the same seven categories, 100 points in total, drawn entirely from publicly accessible sources, the same places a visitor looks. No surveys, no self-reporting, no private analytics.</p>
+      </div>
+      <div class="card-grid">
+        <div class="card"><h3>Third-Party Presence</h3><p>Do the lists, guides, and press that visitors and AI assistants read name you?</p></div>
+        <div class="card"><h3>Review Volume &amp; Reputation</h3><p>How many people vouch for you, and are they still doing it?</p></div>
+        <div class="card"><h3>Search &amp; Map Discovery</h3><p>When a visitor searches for wineries rather than for you by name, do you come up, in the results and on the map?</p></div>
+        <div class="card"><h3>AI-Ready Booking &amp; Buying</h3><p>Once someone has picked you, can they book, join, and buy without picking up the phone?</p></div>
+        <div class="card"><h3>Profile Accuracy</h3><p>Does your Google profile state the right facts, and does Apple Maps agree?</p></div>
+        <div class="card"><h3>Citation Readiness</h3><p>When a search engine or AI assistant reads your site, can it get the facts out?</p></div>
+        <div class="card"><h3>Social</h3><p>Does your Instagram confirm you're open, active, and worth visiting?</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== THE FREE Q3 SUMMARY, ONE FORM (Scott, 2026-10-10). Name and email write the Zoho Lead
+       (newsletter_signup, list=wcir, WCIR Subscriber tag); wcir-subscribe.js then opens the form's
+       data-next page, the current quarter's Central Coast summary, which links the sample edition.
+       QUARTERLY: update data-next to the new delivery-page slug. Keep the #wcir-signup anchor:
+       other pages link it. ===== -->
+  <section id="wcir-signup">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">The free Q3 summary</span>
+        <h2 class="section-title">Read the free Q3 summary</h2>
+        <p class="section-subtitle">Leave your name and email and the Q3 Central Coast summary opens, with a link to the full sample edition. Each new edition comes to the same address every quarter as a direct link.</p>
+      </div>
+      <div class="wcir-subscribe q3-gate" id="subscribe-free">
+        <p>The Central Coast Wine Country Report is free and comes out every quarter: the region's leaders, the AI-visibility read and the market, across both counties. The sample edition is the Q3 2026 Santa Barbara County edition with invented wineries and illustrative per-winery figures; the county figures are as published, except the top scores, which belong to the invented wineries. Wine Country Intelligence keeps its own list, separate from the Main Street IQ email list.</p>
+        <p id="wcirSubscribeFallback">Email <a href="mailto:wci@mainstreetiq.com?subject=Send%20me%20the%20next%20Central%20Coast%20Wine%20Country%20Report" data-vertical="wine">wci@mainstreetiq.com</a> to get the next edition.</p>
+        <form id="wcirSubscribeForm" data-list="wcir" data-next="/wcir/q3-2026-central-coast?utm_source=site&amp;utm_medium=wine-country-intelligence&amp;utm_campaign=q3-2026-central-coast" novalidate hidden>
+          <label for="wcirName">Name</label>
+          <input type="text" id="wcirName" name="first_name" required autocomplete="name" maxlength="80">
+          <label for="wcirEmail">Email</label>
+          <input type="email" id="wcirEmail" name="email" required autocomplete="email" maxlength="100" placeholder="you@winery.com">
+          <label for="wcirWinery">Winery (optional)</label>
+          <input type="text" id="wcirWinery" name="winery" autocomplete="organization" maxlength="120">
+          <input type="text" name="honeypot" class="wcir-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <p class="wcir-fine">Sending this adds you to the Wine Country Intelligence list.</p>
+          <button type="submit" class="btn btn-primary">Read the free Q3 summary</button>
+          <div class="wcir-subscribe-msg" id="wcirSubscribeMsg" role="status" aria-live="polite"></div>
+        </form>
+        <p class="wcir-fine">Unsubscribe anytime. <a href="/legal/privacy">Privacy Policy</a>.</p>
+      </div>
+    </div>
+  </section>
+
 
   <!-- ===== CURRENT QUARTER SNAPSHOT =====
        Figures from the Q3 2026 build (WCI bundle.json build 4011d659f802) and
@@ -135,12 +189,14 @@
       <div class="section-header">
         <span class="section-label">The new discovery channel</span>
         <h2 class="section-title">45 of 442 wineries account for 47.5% of every time AI names a winery</h2>
-        <p class="section-subtitle">The report asks six AI assistants the trip-planning questions a visitor would ask about each county, three times over the month, and counts which wineries they name: 2,644 answers in Q3 2026, naming a winery 23,432 times. Most wineries are named at least once for their own county's questions, 388 of 442, but a small group gets nearly half of the namings. The ten named most often account for 17.4% of every naming, and 54 wineries were never named in an answer to their own county's questions.</p>
       </div>
-      <p class="wcir-note">A winery with strong Google rankings can be completely absent from AI results. The signals are different, and the wineries winning here are not always the ones winning in traditional search.</p>
-      <p class="q3-note">About as many wineries were named overall; what changed is which ones. In the set of questions and assistants we kept unchanged from Q2 2026, the 40 wineries named less often went from 343 namings to 225, and 99 of those 118 fewer namings came from the two assistants in that set that search the web for every answer. That points to a change in what those searches now find, not necessarily at the wineries.</p>
-      <p class="q3-note">And travelers are asking: MMGY Travel Intelligence's summer 2026 survey of 4,371 U.S. adults found that 52% of active leisure travelers have used AI to help plan a trip, up 10 points in a year.</p>
-      <p class="q3-note">Running the identical panel more than once returns a different set of wineries, with nothing about those wineries changing in between. That is why the report asks each question three times over the month. A winery near the edge of visibility drifts in and out of these answers on its own.</p>
+      <div class="wcir-ai-notes">
+        <p>The report asks six AI assistants the trip-planning questions a visitor would ask about each county, three times over the month, and counts which wineries they name: 2,644 answers in Q3 2026, naming a winery 23,432 times. Most wineries are named at least once for their own county's questions, 388 of 442, but a small group gets nearly half of the namings. The ten named most often account for 17.4% of every naming, and 54 wineries were never named in an answer to their own county's questions.</p>
+        <p class="wcir-ai-lead">A winery with strong Google rankings can be completely absent from AI results. The signals are different, and the wineries winning here are not always the ones winning in traditional search.</p>
+        <p>About as many wineries were named overall; what changed is which ones. In the set of questions and assistants we kept unchanged from Q2 2026, the 40 wineries named less often went from 343 namings to 225, and 99 of those 118 fewer namings came from the two assistants in that set that search the web for every answer. That points to a change in what those searches now find, not necessarily at the wineries.</p>
+        <p>And travelers are asking: MMGY Travel Intelligence's summer 2026 survey of 4,371 U.S. adults found that 52% of active leisure travelers have used AI to help plan a trip, up 10 points in a year.</p>
+        <p>Running the identical panel more than once returns a different set of wineries, with nothing about those wineries changing in between. That is why the report asks each question three times over the month. A winery near the edge of visibility drifts in and out of these answers on its own.</p>
+      </div>
     </div>
   </section>
 
@@ -151,69 +207,16 @@
       <div class="section-header">
         <span class="section-label">Key findings</span>
         <h2 class="section-title">The five gaps we found most often in the categories that take sustained work</h2>
-        <p class="section-subtitle">Across the 442 wineries in both counties, each counted only where we could check.</p>
+        <p class="q3-gaps-total"><strong>Across 442 wineries</strong> in both counties, each counted only where we could check.</p>
       </div>
       <ol class="q3-gaps">
-        <li><span class="q3-gap-num">338 of 442</span> not in the search results for &ldquo;wine tasting&rdquo; searches</li>
-        <li><span class="q3-gap-num">332 of 442</span> no press on the first page of its own name search</li>
-        <li><span class="q3-gap-num">273 of 442</span> not in the Google Maps results for discovery searches</li>
-        <li><span class="q3-gap-num">100 of 429</span> no new reviews in 90 days, of the wineries we could check</li>
-        <li><span class="q3-gap-num">72 of 442</span> few or no Google reviews</li>
+        <li><span class="q3-gap-num">338</span> not in the search results for &ldquo;wine tasting&rdquo; searches</li>
+        <li><span class="q3-gap-num">332</span> no press on the first page of its own name search</li>
+        <li><span class="q3-gap-num">273</span> not in the Google Maps results for discovery searches</li>
+        <li><span class="q3-gap-num">100</span> no new reviews in 90 days, of the 429 we could check</li>
+        <li><span class="q3-gap-num">72</span> few or no Google reviews</li>
       </ol>
       <p class="q3-forward">Your county edition counts three of these gaps across your county and ranks every winery we score on every category. Monitor re-scores your own winery on the same seven categories every month, so you see what moved.</p>
-    </div>
-  </section>
-
-  <!-- ===== THE FREE Q3 SUMMARY, ONE FORM (Scott, 2026-10-10). Name and email write the Zoho Lead
-       (newsletter_signup, list=wcir, WCIR Subscriber tag); wcir-subscribe.js then opens the form's
-       data-next page, the current quarter's Central Coast summary, which links the sample edition.
-       QUARTERLY: update data-next to the new delivery-page slug. Keep the #wcir-signup anchor:
-       other pages link it. ===== -->
-  <section id="wcir-signup">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label">The free Q3 summary</span>
-        <h2 class="section-title">Read the free Q3 summary</h2>
-        <p class="section-subtitle">Leave your name and email and the Q3 Central Coast summary opens, with a link to the full sample edition. Each new edition comes to the same address every quarter as a direct link.</p>
-      </div>
-      <div class="wcir-subscribe q3-gate" id="subscribe-free">
-        <p>The Central Coast Wine Country Report is free and comes out every quarter: the region's leaders, the AI-visibility read and the market, across both counties. The sample edition is the Q3 2026 Santa Barbara County edition with invented wineries and illustrative per-winery figures; the county figures are as published, except the top scores, which belong to the invented wineries. Wine Country Intelligence keeps its own list, separate from the Main Street IQ email list.</p>
-        <p id="wcirSubscribeFallback">Email <a href="mailto:wci@mainstreetiq.com?subject=Send%20me%20the%20next%20Central%20Coast%20Wine%20Country%20Report" data-vertical="wine">wci@mainstreetiq.com</a> to get the next edition.</p>
-        <form id="wcirSubscribeForm" data-list="wcir" data-next="/wcir/q3-2026-central-coast?utm_source=site&amp;utm_medium=wine-country-intelligence&amp;utm_campaign=q3-2026-central-coast" novalidate hidden>
-          <label for="wcirName">Name</label>
-          <input type="text" id="wcirName" name="first_name" required autocomplete="name" maxlength="80">
-          <label for="wcirEmail">Email</label>
-          <input type="email" id="wcirEmail" name="email" required autocomplete="email" maxlength="100" placeholder="you@winery.com">
-          <label for="wcirWinery">Winery (optional)</label>
-          <input type="text" id="wcirWinery" name="winery" autocomplete="organization" maxlength="120">
-          <input type="text" name="honeypot" class="wcir-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
-          <p class="wcir-fine">Sending this adds you to the Wine Country Intelligence list.</p>
-          <button type="submit" class="btn btn-primary">Read the free Q3 summary</button>
-          <div class="wcir-subscribe-msg" id="wcirSubscribeMsg" role="status" aria-live="polite"></div>
-        </form>
-        <p class="wcir-fine">Unsubscribe anytime. <a href="/legal/privacy">Privacy Policy</a>.</p>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ===== THE SEVEN CATEGORIES ===== -->
-  <section class="bg-light">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label">The methodology</span>
-        <h2 class="section-title">Seven categories, scored from public data</h2>
-        <p class="section-subtitle">Every winery is scored on the same seven categories, 100 points in total, drawn entirely from publicly accessible sources, the same places a visitor looks. No surveys, no self-reporting, no private analytics.</p>
-      </div>
-      <div class="card-grid">
-        <div class="card"><h3>Third-Party Presence</h3><p>Do the lists, guides, and press that visitors and AI assistants read name you?</p></div>
-        <div class="card"><h3>Review Volume &amp; Reputation</h3><p>How many people vouch for you, and are they still doing it?</p></div>
-        <div class="card"><h3>Search &amp; Map Discovery</h3><p>When a visitor searches for wineries rather than for you by name, do you come up, in the results and on the map?</p></div>
-        <div class="card"><h3>AI-Ready Booking &amp; Buying</h3><p>Once someone has picked you, can they book, join, and buy without picking up the phone?</p></div>
-        <div class="card"><h3>Profile Accuracy</h3><p>Does your Google profile state the right facts, and does Apple Maps agree?</p></div>
-        <div class="card"><h3>Citation Readiness</h3><p>When a search engine or AI assistant reads your site, can it get the facts out?</p></div>
-        <div class="card"><h3>Social</h3><p>Does your Instagram confirm you're open, active, and worth visiting?</p></div>
-      </div>
     </div>
   </section>
 
@@ -332,17 +335,11 @@
       </div>
       <div class="wcir-options">
         <div class="wcir-option wcir-option-featured" id="subscribe-county">
-          <span class="wcir-option-badge">Recommended</span>
-          <h3>County edition, annual</h3>
-          <p class="wcir-option-price">$800/yr per county</p>
-          <p>The county report every quarter plus the Wine Pricing Report twice a year, for Santa Barbara County or San Luis Obispo County, with every winery ranked. You choose the county at checkout.</p>
-          <p class="wcir-option-buy"><a href="https://buy.stripe.com/00w4gA1ib19q8H8duRa3u01" target="_blank" rel="noopener" class="btn btn-primary" data-stripe-product="wine-wcir-county-annual" data-vertical="wine">County edition, annual &rarr;</a></p>
-        </div>
-        <div class="wcir-option" id="subscribe-county-issue">
-          <h3>County edition, one issue</h3>
-          <p class="wcir-option-price">$250 per county</p>
-          <p>The Q3 2026 county report for one county, one time. Single issues are not discounted. You choose the county at checkout.</p>
-          <p class="wcir-option-buy"><a href="https://buy.stripe.com/dRm5kE9OHcS8bTkbmJa3u16" target="_blank" rel="noopener" class="btn btn-primary" data-stripe-product="wine-wcir-county-single" data-vertical="wine">County edition, one issue &rarr;</a></p>
+          <span class="wcir-option-badge">Recommended</span><span id="subscribe-county-issue"></span>
+          <h3>County edition</h3>
+          <p class="wcir-option-price">$800/yr per county, or $250 for one issue</p>
+          <p>The county report every quarter plus the Wine Pricing Report twice a year, for Santa Barbara County or San Luis Obispo County, with every winery ranked. One issue is the current county report, one time; single issues are not discounted. You choose the county at checkout.</p>
+          <p class="wcir-option-buy"><a href="https://buy.stripe.com/00w4gA1ib19q8H8duRa3u01" target="_blank" rel="noopener" class="btn btn-primary" data-stripe-product="wine-wcir-county-annual" data-vertical="wine">County edition, annual &rarr;</a><a href="https://buy.stripe.com/dRm5kE9OHcS8bTkbmJa3u16" target="_blank" rel="noopener" class="btn btn-secondary" data-stripe-product="wine-wcir-county-single" data-vertical="wine">County edition, one issue &rarr;</a></p>
         </div>
         <div class="wcir-option" id="subscribe-monitor">
           <h3>Monitor</h3>
@@ -580,7 +577,7 @@
       margin: 0;
     }
     /* Moved from /wineries 2026-10-10: shelf, free-summary form, findings, county edition */
-    .wcir-options { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr)); gap: 1.25rem; margin-top: 1.5rem; }
+    .wcir-options { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 1.25rem; margin-top: 1.5rem; }
     .wcir-option { position: relative; background: var(--color-white); border: 1px solid var(--color-border); border-top: 3px solid var(--color-navy); border-radius: 6px; padding: 1.5rem 1.25rem 1.25rem; display: flex; flex-direction: column; }
     .wcir-option-featured { border-color: var(--color-navy); }
     .wcir-option-badge { position: absolute; top: -0.8rem; left: 1.25rem; background: var(--color-navy); color: var(--color-white); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.2rem 0.6rem; border-radius: 4px; }
@@ -607,12 +604,17 @@
     .q3-stat { background: var(--color-white); border: 1px solid var(--color-border); border-top: 3px solid var(--color-navy); border-radius: 6px; padding: 1.25rem; }
     .q3-stat p { margin: 0; line-height: 1.55; }
     .q3-stat .q3-stat-num { font-size: 1.9rem; font-weight: 300; color: var(--color-navy); margin-bottom: 0.35rem; font-variant-numeric: tabular-nums; }
+    .wcir-ai-notes { max-width: 760px; margin: 0 auto; }
+    .wcir-ai-notes p { font-size: 1rem; color: var(--color-neutral); line-height: 1.7; margin: 0 0 1rem; }
+    .wcir-ai-notes .wcir-ai-lead { color: var(--color-dark-text); font-weight: 500; }
+    .q3-gaps-total { max-width: 720px; margin: 0.5rem auto 0; text-align: center; font-size: 1.15rem; color: var(--color-neutral); }
+    .q3-gaps-total strong { display: block; font-size: 1.6rem; font-weight: 600; color: var(--color-navy); margin-bottom: 0.25rem; }
     .q3-note { max-width: 820px; margin-top: 1.25rem; font-size: 0.95rem; color: var(--color-neutral); line-height: 1.6; }
     .q3-gaps-title { font-size: 1.3rem; margin: 2.75rem 0 0.35rem; color: var(--color-dark-text); }
     .q3-gaps-sub { margin: 0 0 1rem; color: var(--color-neutral); font-size: 0.95rem; }
     .q3-gaps { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 0.75rem; }
     .q3-gaps li { background: var(--color-white); border: 1px solid var(--color-border); border-radius: 6px; padding: 1rem; line-height: 1.5; font-size: 0.95rem; }
-    .q3-gap-num { display: block; font-size: 1.35rem; font-weight: 300; color: var(--color-navy); margin-bottom: 0.25rem; font-variant-numeric: tabular-nums; }
+    .q3-gap-num { display: block; font-size: 1.6rem; font-weight: 400; color: var(--color-navy); margin-bottom: 0.25rem; font-variant-numeric: tabular-nums; }
     .q3-gate { margin-top: 2.75rem; background: var(--color-white); border: 1px solid var(--color-border); border-radius: 8px; padding: 1.75rem; }
     .q3-gate h3 { margin-top: 0; }
     .q3-full { margin-top: 1.25rem; }
