@@ -392,8 +392,8 @@ PAGE_CSS = """  <style>
 # "{quarter}" is filled from the report cover.
 OPTIONS = [
     {"title": "County edition", "badge": "Recommended",
-     "body": "The county report every quarter plus the Wine Pricing Report twice a year, for Santa Barbara County or San Luis Obispo County, with every winery ranked. One issue is the {quarter} county report, one time; single issues are not discounted. You choose the county at checkout.",
-     "price": "$800/yr per county, or $250 for one issue",
+     "body": "The county report every quarter plus the Wine Pricing Report twice a year, for Santa Barbara County or San Luis Obispo County, with every winery ranked. The annual plan renews each year until canceled. One issue is the {quarter} county report, one time; single issues are not discounted. You choose the county at checkout.",
+     "price": "$800/yr per county, or $250 per county for one issue",
      "buy": [("County edition, annual", "https://buy.stripe.com/00w4gA1ib19q8H8duRa3u01", "wine-wcir-county-annual"),
              ("County edition, one issue", "https://buy.stripe.com/dRm5kE9OHcS8bTkbmJa3u16", "wine-wcir-county-single")],
      "detail": "/wine-country-intelligence#county-edition"},
