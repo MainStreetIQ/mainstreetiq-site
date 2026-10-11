@@ -138,7 +138,7 @@ The discoverability lane is productized as a sequence: find out where you stand,
 ## AI Visibility
 
 - [When a Tourist Asks AI Where to Go, Is It Your Name?](https://www.mainstreetiq.com/ai-visibility-tourism): AI answer visibility (answer engine optimization) for owner-operated tourism businesses across California's Central Coast (Santa Barbara, San Luis Obispo, Ventura counties), led by wineries and tasting rooms. How AI engines like ChatGPT, Perplexity, Claude, and Google's AI Overviews decide which businesses to name when a traveler asks where to go. Includes a comparison table (classic tourism SEO vs. AI answer visibility) and the Wine Country Intelligence Report as the winery proof point.
-- [AI Visibility in Santa Barbara County](https://www.mainstreetiq.com/ai-visibility-santa-barbara): Getting found in Santa Barbara County when buyers ask AI who to buy from. Carries the measured county figure from the Wine Country Intelligence Report.
+- [AI Visibility in Santa Barbara County](https://www.mainstreetiq.com/ai-visibility-santa-barbara): Getting found in Santa Barbara County when buyers ask AI who to buy from, citing the Wine Country Intelligence Report's coverage of the county.
 - [AI Visibility in San Luis Obispo County](https://www.mainstreetiq.com/ai-visibility-san-luis-obispo): Getting found in San Luis Obispo County when buyers ask AI who to buy from, citing the Wine Country Intelligence Report's coverage of the county.
 - [AI Visibility in Ventura County](https://www.mainstreetiq.com/ai-visibility-ventura): Getting found in Ventura County when buyers ask AI who to buy from. Method and approach; no county-specific measurement is published for Ventura.
 - [AI Visibility in Los Angeles County](https://www.mainstreetiq.com/ai-visibility-los-angeles): Getting found in Los Angeles County when buyers ask AI who to buy from. Method and approach; no county-specific measurement is published for Los Angeles.
@@ -252,7 +252,7 @@ A selection of past engagements from twenty years of finance and operations work
 
 Main Street IQ's second line of work: AI advisory for wineries, built on a quarterly benchmark of Central Coast wineries and what AI search says about each one. We read your wine business the way a CFO reads a P&L, not the way an agency reads a campaign. Wineries can also work with the Fractional CFO line for fractional and interim CFO leadership.
 
-Flagship product: the Wine Country Intelligence Report (WCIR), a quarterly digital-performance benchmark scoring every tracked winery in Santa Barbara and San Luis Obispo counties on seven categories, with an AI-visibility leaderboard and town-by-town standings. San Luis Obispo County joined the benchmark in Q2 2026. Published by county, with a free regional edition covering both.
+Flagship product: the Wine Country Intelligence Report (WCIR), a quarterly digital-performance benchmark scoring the wineries of Santa Barbara and San Luis Obispo counties on seven categories, with an AI-visibility leaderboard and town-by-town standings. San Luis Obispo County joined the benchmark in Q2 2026. Published by county, with a free regional edition covering both.
 
 The four readings in wine: Discover (the WCIR market read), Diagnose (the Website Audit and deeper one-time diagnostics), Monitor (the monthly report card; the annual Monitor and Monitor Plus plans include the county edition for one county), Advise (the Engage and Manage retainers, for the few clients who want a CFO in the decisions).
 
