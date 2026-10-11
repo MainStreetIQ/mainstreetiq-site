@@ -107,14 +107,26 @@
         <h2 class="section-title">Seven categories, scored from public data</h2>
         <p class="section-subtitle">Every winery is scored on the same seven categories, 100 points in total, drawn entirely from publicly accessible sources, the same places a visitor looks. No surveys, no self-reporting, no private analytics.</p>
       </div>
-      <div class="card-grid">
-        <div class="card"><h3>Third-Party Presence</h3><p>Do the lists, guides, and press that visitors and AI assistants read name you?</p></div>
-        <div class="card"><h3>Review Volume &amp; Reputation</h3><p>How many people vouch for you, and are they still doing it?</p></div>
-        <div class="card"><h3>Search &amp; Map Discovery</h3><p>When a visitor searches for wineries rather than for you by name, do you come up, in the results and on the map?</p></div>
-        <div class="card"><h3>AI-Ready Booking &amp; Buying</h3><p>Once someone has picked you, can they book, join, and buy without picking up the phone?</p></div>
-        <div class="card"><h3>Profile Accuracy</h3><p>Does your Google profile state the right facts, and does Apple Maps agree?</p></div>
-        <div class="card"><h3>Citation Readiness</h3><p>When a search engine or AI assistant reads your site, can it get the facts out?</p></div>
-        <div class="card"><h3>Social</h3><p>Does your Instagram confirm you're open, active, and worth visiting?</p></div>
+      <div class="cat-steps">
+        <div class="cat-step">
+          <p class="cat-step-label">Found</p>
+          <p class="cat-step-q">Can a visitor find you?</p>
+          <div class="cat-item"><h3>Search &amp; Map Discovery</h3><p>When a visitor searches for wineries rather than for you by name, do you come up, in the results and on the map?</p></div>
+          <div class="cat-item"><h3>Third-Party Presence</h3><p>Do the lists, guides, and press that visitors and AI assistants read name you?</p></div>
+          <div class="cat-item"><h3>Citation Readiness</h3><p>When a search engine or AI assistant reads your site, can it get the facts out?</p></div>
+        </div>
+        <div class="cat-step">
+          <p class="cat-step-label">Trusted</p>
+          <p class="cat-step-q">Do they believe what they see?</p>
+          <div class="cat-item"><h3>Review Volume &amp; Reputation</h3><p>How many people vouch for you, and are they still doing it?</p></div>
+          <div class="cat-item"><h3>Profile Accuracy</h3><p>Does your Google profile state the right facts, and does Apple Maps agree?</p></div>
+          <div class="cat-item"><h3>Social</h3><p>Does your Instagram confirm you're open, active, and worth visiting?</p></div>
+        </div>
+        <div class="cat-step">
+          <p class="cat-step-label">Booked</p>
+          <p class="cat-step-q">Can they act on it?</p>
+          <div class="cat-item"><h3>AI-Ready Booking &amp; Buying</h3><p>Once someone has picked you, can they book, join, and buy without picking up the phone?</p></div>
+        </div>
       </div>
     </div>
   </section>
@@ -604,6 +616,13 @@
     .q3-stat { background: var(--color-white); border: 1px solid var(--color-border); border-top: 3px solid var(--color-navy); border-radius: 6px; padding: 1.25rem; }
     .q3-stat p { margin: 0; line-height: 1.55; }
     .q3-stat .q3-stat-num { font-size: 1.9rem; font-weight: 300; color: var(--color-navy); margin-bottom: 0.35rem; font-variant-numeric: tabular-nums; }
+    .cat-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 1.25rem; margin-top: 2rem; }
+    .cat-step { background: var(--color-white); border: 1px solid var(--color-border); border-top: 3px solid var(--color-navy); border-radius: 6px; padding: 1.5rem 1.25rem; }
+    .cat-step-label { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-navy); margin: 0; }
+    .cat-step-q { font-size: 1.05rem; color: var(--color-dark-text); margin: 0.25rem 0 0.75rem; }
+    .cat-item { border-top: 1px solid var(--color-border); padding-top: 0.9rem; margin-top: 0.9rem; }
+    .cat-item h3 { font-size: 1.05rem; margin: 0 0 0.3rem; color: var(--color-dark-text); }
+    .cat-item p { font-size: 0.95rem; color: var(--color-neutral); line-height: 1.6; margin: 0; }
     .wcir-ai-notes { max-width: 760px; margin: 0 auto; }
     .wcir-ai-notes p { font-size: 1rem; color: var(--color-neutral); line-height: 1.7; margin: 0 0 1rem; }
     .wcir-ai-notes .wcir-ai-lead { color: var(--color-dark-text); font-weight: 500; }
