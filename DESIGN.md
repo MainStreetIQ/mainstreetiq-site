@@ -105,4 +105,3 @@ Bump `version` in the frontmatter when prohibitions change, when tokens shift, o
 
 - `~/MSIQ/CLAUDE.md` — portfolio-wide always-on rules
 - `~/.claude/skills/CLAUDE.md` — skill-building rules + canonical reference artifact list
-- Memory index: `~/.claude/projects/c--Users-scott-MSIQ/memory/MEMORY.md`
