@@ -307,7 +307,7 @@ def faqs(c):
          f"lives off your website. We read both layers and the classical-search layer underneath them."),
         (f"How do you measure AI visibility in {county}?", measure),
         (f"Which businesses in {county} is this for?",
-         f"Owner-operated, lower middle market companies, and small and family wineries. {c['audience_line']} "
+         f"Lower middle market companies, and small and family wineries. {c['audience_line']} "
          f"The practice is based on California's Central Coast and {county} is one of six counties where "
          f"our outbound and on-site availability concentrate, which is not a limit on who we accept. If "
          f"buyers in your category are starting to ask AI who to trust, the work applies to you."),
@@ -360,7 +360,7 @@ def render(c):
                         f"wine through the Wine Country Intelligence Report."),
         "areaServed": area_served(c),
         "audience": {"@type": "Audience",
-                     "audienceType": "Owner-operated ecommerce, winery, wellness, and elective medicine businesses"},
+                     "audienceType": "Ecommerce, winery, wellness, and elective medicine businesses"},
         "url": url,
     }
     prof_ld = {
@@ -368,7 +368,7 @@ def render(c):
         "sameAs": ["https://www.linkedin.com/company/107523729",
                    "https://www.linkedin.com/in/johnscotthess"],
         "description": (f"Veteran-owned and operated. AI discoverability and answer-engine optimization "
-                        f"for owner-operated businesses in {county}, California, serving wineries, DTC "
+                        f"for lower middle market companies in {county}, California, serving wineries, DTC "
                         f"ecommerce, health and wellness, and elective medicine."),
         "url": url,
         "award": ["Veteran-Owned Business"],
@@ -582,7 +582,7 @@ def render(c):
         <h2 class="section-title">AI discoverability across {county}</h2>
       </div>
       <div style="max-width: 820px; margin: 0 auto; font-size: 1.05rem; line-height: 1.7;">
-        <p>We work with owner-operated businesses across {cities_prose}. The practice is based on California's Central Coast, and {county} is one of six counties where our outbound and on-site availability concentrate. That is not a limit on who we accept; the work runs remotely for clients elsewhere in the United States.</p>
+        <p>We work with lower middle market companies across {cities_prose}. The practice is based on California's Central Coast, and {county} is one of six counties where our outbound and on-site availability concentrate. That is not a limit on who we accept; the work runs remotely for clients elsewhere in the United States.</p>
         <p style="margin-top: 1.25rem;">Looking for the finance side instead? The CFO practice runs in this county too: <a href="/fractional-cfo-{c['slug']}" style="color: var(--color-navy);">fractional CFO in {county} &rarr;</a></p>
       </div>
     </div>

@@ -37,7 +37,7 @@ PAYLOADS: dict[str, str] = {
       "url": "https://www.mainstreetiq.com"
     },
     "serviceType": "Professional referral partnership",
-    "description": "A small, deliberate network of accountants, bankers, and advisors who introduce their owner-operator clients on the California coast to Main Street IQ for fractional CFO advisory and customer acquisition intelligence work.",
+    "description": "A small, deliberate network of accountants, bankers, and advisors who introduce their clients on the California coast to Main Street IQ for fractional CFO advisory and customer acquisition intelligence work.",
     "areaServed": [
       {
         "@type": "State",
@@ -50,7 +50,7 @@ PAYLOADS: dict[str, str] = {
     ],
     "audience": {
       "@type": "Audience",
-      "audienceType": "Accountants, bankers, attorneys, wealth advisors, and consultants serving owner-operated businesses under $50MM"
+      "audienceType": "Accountants, bankers, attorneys, wealth advisors, and consultants serving lower middle market companies"
     },
     "url": "https://www.mainstreetiq.com/partners"
   }
@@ -92,14 +92,14 @@ PAYLOADS: dict[str, str] = {
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "Fractional CFO for Owner-Operated Ecommerce Brands",
+    "name": "Fractional CFO for Ecommerce Brands",
     "provider": {
       "@type": "ProfessionalService",
       "name": "Main Street IQ",
       "url": "https://www.mainstreetiq.com"
     },
     "serviceType": "Fractional CFO advisory",
-    "description": "Fractional CFO and customer acquisition intelligence for owner-operated DTC, Amazon, wholesale, and retail ecommerce brands on the California coast. Channel-level CAC, contribution margin, inventory cash modeling, cohort and LTV math, and halo attribution between DTC ad spend and Amazon conversions.",
+    "description": "Fractional CFO and customer acquisition intelligence for DTC, Amazon, wholesale, and retail ecommerce brands on the California coast. Channel-level CAC, contribution margin, inventory cash modeling, cohort and LTV math, and halo attribution between DTC ad spend and Amazon conversions.",
     "areaServed": [
       {
         "@type": "State",

@@ -41,17 +41,17 @@ CTA_NEW = '<a href="/fit-call" class="btn btn-white">Book a Fit Call &rarr;</a>'
 
 # Revenue-band phrasings, longest/most-specific first.
 REVENUE_SUBS = [
-    ("companies in the $10M to $100M range", "owner-operated companies under $50MM"),
-    ("companies in the $10M–$100M range", "owner-operated companies under $50MM"),
-    ("companies in the $10M-$100M range", "owner-operated companies under $50MM"),
+    ("companies in the $10M to $100M range", "lower middle market companies"),
+    ("companies in the $10M–$100M range", "lower middle market companies"),
+    ("companies in the $10M-$100M range", "lower middle market companies"),
     ("between $10M and $100M in revenue", "under $50MM in revenue"),
     ("between $10M and $300M in revenue", "under $50MM in revenue"),
     ("$10M to $300M client revenue range", "under-$50MM revenue range"),
     ("$10M–$300M client revenue range", "under-$50MM revenue range"),
     ("$10M–$300M range", "under-$50MM range"),
     ("$10M to $300M range", "under-$50MM range"),
-    ("$10M–$100M companies", "owner-operated companies under $50MM"),
-    ("$10M-$100M companies", "owner-operated companies under $50MM"),
+    ("$10M–$100M companies", "lower middle market companies"),
+    ("$10M-$100M companies", "lower middle market companies"),
     ("$10M to $100M", "under $50MM"),
     ("$10M–$100M", "under $50MM"),
     ("$10M-$100M", "under $50MM"),
