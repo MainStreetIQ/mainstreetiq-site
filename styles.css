@@ -1127,3 +1127,70 @@ section { padding: var(--section-padding); }
   }
   .assessment-teaser .btn { width: 100%; justify-content: center; }
 }
+
+/* Before / after comparison pairs */
+.compare {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.compare-row h3 {
+  font-size: 1.15rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+.compare-pair {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 1rem;
+}
+.compare-cell {
+  padding: 1.25rem 1.5rem;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+.compare-after { border-left: 3px solid var(--accent); }
+.compare-tag {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--slate);
+  margin-bottom: 0.5rem;
+}
+.compare-after .compare-tag { color: var(--accent); }
+.compare-cell p {
+  font-size: 0.95rem;
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .compare-pair { grid-template-columns: 1fr; }
+}
+
+/* Case study "At a Glance" box */
+.case-glance {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem 2rem;
+  margin: 0 0 3rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.case-glance dt {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--slate);
+  margin-bottom: 0.25rem;
+}
+.case-glance dd {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--color-dark-text);
+}
+@media (max-width: 480px) {
+  .case-glance { grid-template-columns: 1fr; }
+}
