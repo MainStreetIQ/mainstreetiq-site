@@ -61,6 +61,47 @@
     "url": "https://www.mainstreetiq.com/intro-call"
   }
   </script>
+  <!-- Structured Data: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Why don't you publish prices for Engage and Manage?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Because the right shape depends on what you already have in-house: the strength of your finance team, the decisions on your calendar, and how much of the function you want us to run. A list price would fit almost nobody. We give you the figure for your situation once we understand it. For wineries, Monitor is the exception; its pricing is on its own page."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens on the call?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Thirty minutes. We talk through where your finance function is today and what your numbers are and aren't telling you. You leave with a direct read on whether we are the right fit. If we are not, we say so, with a referral where we can give one. If we are, we recommend the engagement that fits your situation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What should I have ready?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nothing formal. The short form on this page gives us a head start, and anything you share about what is prompting the call makes the conversation sharper. Bring the question that is already on your desk."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is my information handled?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "What you share in the form is handled under our Privacy Policy. If we work together later, we work only from the data you explicitly grant us access to, and our Trust Center documents our controls, vendors, and data flow in detail."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
@@ -219,6 +260,54 @@
           <p class="msiq-form__privacy" style="font-size: 0.8rem; color: var(--slate); margin-top: 0.75rem;">How we use what you share here is set out in our <a href="/legal/privacy">Privacy Policy</a>.</p>
         </form>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="bg-light">
+    <div class="container">
+      <div class="section-header section-header-left">
+        <span class="section-label">FAQ</span>
+        <h2 class="section-title">Common Questions</h2>
+      </div>
+      <div class="container-narrow" style="max-width: 800px;">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Why don't you publish prices for Engage and Manage?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Because the right shape depends on what you already have in-house: the strength of your finance team, the decisions on your calendar, and how much of the function you want us to run. A list price would fit almost nobody. We give you the figure for your situation once we understand it. For wineries, <a href="/monitor" style="color: var(--navy); font-weight: 600;">Monitor</a> is the exception; its pricing is on its own page.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>What happens on the call?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Thirty minutes. We talk through where your finance function is today and what your numbers are and aren't telling you. You leave with a direct read on whether we are the right fit. If we are not, we say so, with a referral where we can give one. If we are, we recommend the engagement that fits your situation.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>What should I have ready?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Nothing formal. The short form on this page gives us a head start, and anything you share about what is prompting the call makes the conversation sharper. Bring the question that is already on your desk.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>How is my information handled?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            <p>What you share in the form is handled under our <a href="/legal/privacy" style="color: var(--navy); font-weight: 600;">Privacy Policy</a>. If we work together later, we work only from the data you explicitly grant us access to, and our <a href="/trust" style="color: var(--navy); font-weight: 600;">Trust Center</a> documents our controls, vendors, and data flow in detail.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -411,6 +500,21 @@
     toggle.addEventListener('click', () => {
       navLinks.classList.toggle('open');
       toggle.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const isOpen = item.classList.contains('active');
+        document.querySelectorAll('.faq-item').forEach(i => {
+          i.classList.remove('active');
+          i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        });
+        if (!isOpen) {
+          item.classList.add('active');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
     });
 
     // On submit:
