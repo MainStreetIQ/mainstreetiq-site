@@ -14,8 +14,8 @@
 {{meta_base}}
   <title>Trust Center | Main Street IQ</title>
 {{ga4}}
-  <meta name="description" content="Main Street IQ Trust Center. Full stack walkthrough for engagements that handle financial data: data residency, credential brokering, PII tokenization, audit logging, enterprise add-ons, and HIPAA readiness.">
-  <meta name="keywords" content="trust center, data security, financial data handling, credential vault, PII tokenization, audit logging, AWS Bedrock PrivateLink, HIPAA BAA, Zero Data Retention, fractional CFO security">
+  <meta name="description" content="Main Street IQ Trust Center. Full stack walkthrough for engagements that handle financial data: data residency, credential brokering, de-identification, audit logging, enterprise add-ons, and HIPAA requirements.">
+  <meta name="keywords" content="trust center, data security, financial data handling, credential broker, de-identification, audit logging, AWS Bedrock PrivateLink, HIPAA BAA, fractional CFO security">
   <link rel="canonical" href="https://www.mainstreetiq.com/trust">
   <meta name="robots" content="noindex, follow">
 
@@ -65,7 +65,7 @@
       <div class="section-header section-header-left">
         <span class="section-label">Platform + Practice</span>
         <h2 class="section-title">What We Use From Anthropic, and What We Build Ourselves</h2>
-        <p class="section-subtitle">Manage runs on Anthropic's generally-available Claude products with a Zero Data Retention arrangement on the inference layer. The practice layer on top is built by Main Street IQ. Honest about which is which.</p>
+        <p class="section-subtitle">Manage runs on Anthropic's generally-available Claude products, used on commercial API terms. The practice layer on top is built by Main Street IQ. Honest about which is which.</p>
       </div>
 
       <div class="split-section">
@@ -73,25 +73,25 @@
           <h3 style="font-size: 22px; font-weight: 600; margin-bottom: 12px;">What we use from Anthropic</h3>
           <p style="margin-bottom: 14px;">Generally-available Claude products, configured for your engagement:</p>
           <ul style="list-style: none; padding: 0;">
-            <li style="padding: 8px 0; border-bottom: 1px solid var(--border, #e8eaed);"><strong>Claude Messages API with Zero Data Retention.</strong> The inference layer for every skill output. ZDR means Anthropic does not retain your prompts or outputs at rest after the API response is returned. The arrangement is per-organization and provisioned via Anthropic's sales team.</li>
-            <li style="padding: 8px 0; border-bottom: 1px solid var(--border, #e8eaed);"><strong>Claude Agent SDK.</strong> The Python and TypeScript libraries Anthropic ships for building agent loops. Our skills are built on this SDK directly. ZDR is preserved because the SDK uses the Messages API underneath.</li>
+            <li style="padding: 8px 0; border-bottom: 1px solid var(--border, #e8eaed);"><strong>Claude Messages API.</strong> The inference layer for every skill output, used on Anthropic's commercial API terms. Zero Data Retention is available for this API as a per-organization arrangement through Anthropic's sales team; it is not yet in place for Main Street IQ.</li>
+            <li style="padding: 8px 0; border-bottom: 1px solid var(--border, #e8eaed);"><strong>Claude Code.</strong> Anthropic's agentic tool for code and automation. Our skills run inside it and call the Messages API directly.</li>
             <li style="padding: 8px 0; border-bottom: 1px solid var(--border, #e8eaed);"><strong>Claude Cowork.</strong> Anthropic's collaborative writing surface ($20/mo per seat). Where Scott and your team draft monthly close narratives, board decks, and lender packages with Claude as a real-time collaborator.</li>
             <li style="padding: 8px 0; border-bottom: 1px solid var(--border, #e8eaed);"><strong>Claude for Excel.</strong> The Microsoft Excel add-in ($20/mo per seat). Where your CEO and growth team edit driver-based forecasts and scenario models live, with Claude tracing references across tabs and diagnosing model structure.</li>
             <li style="padding: 8px 0;"><strong>Claude on AWS Bedrock with PrivateLink (enterprise add-on).</strong> Available for clients who require network-isolated deployment and have an existing AWS posture. Not the default; scoped per engagement.</li>
           </ul>
-          <p style="margin-top: 12px; font-size: 12.5px; color: var(--muted, #5a6573); font-style: italic;">Cowork and Claude for Excel are not currently ZDR-eligible by Anthropic's policy. We use them transparently for collaborative work; high-sensitivity flows run on the ZDR-eligible Messages API.</p>
+          <p style="margin-top: 12px; font-size: 12.5px; color: var(--muted, #5a6573); font-style: italic;">Cowork and Claude for Excel are not currently ZDR-eligible by Anthropic's policy. We use them transparently for collaborative work; high-sensitivity flows run on the Messages API.</p>
         </div>
         <div>
           <h3 style="font-size: 22px; font-weight: 600; margin-bottom: 12px;">What we build ourselves</h3>
           <p style="margin-bottom: 14px;">The practice and security layers on top:</p>
           <ul style="list-style: none; padding: 0;">
-            <li style="padding: 8px 0; border-bottom: 1px solid var(--border, #e8eaed);"><strong>Credential broker.</strong> A local secrets store built by Main Street IQ, with OS-keychain-backed encryption. Issues short-lived per-call tokens. AI context never holds real refresh tokens, so a prompt-injection attack cannot exfiltrate credentials. ZDR-compatible by design.</li>
-            <li style="padding: 8px 0; border-bottom: 1px solid var(--border, #e8eaed);"><strong>Pre-prompt PII redaction.</strong> Customer names, account numbers, EINs, and other identifiers are tokenized before any data reaches the LLM. The model reasons about tokens; only authorized humans see the un-tokenized output.</li>
-            <li style="padding: 8px 0; border-bottom: 1px solid var(--border, #e8eaed);"><strong>Per-client read scoping and structured audit log.</strong> A decorator on every skill enforces single-client reads. Every skill run writes a JSONL audit entry to your encrypted client folder. You can read it directly.</li>
-            <li style="padding: 8px 0; border-bottom: 1px solid var(--border, #e8eaed);"><strong>49 vertical-specific skills.</strong> Marketplace settlement reconciliation, cohort economics with long-window variants, marketing halo attribution, multi-location inventory, 3PL invoice forensics, cash-forecast drift detection.</li>
+            <li style="padding: 8px 0; border-bottom: 1px solid var(--border, #e8eaed);"><strong>Credential broker.</strong> A local secrets store built by Main Street IQ, backed by the operating system keychain, that mints short-lived, narrowly scoped tokens one call at a time. Version one is built and tested against mock providers; live provider connections come next. Our rule in the meantime: no credential reaches a model in any form.</li>
+            <li style="padding: 8px 0; border-bottom: 1px solid var(--border, #e8eaed);"><strong>De-identification before AI.</strong> Our handling is designed so models work from aggregates and de-identified data rather than raw customer records. Customer identifiers are replaced with keys and leak-checked, and a guard blocks AI tools from reading raw client exports.</li>
+            <li style="padding: 8px 0; border-bottom: 1px solid var(--border, #e8eaed);"><strong>Per-client read scoping and structured audit log.</strong> A scoping layer stops a run for one client from reading another client's folder. Month-end close, P&amp;L, P&amp;L forecast and finance package runs append a structured audit entry to that client's folder, available to you on request.</li>
+            <li style="padding: 8px 0; border-bottom: 1px solid var(--border, #e8eaed);"><strong>Vertical-specific skills.</strong> Marketplace settlement reconciliation, cohort economics with long-window variants, marketing halo attribution, multi-location inventory, 3PL invoice forensics, cash-forecast drift detection.</li>
             <li style="padding: 8px 0; border-bottom: 1px solid var(--border, #e8eaed);"><strong>Four market-segment packs.</strong> Ecommerce, wine, health and wellness, elective medicine. Different stacks, different cohort definitions, different compliance calendars.</li>
             <li style="padding: 8px 0; border-bottom: 1px solid var(--border, #e8eaed);"><strong>Per-client CEO dashboard.</strong> Four tiers, phone-first, with the disclosure tier discipline (real / benchmark / fixture) we ship on every artifact.</li>
-            <li style="padding: 8px 0;"><strong>The pre-publish gate.</strong> Four-checker integrity chain (canonical facts, scope, voice, factual verification) on every artifact that leaves the engagement. Plus Scott signs every monthly close.</li>
+            <li style="padding: 8px 0;"><strong>The pre-publish gate.</strong> Every artifact that leaves the engagement is checked for canonical facts, scope, voice, factual accuracy, legal and regulatory risk, and the numbers behind it. Plus Scott signs every monthly close.</li>
           </ul>
         </div>
       </div>
@@ -104,12 +104,12 @@
       <div class="section-header">
         <span class="section-label">The Six Controls</span>
         <h2 class="section-title">Three From Anthropic. Three From Us.</h2>
-        <p class="section-subtitle">Every embedded finance engagement should be able to name its security controls specifically. Here are ours.</p>
+        <p class="section-subtitle">Every embedded finance engagement should be able to name its security controls specifically. Here are ours, and where each one stands today.</p>
       </div>
       <div class="raid-grid">
         <div class="raid-card">
-          <h4>Zero Data Retention on the Inference Layer</h4>
-          <p>The Claude Messages API is ZDR-eligible by Anthropic's published policy. Under a ZDR arrangement, your prompts and outputs are not stored at rest after the API response is returned. The arrangement is per-organization and provisioned through Anthropic's sales team. We apply for ZDR before any client integration touches live data.</p>
+          <h4>Zero Data Retention: Where It Stands</h4>
+          <p>The Claude Messages API is eligible for Zero Data Retention under Anthropic's published policy: prompts and outputs are not stored at rest after the response returns. The arrangement is per-organization and provisioned through Anthropic's sales team. It is not yet in place for Main Street IQ. If your engagement requires it, ask us where it stands.</p>
         </div>
         <div class="raid-card">
           <h4>No Training on Your Data</h4>
@@ -117,24 +117,24 @@
         </div>
         <div class="raid-card">
           <h4>Optional PrivateLink via AWS Bedrock</h4>
-          <p>For enterprise clients requiring network-isolated inference, we deploy Claude on AWS Bedrock with PrivateLink. Your queries route through your own AWS VPC; financial data does not transit the public internet. Added as a scoped per-engagement option, not the default. See pricing and architecture spec on request.</p>
+          <p>For enterprise clients requiring network-isolated inference, we can deploy Claude on AWS Bedrock with PrivateLink. Your queries route through your own AWS VPC; financial data does not transit the public internet. Added as a scoped per-engagement option, not the default. See pricing and architecture spec on request.</p>
         </div>
         <div class="raid-card">
           <h4>Main Street IQ Credential Broker</h4>
-          <p>Tokens for QuickBooks, Shopify, Amazon, bank feeds, and ad platforms live in a local secrets store built by Main Street IQ and backed by OS-level keychain encryption. Skills request short-lived per-call tokens via placeholder substitution. AI context never holds real refresh tokens, so a prompt-injection attack cannot exfiltrate credentials.</p>
+          <p>A local secrets store built by Main Street IQ, backed by the operating system keychain, holds long-lived provider credentials and mints short-lived, narrowly scoped tokens one call at a time. Version one is built and tested against mock providers; live connections to QuickBooks and other providers come next. Our rule in the meantime: no credential reaches a model in any form.</p>
         </div>
         <div class="raid-card">
-          <h4>Pre-Prompt Redaction + Client Scope</h4>
-          <p>Customer names, account numbers, EINs, and other identifiers are tokenized before any LLM call. A decorator on every skill enforces single-client read scoping so cross-client access is structurally impossible.</p>
+          <h4>De-identification + Client Scope</h4>
+          <p>Our handling is designed so models see aggregates or de-identified data rather than raw rows: customer identifiers are replaced with keys and leak-checked, and a guard blocks AI tools from reading raw client exports. A scoping layer stops a run for one client from reading another client's folder.</p>
         </div>
         <div class="raid-card">
           <h4>Audit Log + Pre-Publish Gate</h4>
-          <p>Every skill run writes a structured JSONL audit entry to your encrypted client folder, accessible to your team directly. Every artifact bound for outside our engagement (CPA, lender, board) passes through a four-checker gate: canonical facts, scope, brand voice, factual verification.</p>
+          <p>Month-end close, P&amp;L, P&amp;L forecast and finance package runs append a structured audit entry to that client's folder, available to you on request. Every artifact bound for outside our engagement (CPA, lender, board) passes through an integrity gate that checks facts, scope, voice, legal and regulatory risk, and the numbers.</p>
         </div>
       </div>
 
       <p style="margin-top: 28px; font-size: 14px; color: var(--muted, #5a6573); max-width: 760px;">
-        Claude Cowork and Claude for Excel, which we use for collaborative document work, are not currently ZDR-eligible by Anthropic's published policy. We disclose this transparently and route high-sensitivity flows through the ZDR-eligible Messages API path.
+        Claude Cowork and Claude for Excel, which we use for collaborative document work, are not currently ZDR-eligible by Anthropic's published policy. We disclose this transparently and route high-sensitivity flows through the Messages API path.
       </p>
     </div>
   </section>
@@ -144,10 +144,10 @@
     <div class="container">
       <div class="section-header section-header-left">
         <span class="section-label">Regulated Engagements</span>
-        <h2 class="section-title">HIPAA Readiness and Data Residency</h2>
+        <h2 class="section-title">HIPAA Requirements and Data Residency</h2>
       </div>
       <div class="container-narrow" style="max-width: 800px;">
-        <p><strong>HIPAA.</strong> For elective medicine clients handling protected health information, we run engagements under a signed Business Associate Agreement on a HIPAA-enabled Anthropic organization. HIPAA readiness is provisioned at the organization level via Anthropic's sales team. Note: HIPAA-ready API access is not available on AWS Bedrock; PHI engagements run on the first-party Claude API with the BAA.</p>
+        <p><strong>HIPAA.</strong> For elective medicine clients handling protected health information, an engagement requires a signed Business Associate Agreement and a HIPAA-enabled setup on whichever platform runs the work: on Anthropic's own API, HIPAA readiness is enabled at the organization level; on AWS Bedrock, coverage comes through AWS's own BAA. Ask us where that stands before sharing any PHI.</p>
         <p style="margin-top: 12px;"><strong>Data residency.</strong> Standard engagements process data in US-based Anthropic infrastructure. Bedrock-deployed clients choose their AWS region directly.</p>
         <p style="margin-top: 12px;"><strong>Subprocessor list.</strong> Our full subprocessor list is maintained at <a href="/legal/privacy">our Privacy page</a> and updated whenever we add or change a vendor.</p>
       </div>
@@ -163,7 +163,7 @@
       </div>
       <div class="container-narrow" style="max-width: 800px;">
         <p>Anthropic released "Claude for Financial Services" on May 5, 2026. It is a product for institutional finance firms: Citadel, Carlyle, BNY, Travelers, Walleye Capital, Hg. It ships ten agent templates designed for investment banking workflows (pitchbook construction, KYC screening, model building, earnings review) and a set of data-partner integrations (FactSet, S&P Capital IQ, MSCI, PitchBook).</p>
-        <p style="margin-top: 12px;">Manage does not use that product. The institutional-FS agent templates are not designed for lower middle market finance and the data-partner integrations are not relevant for the buyer we serve. We use the underlying generally-available Claude products (the Messages API, the Agent SDK, Cowork, Excel) directly. If a security team asks whether Main Street IQ is "on the same platform as Citadel," the answer is honest: same Anthropic platform underneath, very different product surface on top.</p>
+        <p style="margin-top: 12px;">Manage does not use that product. The institutional-FS agent templates are not designed for lower middle market finance and the data-partner integrations are not relevant for the buyer we serve. We use the underlying generally-available Claude products (the Messages API, Claude Code, Cowork, Excel) directly. If a security team asks whether Main Street IQ is "on the same platform as Citadel," the answer is honest: same Anthropic platform underneath, very different product surface on top.</p>
       </div>
     </div>
   </section>
