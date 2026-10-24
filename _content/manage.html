@@ -92,7 +92,7 @@
         "name": "What does Manage actually cover?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Daily bookkeeping execution held to a 99%+ accuracy standard. Monthly close signed by Scott. A 13-week cash forecast that refreshes daily and is rendered weekly. SKU, channel, cohort, and customer-level unit economics in your CEO dashboard. Cohort LTV and CAC at 30, 90, 180, and 365 days (longer windows for slow-reorder businesses). 3PL and vendor invoice validation. Sales tax, 1099, and compliance filings prep for your CPA to file. Capital stack management. A monthly CFO narrative in your hands by day eight, written and signed by Scott. Weekly office hours with the CEO and asynchronous everything else."
+          "text": "Daily bookkeeping execution held to a 99%+ accuracy standard. Monthly close signed by Scott. A 13-week cash forecast your bookkeeper updates every week, with an alert when the lowest week dips below your cash floor. SKU, channel, cohort, and customer-level unit economics in your CEO dashboard. Cohort LTV and CAC at 30, 90, 180, and 365 days (longer windows for slow-reorder businesses). 3PL and vendor invoice validation. Sales tax, 1099, and compliance filings prep for your CPA to file. Capital stack management. A monthly CFO narrative in your hands by day eight, written and signed by Scott. Weekly office hours with the CEO and asynchronous everything else."
         }
       },
       {
@@ -124,7 +124,7 @@
         "name": "How long does it take to be live?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Three months from start to fully live. Month one stabilizes the books and gets the integrations wired. Month two builds out the SKU and cohort layer plus the dashboard tiers. Month three locks in the operating cadence: daily cash refresh, weekly CEO dashboard ritual, monthly close signed by day eight, quarterly strategic review. Transition from an existing fractional CFO setup can run in parallel; a mid-month transition can run in as little as two weeks when the calendar requires it."
+          "text": "Three months from start to fully live. Month one stabilizes the books and gets the integrations wired. Month two builds out the SKU and cohort layer plus the dashboard tiers. Month three locks in the operating cadence: weekly cash forecast read, weekly CEO dashboard ritual, monthly close signed by day eight, quarterly strategic review. Transition from an existing fractional CFO setup can run in parallel; a mid-month transition can run in as little as two weeks when the calendar requires it."
         }
       },
       {
@@ -132,7 +132,7 @@
         "name": "How is my financial data protected?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Your financial data lives in encrypted per-client storage. Credentials are brokered through a vault so AI tools never hold real tokens. Customer PII and account numbers are tokenized before any AI call. Every artifact bound for you, your CPA, your lender, or your board passes through an integrity gate that checks facts, voice, legal and regulatory risk, and the numbers before it ships. Network-isolated VPC deployment is available as an enterprise add-on. HIPAA-ready engagements with a signed Business Associate Agreement are supported for elective medicine clients. The full stack and vendor details are on our Trust Center."
+          "text": "Your financial data lives in per-client storage, and a scoping layer keeps each client's folder separate from every other's. Our handling is designed so AI models work from aggregates and de-identified data rather than raw customer records, and credentials are never passed to a model. Every artifact bound for you, your CPA, your lender, or your board passes through an integrity gate that checks facts, voice, legal and regulatory risk, and the numbers before it ships. Network-isolated VPC deployment is available as an enterprise add-on. Engagements that handle protected health information require a signed Business Associate Agreement and a HIPAA-enabled setup; ask us where that stands before sharing any PHI. The full stack and vendor details are on our Trust Center."
         }
       }
     ]
@@ -179,7 +179,7 @@
           </div>
           <div class="problem-item">
             <h3>You Found Out About a Cash Gap by Living Through It</h3>
-            <p>You took on a high-APR working capital line because the forecast did not see the gap coming. You would rather a daily-refreshed 13-week forecast that alerts you the week before, not a quarterly board slide reviewing what already happened.</p>
+            <p>You took on a high-APR working capital line because the forecast did not see the gap coming. You would rather a 13-week forecast, updated every week, that alerts you when the low point dips under your cash floor, not a quarterly board slide reviewing what already happened.</p>
           </div>
           <div class="problem-item">
             <h3>You Cannot See Profitability by SKU, Channel, or Cohort</h3>
@@ -217,7 +217,7 @@
         </div>
         <div class="raid-card">
           <h4>02 &middot; Cash &amp; Working Capital</h4>
-          <p><strong>Treasurer agent.</strong> A 13-week cash forecast pulled daily from your live bank, AR, AP, open POs, ad pacing, payroll calendar, and tax obligations. Monday-morning rendered weekly with drift detection (last Monday we projected week 7 at $480K; today $390K; here is what changed). Pre-computed scenarios for revenue-down, tariff shock, accelerated paydown. Collections nudges drafted for your operator's queue. Lockbox capture for paper-check B2B AR. Runway alerts before they become emergencies.</p>
+          <p><strong>Treasurer agent.</strong> A 13-week cash forecast in a workbook you own, updated every week from your bank balances, daily sales report, QuickBooks bills and open invoices, payroll calendar, and committed spend, with what moved since the last week called out. Pre-computed scenarios for revenue-down, tariff shock, accelerated paydown. Collections nudges drafted for your operator's queue. Lockbox capture for paper-check B2B AR. Runway alerts before they become emergencies.</p>
         </div>
         <div class="raid-card">
           <h4>03 &middot; Unit Economics &amp; Forecasting</h4>
@@ -225,7 +225,52 @@
         </div>
         <div class="raid-card">
           <h4>04 &middot; Compliance &amp; Risk</h4>
-          <p><strong>Tax &amp; Compliance agent.</strong> Multi-state sales tax nexus monitoring across all your channels. Marketplace facilitator coverage verification (Amazon and TikTok collect-and-remit by state). 1099 prep and W9 collection. Audit-trail workpapers your CPA can file from. Estimated quarterly tax payment calculations. Vertical-specific compliance (TTB for wine, HIPAA-tier data handling for medical, sales tax + marketplace facilitator for ecom). The pre-publish gate runs on every artifact that leaves the engagement.</p>
+          <p><strong>Tax &amp; Compliance agent.</strong> Multi-state sales tax nexus monitoring across all your channels. Marketplace facilitator coverage verification (Amazon and TikTok collect-and-remit by state). 1099 prep and W9 collection. Audit-trail workpapers your CPA can file from. Estimated quarterly tax payment calculations. Vertical-specific compliance (TTB for wine, HIPAA handling for medical under a signed Business Associate Agreement, sales tax + marketplace facilitator for ecom). The pre-publish gate runs on every artifact that leaves the engagement.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== THE 13-WEEK CASH FORECAST ===== -->
+  <section>
+    <div class="container">
+      <div class="section-header section-header-left">
+        <span class="section-label">The Cash Forecast</span>
+        <h2 class="section-title">How the 13-Week Cash Forecast Works</h2>
+        <p class="section-subtitle">One workbook, built for your business, updated every week, and read by us each week.</p>
+      </div>
+      <div class="engagement-list">
+        <div class="engagement-item">
+          <div class="engagement-num">01</div>
+          <div>
+            <h3>Built for Your Business</h3>
+            <p class="engagement-hours">Your channels, your payroll, your cards</p>
+            <p>One Excel workbook that you own, shaped to how money actually moves through your company: the sales channels you run (online store, subscription, marketplaces, wholesale), your payroll cadence, each card's statement cycle, and the day your week starts. It opens from cash in the bank, not book cash.</p>
+          </div>
+        </div>
+        <div class="engagement-item">
+          <div class="engagement-num">02</div>
+          <div>
+            <h3>Updated Every Week</h3>
+            <p class="engagement-hours">Your bookkeeper's weekly routine</p>
+            <p>Your bookkeeper enters last week's actuals and bank balances, pastes the daily sales report and the QuickBooks unpaid bills report (plus open invoices, if you sell on terms), and updates committed spend. The workbook turns sales into expected payouts on its own. The routine is written into the workbook itself.</p>
+          </div>
+        </div>
+        <div class="engagement-item">
+          <div class="engagement-num">03</div>
+          <div>
+            <h3>Checked Before It Counts</h3>
+            <p class="engagement-hours">A readiness check on every save</p>
+            <p>A built-in health check flags blank inputs and gaps before anyone relies on the numbers, and every finance package and weekly flash states what that check reads.</p>
+          </div>
+        </div>
+        <div class="engagement-item">
+          <div class="engagement-num">04</div>
+          <div>
+            <h3>Read Every Week</h3>
+            <p class="engagement-hours">Low point, what moved, floor alert</p>
+            <p>We read each saved week: the lowest point in the next thirteen, what moved since the last read, and an alert when that low point falls below the cash floor you set. It feeds the monthly finance package and a one-page weekly cash and sales flash between packages.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -308,7 +353,7 @@
         </div>
         <div class="raid-card">
           <h4>One-Time Setup</h4>
-          <p>Vertical-pack configuration, adapter wiring, dashboard build, agent vault provisioning, historical data backfill. Real work, named transparently, and waived for the first three Manage clients as our lighthouse customers.</p>
+          <p>Vertical-pack configuration, adapter wiring, dashboard build, credential broker setup, historical data backfill. Real work, named transparently, and waived for the first three Manage clients as our lighthouse customers.</p>
         </div>
         <div class="raid-card">
           <h4>Multi-Entity and International</h4>
@@ -334,7 +379,7 @@
         <h2 class="section-title">Built for Financial Data From the Start</h2>
       </div>
       <div class="container-narrow" style="max-width: 800px;">
-        <p>Your financial data lives in encrypted per-client storage. Credentials are brokered through a vault so AI tools never hold real tokens. Customer PII and account numbers are tokenized before any AI call. Every artifact bound for you, your CPA, your lender, or your board passes through an integrity gate that checks facts, voice, legal and regulatory risk, and the numbers before it ships. Network-isolated VPC deployment is available as an enterprise add-on. HIPAA-ready engagements with a signed Business Associate Agreement are supported for elective medicine clients handling protected health information.</p>
+        <p>Your financial data lives in per-client storage, and a scoping layer keeps each client's folder separate from every other's. Our handling is designed so AI models work from aggregates and de-identified data rather than raw customer records, and credentials are never passed to a model. Every artifact bound for you, your CPA, your lender, or your board passes through an integrity gate that checks facts, voice, legal and regulatory risk, and the numbers before it ships. Network-isolated VPC deployment is available as an enterprise add-on. Engagements that handle protected health information require a signed Business Associate Agreement and a HIPAA-enabled setup; ask us where that stands before sharing any PHI.</p>
         <div style="margin-top: 22px; padding: 18px 22px; background: #fff; border-left: 3px solid var(--accent, #2563eb); border-radius: 4px;">
           <p style="margin: 0; font-size: 14.5px;"><strong>For your security team, compliance officer, or legal counsel.</strong> The <a href="/trust" style="font-weight: 600;">Main Street IQ Trust Center</a> documents every control, every vendor, and the data flow end to end. Built for the people who need the long version before they can sign off.</p>
         </div>
@@ -365,7 +410,7 @@
         </div>
         <div class="raid-card">
           <h4>Elective Medicine</h4>
-          <p>QuickBooks + Nextech or Modernizing Medicine or Mangomint + your POS. Patient cohort economics. Provider-level and treatment-class profitability. HIPAA-tier data handling at the redaction layer. Multi-modality practices (surgery + injectables + skin + cosmetic dental) covered.</p>
+          <p>QuickBooks + Nextech or Modernizing Medicine or Mangomint + your POS. Patient cohort economics. Provider-level and treatment-class profitability. Protected health information handled only under a signed Business Associate Agreement. Multi-modality practices (surgery + injectables + skin + cosmetic dental) covered.</p>
         </div>
       </div>
     </div>
@@ -383,8 +428,8 @@
           <div class="engagement-num">01</div>
           <div>
             <h3>Month 1: Stabilize</h3>
-            <p class="engagement-hours">First close, integrations live, daily cash refresh running</p>
-            <p>Pull historical data, wire QuickBooks and marketplace adapters, provision the vault, hire and onboard your bookkeeper-controller, get the first monthly close completed under our discipline, stand up the 13-week cash forecast. Dashboard Tier 1 (phone glance) live.</p>
+            <p class="engagement-hours">First close, integrations live, weekly cash forecast running</p>
+            <p>Pull historical data, wire QuickBooks and marketplace adapters, set up the credential broker, hire and onboard your bookkeeper-controller, get the first monthly close completed under our discipline, stand up the 13-week cash forecast. Dashboard Tier 1 (phone glance) live.</p>
           </div>
         </div>
         <div class="engagement-item">
@@ -421,7 +466,7 @@
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
           </button>
           <div class="faq-answer">
-            <p>Daily bookkeeping execution held to a 99%+ accuracy standard. Monthly close signed by Scott. A 13-week cash forecast that refreshes daily and is rendered weekly. SKU, channel, cohort, and customer-level unit economics in your CEO dashboard. Cohort LTV and CAC at 30, 90, 180, and 365 days (longer windows for slow-reorder businesses). 3PL and vendor invoice validation. Sales tax, 1099, and compliance filings prep for your CPA to file. Capital stack management. A monthly CFO narrative in your hands by day eight, written and signed by Scott. Weekly office hours with the CEO and asynchronous everything else.</p>
+            <p>Daily bookkeeping execution held to a 99%+ accuracy standard. Monthly close signed by Scott. A 13-week cash forecast your bookkeeper updates every week, with an alert when the lowest week dips below your cash floor. SKU, channel, cohort, and customer-level unit economics in your CEO dashboard. Cohort LTV and CAC at 30, 90, 180, and 365 days (longer windows for slow-reorder businesses). 3PL and vendor invoice validation. Sales tax, 1099, and compliance filings prep for your CPA to file. Capital stack management. A monthly CFO narrative in your hands by day eight, written and signed by Scott. Weekly office hours with the CEO and asynchronous everything else.</p>
           </div>
         </div>
         <div class="faq-item">
@@ -457,7 +502,7 @@
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
           </button>
           <div class="faq-answer">
-            <p>Three months from start to fully live. Month one stabilizes the books and gets the integrations wired. Month two builds out the SKU and cohort layer plus the dashboard tiers. Month three locks in the operating cadence: daily cash refresh, weekly CEO dashboard ritual, monthly close signed by day eight, quarterly strategic review. Transition from an existing fractional CFO setup can run in parallel; a mid-month transition can run in as little as two weeks when the calendar requires it.</p>
+            <p>Three months from start to fully live. Month one stabilizes the books and gets the integrations wired. Month two builds out the SKU and cohort layer plus the dashboard tiers. Month three locks in the operating cadence: weekly cash forecast read, weekly CEO dashboard ritual, monthly close signed by day eight, quarterly strategic review. Transition from an existing fractional CFO setup can run in parallel; a mid-month transition can run in as little as two weeks when the calendar requires it.</p>
           </div>
         </div>
         <div class="faq-item">
@@ -466,7 +511,7 @@
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
           </button>
           <div class="faq-answer">
-            <p>Your financial data lives in encrypted per-client storage. Credentials are brokered through a vault so AI tools never hold real tokens. Customer PII and account numbers are tokenized before any AI call. Every artifact bound for you, your CPA, your lender, or your board passes through an integrity gate that checks facts, voice, legal and regulatory risk, and the numbers before it ships. Network-isolated VPC deployment is available as an enterprise add-on. HIPAA-ready engagements with a signed Business Associate Agreement are supported for elective medicine clients. The full stack and vendor details are on our <a href="/trust">Trust Center</a>.</p>
+            <p>Your financial data lives in per-client storage, and a scoping layer keeps each client's folder separate from every other's. Our handling is designed so AI models work from aggregates and de-identified data rather than raw customer records, and credentials are never passed to a model. Every artifact bound for you, your CPA, your lender, or your board passes through an integrity gate that checks facts, voice, legal and regulatory risk, and the numbers before it ships. Network-isolated VPC deployment is available as an enterprise add-on. Engagements that handle protected health information require a signed Business Associate Agreement and a HIPAA-enabled setup; ask us where that stands before sharing any PHI. The full stack and vendor details are on our <a href="/trust">Trust Center</a>.</p>
           </div>
         </div>
         <div class="faq-item">
