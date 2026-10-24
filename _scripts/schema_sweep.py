@@ -81,7 +81,7 @@ PAYLOADS: dict[str, str] = {
     ],
     "audience": {
       "@type": "Audience",
-      "audienceType": "Owner and founder-led companies under $50MM in wine, health and wellness, elective medicine, and ecommerce"
+      "audienceType": "Lower middle market companies in wine, health and wellness, elective medicine, and ecommerce"
     },
     "url": "https://www.mainstreetiq.com/fit-call"
   }

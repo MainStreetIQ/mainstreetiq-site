@@ -40,8 +40,8 @@ FOOTER_TAGLINE_OLD = (
     "without the headcount."
 )
 FOOTER_TAGLINE_NEW = (
-    "Fractional CFO and business advisory for owner and founder-led "
-    "companies on the California coast."
+    "Fractional CFO and business advisory for lower middle market "
+    "companies, rooted on the California coast."
 )
 
 

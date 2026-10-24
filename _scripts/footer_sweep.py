@@ -23,7 +23,7 @@ ROOT = Path(__file__).resolve().parent.parent
 CANONICAL_FOOTER = """<div class="footer-grid">
         <div class="footer-brand">
           <a href="/" class="logo"><img src="/assets/logos/logo-horizontal-dark.svg" alt="Main Street IQ"></a>
-          <p>Fractional CFO and business advisory for owner and founder-led companies on the California coast.</p>
+          <p>Fractional CFO and business advisory for lower middle market companies, rooted on the California coast.</p>
         </div>
         <div class="footer-col">
           <h4>Company</h4>
