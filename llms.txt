@@ -87,7 +87,6 @@ Past engagements from Scott Hess's career before Main Street IQ. No client names
 
 - [E-Commerce: $15M Company](https://www.mainstreetiq.com/our-work/e-commercegrowth): Scaling finance through hypergrowth: inventory forecasting, margin analysis by channel, KPI dashboards, enterprise accounting migration.
 - [Apparel/DTC: $10M Brand](https://www.mainstreetiq.com/our-work/designer-led-apparel): Product costing, seasonal cash flow forecasting, channel profitability analysis, working capital optimization.
-- [Hospitality: Six-Location Restaurant Group](https://www.mainstreetiq.com/our-work/restaurant-group): Unified multi-location reporting, food/labor cost controls, expansion modeling for coastal California restaurants.
 - [Turnaround: Asset Purchase](https://www.mainstreetiq.com/our-work/asset-purchase): Management-led acquisition from bankruptcy: valuation, financing, 100-day integration, finance function built from scratch.
 - [SaaS: Post-Seed Series A Prep](https://www.mainstreetiq.com/our-work/saas-post-seed-funding): SaaS metrics implementation (ARR, MRR, CAC, LTV, churn), cohort analysis, revenue recognition, investor-ready reporting.
 - [Family Office](https://www.mainstreetiq.com/our-work/family-office): Unified reporting across PE, real estate, operating businesses. Institutional-grade investment analysis and multigenerational governance.

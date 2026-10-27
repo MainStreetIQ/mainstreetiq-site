@@ -92,6 +92,7 @@ BESPOKE = {
     "ai-cfo-santa-barbara.html": "redirect stub, retired 2026-10-27 for /fractional-cfo-santa-barbara",
     "ai-cfo-san-luis-obispo.html": "redirect stub, retired 2026-10-27 for /fractional-cfo-san-luis-obispo",
     "ai-cfo-ventura.html": "redirect stub, retired 2026-10-27 for /fractional-cfo-ventura",
+    "our-work/restaurant-group.html": "redirect stub, retired 2026-10-27 (Scott: hospitality is a retired segment) for /our-work",
     # Only file on the site containing literal Liquid-style braces.
     "legal/index.html": "contains literal {{ }} braces",
 }
