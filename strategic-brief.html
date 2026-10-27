@@ -8,7 +8,7 @@
   <title>Strategic Brief | Main Street IQ</title>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-SBC31MGCEV"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-SBC31MGCEV');</script>
-  <meta name="description" content="Main Street IQ client onboarding Strategic Brief.">
+  <meta name="description" content="The Main Street IQ Strategic Brief: the intake a Monitor report or Website Audit is built on.">
   <link rel="canonical" href="https://www.mainstreetiq.com/strategic-brief">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -64,7 +64,7 @@
     <div class="container">
       <span class="section-label">Client Onboarding</span>
       <h1>Your Strategic Brief</h1>
-      <p>This is the document every Main Street IQ engagement is built on. It takes 20 to 40 minutes. Answer in plain language, the way you'd explain your business to a friend. There are no wrong answers, only useful ones.</p>
+      <p>This is the intake your Monitor report or Website Audit is built on. It takes 20 to 40 minutes. Answer in plain language, the way you'd explain your business to a friend. There are no wrong answers, only useful ones.</p>
     </div>
   </section>
 
@@ -73,23 +73,7 @@
     <div class="container">
       <div class="sb-form-wrap">
 
-        <!--
-          Strategic Brief intake.
-          Posts to the existing "MSIQ Client Strategic Brief" Zoho Form via its
-          external htmlRecords/submit endpoint, so the established onboarding
-          pipeline (native CRM Account creation, operator "New onboarding |"
-          email, client confirmation email, client-onboarding-intake skill ->
-          build.py -> goals.md) keeps firing unchanged.
-
-          Field name attributes are the Zoho Form link-names, extracted from the
-          live form on 2026-05-21. Do not rename them; the Zoho mapping depends
-          on exact matches.
-
-          NOTE: the htmlRecords/submit contract needs one live verification
-          submission before this is considered done. If Zoho rejects the
-          external POST (anti-spam, email verification, or page-token), the
-          fallback is a Vercel relay function. Flagged in the PR.
-        -->
+        <!-- Field name attributes match the form endpoint. Do not rename them. -->
         <form class="msiq-form msiq-form--wide msiq-form--multi-step" id="msiqStrategicBriefForm"
               action="https://forms.zohopublic.com/mainstreetiq1/form/MSIQClientStrategicBrief/formperma/imvGt6hX80Mt23CSzGV6pZKooc1kh_hMyjENp4-V0Is/htmlRecords/submit"
               method="POST" accept-charset="UTF-8">
@@ -489,8 +473,7 @@
               <select class="msiq-form__select" id="sbIndustry" name="Dropdown7" required>
                 <option value="">Select...</option>
                 <option value="Winery">Winery</option>
-                <option value="Healthcare / Medical">Healthcare / Medical</option>
-                <option value="Hospitality / F&B">Hospitality / F&amp;B</option>
+                <option value="Healthcare / Medical">Health and wellness, or elective medicine</option>
                 <option value="Professional Services">Professional Services</option>
                 <option value="DTC / Ecommerce">DTC / Ecommerce</option>
               </select>
@@ -524,7 +507,7 @@
           <div class="msiq-form__success">
             <svg class="msiq-form__success-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             <h2 class="msiq-form__success-title">Your Strategic Brief is in.</h2>
-            <p class="msiq-form__success-body">Thank you. We'll review it and get your engagement moving. You'll get a confirmation email shortly.</p>
+            <p class="msiq-form__success-body">Thank you. We'll review it and get your report or audit moving. You'll get a confirmation email shortly.</p>
           </div>
         </form>
 
