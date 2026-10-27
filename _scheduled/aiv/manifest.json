@@ -19,7 +19,7 @@
       "month_label": "July 2026",
       "month_datetime": "2026-07",
       "read_min": 6,
-      "card_desc": "Your next customer isn't Googling wineries. She's asking ChatGPT which ones to visit, and the engine hands her a short list. If you're not on it, there's no page two to fight your way onto.",
+      "card_desc": "Your next customer isn't Googling businesses like yours. She's asking ChatGPT which ones to choose, and the engine hands her a short list. If you're not on it, there's no page two to fight your way onto.",
       "llms_desc": "Buyers increasingly ask ChatGPT, Perplexity, and Gemini for recommendations instead of Googling, and the engine returns a short list rather than ten links. Why discoverability in AI answers is a leading indicator of revenue."
     },
     {
@@ -30,7 +30,7 @@
       "month_datetime": "2026-07",
       "read_min": 7,
       "card_desc": "SEO, AEO, and GEO are three different games. Your site was built to rank on Google. It was never built to be quoted by an AI engine or surfaced in a recommendation. Most businesses play only the oldest one.",
-      "llms_desc": "SEO vs AEO vs GEO in plain language: ranking on Google, being quoted as the answer, and being surfaced in a generated recommendation are three different games. Why most small business sites only play the oldest one."
+      "llms_desc": "SEO vs AEO vs GEO in plain language: ranking on Google, being quoted as the answer, and being surfaced in a generated recommendation are three different games. Why most company websites only play the oldest one."
     },
     {
       "slug": "ai-visibility-before-the-pl",
@@ -50,7 +50,7 @@
       "month_datetime": "2026-07",
       "read_min": 6,
       "card_desc": "Being invisible in AI search isn't a marketing problem. It's a revenue line you can't see. Here is the math to run on your own numbers, without a single made-up statistic.",
-      "llms_desc": "How to size the revenue cost of being invisible in AI search using your own numbers (first-time customer value, recommendation share) without fabricated statistics. Links to the free quarterly Central Coast summary."
+      "llms_desc": "How to size the revenue cost of being invisible in AI search using your own numbers (first-time customer value, recommendation share) without fabricated statistics. Points wineries to the quarterly Central Coast summary and other businesses to the Website Audit."
     },
     {
       "slug": "we-track-what-ai-says-about-you",
