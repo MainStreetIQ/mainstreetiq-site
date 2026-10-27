@@ -85,13 +85,13 @@
     </div>
   </section>
 
-  <!-- ===== PLATFORM + PRACTICE ===== -->
+  <!-- ===== PLATFORM + OUR OWN LAYERS ===== -->
   <section>
     <div class="container">
       <div class="section-header section-header-left">
-        <span class="section-label">Platform + Practice</span>
+        <span class="section-label">Platform + Our Own Layers</span>
         <h2 class="section-title">What We Use, and What We Build Ourselves</h2>
-        <p class="section-subtitle">Manage runs on commercial AI tools used under business terms. The practice and security layers on top are built by Main Street IQ. Honest about which is which.</p>
+        <p class="section-subtitle">Manage runs on commercial AI tools used under business terms. The security layers on top are built by Main Street IQ. Honest about which is which.</p>
       </div>
 
       <div class="split-section">
@@ -99,23 +99,14 @@
           <h3 style="font-size: 22px; font-weight: 600; margin-bottom: 12px;">What we use</h3>
           <p style="margin-bottom: 14px;">Commercial AI tools, configured for your engagement:</p>
           <ul style="list-style: none; padding: 0;">
-            <li style="padding: 8px 0; border-bottom: 1px solid var(--border, #e8eaed);"><strong>An AI model service.</strong> The inference layer for every skill output, used under business terms. Zero data retention is available from the provider as a per-organization arrangement; it is not yet in place for Main Street IQ.</li>
-            <li style="padding: 8px 0; border-bottom: 1px solid var(--border, #e8eaed);"><strong>Collaborative drafting and spreadsheet tools.</strong> Where your team and ours draft close narratives, board decks, and lender packages, and work through forecasts and scenario models together. Our practice is to keep high-sensitivity work out of these tools.</li>
+            <li style="padding: 8px 0; border-bottom: 1px solid var(--border, #e8eaed);"><strong>An AI model service.</strong> The model behind our AI-assisted work, used under business terms. Zero data retention is available from the provider as a per-organization arrangement; it is not yet in place for Main Street IQ.</li>
+            <li style="padding: 8px 0; border-bottom: 1px solid var(--border, #e8eaed);"><strong>Collaborative drafting and spreadsheet tools.</strong> Where your team and ours draft close narratives and board decks, and work through forecasts and scenario models together. Our policy is to keep high-sensitivity work out of these tools.</li>
             <li style="padding: 8px 0;"><strong>Network-isolated deployment (enterprise add-on).</strong> Available for clients who require AI processing inside their own cloud environment. Not the default; scoped per engagement.</li>
           </ul>
         </div>
         <div>
           <h3 style="font-size: 22px; font-weight: 600; margin-bottom: 12px;">What we build ourselves</h3>
-          <p style="margin-bottom: 14px;">The practice and security layers on top:</p>
-          <ul style="list-style: none; padding: 0;">
-            <li style="padding: 8px 0; border-bottom: 1px solid var(--border, #e8eaed);"><strong>Credential broker.</strong> A local secrets store built by Main Street IQ, backed by the operating system keychain, that mints short-lived, narrowly scoped tokens one call at a time. Version one is built and tested against mock providers; live provider connections come next. Our rule in the meantime: no credential reaches a model in any form.</li>
-            <li style="padding: 8px 0; border-bottom: 1px solid var(--border, #e8eaed);"><strong>De-identification before AI.</strong> Our handling is designed so models work from aggregates and de-identified data rather than raw customer records. Customer identifiers are replaced with keys and leak-checked, and a guard blocks AI tools from reading raw client exports.</li>
-            <li style="padding: 8px 0; border-bottom: 1px solid var(--border, #e8eaed);"><strong>Per-client read scoping and structured audit log.</strong> A scoping layer stops a run for one client from reading another client's folder. Month-end close, P&amp;L, P&amp;L forecast and finance package runs append a structured audit entry to that client's folder, available to you on request.</li>
-            <li style="padding: 8px 0; border-bottom: 1px solid var(--border, #e8eaed);"><strong>Market-segment skills.</strong> Marketplace settlement reconciliation, cohort economics with long-window variants, marketing halo attribution, multi-location inventory, 3PL invoice forensics, cash-forecast drift detection.</li>
-            <li style="padding: 8px 0; border-bottom: 1px solid var(--border, #e8eaed);"><strong>Four market-segment packs.</strong> Ecommerce, wine, health and wellness, elective medicine. Different stacks, different cohort definitions, different compliance calendars.</li>
-            <li style="padding: 8px 0; border-bottom: 1px solid var(--border, #e8eaed);"><strong>Per-client CEO dashboard.</strong> Four tiers, phone-first, with the disclosure tier discipline (real / benchmark / fixture) we ship on every artifact.</li>
-            <li style="padding: 8px 0;"><strong>The pre-publish gate.</strong> Every artifact that leaves the engagement is checked for canonical facts, scope, voice, factual accuracy, legal and regulatory risk, and the numbers behind it. Plus Scott signs every monthly close.</li>
-          </ul>
+          <p>The security layers on top are built by Main Street IQ: a credential broker, de-identification designed so models see aggregates or de-identified data, not raw customer records, per-client scoping with a structured audit log, and a pre-publish gate on everything that leaves the engagement. Scott also signs every monthly close. Each control is described below, with where it stands today.</p>
         </div>
       </div>
     </div>
@@ -125,13 +116,13 @@
   <section class="bg-light">
     <div class="container">
       <div class="section-header">
-        <span class="section-label">The Six Controls</span>
-        <h2 class="section-title">Three From Our Providers. Three From Us.</h2>
+        <span class="section-label">The Controls</span>
+        <h2 class="section-title">Six Controls and Where Each Stands</h2>
         <p class="section-subtitle">Every embedded finance engagement should be able to name its security controls. Here are ours, and where each one stands today.</p>
       </div>
       <div class="raid-grid">
         <div class="raid-card">
-          <h4>Zero Data Retention: Where It Stands</h4>
+          <h4>Zero Data Retention: Not Yet in Place</h4>
           <p>Our AI provider offers zero data retention as a per-organization arrangement, under which prompts and outputs are not stored after the response returns. It is not yet in place for Main Street IQ. If your engagement requires it, ask us where it stands.</p>
         </div>
         <div class="raid-card">
@@ -139,11 +130,11 @@
           <p>Under our AI provider's business terms, your data is not used to train its models. That holds whether or not zero data retention is in place.</p>
         </div>
         <div class="raid-card">
-          <h4>Optional Network Isolation</h4>
+          <h4>Network Isolation: Optional, Not the Default</h4>
           <p>For enterprise clients that require it, we can run AI processing inside your own cloud environment over a private connection, designed so financial data does not cross the public internet. Scoped per engagement, not the default. Architecture details on request.</p>
         </div>
         <div class="raid-card">
-          <h4>Main Street IQ Credential Broker</h4>
+          <h4>Credential Broker: Built, Not Yet Live</h4>
           <p>A local secrets store built by Main Street IQ, backed by the operating system keychain, holds long-lived provider credentials and mints short-lived, narrowly scoped tokens one call at a time. Version one is built and tested against mock providers; live connections to QuickBooks and other providers come next. Our rule in the meantime: no credential reaches a model in any form.</p>
         </div>
         <div class="raid-card">
@@ -152,7 +143,7 @@
         </div>
         <div class="raid-card">
           <h4>Audit Log + Pre-Publish Gate</h4>
-          <p>Month-end close, P&amp;L, P&amp;L forecast and finance package runs append a structured audit entry to that client's folder, available to you on request. Every artifact bound for outside our engagement (CPA, lender, board) passes through an integrity gate that checks facts, scope, voice, legal and regulatory risk, and the numbers.</p>
+          <p>Month-end close, P&amp;L, P&amp;L forecast and finance package runs append a structured audit entry to that client's folder, available to you on request. Every artifact bound for outside our engagement (CPA, lender, board) passes through an integrity gate that checks facts, scope, voice and the numbers, and flags legal and regulatory risk for review.</p>
         </div>
       </div>
     </div>
