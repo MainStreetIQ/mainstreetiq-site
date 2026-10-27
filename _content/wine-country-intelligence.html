@@ -90,10 +90,44 @@
     <div class="container">
       <span class="section-label">Wine Country Intelligence</span>
       <h1>The Wine Country Intelligence Report</h1>
-      <p>A quarterly digital-performance benchmark of the Central Coast wine market. 442 wineries in Santa Barbara and San Luis Obispo counties scored on the same seven categories, and an AI-visibility read measured across six AI assistants. Published by county, with a free Central Coast summary covering both. The report is the flagship of Wine Country Intelligence, Main Street IQ's AI advisory for wineries.</p>
+      <p>More visitors now ask AI assistants where to taste, and the answer names a handful of wineries. We measure whether yours is one of them and what is holding it back. Every quarter we score 442 wineries in Santa Barbara and San Luis Obispo counties on the same seven categories, with an AI-visibility read across six AI assistants. The free Central Coast summary covers both counties, and any winery can sign up online for the full county report or a monthly report card, no call needed. The report is the flagship of Wine Country Intelligence, Main Street IQ's AI advisory for wineries.</p>
       <div class="hero-buttons">
         <a href="#wcir-signup" class="btn btn-white" data-vertical="wine">Read the free Central Coast summary &rarr;</a>
-        <a href="#county-edition" class="btn btn-outline-white" data-vertical="wine">See what the full report includes</a>
+        <a href="#start" class="btn btn-outline-white" data-vertical="wine">See plans and sign up</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== FROM THE INDEPENDENT (2026-10-27): hidden unless the visitor arrives from the Santa
+       Barbara Independent story (referrer independent.com or utm_source containing "independent").
+       Remove a few weeks after the story runs. ===== -->
+  <section id="from-the-independent" hidden>
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">From the Santa Barbara Independent</span>
+        <h2 class="section-title">Thanks for reading. Here is where to start.</h2>
+      </div>
+      <div class="card-grid">
+        <div class="card">
+          <h3>You run a winery</h3>
+          <p>Sign up online for a monthly report card on how your winery shows up when visitors search and ask AI where to taste. Monitor starts at $400 a month and renews until canceled, and you can start without a call. Or begin with the free Central Coast summary.</p>
+          <p style="margin-top: 1rem;"><a href="#start" class="btn btn-primary" data-vertical="wine">See plans and sign up &rarr;</a></p>
+          <p style="margin-top: 0.75rem; font-size: 0.95rem;"><a href="#wcir-signup" style="color: var(--navy); font-weight: 600;">Read the free summary &rarr;</a></p>
+          <p style="margin-top: 0.35rem; font-size: 0.95rem;"><a href="/intro-call" style="color: var(--navy); font-weight: 600;">Rather talk first? Book an Intro Call &rarr;</a></p>
+        </div>
+        <div class="card">
+          <h3>You love Central Coast wine</h3>
+          <p>See the wineries that scored highest this quarter, and get the free Central Coast summary each time a new edition comes out.</p>
+          <p style="margin-top: 1rem;"><a href="#top-10" class="btn btn-secondary" data-vertical="wine">See the Top 10 &rarr;</a></p>
+          <p style="margin-top: 0.75rem; font-size: 0.95rem;"><a href="#wcir-signup" style="color: var(--navy); font-weight: 600;">Get the free summary &rarr;</a></p>
+        </div>
+        <div class="card">
+          <h3>You run another kind of business</h3>
+          <p>Whatever you sell, buyers increasingly ask AI who to trust. Our Website Audit reads your site and runs your buyers' questions through the AI assistants, so you see who gets named instead. Its prices are on the Website Audit page.</p>
+          <p style="margin-top: 1rem;"><a href="/audit" class="btn btn-secondary">See the Website Audit &rarr;</a></p>
+          <p style="margin-top: 0.75rem; font-size: 0.95rem;"><a href="/intro-call" style="color: var(--navy); font-weight: 600;">Book an Intro Call &rarr;</a></p>
+        </div>
       </div>
     </div>
   </section>
@@ -131,7 +165,47 @@
     </div>
   </section>
 
-  <!-- ===== THE FREE Q3 SUMMARY, ONE FORM (Scott, 2026-10-10). Name and email write the Zoho Lead
+    <!-- ===== START TODAY (Scott, 2026-10-27: make the offer clear and let any winery sign up
+       without a call). Each card points to its checkout card in #subscribe, where the renewal
+       terms sit beside the buy buttons. Prices must match #subscribe and canonical-facts. ===== -->
+  <section id="start">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Start today</span>
+        <h2 class="section-title">Sign up online. No call needed.</h2>
+        <p class="section-subtitle">Four ways in for any winery. The summary is free; each paid plan checks out online and renews automatically until canceled. The full terms sit beside the checkout buttons further down the page.</p>
+      </div>
+      <div class="card-grid wcir-start-grid">
+        <div class="card">
+          <h3>Free Central Coast summary</h3>
+          <p class="wcir-option-price">Free, every quarter</p>
+          <p>The region's leaders, the AI-visibility read and the market, across both counties.</p>
+          <p style="margin-top: 1rem;"><a href="#wcir-signup" style="color: var(--navy); font-weight: 600;" data-vertical="wine">Read it free &rarr;</a></p>
+        </div>
+        <div class="card">
+          <h3>County edition</h3>
+          <p class="wcir-option-price">$800/yr per county, or $250 for one issue</p>
+          <p>The full quarterly report for your county, with every winery ranked. The annual plan adds the Wine Pricing Report twice a year.</p>
+          <p style="margin-top: 1rem;"><a href="#subscribe-county" style="color: var(--navy); font-weight: 600;" data-vertical="wine">Sign up for the county edition &rarr;</a></p>
+        </div>
+        <div class="card">
+          <h3>Monitor</h3>
+          <p class="wcir-option-price">$400/mo, or $4,000/yr</p>
+          <p>A monthly report card for your own winery on the same seven categories, with one to three actions each month.</p>
+          <p style="margin-top: 1rem;"><a href="#subscribe-monitor" style="color: var(--navy); font-weight: 600;" data-vertical="wine">Sign up for Monitor &rarr;</a></p>
+        </div>
+        <div class="card">
+          <h3>Monitor Plus</h3>
+          <p class="wcir-option-price">$600/mo, or $6,000/yr</p>
+          <p>Everything in Monitor, plus four peers you name, scored beside you every month.</p>
+          <p style="margin-top: 1rem;"><a href="#subscribe-monitor-plus" style="color: var(--navy); font-weight: 600;" data-vertical="wine">Sign up for Monitor Plus &rarr;</a></p>
+        </div>
+      </div>
+      <p style="text-align: center; margin-top: 1.5rem; font-size: 0.95rem;">Rather talk it through first? <a href="/intro-call" style="color: var(--navy); font-weight: 600;">Book a 30-minute Intro Call &rarr;</a></p>
+    </div>
+  </section>
+
+<!-- ===== THE FREE Q3 SUMMARY, ONE FORM (Scott, 2026-10-10). Name and email write the Zoho Lead
        (newsletter_signup, list=wcir, WCIR Subscriber tag); wcir-subscribe.js then opens the form's
        data-next page, the current quarter's Central Coast summary, which links the sample edition.
        QUARTERLY: update data-next to the new delivery-page slug. Keep the #wcir-signup anchor:
@@ -162,6 +236,26 @@
       </div>
     </div>
   </section>
+
+  <!-- ===== FROM THE FOUNDER (2026-10-27: longer letter restored and moved up for press
+       readers; the $1.7B / 1.1M visitor figures stay out, unsourced) ===== -->
+  <section class="bg-light">
+    <div class="container">
+      <div class="container-narrow" style="max-width: 800px; margin: 0 auto;">
+        <div class="section-header section-header-left">
+          <span class="section-label">From the founder</span>
+          <h2 class="section-title">Why a Finance Firm Publishes a Wine Report</h2>
+        </div>
+        <p>I am Scott Hess, founder of Main Street IQ. We work in two ways: Fractional CFO, and Wine Country Intelligence, our AI advisory for wineries. I have lived in Solvang since 2019, and a lot of the people I count as friends here own wineries. Many of them kept telling me the same thing: they need more people through the door.</p>
+        <p>Strip the question down to what a winery owner cannot already see. Not the P&amp;L; you have someone for that. The blind spot is whether you show up when a traveler asks an AI trip planner or a search engine where to taste, when a buyer compares you against the tasting room down the road, when your name should come up and quietly does not.</p>
+        <p>I measure visibility for the same reason a CFO measures club attrition: both sit upstream of your margin. Visibility decides whether you get found. Getting found decides what a new customer costs you. What a customer costs decides whether the tasting room, the club and the wholesale book actually make money.</p>
+        <p>Visitors increasingly decide where to taste before they leave home: they check reviews, scan Instagram and ask AI assistants for recommendations. Great wine has never been enough on its own. The report shows every winery in the county where it stands on the surfaces that decision runs through.</p>
+        <p>It is also the lightest way to work with us: intelligence that sharpens decisions you are already making, with you in the driver's seat. Some owners stop at the report. Some sign up for Monitor to track their own winery every month. Some bring our Fractional CFO work into the pricing, club and allocation decisions. Whichever path you take, it starts with a number you could not see before.</p>
+        <p>Scott Hess | Founder and Fractional CFO, Main Street IQ | <a href="mailto:scott@mainstreetiq.com">scott@mainstreetiq.com</a></p>
+      </div>
+    </div>
+  </section>
+
 
 
   <!-- ===== CURRENT QUARTER SNAPSHOT =====
@@ -285,7 +379,7 @@
        tie rule: every winery ranked tenth or better). The client disclosure is
        verbatim from the Q3 report and sits above the first table on this page
        that names a winery. Print it once. -->
-  <section class="bg-light">
+  <section class="bg-light" id="top-10">
     <div class="container">
       <div class="section-header">
         <span class="section-label">Top 10 spotlight</span>
@@ -405,20 +499,6 @@
   </section>
 
 
-  <!-- ===== FROM THE FOUNDER: WHY A CFO BUILT THIS ===== -->
-  <section class="bg-light">
-    <div class="container">
-      <div class="container-narrow" style="max-width: 800px; margin: 0 auto;">
-        <div class="section-header section-header-left">
-          <span class="section-label">From the founder</span>
-          <h2 class="section-title">Why a Finance Firm Publishes a Wine Report</h2>
-        </div>
-        <p>I am Scott Hess, founder of Main Street IQ, which works in two ways: Fractional CFO, and Wine Country Intelligence, our AI advisory for wineries.</p>
-        <p>I measure visibility for the same reason a CFO measures club attrition: whether you get found decides what a new customer costs you, and that decides whether the tasting room, the club and the wholesale book make money.</p>
-        <p>Scott Hess | Founder and Fractional CFO, Main Street IQ | <a href="mailto:scott@mainstreetiq.com">scott@mainstreetiq.com</a></p>
-      </div>
-    </div>
-  </section>
 
 
   <!-- ===== BEYOND THE REPORT: PER-WINERY OFFERINGS ===== -->
@@ -639,6 +719,8 @@
     .county-edition-list { max-width: 860px; margin: 0 auto; padding-left: 1.25rem; line-height: 1.6; }
     .county-edition-list li { margin-bottom: 0.6rem; }
     .county-edition-sample { max-width: 860px; margin: 1.25rem auto 0; }
+    .wcir-start-grid { grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1.25rem; }
+    .wcir-start-grid .card { padding: 1.5rem; }
   </style>
 
   <script>
@@ -703,6 +785,18 @@
     })();
   </script>
 
+  <script>
+    // Show the Independent welcome strip only to readers arriving from the story.
+    (function () {
+      try {
+        var src = (new URLSearchParams(window.location.search).get('utm_source') || '').toLowerCase();
+        if (src.indexOf('independent') > -1 || /independent\.com/i.test(document.referrer || '')) {
+          var el = document.getElementById('from-the-independent');
+          if (el) el.hidden = false;
+        }
+      } catch (e) {}
+    })();
+  </script>
   <script src="/assets/js/wcir-subscribe.js" defer></script>
 </body>
 </html>

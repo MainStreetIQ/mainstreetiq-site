@@ -30,6 +30,24 @@ var WCIR_FORM_LIVE = true;
   // 200 {ok:true} is success; 502 {ok:false, code} is failure. Only r.ok shows success.
   var path = ((window.location && window.location.pathname) || '/wcir/').replace(/\.html$/, '');
 
+  // Where the visitor came from: utm_source if the link carried one, else the referring site when
+  // it is not ours. Kept for the visit in sessionStorage, so a reader who signs up on the summary
+  // page after arriving from a press story is still attributed. The endpoint stores
+  // "wcir:<path>" (80 chars max) in the Zoho Lead Description, so the tag rides on the path.
+  var via = '';
+  try {
+    var params = new URLSearchParams(window.location.search);
+    via = params.get('utm_source') || '';
+    if (via === 'site') via = ''; // our own internal links tag themselves utm_source=site
+    if (!via && document.referrer) {
+      var host = new URL(document.referrer).hostname.replace(/^www\./, '');
+      if (host && host.indexOf('mainstreetiq.com') === -1) via = host;
+    }
+    if (via) sessionStorage.setItem('wcirVia', via);
+    else via = sessionStorage.getItem('wcirVia') || '';
+  } catch (e) { /* private mode or old browser: attribution is best effort */ }
+  if (via) path = path + ' via ' + via.slice(0, 40);
+
   function setMsg(text, kind) {
     msg.textContent = text;
     msg.className = 'wcir-subscribe-msg' + (kind ? ' ' + kind : '');
