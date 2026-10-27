@@ -82,6 +82,16 @@ BESPOKE = {
     "cfo-for-series-a-prep.html": "redirect stub, vercel.json path, to /our-services",
     "5-day-close.html": "redirect stub, vercel.json path, to /our-services",
     "fractional-cfo-inland-empire.html": "redirect stub, vercel.json path, to /",
+    # Retired 2026-10-27 (Scott, site-cleanup rulings 4 and 13): AI visibility outside
+    # wine is part of the CFO work, and each ai-cfo-<county> page folded into its
+    # fractional-cfo-<county> page. build_ai_visibility_pages.py no longer emits these.
+    "ai-visibility-los-angeles.html": "redirect stub, retired 2026-10-27 for /fractional-cfo-los-angeles",
+    "ai-visibility-orange-county.html": "redirect stub, retired 2026-10-27 for /fractional-cfo-orange-county",
+    "ai-visibility-san-diego.html": "redirect stub, retired 2026-10-27 for /fractional-cfo-san-diego",
+    "ai-visibility-ventura.html": "redirect stub, retired 2026-10-27 for /fractional-cfo-ventura",
+    "ai-cfo-santa-barbara.html": "redirect stub, retired 2026-10-27 for /fractional-cfo-santa-barbara",
+    "ai-cfo-san-luis-obispo.html": "redirect stub, retired 2026-10-27 for /fractional-cfo-san-luis-obispo",
+    "ai-cfo-ventura.html": "redirect stub, retired 2026-10-27 for /fractional-cfo-ventura",
     # Only file on the site containing literal Liquid-style braces.
     "legal/index.html": "contains literal {{ }} braces",
 }

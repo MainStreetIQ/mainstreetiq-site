@@ -1,15 +1,25 @@
 """
-build_ai_visibility_pages.py — generate the 6 AI Discoverability county landing
-pages (`ai-visibility-<county>.html`).
+build_ai_visibility_pages.py — generate the AI-visibility county landing pages
+(`ai-visibility-<county>.html`) AND their sitegen sources (`_content/<same>.html`).
 
-Why a generator: the six pages share ~80% boilerplate (nav, footer, the shift,
-what-we-read, surface-optimize-manage, scripts). Hand-authoring six 500-line
-files guarantees drift. Per-county copy, cities, hero image, and FAQ live in
-COUNTIES below; everything else is one template.
+WINERY-ONLY FROM 2026-10-27 (Scott, site-cleanup ruling 4). AI discoverability
+outside wine is not its own service; it is part of how the Fractional CFO work
+reads a business. So:
+  - santa-barbara and san-luis-obispo are WINERY-ONLY pages under Wine Country
+    Intelligence: no non-wine segment cards, no DTC / wellness / elective
+    medicine pitch, no "outbound", never "the practice" as the company name.
+  - ventura, los-angeles, orange-county and san-diego are RETIRED. They are
+    hand-written redirect stubs to /fractional-cfo-<county>, listed in sitegen's
+    BESPOKE skip list. This script no longer emits them; do not add them back.
 
-Lane note: these are the AI-visibility peers to the `fractional-cfo-<county>`
-CFO-lane pages. Different search intent, different lane. `ai-cfo-<county>` is a
-THIRD thing (a fractional CFO with an intelligence engine) and is CFO-lane.
+Both outputs are written on every run: the root HTML (what Pages serves) and the
+`_content/` source (what `sitegen.py build` renders). The source is derived with
+sitegen's own build_content() and must round-trip to the root file byte for byte,
+or the run fails. That is what keeps `sitegen.py build --check` at 0 drift.
+
+Why a generator: the pages share ~80% boilerplate (nav, footer, the shift,
+what-we-read, surface-optimize-manage, scripts). Per-county copy, cities, hero
+image, and FAQ live in COUNTIES below; everything else is one template.
 
 PROOF CONSTRAINT (do not "fix" this into symmetry):
 The Wine Country Intelligence Report covers Santa Barbara and San Luis Obispo
@@ -49,11 +59,11 @@ The rest of the site carries the REGION-wide version of that same figure (228 of
     page now carries the SLO-scoped invisible stat, 157 of 252. Each measured
     county prints ITS OWN county-scoped figure via the stat_invisible field;
     never print one county's number on the other's page.
-  - ventura / los-angeles / orange-county / san-diego carry NO local wine stat.
-    They describe the published method and are explicit that the benchmark was
-    measured in wine, on the Central Coast. Extrapolating the SB number to a
-    county it was never measured in is exactly what reality-checker and
-    compliance-review block on.
+  - ventura / los-angeles / orange-county / san-diego carried NO local wine stat
+    (the "method" variant). Those pages were retired to redirect stubs on
+    2026-10-27 and the "method" branch was removed with them. Extrapolating the
+    SB number to a county it was never measured in is still exactly what
+    reality-checker and compliance-review block on.
 
 Run from msiq-site root:
     python3 _scripts/build_ai_visibility_pages.py            # write files
@@ -68,7 +78,8 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from sitegen import render_footer, render_nav  # noqa: E402  (one copy of the chrome)
+from sitegen import (PARAM_CLOSE, PARAM_OPEN, RE_HEAD, detect_asset_params,  # noqa: E402
+                     render_content, render_footer, render_nav, tokenize_head)  # one copy of the chrome
 
 ROOT = Path(__file__).resolve().parent.parent
 BASE = "https://www.mainstreetiq.com"
@@ -82,18 +93,15 @@ COUNTIES = [
         "short": "San Luis Obispo",
         "geo_placename": "San Luis Obispo, California",
         "hero_img": "slo-downtown.jpg",
-        "cities": ["San Luis Obispo", "Paso Robles", "Templeton", "Atascadero",
-                   "Arroyo Grande", "Pismo Beach", "Grover Beach", "Morro Bay", "Nipomo"],
+        "cities": ["San Luis Obispo", "Paso Robles", "Templeton", "Atascadero", "Arroyo Grande"],
         "wcir": "measured",  # Q2 2026 published the SLO count; switched from "covered" per Scott 2026-08-05
-        "audience_line": ("We go deepest in two market segments, wineries across Paso Robles and the "
-                          "Edna Valley and DTC and ecommerce brands, and we also work with health and "
-                          "wellness and elective medicine practices."),
+        "audience_line": ("Small and family wineries across Paso Robles, Templeton, the Edna Valley, "
+                          "and the Arroyo Grande Valley."),
         "local_para": (
-            "San Luis Obispo County runs on businesses a visitor or a buyer has to find before they "
-            "can choose: tasting rooms in Paso Robles and the Edna Valley, practices in San Luis "
-            "Obispo and Atascadero, brands shipping out of the Five Cities. When the search that "
-            "used to surface a map of pins now returns a handful of names, being one of them is the "
-            "whole game."),
+            "San Luis Obispo County has hundreds of tasting rooms, from Paso Robles and Templeton to "
+            "the Edna Valley and the Arroyo Grande Valley, and a visitor has to find one before they "
+            "can choose it. When the search that used to surface a map of pins now returns a handful "
+            "of names, being one of them is the whole game."),
     },
     {
         "slug": "santa-barbara",
@@ -103,92 +111,15 @@ COUNTIES = [
         "short": "Santa Barbara",
         "geo_placename": "Santa Barbara, California",
         "hero_img": "santa-barbara-waterfront.jpg",
-        "cities": ["Santa Barbara", "Goleta", "Santa Ynez", "Solvang", "Buellton",
-                   "Lompoc", "Los Olivos", "Carpinteria", "Montecito", "Santa Maria"],
+        "cities": ["Santa Barbara", "Santa Ynez", "Solvang", "Buellton",
+                   "Los Olivos", "Lompoc", "Santa Maria"],
         "wcir": "measured",  # SB-scoped invisible figure
-        "audience_line": ("We go deepest in two market segments, wineries across the Santa Ynez Valley "
-                          "and the Sta. Rita Hills and DTC and ecommerce brands, and we also work with "
-                          "health and wellness and elective medicine practices."),
+        "audience_line": ("Small and family wineries across the Santa Ynez Valley, the Sta. Rita "
+                          "Hills, and the Santa Maria Valley."),
         "local_para": (
             "Between the Santa Ynez Valley, Solvang, Los Olivos, and the Sta. Rita Hills, Santa "
-            "Barbara County packs a dense field of businesses into the same short AI answer, and "
+            "Barbara County packs a dense field of wineries into the same short AI answer, and "
             "the gap between the ones the models name and the ones they skip is already wide."),
-    },
-    {
-        "slug": "ventura",
-        "home_turf": False,
-        "article": "a",
-        "county": "Ventura County",
-        "short": "Ventura",
-        "geo_placename": "Ventura, California",
-        "hero_img": "ventura-coastline.jpg",
-        "cities": ["Ventura", "Oxnard", "Camarillo", "Thousand Oaks", "Simi Valley",
-                   "Moorpark", "Ojai", "Port Hueneme", "Santa Paula", "Fillmore"],
-        "wcir": "method",
-        "audience_line": ("We go deepest in two market segments, DTC and ecommerce brands and wineries, "
-                          "and we also work with health and wellness and elective medicine practices."),
-        "local_para": (
-            "Ventura County businesses sit close enough to Los Angeles to compete with its marketing "
-            "budgets and far enough out to lose the default search result. When a buyer in Thousand "
-            "Oaks or Camarillo asks an AI who to use, the answer is assembled from a footprint most "
-            "owners here have never audited."),
-    },
-    {
-        "slug": "los-angeles",
-        "home_turf": False,
-        "article": "a",
-        "county": "Los Angeles County",
-        "short": "Los Angeles",
-        "geo_placename": "Los Angeles, California",
-        "hero_img": "los-angeles-downtown.jpg",
-        "cities": ["Los Angeles", "Santa Monica", "Beverly Hills", "West Hollywood",
-                   "Manhattan Beach", "Culver City", "Pasadena", "Burbank", "Long Beach"],
-        "wcir": "method",
-        "audience_line": ("We go deepest in two market segments, DTC and ecommerce brands and wineries, "
-                          "and we also work with elective medicine and health and wellness practices."),
-        "local_para": (
-            "Los Angeles County is the hardest version of this problem: the category is crowded, the "
-            "competitors spend heavily, and the AI answer still names only a few. Paid acquisition "
-            "can buy attention here, but it cannot buy a place in the answer a buyer gets before "
-            "they ever run a search you are bidding on."),
-    },
-    {
-        "slug": "orange-county",
-        "home_turf": False,
-        "article": "an",
-        "county": "Orange County",
-        "short": "Orange County",
-        "geo_placename": "Irvine, California",
-        "hero_img": "newport-beach-harbor.jpg",
-        "cities": ["Irvine", "Costa Mesa", "Newport Beach", "Anaheim", "Santa Ana",
-                   "Huntington Beach", "Fullerton", "Laguna Beach", "Mission Viejo", "San Clemente"],
-        "wcir": "method",
-        "audience_line": ("We go deepest in two market segments, DTC and ecommerce brands and wineries, "
-                          "and we also work with elective medicine and health and wellness practices."),
-        "local_para": (
-            "Orange County concentrates exactly the businesses this shift hits hardest: "
-            "high-consideration practices in Newport Beach and Irvine where a patient researches for "
-            "weeks before booking, and DTC brands competing on a category term rather than a "
-            "location. Both are decided by what the model says long before the first call."),
-    },
-    {
-        "slug": "san-diego",
-        "home_turf": False,
-        "article": "a",
-        "county": "San Diego County",
-        "short": "San Diego",
-        "geo_placename": "San Diego, California",
-        "hero_img": "san-diego-skyline.jpg",
-        "cities": ["San Diego", "La Jolla", "Del Mar", "Encinitas", "Carlsbad",
-                   "Escondido", "Ramona", "Chula Vista"],
-        "wcir": "method",
-        "audience_line": ("We go deepest in two market segments, DTC and ecommerce brands and wineries, "
-                          "and we also work with health and wellness and elective medicine practices."),
-        "local_para": (
-            "San Diego County spreads demand across distinct markets, from La Jolla and Encinitas to "
-            "Escondido and Chula Vista, and a buyer in each one asks the same AI the same question. A "
-            "business visible in one and absent in the others is losing the visit without ever "
-            "seeing it happen in the analytics."),
     },
 ]
 
@@ -196,9 +127,13 @@ COUNTIES = [
 # ---------------------------------------------------------------- proof block
 
 def proof_section(c):
-    """Wine proof, scoped honestly per county. See PROOF CONSTRAINT in the docstring."""
+    """Wine proof, scoped honestly per county. See PROOF CONSTRAINT in the docstring.
+
+    It describes a published MEASUREMENT, not a proven result: the report benchmarks
+    which wineries AI names; it does not show that our fixes raise anyone's visibility.
+    """
     if c["wcir"] == "measured":
-        body = f"""        <p>Wine is where the AI-search shift hit hardest and earliest, and {c['county']} is where we measured it and published the result. A visitor searching for the best wineries in the county used to get a map; now they get a three-to-five-name answer, and the wineries left off it lose the visit.</p>
+        body = f"""        <p>Wine is where the AI-search shift hit hardest and earliest, and {c['county']} is where we measure it and publish the result. A visitor searching for the best wineries in the county used to get a map; now they get a three-to-five-name answer, and the wineries left off it lose the visit.</p>
         <p>The <a href="/wine-country-intelligence" style="color: var(--color-sky);">Wine Country Intelligence Report</a> benchmarks every tracked winery in Santa Barbara and San Luis Obispo counties on exactly this: which wineries the AI answer names, and how often, beside a score on seven categories. This county's standings are in the latest edition.</p>
         <div class="stat-bar" style="border-top-color: rgba(255,255,255,0.15); margin-top: 1.5rem;">
           <div class="stat-item">
@@ -210,37 +145,30 @@ def proof_section(c):
             <p style="color: rgba(255,255,255,0.7);">The county benchmark is rebuilt on a quarterly cycle</p>
           </div>
           <div class="stat-item">
-            <p class="stat-num" style="color: var(--color-sky);">Re-read monthly</p>
-            <p style="color: rgba(255,255,255,0.7);">We track where a business stands against that benchmark every month</p>
+            <p class="stat-num" style="color: var(--color-sky);">Monthly</p>
+            <p style="color: rgba(255,255,255,0.7);">With Monitor, a winery's own AI visibility is re-checked every month between editions</p>
           </div>
         </div>
-        <p style="margin-top: 1.5rem;">Wine is the proof, not the limit. The same engine reads discoverability for any business we work with in the county.</p>
         <div class="hero-buttons" style="margin-top: 1.5rem;">
           <a href="/wine-country-intelligence" class="btn btn-white">Read the quarterly report &rarr;</a>
           <a href="/wineries" class="btn btn-outline-white">How the wine work runs</a>
         </div>"""
     elif c["wcir"] == "covered":
-        body = f"""        <p>Wine is where the AI-search shift hit hardest and earliest, so it is where we built the measurement and published it. A visitor searching for the best wineries in the county used to get a map; now they get a three-to-five-name answer, and the wineries left off it lose the visit.</p>
+        body = f"""        <p>Wine is where the AI-search shift hit hardest and earliest, so it is where we built the measurement and publish it. A visitor searching for the best wineries in the county used to get a map; now they get a three-to-five-name answer, and the wineries left off it lose the visit.</p>
         <p>The <a href="/wine-country-intelligence" style="color: var(--color-sky);">Wine Country Intelligence Report</a> benchmarks every tracked winery in Santa Barbara and San Luis Obispo counties on exactly that question: who the AI answer names, and who it skips. {c['county']} is inside that footprint, which means the read here runs against a benchmark we already publish rather than one we invent for the engagement.</p>
-        <p style="margin-top: 1.5rem;">Wine is the proof, not the limit. The same engine reads discoverability for any business we work with in the county.</p>
         <div class="hero-buttons" style="margin-top: 1.5rem;">
           <a href="/wine-country-intelligence" class="btn btn-white">Read the quarterly report &rarr;</a>
           <a href="/wineries" class="btn btn-outline-white">How the wine work runs</a>
         </div>"""
     else:
-        body = f"""        <p>We did not start with a theory. We built the measurement in wine, on the Central Coast, because that is where the AI-search shift hit hardest and earliest, and then we published it.</p>
-        <p>The <a href="/wine-country-intelligence" style="color: var(--color-sky);">Wine Country Intelligence Report</a> benchmarks every tracked winery in Santa Barbara and San Luis Obispo counties on one question: who the AI answer names, and who it skips. That benchmark has not been run on {c['county']}, and we are not going to quote you a number from a county it was never measured in. What carries over is the method: the same engine, the same four layers, read against your category and your market here.</p>
-        <p style="margin-top: 1.5rem;">Wine is where the approach was proven in public. {c['county']} is where we would run it for you.</p>
-        <div class="hero-buttons" style="margin-top: 1.5rem;">
-          <a href="/discoverability" class="btn btn-white">How the engine works &rarr;</a>
-          <a href="/our-work" class="btn btn-outline-white">See our work</a>
-        </div>"""
+        raise ValueError(f"{c['slug']}: only 'measured' and 'covered' remain; the 'method' "
+                         f"variant was retired with its four pages on 2026-10-27")
     return f"""  <!-- ===== PROOF ===== -->
   <section class="bg-navy">
     <div class="container">
       <div class="section-header">
-        <span class="section-label">Proof: we built it in wine first</span>
-        <h2 class="section-title">Where we proved discoverability, publicly</h2>
+        <span class="section-label">Where we measure it in public</span>
+        <h2 class="section-title">A benchmark we publish every quarter</h2>
       </div>
       <div class="container-narrow" style="max-width: 820px; margin: 0 auto; font-size: 1.05rem; line-height: 1.7;">
 {body}
@@ -264,39 +192,33 @@ def area_served(c):
 def faqs(c):
     short, county = c["short"], c["county"]
     if c["wcir"] == "measured":
-        measure = (f"We built the measurement in wine and published it. The Wine Country Intelligence "
+        measure = (f"We built the measurement in wine and publish it. The Wine Country Intelligence "
                    f"Report benchmarks every tracked winery in Santa Barbara and San Luis Obispo counties "
                    f"on AI visibility, including how many {county} wineries are never named in an AI answer "
-                   f"to their own county's questions, and publishes the results every quarter. That same benchmark is how we read where your business stands: which "
+                   f"to their own county's questions, and publishes the results every quarter. That same benchmark is how we read where your winery stands: which "
                    f"surfaces the AI answer is built from, where you show up, and where you are absent. "
-                   f"Then we name the fixes and re-check your visibility every month.")
+                   f"Then we name the fixes, and with Monitor we re-check your visibility every month.")
     elif c["wcir"] == "covered":
-        measure = (f"We built the measurement in wine and published it. The Wine Country Intelligence "
+        measure = (f"We built the measurement in wine and publish it. The Wine Country Intelligence "
                    f"Report benchmarks every tracked winery in Santa Barbara and San Luis Obispo counties "
                    f"on AI visibility, so {county} sits inside a benchmark we already run rather than one "
-                   f"invented for the engagement. The read is the same for any business here: which "
+                   f"invented for the engagement. The read is the same for every winery here: which "
                    f"surfaces the AI answer is built from, where you show up, where you are absent, then "
-                   f"the fixes, then a re-check every month.")
+                   f"the fixes, and with Monitor a re-check every month.")
     else:
-        measure = (f"We built the measurement in wine, on the Central Coast, and published it as the Wine "
-                   f"Country Intelligence Report. That published benchmark covers Santa Barbara and San "
-                   f"Luis Obispo counties, not {county}, and we will not quote you a visibility figure "
-                   f"from a county where it was never measured. What transfers is the method: we read the "
-                   f"same four layers against your category and your market here, name where you are "
-                   f"absent, and re-check every month.")
+        raise ValueError(f"{c['slug']}: unknown wcir variant {c['wcir']!r}")
 
     return [
-        (f"How do I get my {short} business to show up in AI search?",
+        (f"How do I get my {short} winery to show up in AI search?",
          f"Start by finding out where you currently stand, because the answer is rarely where owners "
          f"assume. The models build their recommendation from your whole footprint, not just your "
          f"website: reviews, directory and map listings, third-party mentions, the schema on your pages, "
-         f"and the wider citation trail around your name. We read all of it, rank the gaps by what "
-         f"actually moves prospects toward you, and then manage it as the models change. The first step "
-         f"is a 30-minute Intro Call."),
-        (f"Why is my competitor showing up in AI answers in {county} and I am not?",
-         f"Usually not because their product is better. It is because they are legible to the model and "
-         f"you are not. A competitor with consistent listings, current reviews, structured pages, and a "
-         f"citation footprint the model can corroborate will be named ahead of a better business whose "
+         f"and the wider citation trail around your name. We read all of it and rank the gaps by what "
+         f"actually moves visitors toward your tasting room. The first step is a 30-minute Intro Call."),
+        (f"Why is another winery showing up in AI answers in {county} and mine is not?",
+         f"Usually not because their wine is better. It is because they are legible to the model and "
+         f"you are not. A winery with consistent listings, current reviews, structured pages, and a "
+         f"citation footprint the model can corroborate will be named ahead of a better winery whose "
          f"signals are thin, stale, or contradictory across sources. That gap is usually fixable, and it is "
          f"mostly fixable off your own website."),
         (f"How is this different from SEO for {short}?",
@@ -306,21 +228,22 @@ def faqs(c):
          f"citation footprint rather than your own pages, so the lever that moves AI visibility usually "
          f"lives off your website. We read both layers and the classical-search layer underneath them."),
         (f"How do you measure AI visibility in {county}?", measure),
-        (f"Which businesses in {county} is this for?",
-         f"Lower middle market companies, and small and family wineries. {c['audience_line']} "
-         f"The practice is based on California's Central Coast and {county} is one of six counties where "
-         f"our outbound and on-site availability concentrate, which is not a limit on who we accept. If "
-         f"buyers in your category are starting to ask AI who to trust, the work applies to you."),
+        (f"Which wineries in {county} is this for?",
+         f"{c['audience_line']} This page covers the AI-visibility work for wineries, which runs as "
+         f"Wine Country Intelligence. If visitors are starting to ask AI which wineries to visit, "
+         f"the work applies to you."),
     ]
 
 
 # ----------------------------------------------------------------- template
 
-def render(c):
+def render(c, tokens=False):
+    """The page. tokens=True leaves sitegen's {{nav}} / {{footer}} tokens in place of the chrome."""
     slug = f"ai-visibility-{c['slug']}"
     url = f"{BASE}/{slug}"
     county, short = c["county"], c["short"]
-    nav, footer = render_nav({}), render_footer({})
+    nav, footer = (("{{nav}}", "{{footer}}") if tokens
+                   else (render_nav({}), render_footer({})))
     cities_prose = ", ".join(c["cities"][:-1]) + ", and " + c["cities"][-1]
     article = c["article"]
 
@@ -328,48 +251,48 @@ def render(c):
     # counties are SERVED FROM it. Claiming "based here" on a San Diego page is simply false,
     # and the CFO-lane sibling already gets this right.
     if c["home_turf"]:
-        base_clause = "the practice is based here on the Central Coast."
-        stat3_num, stat3_cap = "Central Coast", "Where the practice is based"
+        base_clause = "Main Street IQ is based here on the Central Coast."
+        stat3_num, stat3_cap = "Central Coast", "Where Main Street IQ is based"
     else:
-        base_clause = f"the practice serves {county} from California's Central Coast."
-        stat3_num, stat3_cap = "6 counties", "Where our outbound and on-site availability concentrate"
+        base_clause = f"Main Street IQ serves {county} from California's Central Coast."
+        stat3_num, stat3_cap = "6 counties", "Where we work in person"
 
     # Orange County's short name IS its county name, so cities[1] alone would silently drop Irvine.
     meta_cities = (f"{c['cities'][0]} and {c['cities'][1]}" if short == county
                    else f"{short} and {c['cities'][1]}")
     faq_list = faqs(c)
 
-    title = f"AI Visibility in {county} | Get Found When Buyers Ask AI | Main Street IQ"
-    desc = (f"Your next customer in {county} is asking AI who to buy from. Main Street IQ finds every "
-            f"place a prospect can discover you across search, answer engines, and AI chat, then "
-            f"optimizes and manages that footprint. Serving {meta_cities}. Veteran-owned.")
-    og_desc = (f"Buyers in {county} are asking ChatGPT, Claude, and Gemini who to buy from. We find every "
-               f"touchpoint that answer is built from, optimize it, and manage it.")
+    title = f"AI Visibility for {county} Wineries | Wine Country Intelligence | Main Street IQ"
+    desc = (f"Visitors to {county} are asking AI which wineries to visit. Wine Country Intelligence from "
+            f"Main Street IQ reads every place a visitor can find your winery across search, answer "
+            f"engines, and AI chat, then ranks the fixes and tracks them. Serving {meta_cities}. "
+            f"Veteran-owned.")
+    og_desc = (f"Visitors to {county} are asking ChatGPT, Claude, and Gemini which wineries to visit. We find every "
+               f"touchpoint that answer is built from, rank what to fix, and track it.")
 
     service_ld = {
         "@context": "https://schema.org", "@type": "Service",
-        "name": f"AI Discoverability in {county}",
+        "name": f"AI Visibility for Wineries in {county}",
         "provider": {"@type": "ProfessionalService", "name": "Main Street IQ",
                      "sameAs": ["https://www.linkedin.com/company/107523729",
                                 "https://www.linkedin.com/in/johnscotthess"],
                      "url": BASE},
         "serviceType": "AI discoverability and answer-engine optimization",
-        "description": (f"Finding, optimizing, and managing every touchpoint a prospect in {county} can "
-                        f"use to discover a business across classical search, answer engines, and "
-                        f"generative AI chat. Read and managed with a CFO's discipline, proven first in "
-                        f"wine through the Wine Country Intelligence Report."),
+        "description": (f"Finding every touchpoint a visitor to {county} can "
+                        f"use to discover a winery across classical search, answer engines, and "
+                        f"generative AI chat, ranking the fixes and tracking them, read against the Wine Country Intelligence Report, the "
+                        f"quarterly benchmark we publish for Santa Barbara and San Luis Obispo counties."),
         "areaServed": area_served(c),
         "audience": {"@type": "Audience",
-                     "audienceType": "Ecommerce, winery, wellness, and elective medicine businesses"},
+                     "audienceType": "Wineries"},
         "url": url,
     }
     prof_ld = {
         "@context": "https://schema.org", "@type": "ProfessionalService", "name": "Main Street IQ",
         "sameAs": ["https://www.linkedin.com/company/107523729",
                    "https://www.linkedin.com/in/johnscotthess"],
-        "description": (f"Veteran-owned and operated. AI discoverability and answer-engine optimization "
-                        f"for lower middle market companies in {county}, California, serving wineries, DTC "
-                        f"ecommerce, health and wellness, and elective medicine."),
+        "description": (f"Veteran-owned and operated. AI visibility and answer-engine optimization "
+                        f"for wineries in {county}, California, through Wine Country Intelligence."),
         "url": url,
         "award": ["Veteran-Owned Business"],
         "founder": {"@type": "Person", "name": "Scott Hess", "jobTitle": "Founder & Fractional CFO",
@@ -391,8 +314,8 @@ def render(c):
         "@context": "https://schema.org", "@type": "BreadcrumbList",
         "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{BASE}/"},
-            {"@type": "ListItem", "position": 2, "name": "AI Discoverability",
-             "item": f"{BASE}/discoverability"},
+            {"@type": "ListItem", "position": 2, "name": "Wine Country Intelligence",
+             "item": f"{BASE}/wine-country-intelligence"},
             {"@type": "ListItem", "position": 3, "name": county, "item": url},
         ],
     }
@@ -427,7 +350,7 @@ def render(c):
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-SBC31MGCEV"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','G-SBC31MGCEV');</script>
   <meta name="description" content="{desc}">
-  <meta name="keywords" content="AI visibility {short}, AI search {short}, answer engine optimization {short}, generative engine optimization {county}, get found on ChatGPT {short}, AI discoverability {county}, AI SEO {short}, local AI search {short}">
+  <meta name="keywords" content="AI visibility {short} wineries, winery AI search {short}, answer engine optimization wineries {short}, generative engine optimization {county} wineries, get found on ChatGPT {short} winery, AI discoverability {county} wineries, winery AI SEO {short}">
   <link rel="canonical" href="{url}">
   <meta name="geo.region" content="US-CA">
   <meta name="geo.placename" content="{c['geo_placename']}">
@@ -474,9 +397,9 @@ def render(c):
     <img src="assets/images/locations/{c['hero_img']}" alt="" class="hero-bg" aria-hidden="true">
     <div class="hero-overlay"></div>
     <div class="container">
-      <span class="section-label">AI Discoverability | {county}, CA</span>
-      <h1>Your next customer in<br>{county} is asking AI.</h1>
-      <p>When a buyer here asks ChatGPT, Claude, or Gemini for the best option in your category, the answer names a few businesses and skips the rest. Main Street IQ finds every touchpoint that answer is built from, optimizes it, and manages it, with the goal that more of the prospects already looking for you arrive at your door. Founder Scott Hess is a U.S. Navy veteran, and {base_clause}</p>
+      <span class="section-label">Wine Country Intelligence | {county}, CA</span>
+      <h1>Your next visitor in<br>{county} is asking AI.</h1>
+      <p>When a visitor planning a trip here asks ChatGPT, Claude, or Gemini which wineries to visit, the answer names a few and skips the rest. Wine Country Intelligence, Main Street IQ's AI advisory work for wineries, finds every touchpoint that answer is built from, ranks what to fix, and tracks it, with the goal that more of the visitors already looking for a winery like yours arrive at your tasting room. Founder Scott Hess is a U.S. Navy veteran, and {base_clause}</p>
       <div class="hero-buttons">
         <a href="/intro-call" class="btn btn-white">Book an Intro Call &rarr;</a>
         <a href="/audit" class="btn btn-outline-white">Start with a finding</a>
@@ -505,12 +428,12 @@ def render(c):
     <div class="container">
       <div class="section-header">
         <span class="section-label">Why this matters now</span>
-        <h2 class="section-title">Discovery moved, and most businesses did not</h2>
+        <h2 class="section-title">Discovery moved, and most wineries did not</h2>
       </div>
       <div style="max-width: 820px; margin: 0 auto; font-size: 1.1rem; line-height: 1.7;">
-        <p>A prospect used to find you through a ranked page of links and a map of pins. They compared, they clicked, they decided. That funnel is still there, but a new one now sits in front of it: the buyer asks an AI what to buy and who to trust, reads one synthesized answer, and often stops there.</p>
+        <p>A visitor used to find you through a ranked page of links and a map of pins. They compared, they clicked, they decided. That funnel is still there, but a new one now sits in front of it: the visitor asks an AI which wineries to visit, reads one synthesized answer, and often stops there.</p>
         <p>{c['local_para']}</p>
-        <p>That answer is not built from your website alone. The model assembles it from your reviews, your directory listings, the articles that mention you, the schema on your pages, and the wider citation footprint that surrounds your name. If those signals are thin or stale, you are absent from the answer no matter how good your product is. Often your competitor is not winning because they are better; they are winning because they are legible to the machine and you are not.</p>
+        <p>That answer is not built from your website alone. The model assembles it from your reviews, your directory listings, the articles that mention you, the schema on your pages, and the wider citation footprint that surrounds your name. If those signals are thin or stale, you are absent from the answer no matter how good the wine is. Often the winery that gets named is not winning because it is better; it is winning because it is legible to the machine and you are not.</p>
       </div>
     </div>
   </section>
@@ -520,13 +443,13 @@ def render(c):
     <div class="container">
       <div class="section-header">
         <span class="section-label">What we read</span>
-        <h2 class="section-title">Every place a buyer in {short} can find you</h2>
-        <p class="section-subtitle">Discoverability is not one channel. It is a footprint. We read all of it the way a CFO reads a P&amp;L, so the fixes are ranked by what actually moves prospects, not by what is easiest to do.</p>
+        <h2 class="section-title">Every place a visitor to {short} can find you</h2>
+        <p class="section-subtitle">Discoverability is not one channel. It is a footprint. We read all of it the way a CFO reads a P&amp;L, so the fixes are ranked by what actually moves visitors, not by what is easiest to do.</p>
       </div>
       <div class="card-grid">
         <div class="card">
           <h3>Classical search</h3>
-          <p>Where you rank when a buyer types the query, and whether your pages are structured so a search engine can read what you sell, where, and to whom. The layer everyone knows, still the floor everything else stands on.</p>
+          <p>Where you rank when a visitor types the query, and whether your pages are structured so a search engine can read what you pour, where, and when you are open. The layer everyone knows, still the floor everything else stands on.</p>
         </div>
         <div class="card">
           <h3>Answer engines</h3>
@@ -534,14 +457,14 @@ def render(c):
         </div>
         <div class="card">
           <h3>Generative AI chat</h3>
-          <p>What ChatGPT, Claude, and Gemini say when a buyer asks them who to buy from in your category and region. This is decided by your external citation footprint, the part of your presence that lives off your own website, where most owners have never looked.</p>
+          <p>What ChatGPT, Claude, and Gemini say when a visitor asks them which wineries to visit in your region. This is decided by your external citation footprint, the part of your presence that lives off your own website, where most owners have never looked.</p>
         </div>
         <div class="card">
           <h3>Reputation and listings</h3>
           <p>Reviews, directories, maps, and the third-party mentions the models lean on to decide who is real and who is trusted. The signals that turn a name into a recommendation.</p>
         </div>
       </div>
-      <p style="margin-top: 2rem; font-size: 1rem; max-width: 820px;">A <a href="/audit" style="color: var(--color-navy);">Website Audit</a> reads all four layers and hands back a severity-ranked fix list. <a href="/our-services" style="color: var(--color-navy);">Monitor</a> re-reads them every month, an outside check that catches drift the month it starts.</p>
+      <p style="margin-top: 2rem; font-size: 1rem; max-width: 820px;">A <a href="/audit" style="color: var(--color-navy);">Website Audit</a> reads all four layers and hands back a severity-ranked fix list. <a href="/monitor" style="color: var(--color-navy);">Monitor</a> re-reads them every month, an outside check that catches drift the month it starts.</p>
     </div>
   </section>
 
@@ -551,23 +474,23 @@ def render(c):
       <div class="section-header">
         <span class="section-label">How the engine works</span>
         <h2 class="section-title">Surface, optimize, manage</h2>
-        <p class="section-subtitle">Three moves that turn a scattered, invisible footprint into a managed one that keeps working while you run the business.</p>
+        <p class="section-subtitle">Three moves that turn a scattered, invisible footprint into a managed one that keeps working while you run the winery.</p>
       </div>
       <div class="problem-list" style="max-width: 860px;">
         <div class="problem-item">
           <h3>1. Surface every touchpoint</h3>
-          <p>We map the full set of places a prospect in {county} can discover you and score each one. You leave knowing exactly where you show up, where you are absent, and which gaps are costing you the most, instead of guessing which channel to chase this quarter.</p>
+          <p>We map the full set of places a visitor to {county} can discover you and score each one. You leave knowing exactly where you show up, where you are absent, and which gaps are costing you the most, instead of guessing which channel to chase this quarter.</p>
         </div>
         <div class="problem-item">
-          <h3>2. Optimize what actually moves prospects</h3>
-          <p>Not every fix is worth making. We sequence the work by what actually pulls prospects toward you, from the schema and pages you control to the citation footprint you influence, so effort lands where it compounds rather than where it is convenient.</p>
+          <h3>2. Optimize what actually moves visitors</h3>
+          <p>Not every fix is worth making. We sequence the work by what actually pulls visitors toward you, from the schema and pages you control to the citation footprint you influence, so effort lands where it compounds rather than where it is convenient.</p>
         </div>
         <div class="problem-item">
           <h3>3. Manage it as it drifts</h3>
           <p>The models change, competitors move, and a footprint left alone goes stale. Monitor is the outside check that the work is still working: it re-reads your visibility every month and flags the drift, so the gains you made in month one still hold in month twelve.</p>
         </div>
       </div>
-      <p style="margin-top: 1.5rem; font-size: 0.95rem; color: var(--slate); max-width: 860px; font-style: italic;">The outcome we are after is simple: more of the prospects already searching for what you sell end up at your door. How far that moves depends on your starting point and your own execution; we measure it against your real numbers rather than promise a figure.</p>
+      <p style="margin-top: 1.5rem; font-size: 0.95rem; color: var(--slate); max-width: 860px; font-style: italic;">The outcome we are after is simple: more of the visitors already planning a trip end up in your tasting room. How far that moves depends on your starting point and your own execution; we measure it against your real numbers rather than promise a figure.</p>
       <p style="margin-top: 1.5rem;"><a href="/intro-call" class="btn btn-primary">Start with an Intro Call &rarr;</a></p>
     </div>
   </section>
@@ -579,44 +502,11 @@ def render(c):
     <div class="container">
       <div class="section-header">
         <span class="section-label">Where we work</span>
-        <h2 class="section-title">AI discoverability across {county}</h2>
+        <h2 class="section-title">AI visibility for wineries across {county}</h2>
       </div>
       <div style="max-width: 820px; margin: 0 auto; font-size: 1.05rem; line-height: 1.7;">
-        <p>We work with lower middle market companies across {cities_prose}. The practice is based on California's Central Coast, and {county} is one of six counties where our outbound and on-site availability concentrate. That is not a limit on who we accept; the work runs remotely for clients elsewhere in the United States.</p>
-        <p style="margin-top: 1.25rem;">Looking for the finance side instead? The CFO practice runs in this county too: <a href="/fractional-cfo-{c['slug']}" style="color: var(--color-navy);">fractional CFO in {county} &rarr;</a></p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== YOUR MARKET SEGMENT ===== -->
-  <section>
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label">Your market segment is next</span>
-        <h2 class="section-title">The same read, tuned to how buyers find you</h2>
-        <p class="section-subtitle">Discoverability is horizontal, but the queries, the touchpoints, and the buyer are not. We tune the engine to your market segment.</p>
-      </div>
-      <div class="card-grid">
-        <div class="card">
-          <h3>DTC &amp; Ecommerce</h3>
-          <p>When a shopper asks AI what to buy in your category, is your brand in the answer, or is paid acquisition backfilling a gap that keeps getting wider?</p>
-          <p style="margin-top: 0.75rem;"><a href="/ecommerce" style="color: var(--color-navy);">Discoverability for ecommerce &rarr;</a></p>
-        </div>
-        <div class="card">
-          <h3>Wineries</h3>
-          <p>A visitor planning a trip asks AI which wineries to visit. Being absent from that answer costs the tasting-room visit and the club signup behind it.</p>
-          <p style="margin-top: 0.75rem;"><a href="/wineries" style="color: var(--color-navy);">Discoverability for wineries &rarr;</a></p>
-        </div>
-        <div class="card">
-          <h3>Health &amp; wellness</h3>
-          <p>Prospective clients ask AI who to trust with their health before they ever call. We read whether your practice is the one the answer recommends.</p>
-          <p style="margin-top: 0.75rem;"><a href="/wellness" style="color: var(--color-navy);">Discoverability for wellness &rarr;</a></p>
-        </div>
-        <div class="card">
-          <h3>Elective medicine</h3>
-          <p>High-consideration, high-value decisions now start with an AI question. We read your visibility and reputation footprint across the surfaces a patient checks before they book.</p>
-          <p style="margin-top: 0.75rem;"><a href="/aesthetics" style="color: var(--color-navy);">Discoverability for elective medicine &rarr;</a></p>
-        </div>
+        <p>We work with wineries across {cities_prose}. Main Street IQ is based on California's Central Coast, and {county} is one of six coastal counties where we work in person.</p>
+        <p style="margin-top: 1.25rem;">Looking for the finance side instead? Our Fractional CFO line works in this county too: <a href="/fractional-cfo-{c['slug']}" style="color: var(--color-navy);">fractional CFO in {county} &rarr;</a></p>
       </div>
     </div>
   </section>
@@ -626,7 +516,7 @@ def render(c):
     <div class="container">
       <div class="section-header">
         <span class="section-label">Common questions</span>
-        <h2 class="section-title">What {short} owners ask about AI visibility</h2>
+        <h2 class="section-title">What {short} wineries ask about AI visibility</h2>
       </div>
       <div class="container-narrow" style="max-width: 820px; margin: 0 auto;">
 {faq_html}
@@ -637,7 +527,7 @@ def render(c):
   <!-- ===== FINAL CTA ===== -->
   <section class="bg-navy">
     <div class="container" style="text-align: center;">
-      <h2 class="section-title">Find out where you show up when {article} {short} buyer asks AI.</h2>
+      <h2 class="section-title">Find out where your winery shows up when {article} {short} visitor asks AI.</h2>
       <p style="max-width: 640px; margin: 0 auto 1.5rem; color: rgba(255,255,255,0.7);">One conversation. A straight read on where you stand and what moves it.</p>
       <div class="hero-buttons" style="justify-content: center;">
         <a href="/intro-call" class="btn btn-white">Book an Intro Call &rarr;</a>
@@ -693,21 +583,41 @@ def render(c):
 """
 
 
+def content_source(c, html):
+    """The sitegen source for a generated page, built the way `sitegen extract` builds one:
+    chrome as {{nav}} / {{footer}} tokens, head boilerplate as atom tokens. It must render
+    back to the generated page byte for byte, or the run fails."""
+    tok = render(c, tokens=True)
+    params = detect_asset_params(tok)
+    head = RE_HEAD.search(tok).group(1)
+    head_tok, _used = tokenize_head(head, params)
+    tok = tok.replace(head, head_tok, 1)
+    params["nav"], params["footer"] = {}, {}
+    content = (PARAM_OPEN + "\n" + json.dumps(params, indent=2, ensure_ascii=False) + "\n"
+               + PARAM_CLOSE + "\n" + tok)
+    if render_content(content) != html:
+        raise SystemExit(f"ai-visibility-{c['slug']}: _content source does not round-trip")
+    return content
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
     for c in COUNTIES:
-        path = ROOT / f"ai-visibility-{c['slug']}.html"
+        rel = f"ai-visibility-{c['slug']}.html"
         html = render(c)
-        if args.dry_run:
-            existing = path.read_text(encoding="utf-8") if path.exists() else None
-            state = "unchanged" if existing == html else ("NEW" if existing is None else "would change")
-            print(f"{path.name}: {state} ({len(html.splitlines())} lines)")
-        else:
-            path.write_text(html, encoding="utf-8")
-            print(f"wrote {path.name} ({len(html.splitlines())} lines)")
+        targets = [(ROOT / rel, html), (ROOT / "_content" / rel, content_source(c, html))]
+        for path, text in targets:
+            name = str(path.relative_to(ROOT))
+            if args.dry_run:
+                existing = path.read_text(encoding="utf-8") if path.exists() else None
+                state = "unchanged" if existing == text else ("NEW" if existing is None else "would change")
+                print(f"{name}: {state} ({len(text.splitlines())} lines)")
+            else:
+                path.write_text(text, encoding="utf-8")
+                print(f"wrote {name} ({len(text.splitlines())} lines)")
     return 0
 
 
