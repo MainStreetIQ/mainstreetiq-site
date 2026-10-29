@@ -45,7 +45,7 @@
     <div class="container">
       <span class="section-label">Confirmed</span>
       <h1>Your subscription is live.</h1>
-      <p>One short brief below and we're underway. It takes about 5 minutes. The faster it lands, the faster your first scorecard goes out.</p>
+      <p>One short brief below and we're underway. It takes about 5 minutes. The faster it lands, the faster your first report goes out.</p>
     </div>
   </section>
 
@@ -55,12 +55,12 @@
       <div class="container-narrow" style="max-width: 800px; margin: 0 auto;">
         <div class="section-header section-header-left">
           <span class="section-label">What Happens Next</span>
-          <h2 class="section-title">From brief to first scorecard.</h2>
+          <h2 class="section-title">From brief to first report.</h2>
         </div>
         <ol style="margin: 1rem 0 2rem 1.5rem; line-height: 1.8;">
           <li><strong>Fill out the brief below</strong> (about 5 minutes). It's the minimum we need to run the work well, no padding.</li>
-          <li><strong>First scorecard + welcome packet</strong> land in your inbox within 5-7 business days of receiving your brief.</li>
-          <li><strong>Monthly cadence</strong> begins from there.</li>
+          <li><strong>Reports usually go out in the first 10 business days of each month.</strong> Your first one comes with the first monthly cycle after your brief is in.</li>
+          <li><strong>After that</strong>, a new report every month.</li>
         </ol>
         <p style="color: var(--color-neutral); font-size: 0.95em;">If you close this page before finishing, no problem. Your purchase confirmation email links back to this same form.</p>
       </div>
@@ -94,17 +94,8 @@
               <input class="msiq-form__input" type="text" id="domain" name="domain" required maxlength="200" inputmode="url" autocomplete="url" placeholder="yourbusiness.com" data-kind="url">
               <div class="msiq-form__error">Enter your website address, like yourbusiness.com.</div>
             </div>
-            <div class="msiq-form__field">
-              <label class="msiq-form__label msiq-form__label--required" for="industry">Industry</label>
-              <select class="msiq-form__select" id="industry" name="industry" required>
-                <option value="">Select one...</option>
-                <option>Wine</option>
-                <option value="E-commerce or DTC">DTC &amp; Ecommerce</option>
-                <option>Health &amp; Wellness</option>
-                <option>Elective Medicine</option>
-              </select>
-              <div class="msiq-form__error">Choose the industry closest to yours.</div>
-            </div>
+            <!-- Monitor is wine-only (Scott, 2026-10-27); the intake endpoint still requires the field. -->
+            <input type="hidden" id="industry" name="industry" value="Wine">
             <div class="msiq-form__field--inline-pair">
               <div class="msiq-form__field">
                 <label class="msiq-form__label msiq-form__label--required" for="owner_name">Your name</label>
@@ -206,7 +197,7 @@
           <div class="msiq-form__success" id="intakeSuccess" role="status" tabindex="-1">
             <svg class="msiq-form__success-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             <h3 class="msiq-form__success-title">Got it. Your intake is with Scott.</h3>
-            <p class="msiq-form__success-body">Your first scorecard and welcome packet follow within 5-7 business days. Anything to add or change, email <a href="mailto:scott@mainstreetiq.com?subject=Monitor%20intake%20update">scott@mainstreetiq.com</a>.</p>
+            <p class="msiq-form__success-body">Your first report comes with our next monthly cycle, usually in the first 10 business days of the month. Anything to add or change, email <a href="mailto:scott@mainstreetiq.com?subject=Monitor%20intake%20update">scott@mainstreetiq.com</a>.</p>
           </div>
         </div>
       </div>
