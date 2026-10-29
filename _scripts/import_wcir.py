@@ -40,6 +40,10 @@ COVER_LINES = {"MAIN STREET IQ", "Wine Country Intelligence"}
 # The build hash: a print footer line (to 2026-10-09 10:33) or an HTML comment (from 10:58).
 RE_BUILD_LINE = re.compile(r"^<small>.*\bbuild ([0-9a-f]{6,})</small>$")
 RE_BUILD_COMMENT = re.compile(r"^<!-- build ([0-9a-f]{6,}) -->$")
+# WCI marks where the web page's price cards go (WCI ARCHITECTURE.md, "The free WCIR on
+# the web", 2026-10-29): report content above it, method, sources, disclaimers and About below.
+OPTIONS_MARKER = "<!-- web:options -->"
+OPTIONS_SLOT = "\x00OPTIONS\x00"
 # The print running footer ("mainstreetiq.com | ... | Q3 2026"): print-only, dropped.
 RE_PRINT_FOOTER = re.compile(r"^<small>mainstreetiq\.com \|.*</small>$")
 # Print-only cross references. None exist today; if one appears, stop.
@@ -219,6 +223,12 @@ def parse_body(lines: list[str]) -> tuple[list[dict], str | None]:
             blocks.append({"type": f"h{level}", "text": m.group(2)})
             i += 1
             continue
+        if st == OPTIONS_MARKER:
+            if any(b["type"] == "options" for b in blocks):
+                raise ImportError_("source has more than one options marker")
+            blocks.append({"type": "options"})
+            i += 1
+            continue
         mb = RE_BUILD_LINE.match(st) or RE_BUILD_COMMENT.match(st)
         if mb:
             build = mb.group(1)
@@ -313,6 +323,8 @@ def render_blocks(blocks: list[dict]) -> tuple[str, list[tuple[str, str]]]:
                 label = plain(whole)
             else:
                 out.append(f"<p>{text}</p>")
+        elif t == "options":
+            out.append(OPTIONS_SLOT)
         elif t == "quote":
             out.append(f'<blockquote class="wcir-callout"><p>{inline(b["text"])}</p></blockquote>')
         elif t == "small":
@@ -520,6 +532,16 @@ def render_page(cover: dict, body: str, toc: list, slug: str, source_name: str, 
     sample_link = ('\n      <p class="wcir-pdf"><a href="#options" data-vertical="wine">See where your winery stands</a></p>'
                    if sample_href else "")
     pdf = SAMPLE_PDF if sample else f"/reports/wcir-{slug}.pdf"
+    body_main, _, body_tail = body.partition(OPTIONS_SLOT)
+    tail_section = (f"""
+  <section>
+    <div class="container">
+      <article class="wcir-report">
+{body_tail}
+      </article>
+    </div>
+  </section>
+""" if body_tail.strip() else "")
     # The summary is reached through the email form, so its signup speaks to forwarded readers.
     subscribe_heading = ("Get the next edition when it is out." if sample
                          else "Forwarded this report? Get the next edition when it is out.")
@@ -597,7 +619,7 @@ def render_page(cover: dict, body: str, toc: list, slug: str, source_name: str, 
         </ol>
       </nav>
       <article class="wcir-report">
-{body}
+{body_main}
       </article>
     </div>
   </section>
@@ -616,7 +638,7 @@ def render_page(cover: dict, body: str, toc: list, slug: str, source_name: str, 
       <p class="wcir-options-terms">{RENEWAL_LINE}</p>
     </div>
   </section>
-
+{tail_section}
   <section id="subscribe">
     <div class="container">
       <div class="wcir-subscribe">
