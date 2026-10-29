@@ -78,7 +78,15 @@ RE_WINERIES_SHELF = re.compile(r"(mainstreetiq\.com)/wineries(?=(?:\?[^#\s]*)?#s
 RE_WINERIES_BARE = re.compile(r"(?<![\w/@.])((?:www\.)?mainstreetiq\.com)/wineries(?![\w/?#-])")
 
 
+INTRO_CALL = "https://www.mainstreetiq.com/intro-call"
+
+
 def web_url(url: str) -> str:
+    # The report's call links go to Calendly, which the PDF keeps; on the page they
+    # go to the Intro Call page like every other call link on the site (agreed with
+    # WCI 2026-10-28: the swap happens here, not in WCI's source).
+    if "calendly.com/" in url:
+        return INTRO_CALL
     # The report's links are tagged for the PDF; on the page they are web clicks.
     # Its #subscribe-* links point at /wineries, where the buying options used to
     # live; since 2026-10-10 they live on /wine-country-intelligence, which carries
@@ -105,8 +113,9 @@ def inline(text: str) -> str:
 
     def site(m: re.Match) -> str:
         host_path = m.group(1)
-        href = "https://" + (host_path if host_path.startswith("www.") or host_path.startswith("calendly")
-                             else "www." + host_path)
+        if host_path.startswith("calendly"):
+            return park(f'<a href="{INTRO_CALL}">mainstreetiq.com/intro-call</a>')
+        href = "https://" + (host_path if host_path.startswith("www.") else "www." + host_path)
         return park(f'<a href="{attr(href)}">{esc(host_path)}</a>')
 
     out = RE_SITE.sub(site, out)
@@ -429,7 +438,7 @@ SECOND_COUNTY_LINE = ('Adding a second county? A second county edition, annual, 
                       '<a href="mailto:scott@mainstreetiq.com?subject=Second%20county">scott@mainstreetiq.com</a>.')
 
 
-def render_options(quarter: str) -> str:
+def render_options(quarter: str, sample_href: str | None = None) -> str:
     cards = []
     for o in OPTIONS:
         badge = f'\n            <span class="wcir-option-badge">{esc(o["badge"])}</span>' if o["badge"] else ""
@@ -437,12 +446,14 @@ def render_options(quarter: str) -> str:
             f'<a href="{attr(url)}" target="_blank" rel="noopener" class="btn {"btn-primary" if k == 0 else "btn-secondary"}" '
             f'data-stripe-product="{prod}" data-vertical="wine">{esc(label)} &rarr;</a>'
             for k, (label, url, prod) in enumerate(o["buy"]))
+        sample = (f'\n            <p class="wcir-option-detail"><a href="{sample_href}" data-vertical="wine">See a sample county edition &rarr;</a></p>'
+                  if sample_href and o["title"] == "County edition" else "")
         cards.append(f"""          <div class="wcir-option{' wcir-option-featured' if o['badge'] else ''}">{badge}
             <h3>{esc(o['title'])}</h3>
             <p class="wcir-option-price">{esc(o['price'])}</p>
             <p>{esc(o['body'].replace('{quarter}', quarter))}</p>
             <p class="wcir-option-buy">{buttons}</p>
-            <p class="wcir-option-detail"><a href="{o['detail']}" data-vertical="wine">What this includes &rarr;</a></p>
+            <p class="wcir-option-detail"><a href="{o['detail']}" data-vertical="wine">What this includes &rarr;</a></p>{sample}
           </div>""")
     return "\n".join(cards)
 
@@ -504,9 +515,14 @@ def render_page(cover: dict, body: str, toc: list, slug: str, source_name: str, 
         desc = f"Sample: {desc} Winery names and per-winery figures are illustrative."
     sample = "banner" in cover
     # A summary page links the current sample edition when the importer is given its slug.
-    sample_link = (f'\n      <p class="wcir-pdf"><a href="/wcir/{sample_slug}?utm_source=site&amp;utm_medium=summary&amp;utm_campaign={slug}" '
-                   f'data-vertical="wine">See the full sample edition</a></p>' if sample_slug and not sample else "")
+    sample_href = (f"/wcir/{sample_slug}?utm_source=site&amp;utm_medium=summary&amp;utm_campaign={slug}"
+                   if sample_slug and not sample else None)
+    sample_link = ('\n      <p class="wcir-pdf"><a href="#options" data-vertical="wine">See where your winery stands</a></p>'
+                   if sample_href else "")
     pdf = SAMPLE_PDF if sample else f"/reports/wcir-{slug}.pdf"
+    # The summary is reached through the email form, so its signup speaks to forwarded readers.
+    subscribe_heading = ("Get the next edition when it is out." if sample
+                         else "Forwarded this report? Get the next edition when it is out.")
     banner = (f'\n      <p class="wcir-sample-banner" style="display: inline-block; background: rgba(255,255,255,0.12); '
               f'color: var(--color-white); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.04em; '
               f'padding: 0.35rem 0.75rem; border-radius: 4px; margin: 0 0 1rem;">{esc(cover["banner"])}</p>'
@@ -591,10 +607,10 @@ def render_page(cover: dict, body: str, toc: list, slug: str, source_name: str, 
       <div class="section-header section-header-left">
         <span class="section-label">Choose your option</span>
         <h2 class="section-title">See where your own winery stands</h2>
-        <p class="section-subtitle">Buy online. Each card links to more about the option.</p>
+        <p class="section-subtitle">Buy online. Each card links to more about the option. Rather talk it through first? <a href="/intro-call" style="color: var(--navy); font-weight: 600;" data-vertical="wine">Book an Intro Call</a>.</p>
       </div>
       <div class="wcir-options">
-{render_options(q)}
+{render_options(q, sample_href)}
       </div>
       <p class="wcir-options-terms">{SECOND_COUNTY_LINE}</p>
       <p class="wcir-options-terms">{RENEWAL_LINE}</p>
@@ -604,7 +620,7 @@ def render_page(cover: dict, body: str, toc: list, slug: str, source_name: str, 
   <section id="subscribe">
     <div class="container">
       <div class="wcir-subscribe">
-        <h2 class="section-title">Get the next edition when it is out.</h2>
+        <h2 class="section-title">{subscribe_heading}</h2>
         <p>The {esc(FREE_REPORT)} is free and comes out every quarter. Wine Country Intelligence keeps its own list, separate from the Main Street IQ email list.</p>
         <p id="wcirSubscribeFallback">Email <a href="{mailto}" data-vertical="wine">wci@mainstreetiq.com</a> to get the next edition.</p>
         <form id="wcirSubscribeForm" data-list="wcir" novalidate hidden>
