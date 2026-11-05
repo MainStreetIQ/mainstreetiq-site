@@ -412,7 +412,7 @@ PAGE_CSS = """  <style>
 # Monitor / Monitor Plus wording follows the subscribe block on /wine-country-intelligence.
 # "{quarter}" is filled from the report cover.
 OPTIONS = [
-    {"title": "County edition", "badge": "Recommended",
+    {"title": "County edition", "badge": None,
      "body": "The county report every quarter plus the Wine Pricing Report twice a year, for Santa Barbara County or San Luis Obispo County, with every winery ranked. The annual plan renews each year until canceled. One issue is the {quarter} county report, one time; single issues are not discounted. You choose the county at checkout.",
      "price": "$800/yr per county, or $250 per county for one issue",
      "buy": [("County edition, annual", "https://buy.stripe.com/00w4gA1ib19q8H8duRa3u01", "wine-wcir-county-annual"),
@@ -424,7 +424,7 @@ OPTIONS = [
      "buy": [("Monitor, annual", "https://buy.stripe.com/8x2bJ21ib7xO2iKcqNa3u0W", "wine-monitor-annual"),
              ("Monitor, monthly", "https://buy.stripe.com/7sY8wQ5yr05m5uW1M9a3u05", "wine-monitor-monthly")],
      "detail": "/monitor"},
-    {"title": "Monitor Plus", "badge": None,
+    {"title": "Monitor Plus", "badge": "Recommended",  # moved from County edition (Scott, 2026-11-05)
      "body": "The same report card with four peers you name, tracked beside you. Each extra peer beyond the four is $50/mo, or $500/yr on the annual plan. The annual plan includes the county edition for the one county you choose: the county report every quarter plus the Wine Pricing Report twice a year.",
      "price": "$600/mo, or $6,000/yr",
      "buy": [("Monitor Plus, annual", "https://buy.stripe.com/6oUcN6d0T7xOe1saiFa3u08", "wine-monitor-plus-annual"),

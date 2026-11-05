@@ -2,6 +2,7 @@ User-agent: *
 Disallow: /reports/
 Disallow: /samples/wine-country-intelligence-report-sample.pdf
 Disallow: /wcir/q3-2026-santa-barbara-sample
+Disallow: /samples/monitor-plus-sample
 Allow: /
 
 Sitemap: https://www.mainstreetiq.com/sitemap.xml
@@ -14,7 +15,7 @@ Sitemap: https://www.mainstreetiq.com/sitemap.xml
 # Explicit allows for AI crawlers and answer engines.
 # MSIQ wants AI surfaces (ChatGPT, Claude, Perplexity, Google AI Overviews,
 # Apple Intelligence, Meta AI, etc.) to discover, index, and cite this site.
-# The wildcard group above allows everything except the three paths it disallows;
+# The wildcard group above allows everything except the four paths it disallows;
 # these explicit groups are defensive against future stricter defaults and
 # against bot owners who require an exact User-agent match before indexing.
 # Each one repeats the same Disallow lines (see the note at the end).
@@ -24,18 +25,21 @@ User-agent: GPTBot
 Disallow: /reports/
 Disallow: /samples/wine-country-intelligence-report-sample.pdf
 Disallow: /wcir/q3-2026-santa-barbara-sample
+Disallow: /samples/monitor-plus-sample
 Allow: /
 
 User-agent: OAI-SearchBot
 Disallow: /reports/
 Disallow: /samples/wine-country-intelligence-report-sample.pdf
 Disallow: /wcir/q3-2026-santa-barbara-sample
+Disallow: /samples/monitor-plus-sample
 Allow: /
 
 User-agent: ChatGPT-User
 Disallow: /reports/
 Disallow: /samples/wine-country-intelligence-report-sample.pdf
 Disallow: /wcir/q3-2026-santa-barbara-sample
+Disallow: /samples/monitor-plus-sample
 Allow: /
 
 # Anthropic
@@ -43,18 +47,21 @@ User-agent: anthropic-ai
 Disallow: /reports/
 Disallow: /samples/wine-country-intelligence-report-sample.pdf
 Disallow: /wcir/q3-2026-santa-barbara-sample
+Disallow: /samples/monitor-plus-sample
 Allow: /
 
 User-agent: ClaudeBot
 Disallow: /reports/
 Disallow: /samples/wine-country-intelligence-report-sample.pdf
 Disallow: /wcir/q3-2026-santa-barbara-sample
+Disallow: /samples/monitor-plus-sample
 Allow: /
 
 User-agent: Claude-Web
 Disallow: /reports/
 Disallow: /samples/wine-country-intelligence-report-sample.pdf
 Disallow: /wcir/q3-2026-santa-barbara-sample
+Disallow: /samples/monitor-plus-sample
 Allow: /
 
 # Google AI (Search Generative Experience, Gemini, Vertex AI grounding)
@@ -62,6 +69,7 @@ User-agent: Google-Extended
 Disallow: /reports/
 Disallow: /samples/wine-country-intelligence-report-sample.pdf
 Disallow: /wcir/q3-2026-santa-barbara-sample
+Disallow: /samples/monitor-plus-sample
 Allow: /
 
 # Perplexity
@@ -69,12 +77,14 @@ User-agent: PerplexityBot
 Disallow: /reports/
 Disallow: /samples/wine-country-intelligence-report-sample.pdf
 Disallow: /wcir/q3-2026-santa-barbara-sample
+Disallow: /samples/monitor-plus-sample
 Allow: /
 
 User-agent: Perplexity-User
 Disallow: /reports/
 Disallow: /samples/wine-country-intelligence-report-sample.pdf
 Disallow: /wcir/q3-2026-santa-barbara-sample
+Disallow: /samples/monitor-plus-sample
 Allow: /
 
 # Common Crawl (training data feedstock for many models)
@@ -82,6 +92,7 @@ User-agent: CCBot
 Disallow: /reports/
 Disallow: /samples/wine-country-intelligence-report-sample.pdf
 Disallow: /wcir/q3-2026-santa-barbara-sample
+Disallow: /samples/monitor-plus-sample
 Allow: /
 
 # Apple Intelligence
@@ -89,12 +100,14 @@ User-agent: Applebot
 Disallow: /reports/
 Disallow: /samples/wine-country-intelligence-report-sample.pdf
 Disallow: /wcir/q3-2026-santa-barbara-sample
+Disallow: /samples/monitor-plus-sample
 Allow: /
 
 User-agent: Applebot-Extended
 Disallow: /reports/
 Disallow: /samples/wine-country-intelligence-report-sample.pdf
 Disallow: /wcir/q3-2026-santa-barbara-sample
+Disallow: /samples/monitor-plus-sample
 Allow: /
 
 # Meta AI
@@ -102,18 +115,21 @@ User-agent: Meta-ExternalAgent
 Disallow: /reports/
 Disallow: /samples/wine-country-intelligence-report-sample.pdf
 Disallow: /wcir/q3-2026-santa-barbara-sample
+Disallow: /samples/monitor-plus-sample
 Allow: /
 
 User-agent: Meta-ExternalFetcher
 Disallow: /reports/
 Disallow: /samples/wine-country-intelligence-report-sample.pdf
 Disallow: /wcir/q3-2026-santa-barbara-sample
+Disallow: /samples/monitor-plus-sample
 Allow: /
 
 User-agent: FacebookBot
 Disallow: /reports/
 Disallow: /samples/wine-country-intelligence-report-sample.pdf
 Disallow: /wcir/q3-2026-santa-barbara-sample
+Disallow: /samples/monitor-plus-sample
 Allow: /
 
 # Amazon (Alexa+, Rufus, etc.)
@@ -121,6 +137,7 @@ User-agent: Amazonbot
 Disallow: /reports/
 Disallow: /samples/wine-country-intelligence-report-sample.pdf
 Disallow: /wcir/q3-2026-santa-barbara-sample
+Disallow: /samples/monitor-plus-sample
 Allow: /
 
 # You.com
@@ -128,6 +145,7 @@ User-agent: YouBot
 Disallow: /reports/
 Disallow: /samples/wine-country-intelligence-report-sample.pdf
 Disallow: /wcir/q3-2026-santa-barbara-sample
+Disallow: /samples/monitor-plus-sample
 Allow: /
 
 # ByteDance / TikTok / Doubao
@@ -135,6 +153,7 @@ User-agent: Bytespider
 Disallow: /reports/
 Disallow: /samples/wine-country-intelligence-report-sample.pdf
 Disallow: /wcir/q3-2026-santa-barbara-sample
+Disallow: /samples/monitor-plus-sample
 Allow: /
 
 # Mistral
@@ -142,6 +161,7 @@ User-agent: MistralAI-User
 Disallow: /reports/
 Disallow: /samples/wine-country-intelligence-report-sample.pdf
 Disallow: /wcir/q3-2026-santa-barbara-sample
+Disallow: /samples/monitor-plus-sample
 Allow: /
 
 # Cohere
@@ -149,12 +169,14 @@ User-agent: cohere-ai
 Disallow: /reports/
 Disallow: /samples/wine-country-intelligence-report-sample.pdf
 Disallow: /wcir/q3-2026-santa-barbara-sample
+Disallow: /samples/monitor-plus-sample
 Allow: /
 
 User-agent: cohere-training-data-crawler
 Disallow: /reports/
 Disallow: /samples/wine-country-intelligence-report-sample.pdf
 Disallow: /wcir/q3-2026-santa-barbara-sample
+Disallow: /samples/monitor-plus-sample
 Allow: /
 
 # DuckDuckGo AI
@@ -162,6 +184,7 @@ User-agent: DuckAssistBot
 Disallow: /reports/
 Disallow: /samples/wine-country-intelligence-report-sample.pdf
 Disallow: /wcir/q3-2026-santa-barbara-sample
+Disallow: /samples/monitor-plus-sample
 Allow: /
 
 # ---------------------------------------------------------------------------
